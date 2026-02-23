@@ -33,6 +33,12 @@ After a successful build, the executable will be placed in:
 build/benchmarks/
 ```
 
+Run with
+
+```bash
+./build/benchmarks/mdkp_mq_random --instance data/kplib/04AlmostStronglyCorrelated/n00500/R01000/s069.kp
+```
+
 ---
 
 To see available targets, you can run:
