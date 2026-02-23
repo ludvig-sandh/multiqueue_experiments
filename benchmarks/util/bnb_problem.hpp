@@ -1,65 +1,53 @@
 #pragma once
 
-#include "knapsack_instance.hpp"
-
+#include <type_traits>
 #include <utility>
 #include <vector>
 
-template <class ValueType>
+// Generic bounds container
+template <class T>
 struct Bounds {
-    ValueType lower;
-    ValueType upper;
+    T lower;
+    T upper;
 };
 
-// TODO: Generalise this to an abstract class where each B&B problem implementation is simply a derivation of this.
-// This is just a placeholder that implements the backend for the standard 0-1 knapsack.
+/*
+CRTP interface for Branch-and-Bound "problem policies".
 
-template <class ValueType, class NodeType>
+A Derived problem must provide:
+  - using data_type = ...
+  - struct Node { ... };  (or using node_type = ...)
+  - std::pair<node_type, data_type> root_impl() const noexcept;
+  - Bounds<data_type> bounds_impl(node_type const&) const noexcept;
+  - void children_impl(node_type const&, data_type incumbent, std::vector<node_type>& out) const;
+
+Optionally, a Derived can provide:
+  - struct Compare { bool operator()(node_type const&, node_type const&) const noexcept; }
+    (useful for std::priority_queue)
+*/
+template <class Derived>
 class BnBProblem {
 public:
-    using data_type = ValueType;
-    using node_type = NodeType;
 
-    explicit BnBProblem(KnapsackInstance<ValueType> const& inst) : inst_(inst) {}
-
-    // Returns (root_node, initial_incumbent)
-    [[nodiscard]] std::pair<node_type, ValueType> root() const noexcept {
-        auto [lb, ub] = inst_.compute_bounds_linear(inst_.capacity(), 0);
-        node_type r{ub, 0, inst_.capacity(), 0};
-        return {r, lb};
+    // Root node + initial incumbent
+    [[nodiscard]] auto root() const noexcept {
+        return derived().root_impl();
     }
 
-    [[nodiscard]] Bounds<ValueType> bounds(node_type const& n) const noexcept {
-        auto [lb, ub] = inst_.compute_bounds_linear(n.free_capacity, n.index + 1);
-        return {n.value + lb, n.value + ub};
+    // Node bounds (must be valid for pruning)
+    template <class Node>
+    [[nodiscard]] auto bounds(Node const& n) const noexcept {
+        return derived().bounds_impl(n);
     }
 
-    // Generate children to push (can incorporate incumbent-based filtering)
-    [[nodiscard]] void children(node_type const& n, ValueType incumbent, std::vector<node_type>& out) const {
-        out.clear();
-
-        if (n.index + 2 >= inst_.size()) return;
-
-        auto [lb, ub] = inst_.compute_bounds_linear(n.free_capacity, n.index + 1);
-
-        // Exclude item
-        {
-            node_type child{n.value + ub, n.index + 1, n.free_capacity, n.value};
-            if (child.upper_bound > incumbent) out.push_back(std::move(child));
-        }
-
-        // Inlcude item
-        if (n.free_capacity >= inst_.weight(n.index)) {
-            node_type child = n;
-            child.value = n.value + inst_.value(n.index);
-            child.free_capacity = n.free_capacity - inst_.weight(n.index);
-            child.index = n.index + 1;
-            child.upper_bound = n.upper_bound;
-
-            if (child.upper_bound > incumbent) out.push_back(std::move(child));
-        }
+    // Generate children (can filter using incumbent)
+    template <class Node, class Value>
+    void children(Node const& n, Value incumbent, std::vector<Node>& out) const {
+        derived().children_impl(n, incumbent, out);
     }
 
 private:
-    KnapsackInstance<ValueType> const& inst_;
+    Derived const& derived() const noexcept {
+        return static_cast<Derived const&>(*this);
+    }
 };

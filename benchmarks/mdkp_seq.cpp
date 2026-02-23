@@ -11,22 +11,66 @@
 #include <queue>
 #include <vector>
 
-#ifdef FLOAT_INSTANCE
-using data_type = double;
-#else
-using data_type = unsigned long;
-#endif
+class KnapsackProblem : public BnBProblem<KnapsackProblem> {
+public:
+    using data_type = unsigned long;
 
-struct Node {
-    data_type upper_bound;
-    std::size_t index;
-    data_type free_capacity;
-    data_type value;
+    struct Node {
+        data_type upper_bound;
+        std::size_t index;
+        data_type free_capacity;
+        data_type value;
+    };
+    using node_type = Node;
+
+    // Optional comparator for std::priority_queue (max-UB first)
+    struct Compare {
+        bool operator()(node_type const& a, node_type const& b) const noexcept {
+            return a.upper_bound < b.upper_bound;
+        }
+    };
+
+    explicit KnapsackProblem(KnapsackInstance<data_type> const& inst) : inst_(inst) {}
+
+    [[nodiscard]] std::pair<node_type, data_type> root_impl() const noexcept {
+        auto [lb, ub] = inst_.compute_bounds_linear(inst_.capacity(), 0);
+        return {node_type{ub, 0, inst_.capacity(), 0}, lb};
+    }
+
+    [[nodiscard]] Bounds<data_type> bounds_impl(node_type const& n) const noexcept {
+        auto [lb, ub] = inst_.compute_bounds_linear(n.free_capacity, n.index + 1);
+        return {n.value + lb, n.value + ub};
+    }
+
+    void children_impl(node_type const& n, data_type incumbent, std::vector<node_type>& out) const {
+        out.clear();
+
+        if (n.index + 2 >= inst_.size()) return;
+
+        // Must match knapsack_seq semantics: compute relaxation from (free_capacity, index+1)
+        auto [lb, ub] = inst_.compute_bounds_linear(n.free_capacity, n.index + 1);
+
+        // Exclude item
+        {
+            node_type child{n.value + ub, n.index + 1, n.free_capacity, n.value};
+            if (child.upper_bound > incumbent) out.push_back(std::move(child));
+        }
+
+        // Include item (reuse parent's upper_bound to match original code exactly)
+        if (n.free_capacity >= inst_.weight(n.index)) {
+            node_type child = n;
+            child.value = n.value + inst_.value(n.index);
+            child.free_capacity = n.free_capacity - inst_.weight(n.index);
+            child.index = n.index + 1;
+            child.upper_bound = n.upper_bound;
+
+            if (child.upper_bound > incumbent) out.push_back(std::move(child));
+        }
+    }
+
+private:
+    KnapsackInstance<data_type> const& inst_;
 };
-
-bool operator<(Node const& lhs, Node const& rhs) noexcept {
-    return lhs.upper_bound < rhs.upper_bound;
-}
 
 struct Settings {
     std::filesystem::path instance_file;
@@ -48,9 +92,11 @@ void write_settings_json(Settings const& settings, std::ostream& out) {
     out << '}';
 }
 
-void knapsack(Settings const& settings) noexcept {
-    data_type best_value{0};
-    std::vector<Node> kids;
+template <class Problem>
+void branch_and_bound(Settings const& settings) noexcept {
+    using data_type = typename Problem::data_type;
+    using node_type = typename Problem::node_type;
+    using compare_type = typename Problem::Compare;
 
     long long processed_nodes{0};
     std::size_t sum_sizes{0};
@@ -67,18 +113,19 @@ void knapsack(Settings const& settings) noexcept {
     std::clog << "Instance has " << instance.size() << " items and " << std::fixed << instance.capacity()
               << " capacity\n";
 
-    BnBProblem<data_type, Node> problem(instance);
+    Problem problem(instance);
 
-    std::vector<Node> container;
+    std::vector<node_type> container;
     container.reserve(1 << 24);
-    std::priority_queue<Node, std::vector<Node>> pq({}, std::move(container));
+    std::priority_queue<node_type, std::vector<node_type>, compare_type> pq({}, std::move(container));
     std::clog << "Working...\n";
     auto t_start = std::chrono::steady_clock::now();
-    {
-        auto [root, initial_best] = problem.root();
-        best_value = initial_best;
-        pq.push(root);
-    }
+    
+    auto [root, best_value] = problem.root();
+    pq.push(root);
+
+    std::vector<node_type> kids;
+
     while (!pq.empty()) {
         auto node = pq.top();
         sum_sizes += pq.size();
@@ -172,6 +219,6 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
     std::clog << "= Running benchmark =\n";
-    knapsack(settings);
+    branch_and_bound<KnapsackProblem>(settings);
     return EXIT_SUCCESS;
 }
