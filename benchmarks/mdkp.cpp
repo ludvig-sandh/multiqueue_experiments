@@ -113,7 +113,7 @@ void process_node(pq_value<Problem> const& item,
     data.problem.children(n, solution, kids);
 
     for (auto& child : kids) {
-        auto child_ub = data.problem.bounds(child).upper;
+        auto child_ub = child.upper_bound;
         if (handle.push({child_ub, std::move(child)})) {
             ++counter.pushed_nodes;
         }
