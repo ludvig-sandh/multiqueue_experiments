@@ -14,6 +14,7 @@
 class KnapsackProblem : public BnBProblem<KnapsackProblem> {
 public:
     using data_type = unsigned long;
+    using instance_type = KnapsackInstance<data_type>;
 
     struct Node {
         data_type upper_bound;
@@ -30,7 +31,7 @@ public:
         }
     };
 
-    explicit KnapsackProblem(KnapsackInstance<data_type> const& inst) : inst_(inst) {}
+    explicit KnapsackProblem(instance_type const& inst) : inst_(inst) {}
 
     [[nodiscard]] std::pair<node_type, data_type> root_impl() const noexcept {
         auto [lb, ub] = inst_.compute_bounds_linear(inst_.capacity(), 0);
@@ -69,7 +70,7 @@ public:
     }
 
 private:
-    KnapsackInstance<data_type> const& inst_;
+    instance_type const& inst_;
 };
 
 struct Settings {
@@ -94,18 +95,18 @@ void write_settings_json(Settings const& settings, std::ostream& out) {
 
 template <class Problem>
 void branch_and_bound(Settings const& settings) noexcept {
-    using data_type = typename Problem::data_type;
     using node_type = typename Problem::node_type;
     using compare_type = typename Problem::Compare;
+    using instance_type = typename Problem::instance_type;
 
     long long processed_nodes{0};
     std::size_t sum_sizes{0};
     std::size_t max_size{0};
 
-    KnapsackInstance<data_type> instance;
+    instance_type instance;
     std::clog << "Reading instance...\n";
     try {
-        instance = KnapsackInstance<data_type>(settings.instance_file);
+        instance = instance_type(settings.instance_file);
     } catch (std::exception const& e) {
         std::cerr << "Error reading instance file: " << e.what() << '\n';
         std::exit(EXIT_FAILURE);
@@ -115,17 +116,17 @@ void branch_and_bound(Settings const& settings) noexcept {
 
     Problem problem(instance);
 
-    std::vector<node_type> container;
+    std::vector<node_type> container, kids;
     container.reserve(1 << 24);
+    kids.reserve(1 << 20);
     std::priority_queue<node_type, std::vector<node_type>, compare_type> pq({}, std::move(container));
+
     std::clog << "Working...\n";
     auto t_start = std::chrono::steady_clock::now();
     
     auto [root, best_value] = problem.root();
     pq.push(root);
-
-    std::vector<node_type> kids;
-
+    
     while (!pq.empty()) {
         auto node = pq.top();
         sum_sizes += pq.size();
