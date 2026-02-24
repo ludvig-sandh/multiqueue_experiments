@@ -1,5 +1,7 @@
+#include "util/bnb_problem.hpp"
 #include "util/build_info.hpp"
 #include "util/knapsack_instance.hpp"
+#include "util/knapsack_problem.hpp"
 
 #include "cxxopts.hpp"
 
@@ -10,22 +12,6 @@
 #include <queue>
 #include <vector>
 
-#ifdef FLOAT_INSTANCE
-using data_type = double;
-#else
-using data_type = unsigned long;
-#endif
-
-struct Node {
-    data_type upper_bound;
-    std::size_t index;
-    data_type free_capacity;
-    data_type value;
-};
-
-bool operator<(Node const& lhs, Node const& rhs) noexcept {
-    return lhs.upper_bound < rhs.upper_bound;
-}
 
 struct Settings {
     std::filesystem::path instance_file;
@@ -47,57 +33,64 @@ void write_settings_json(Settings const& settings, std::ostream& out) {
     out << '}';
 }
 
-void knapsack(Settings const& settings) noexcept {
-    data_type best_value{0};
+template <class Problem>
+void branch_and_bound(Settings const& settings) noexcept {
+    using node_type = typename Problem::node_type;
+    using compare_type = typename Problem::Compare;
+    using instance_type = typename Problem::instance_type;
+
     long long processed_nodes{0};
     std::size_t sum_sizes{0};
     std::size_t max_size{0};
-    KnapsackInstance<data_type> instance;
+
+    instance_type instance;
     std::clog << "Reading instance...\n";
     try {
-        instance = KnapsackInstance<data_type>(settings.instance_file);
+        instance = instance_type(settings.instance_file);
     } catch (std::exception const& e) {
         std::cerr << "Error reading instance file: " << e.what() << '\n';
         std::exit(EXIT_FAILURE);
     }
     std::clog << "Instance has " << instance.size() << " items and " << std::fixed << instance.capacity()
               << " capacity\n";
-    std::vector<Node> container;
+
+    Problem problem(instance);
+
+    std::vector<node_type> container, kids;
     container.reserve(1 << 24);
-    std::priority_queue<Node, std::vector<Node>> pq({}, std::move(container));
+    kids.reserve(1 << 20);
+    std::priority_queue<node_type, std::vector<node_type>, compare_type> pq({}, std::move(container));
+
     std::clog << "Working...\n";
     auto t_start = std::chrono::steady_clock::now();
-    {
-        auto [lb, ub] = instance.compute_bounds_linear(instance.capacity(), 0);
-        best_value = lb;
-        pq.push(Node{ub, 0, instance.capacity(), 0});
-    }
+    
+    auto [root, best_value] = problem.root();
+    pq.push(root);
+    
     while (!pq.empty()) {
         auto node = pq.top();
         sum_sizes += pq.size();
         pq.pop();
+
         if (node.upper_bound <= best_value) {
+            // for best-first, this implies all remaining nodes are also <= best_value
             break;
         }
-        auto [lb, ub] = instance.compute_bounds_linear(node.free_capacity, node.index + 1);
-        if (node.value + lb > best_value) {
-            best_value = node.value + lb;
+        
+        auto [lower, upper] = problem.bounds(node);
+        if (lower > best_value) {
+            best_value = lower;
         }
-        if (node.index + 2 < instance.size()) {
-            if (node.value + ub > best_value) {
-                pq.push({node.value + ub, node.index + 1, node.free_capacity, node.value});
-            }
-            if (node.free_capacity >= instance.weight(node.index)) {
-                node.value += instance.value(node.index);
-                node.free_capacity -= instance.weight(node.index);
-                ++node.index;
-                pq.push(node);
-            }
-        }
+
+        problem.children(node, best_value, kids);
+        for (auto& c : kids) pq.push(std::move(c));
+
         max_size = std::max(max_size, pq.size());
         ++processed_nodes;
     }
+
     auto t_end = std::chrono::steady_clock::now();
+
     std::clog << "Done\n\n";
     std::clog << "= Results =\n";
     std::clog << "Time (s): " << std::fixed << std::setprecision(3)
@@ -167,6 +160,6 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
     std::clog << "= Running benchmark =\n";
-    knapsack(settings);
+    branch_and_bound<KnapsackProblem>(settings);
     return EXIT_SUCCESS;
 }
