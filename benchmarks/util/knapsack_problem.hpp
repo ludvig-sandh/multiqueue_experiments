@@ -40,7 +40,6 @@ public:
 
         if (n.index + 2 >= inst_.size()) return;
 
-        // Must match knapsack_seq semantics: compute relaxation from (free_capacity, index+1)
         auto [lb, ub] = inst_.compute_bounds_linear(n.free_capacity, n.index + 1);
 
         // Exclude item

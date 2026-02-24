@@ -181,8 +181,8 @@ void run_benchmark(RunConfig<Problem> const& cfg) {
         std::cerr << "Error reading instance file: " << e.what() << '\n';
         std::exit(EXIT_FAILURE);
     }
-    std::clog << "Instance has " << instance.size() << " items and " << std::fixed << instance.capacity()
-              << " capacity\n";
+    // std::clog << "Instance has " << instance.size() << " items and " << std::fixed << instance.capacity()
+            //   << " capacity\n";
 
     SharedData<Problem> shared_data{std::move(instance), cfg.num_threads};
     std::vector<Counter> thread_counter(static_cast<std::size_t>(cfg.num_threads));
@@ -219,11 +219,11 @@ void run_benchmark(RunConfig<Problem> const& cfg) {
     std::cout << std::quoted("settings") << ':';
     write_settings_json(cfg, std::cout);
     std::cout << ',';
-    std::cout << std::quoted("instance") << ':';
-    std::cout << '{';
-    std::cout << std::quoted("num_items") << ':' << shared_data.instance.size() << ',';
-    std::cout << std::quoted("capacity") << ':' << std::fixed << shared_data.instance.capacity();
-    std::cout << '}' << ',';
+    // std::cout << std::quoted("instance") << ':';
+    // std::cout << '{';
+    // std::cout << std::quoted("num_items") << ':' << shared_data.instance.size() << ',';
+    // std::cout << std::quoted("capacity") << ':' << std::fixed << shared_data.instance.capacity();
+    // std::cout << '}' << ',';
     std::cout << std::quoted("results") << ':';
     std::cout << '{';
     std::cout << std::quoted("time_ns") << ':' << std::chrono::nanoseconds{end_time - start_time}.count() << ',';
