@@ -1,0 +1,9 @@
+locked_pq 1:        209s    5.14M nodes searched
+seq 1:              170s    5.14M
+mq_stick_swap 1:    213s    6M
+mq_stick_swap 2:    94s     4.52M
+mq_stick_swap 4:    56s     6.03M
+mq_stick_swap 8:    30s     5.36M
+mq_stick_swap 12:   20s     4.85M
+mq_stick_swap 16:   17s     4.52M
+mq_stick_swap 24:   17s     6.44M

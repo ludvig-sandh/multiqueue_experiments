@@ -105,6 +105,8 @@ void process_node(pq_value<Problem> const& item,
     while (b.lower > solution) {
         if (data.solution.compare_exchange_weak(solution, b.lower, std::memory_order_relaxed)) {
             solution = b.lower;
+            std::cout << "new best lower bound found: " << b.lower << "\n";
+            std::cout << "pushed nodes: " << counter.pushed_nodes << ", processed: " << counter.processed_nodes << "\n";
             break;
         }
     }

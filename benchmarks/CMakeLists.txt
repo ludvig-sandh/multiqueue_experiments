@@ -46,12 +46,16 @@ add_library(mdkp_base INTERFACE)
 target_sources(mdkp_base INTERFACE mdkp.cpp)
 target_link_libraries(mdkp_base INTERFACE benchmark_base)
 
+add_library(max_clique_base INTERFACE)
+target_sources(max_clique_base INTERFACE max_clique.cpp)
+target_link_libraries(max_clique_base INTERFACE benchmark_base)
+
 if(EXP_TUNING_TARGETS)
   add_custom_target(tuning_all)
   add_custom_target(tuning_log_all)
 endif()
 
-foreach(benchmark monotonic push_pop dijkstra old_knapsack old_knapsack_float knapsack mdkp)
+foreach(benchmark monotonic push_pop dijkstra old_knapsack old_knapsack_float knapsack mdkp max_clique)
   add_custom_target(${benchmark}_all)
   add_custom_target(${benchmark}_log_all)
   if(EXP_TUNING_TARGETS)
@@ -72,7 +76,7 @@ function(add_benchmark benchmark target)
 endfunction()
 
 foreach(target ${COMPETITORS})
-  foreach(benchmark monotonic push_pop dijkstra old_knapsack knapsack mdkp)
+  foreach(benchmark monotonic push_pop dijkstra old_knapsack knapsack mdkp max_clique)
     add_benchmark(${benchmark} ${target})
     add_dependencies(${benchmark}_all ${benchmark}_${target})
     add_dependencies(${benchmark}_log_all ${benchmark}_log_${target})
@@ -107,3 +111,6 @@ target_compile_definitions(old_knapsack_float_seq PRIVATE FLOAT_INSTANCE)
 
 add_executable(knapsack_seq knapsack_seq.cpp)
 target_link_libraries(knapsack_seq PRIVATE benchmark_base)
+
+add_executable(max_clique_seq max_clique_seq.cpp)
+target_link_libraries(max_clique_seq PRIVATE benchmark_base)
