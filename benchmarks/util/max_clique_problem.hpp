@@ -314,6 +314,7 @@ public:
 
     struct Node {
         data_type upper_bound; // PQ key
+        data_type lower_bound;
         data_type clique_size; // |C|
         Bitset candidates;     // P
     };
@@ -327,14 +328,14 @@ public:
 
     explicit MaxCliqueProblem(instance_type const& inst) : G_(inst) {}
 
-    [[nodiscard]] std::pair<node_type, data_type> root_impl() const noexcept {
+    [[nodiscard]] node_type root_impl() const noexcept {
         Bitset P(G_.size());
         P.set_all();
 
         data_type lb = greedy_completion_lower_bound(G_, P);
         data_type ub = greedy_coloring_upper_bound(G_, P);
 
-        return {node_type{ub, 0u, std::move(P)}, lb};
+        return node_type{ub, lb, 0u, std::move(P)};
     }
 
     [[nodiscard]] Bounds<data_type> bounds_impl(node_type const& n) const noexcept {
@@ -343,9 +344,7 @@ public:
         return {lb, ub};
     }
 
-    void children_impl(node_type const& n, data_type incumbent, std::vector<node_type>& out) const {
-        out.clear();
-
+    void branch_impl(node_type const& n, data_type incumbent, std::vector<node_type>& out) const {
         order_.clear();
         bound_.clear();
         color_sort_with_bounds(G_, n.candidates, order_, bound_);
@@ -364,9 +363,10 @@ public:
             Bitset childP = Bitset::intersection(remaining, G_.neighbors(v));
             data_type child_clique = n.clique_size + 1;
             data_type child_ub = child_clique + greedy_coloring_upper_bound(G_, childP);
+            data_type child_lb = child_clique + greedy_completion_lower_bound(G_, childP);
             if (child_ub <= incumbent) continue;
 
-            out.push_back(node_type{child_ub, child_clique, std::move(childP)});
+            out.push_back(node_type{child_ub, child_lb, child_clique, std::move(childP)});
             remaining.reset(v);
         }
     }
