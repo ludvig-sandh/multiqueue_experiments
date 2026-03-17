@@ -56,9 +56,9 @@ void branch_and_bound(Settings const& settings) noexcept {
 
     Problem problem(instance);
 
-    std::vector<node_type> container, kids;
+    std::vector<node_type> container, children;
     container.reserve(1 << 24);
-    kids.reserve(1 << 20);
+    children.reserve(1 << 20);
     std::priority_queue<node_type, std::vector<node_type>, compare_type> pq({}, std::move(container));
 
     std::clog << "Working...\n";
@@ -81,10 +81,10 @@ void branch_and_bound(Settings const& settings) noexcept {
             break;
         }
 
-        kids.clear();
-        problem.branch(node, incumbent, kids);
+        children.clear();
+        problem.branch(node, incumbent, children);
 
-        for (auto& c : kids) {
+        for (auto& c : children) {
             if (c.lower_bound > incumbent) {
                 incumbent = c.lower_bound;
             }

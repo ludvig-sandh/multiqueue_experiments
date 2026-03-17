@@ -74,14 +74,14 @@ struct SharedData {
 
     instance_type instance;
     Problem problem;  // holds a const ref to instance or pointer
-    std::atomic<data_type> solution{0};
+    std::atomic<data_type> incumbent{0};
     termination_detection::TerminationDetection termination_detection;
     std::atomic_llong missing_nodes{0};
 
     SharedData(instance_type inst, int num_threads)
         : instance(std::move(inst)),
           problem(instance),
-          solution(0),
+          incumbent(0),
           termination_detection(num_threads),
           missing_nodes(0) {}
 };
@@ -91,33 +91,32 @@ void process_node(pq_value<Problem> const& item,
                   typename pq_type<Problem>::handle_type& handle,
                   Counter& counter,
                   SharedData<Problem>& data,
-                  std::vector<typename Problem::node_type>& kids) {
-    auto solution = data.solution.load(std::memory_order_relaxed);
-    auto upper_bound = item.first;
-    if (upper_bound <= solution) {
+                  std::vector<typename Problem::node_type>& children) {
+    auto incumbent = data.incumbent.load(std::memory_order_relaxed);
+    auto const& node = item.second;
+    if (node.upper_bound <= incumbent) {
         ++counter.ignored_nodes;
         return;
     }
 
-    auto const& n = item.second;
-    auto b = data.problem.bounds(n);
+    children.clear();
+    data.problem.branch(node, incumbent, children);
 
-    while (b.lower > solution) {
-        if (data.solution.compare_exchange_weak(solution, b.lower, std::memory_order_relaxed)) {
-            solution = b.lower;
-            std::cout << "new best lower bound found: " << b.lower << "\n";
-            std::cout << "pushed nodes: " << counter.pushed_nodes << ", processed: " << counter.processed_nodes << "\n";
-            break;
+    for (auto& child : children) {
+        while (child.lower_bound > incumbent) {
+            if (data.incumbent.compare_exchange_weak(incumbent, child.lower_bound, std::memory_order_relaxed)) {
+                incumbent = child.lower_bound;
+                std::cout << "new best lower bound found: " << child.lower_bound << "\n";
+                std::cout << "pushed nodes: " << counter.pushed_nodes << ", processed: " << counter.processed_nodes << "\n";
+                break;
+            }
         }
-    }
 
-    // Generate children (Problem filters using incumbent)
-    data.problem.children(n, solution, kids);
-
-    for (auto& child : kids) {
         auto child_ub = child.upper_bound;
-        if (handle.push({child_ub, std::move(child)})) {
-            ++counter.pushed_nodes;
+        if (child_ub > incumbent) {
+            if (handle.push({child_ub, std::move(child)})) {
+                ++counter.pushed_nodes;
+            }
         }
     }
 
@@ -131,15 +130,18 @@ template <class Problem>
     Counter counter;
     auto handle = pq.get_handle();
 
-    std::vector<typename Problem::node_type> kids;
+    std::vector<typename Problem::node_type> children;
 
     if (thread_context.id() == 0) {
-        auto [root, initial_best] = data.problem.root();
-        data.solution.store(initial_best, std::memory_order_relaxed);
+        auto root = data.problem.root();
+        auto initial_best = root.lower_bound;
+        data.incumbent.store(initial_best, std::memory_order_relaxed);
 
-        auto root_ub = data.problem.bounds(root).upper; // or root.upper_bound if you store it
-        handle.push({root_ub, std::move(root)});
-        ++counter.pushed_nodes;
+        auto root_ub = root.upper_bound;
+        if (root_ub > initial_best) {
+            handle.push({root_ub, std::move(root)});
+            ++counter.pushed_nodes;
+        }
     }
 
     thread_context.synchronize();
@@ -150,7 +152,7 @@ template <class Problem>
             item = handle.try_pop();
             return item.has_value();
         })) {
-            process_node<Problem>(*item, handle, counter, data, kids);
+            process_node<Problem>(*item, handle, counter, data, children);
         }
 
         data.missing_nodes.fetch_add(counter.pushed_nodes - counter.processed_nodes - counter.ignored_nodes,
@@ -210,7 +212,7 @@ void run_benchmark(RunConfig<Problem> const& cfg) {
     std::clog << "= Results =\n";
     std::clog << "Time (s): " << std::fixed << std::setprecision(3)
               << std::chrono::duration<double>(end_time - start_time).count() << '\n';
-    std::clog << "Solution: " << shared_data.solution.load() << '\n';
+    std::clog << "Solution: " << shared_data.incumbent.load() << '\n';
     std::clog << "Processed nodes: " << total_counts.processed_nodes << '\n';
     std::clog << "Ignored nodes: " << total_counts.ignored_nodes << '\n';
     if (total_counts.processed_nodes + total_counts.ignored_nodes != total_counts.pushed_nodes) {
@@ -231,7 +233,7 @@ void run_benchmark(RunConfig<Problem> const& cfg) {
     std::cout << std::quoted("time_ns") << ':' << std::chrono::nanoseconds{end_time - start_time}.count() << ',';
     std::cout << std::quoted("processed_nodes") << ':' << total_counts.processed_nodes << ',';
     std::cout << std::quoted("ignored_nodes") << ':' << total_counts.ignored_nodes << ',';
-    std::cout << std::quoted("solution") << ':' << shared_data.solution.load();
+    std::cout << std::quoted("solution") << ':' << shared_data.incumbent.load();
     std::cout << '}';
     std::cout << '}' << '\n';
 }
