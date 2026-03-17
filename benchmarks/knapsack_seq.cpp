@@ -64,26 +64,34 @@ void branch_and_bound(Settings const& settings) noexcept {
     std::clog << "Working...\n";
     auto t_start = std::chrono::steady_clock::now();
     
-    auto [root, best_value] = problem.root();
-    pq.push(root);
+    auto root = problem.root();
+    auto incumbent = root.lower_bound;
+
+    if (root.upper_bound > incumbent) {
+        pq.push(root);
+    }
     
     while (!pq.empty()) {
         auto node = pq.top();
         sum_sizes += pq.size();
         pq.pop();
 
-        if (node.upper_bound <= best_value) {
-            // for best-first, this implies all remaining nodes are also <= best_value
+        if (node.upper_bound <= incumbent) {
+            // for best-first, this implies all remaining nodes are also <= incumbent, so safe to break
             break;
         }
-        
-        auto [lower, upper] = problem.bounds(node);
-        if (lower > best_value) {
-            best_value = lower;
-        }
 
-        problem.children(node, best_value, kids);
-        for (auto& c : kids) pq.push(std::move(c));
+        kids.clear();
+        problem.branch(node, incumbent, kids);
+
+        for (auto& c : kids) {
+            if (c.lower_bound > incumbent) {
+                incumbent = c.lower_bound;
+            }
+            if (c.upper_bound > incumbent) {
+                pq.push(std::move(c));
+            }
+        }
 
         max_size = std::max(max_size, pq.size());
         ++processed_nodes;
@@ -95,7 +103,7 @@ void branch_and_bound(Settings const& settings) noexcept {
     std::clog << "= Results =\n";
     std::clog << "Time (s): " << std::fixed << std::setprecision(3)
               << std::chrono::duration<double>(t_end - t_start).count() << '\n';
-    std::clog << "Solution: " << best_value << '\n';
+    std::clog << "Solution: " << incumbent << '\n';
     std::clog << "Processed nodes: " << processed_nodes << '\n';
     std::clog << "Average PQ size: " << static_cast<double>(sum_sizes) / static_cast<double>(processed_nodes) << '\n';
     std::clog << "Max PQ size: " << max_size << '\n';
@@ -113,7 +121,7 @@ void branch_and_bound(Settings const& settings) noexcept {
     std::cout << '{';
     std::cout << std::quoted("time_ns") << ':' << std::chrono::nanoseconds{t_end - t_start}.count() << ',';
     std::cout << std::quoted("processed_nodes") << ':' << processed_nodes << ',';
-    std::cout << std::quoted("solution") << ':' << best_value << ',';
+    std::cout << std::quoted("solution") << ':' << incumbent << ',';
     std::cout << std::quoted("average_pq_size") << ':'
               << static_cast<double>(sum_sizes) / static_cast<double>(processed_nodes) << ',';
     std::cout << std::quoted("max_pq_size") << ':' << max_size;

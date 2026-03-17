@@ -10,6 +10,7 @@ public:
 
     struct Node {
         data_type upper_bound;
+        data_type lower_bound;
         std::size_t index;
         data_type free_capacity;
         data_type value;
@@ -25,9 +26,9 @@ public:
 
     explicit KnapsackProblem(instance_type const& inst) : inst_(inst) {}
 
-    [[nodiscard]] std::pair<node_type, data_type> root_impl() const noexcept {
+    [[nodiscard]] node_type root_impl() const noexcept {
         auto [lb, ub] = inst_.compute_bounds_linear(inst_.capacity(), 0);
-        return {node_type{ub, 0, inst_.capacity(), 0}, lb};
+        return {ub, lb, 0, inst_.capacity(), 0};
     }
 
     [[nodiscard]] Bounds<data_type> bounds_impl(node_type const& n) const noexcept {
@@ -35,28 +36,27 @@ public:
         return {n.value + lb, n.value + ub};
     }
 
-    void children_impl(node_type const& n, data_type incumbent, std::vector<node_type>& out) const {
-        out.clear();
+    void branch_impl(node_type const& node, data_type incumbent, std::vector<node_type>& out) const {
+        (void)incumbent;
+        
+        if (node.index + 2 >= inst_.size()) return;
 
-        if (n.index + 2 >= inst_.size()) return;
-
-        auto [lb, ub] = inst_.compute_bounds_linear(n.free_capacity, n.index + 1);
+        auto [lb, ub] = inst_.compute_bounds_linear(node.free_capacity, node.index + 1);
 
         // Exclude item
         {
-            node_type child{n.value + ub, n.index + 1, n.free_capacity, n.value};
-            if (child.upper_bound > incumbent) out.push_back(std::move(child));
+            node_type child{node.value + ub, node.value + lb, node.index + 1, node.free_capacity, node.value};
+            out.push_back(std::move(child));
         }
 
         // Include item
-        if (n.free_capacity >= inst_.weight(n.index)) {
-            node_type child = n;
-            child.value = n.value + inst_.value(n.index);
-            child.free_capacity = n.free_capacity - inst_.weight(n.index);
-            child.index = n.index + 1;
-            child.upper_bound = n.upper_bound;
-
-            if (child.upper_bound > incumbent) out.push_back(std::move(child));
+        if (node.free_capacity >= inst_.weight(node.index)) {
+            node_type child = node;
+            child.value = node.value + inst_.value(node.index);
+            child.free_capacity = node.free_capacity - inst_.weight(node.index);
+            child.index = node.index + 1;
+            
+            out.push_back(std::move(child));
         }
     }
 

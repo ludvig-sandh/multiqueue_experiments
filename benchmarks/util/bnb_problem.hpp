@@ -40,10 +40,10 @@ public:
         return derived().bounds_impl(n);
     }
 
-    // Generate children (can filter using incumbent)
+    // Generate children
     template <class Node, class Value>
-    void children(Node const& n, Value incumbent, std::vector<Node>& out) const {
-        derived().children_impl(n, incumbent, out);
+    void branch(Node const& node, Value incumbent, std::vector<Node>& out) const {
+        derived().branch_impl(node, incumbent, out);
     }
 
 private:
