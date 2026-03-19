@@ -21,7 +21,7 @@ This configures the project using the `default` preset and generates the build s
 To compile a particular benchmark (for example, the MultiQueue MDKP benchmark `mdkp_mq_random`), run:
 
 ```bash
-cmake --build build --target mdkp_mq_random -j
+cmake --build build --target knapsack_mq_stick_swap -j
 ```
 ---
 
@@ -36,7 +36,7 @@ build/benchmarks/
 Run with
 
 ```bash
-./build/benchmarks/mdkp_mq_random --instance data/kplib/04AlmostStronglyCorrelated/n00500/R01000/s069.kp
+./build/benchmarks/knapsack_mq_stick_swap --instance data/kplib/04AlmostStronglyCorrelated/n00500/R01000/s069.kp
 ```
 
 ---
