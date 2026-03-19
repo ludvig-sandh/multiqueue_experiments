@@ -1,6 +1,5 @@
-#include "util/bnb_problem.hpp"
 #include "util/build_info.hpp"
-#include "util/max_clique_problem.hpp"
+#include "util/problems/max_clique_problem.hpp"
 
 #include "cxxopts.hpp"
 
@@ -42,13 +41,8 @@ void write_settings_json(Settings const& settings, std::ostream& out) {
 
 template <class Problem>
 void branch_and_bound(Settings const& settings) noexcept {
-    using data_type = typename Problem::data_type;
     using node_type = typename Problem::node_type;
     using instance_type = typename Problem::instance_type;
-    using pq_item = std::pair<data_type, node_type>;
-    struct PQCompare {
-        bool operator()(pq_item const& a, pq_item const& b) const noexcept { return a.first < b.first; }
-    };
 
     long long processed_nodes{0};
     std::size_t sum_sizes{0};
@@ -67,23 +61,21 @@ void branch_and_bound(Settings const& settings) noexcept {
 
     std::vector<node_type> kids;
     kids.reserve(1 << 20);
-    std::queue<pq_item> q;
+    std::stack<node_type> q;
 
     std::clog << "Working...\n";
     auto t_start = std::chrono::steady_clock::now();
     
-    auto [root, best_value] = problem.root();
+    auto root = problem.root();
+    auto best_value = root.lower_bound;
     std::cout << best_value << "\n";
-    auto root_ub = problem.bounds(root).upper;
-    q.push({root_ub, std::move(root)});
+    q.push(std::move(root));
     auto t_temp = std::chrono::steady_clock::now();
     
     while (!q.empty()) {
-        auto item = std::move(q.front());
+        auto node = q.top();
         sum_sizes += q.size();
         q.pop();
-        auto node_ub = item.first;
-        auto node = std::move(item.second);
 
         if (processed_nodes % 100 == 0) {
             auto t_now = std::chrono::steady_clock::now();
@@ -94,22 +86,23 @@ void branch_and_bound(Settings const& settings) noexcept {
             }
         }
 
-        auto [lower, upper] = problem.bounds(node);
-        if (node_ub <= best_value) {
-            continue;
-        }
-        if (upper <= best_value) {
+        // Stack size grows past memory limits, because this is NOT the same thing as a recursive DFS function
+        // std::cout << "Stack size: " << q.size() << "\n";
+
+        if (node.upper_bound <= best_value) {
             continue;
         }
 
-        if (lower > best_value) {
-            std::cout << "new best lower bound found: " << lower << "\n";
-            best_value = lower;
-        }
-
-        problem.children(node, best_value, kids);
+        problem.branch(node, best_value, kids);
+        std::reverse(kids.begin(), kids.end());
         for (auto& c : kids) {
-            q.push({c.upper_bound, std::move(c)});
+            if (c.lower_bound > best_value) {
+                best_value = c.lower_bound;
+                std::cout << "new best lower bound found: " << c.lower_bound << "\n";
+            }
+            if (c.upper_bound > best_value) {
+                q.push(std::move(c));
+            }
         }
 
         max_size = std::max(max_size, q.size());
