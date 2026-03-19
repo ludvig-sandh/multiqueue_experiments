@@ -358,9 +358,9 @@ public:
             data_type child_clique = n.clique_size + 1;
             data_type child_ub = child_clique + greedy_coloring_upper_bound(G_, childP);
             data_type child_lb = child_clique + greedy_completion_lower_bound(G_, childP);
-            if (child_ub <= incumbent) continue;
 
             out.push_back(node_type{child_ub, child_lb, child_clique, std::move(childP)});
+
             remaining.reset(v);
         }
     }
