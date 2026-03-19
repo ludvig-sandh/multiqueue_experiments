@@ -114,3 +114,6 @@ target_link_libraries(knapsack_seq PRIVATE benchmark_base)
 
 add_executable(max_clique_seq max_clique_seq.cpp)
 target_link_libraries(max_clique_seq PRIVATE benchmark_base)
+
+add_executable(max_clique_seq_dfs max_clique_seq_dfs.cpp)
+target_link_libraries(max_clique_seq_dfs PRIVATE benchmark_base)
