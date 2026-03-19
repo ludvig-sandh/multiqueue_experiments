@@ -338,12 +338,6 @@ public:
         return node_type{ub, lb, 0u, std::move(P)};
     }
 
-    [[nodiscard]] Bounds<data_type> bounds_impl(node_type const& n) const noexcept {
-        data_type ub = n.clique_size + greedy_coloring_upper_bound(G_, n.candidates);
-        data_type lb = n.clique_size + greedy_completion_lower_bound(G_, n.candidates);
-        return {lb, ub};
-    }
-
     void branch_impl(node_type const& n, data_type incumbent, std::vector<node_type>& out) const {
         order_.clear();
         bound_.clear();
@@ -372,6 +366,12 @@ public:
     }
 
 private:
+    [[nodiscard]] Bounds<data_type> bounds_impl(node_type const& n) const noexcept {
+        data_type ub = n.clique_size + greedy_coloring_upper_bound(G_, n.candidates);
+        data_type lb = n.clique_size + greedy_completion_lower_bound(G_, n.candidates);
+        return {lb, ub};
+    }
+
     instance_type const& G_;
     inline static thread_local std::vector<unsigned> order_{};
     inline static thread_local std::vector<unsigned> bound_{};

@@ -29,15 +29,9 @@ template <class Derived>
 class BnBProblem {
 public:
 
-    // Root node + initial incumbent
+    // Get the root node
     [[nodiscard]] auto root() const noexcept {
         return derived().root_impl();
-    }
-
-    // Node bounds (must be valid for pruning)
-    template <class Node>
-    [[nodiscard]] auto bounds(Node const& n) const noexcept {
-        return derived().bounds_impl(n);
     }
 
     // Generate children
@@ -47,6 +41,12 @@ public:
     }
 
 private:
+    // Node bounds (must be valid for pruning)
+    template <class Node>
+    [[nodiscard]] auto bounds(Node const& n) const noexcept {
+        return derived().bounds_impl(n);
+    }
+
     Derived const& derived() const noexcept {
         return static_cast<Derived const&>(*this);
     }

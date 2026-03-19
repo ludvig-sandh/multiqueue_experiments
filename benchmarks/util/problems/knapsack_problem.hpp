@@ -31,11 +31,6 @@ public:
         return {ub, lb, 0, inst_.capacity(), 0};
     }
 
-    [[nodiscard]] Bounds<data_type> bounds_impl(node_type const& n) const noexcept {
-        auto [lb, ub] = inst_.compute_bounds_linear(n.free_capacity, n.index + 1);
-        return {n.value + lb, n.value + ub};
-    }
-
     void branch_impl(node_type const& node, data_type incumbent, std::vector<node_type>& out) const {
         (void)incumbent;
         
@@ -61,5 +56,10 @@ public:
     }
 
 private:
+    [[nodiscard]] Bounds<data_type> bounds_impl(node_type const& n) const noexcept {
+        auto [lb, ub] = inst_.compute_bounds_linear(n.free_capacity, n.index + 1);
+        return {n.value + lb, n.value + ub};
+    }
+
     instance_type const& inst_;
 };
