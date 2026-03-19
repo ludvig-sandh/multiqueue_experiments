@@ -1,4 +1,4 @@
-#include "util/bnb_problem.hpp"
+#include "util/problems/bnb_problem.hpp"
 #include "util/build_info.hpp"
 
 #include "cxxopts.hpp"
