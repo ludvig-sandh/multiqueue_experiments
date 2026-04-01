@@ -12,11 +12,10 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <queue>
+#include <stack>
 #include <chrono>
 #include <iomanip>
 #include <iostream>
-#include <queue>
 
 
 struct Settings {
@@ -70,29 +69,17 @@ void branch_and_bound(Settings const& settings) noexcept {
     auto best_value = root.lower_bound;
     std::cout << best_value << "\n";
     q.push(std::move(root));
-    auto t_temp = std::chrono::steady_clock::now();
     
     while (!q.empty()) {
         auto node = q.top();
         sum_sizes += q.size();
         q.pop();
 
-        if (processed_nodes % 100 == 0) {
-            auto t_now = std::chrono::steady_clock::now();
-            auto diff = std::chrono::duration<double>(t_now - t_temp).count();
-            if (diff >= 1) {
-                t_temp = t_now;
-                std::cout << "Processed nodes: " << processed_nodes << "\n";
-            }
-        }
-
-        // Stack size grows past memory limits, because this is NOT the same thing as a recursive DFS function
-        // std::cout << "Stack size: " << q.size() << "\n";
-
         if (node.upper_bound <= best_value) {
             continue;
         }
 
+        kids.clear();
         problem.branch(node, best_value, kids);
         std::reverse(kids.begin(), kids.end());
         for (auto& c : kids) {
