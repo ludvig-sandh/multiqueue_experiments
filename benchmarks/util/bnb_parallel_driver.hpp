@@ -96,6 +96,7 @@ void process_node(pq_value<Problem> const& item,
                   Counter& counter,
                   SharedData<Problem>& data,
                   std::vector<typename Problem::node_type>& batch,
+                  std::vector<typename Problem::node_type>& children,
                   std::size_t batch_size) {
     auto incumbent = data.incumbent.load(std::memory_order_relaxed);
     auto const& first_node = item.second;
@@ -108,7 +109,6 @@ void process_node(pq_value<Problem> const& item,
     // Stop when <batch size> nodes have been processed.
     batch.clear();
     batch.push_back(first_node);
-    typename std::remove_reference<decltype(batch)>::type children;
     for (size_t i{0}; i < batch_size; ++i) {
         if (batch.empty()) {
             break;
@@ -163,6 +163,7 @@ template <class Problem>
     Counter counter;
     auto handle = pq.get_handle();
 
+    std::vector<typename Problem::node_type> batch;
     std::vector<typename Problem::node_type> children;
 
     if (thread_context.id() == 0) {
@@ -185,7 +186,7 @@ template <class Problem>
             item = handle.try_pop();
             return item.has_value();
         })) {
-            process_node<Problem>(*item, handle, counter, data, children, batch_size);
+            process_node<Problem>(*item, handle, counter, data, batch, children, batch_size);
         }
 
         data.missing_nodes.fetch_add(counter.pushed_nodes - counter.processed_nodes - counter.ignored_nodes,
