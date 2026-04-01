@@ -1,5 +1,13 @@
 This repository contains experiments to compare the [multiqueue](https://github.com/marvinwilliams/multiqueue) to other state-of-the-art (relaxed) concurrent priority queues.
 
+## Importing datasets
+The DIMACS maximum clique dataset must be imported via the following command
+```bash
+wget http://iridia.ulb.ac.be/~fmascia/files/DIMACS_all_ascii.tar.bz2
+tar -xvf DIMACS_all_ascii.tar.bz2
+rm DIMACS_all_ascii.tar.bz2
+```
+
 ## Building the Project
 
 This project uses **CMake presets** for configuration. The steps below describe how to configure the build and compile a specific benchmark target.
