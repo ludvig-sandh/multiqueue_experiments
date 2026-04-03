@@ -111,7 +111,6 @@ void branch_and_bound(Settings const& settings) noexcept {
     std::cout << std::quoted("settings") << ':';
     write_settings_json(settings, std::cout);
     std::cout << ',';
-    std::cout << std::quoted("instance") << ':';
     std::cout << std::quoted("results") << ':';
     std::cout << '{';
     std::cout << std::quoted("time_ns") << ':' << std::chrono::nanoseconds{t_end - t_start}.count() << ',';

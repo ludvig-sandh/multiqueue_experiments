@@ -128,8 +128,8 @@ void process_node(pq_value<Problem> const& item,
             while (child.lower_bound > incumbent) {
                 if (data.incumbent.compare_exchange_weak(incumbent, child.lower_bound, std::memory_order_relaxed)) {
                     incumbent = child.lower_bound;
-                    std::cout << "new best lower bound found: " << child.lower_bound << "\n";
-                    std::cout << "pushed nodes: " << counter.pushed_nodes << ", processed: " << counter.processed_nodes << "\n";
+                    // std::cout << "new best lower bound found: " << child.lower_bound << "\n";
+                    // std::cout << "pushed nodes: " << counter.pushed_nodes << ", processed: " << counter.processed_nodes << "\n";
                     break;
                 }
             }
@@ -258,11 +258,6 @@ void run_benchmark(RunConfig<Problem> const& cfg) {
     std::cout << std::quoted("settings") << ':';
     write_settings_json(cfg, std::cout);
     std::cout << ',';
-    // std::cout << std::quoted("instance") << ':';
-    // std::cout << '{';
-    // std::cout << std::quoted("num_items") << ':' << shared_data.instance.size() << ',';
-    // std::cout << std::quoted("capacity") << ':' << std::fixed << shared_data.instance.capacity();
-    // std::cout << '}' << ',';
     std::cout << std::quoted("results") << ':';
     std::cout << '{';
     std::cout << std::quoted("time_ns") << ':' << std::chrono::nanoseconds{end_time - start_time}.count() << ',';
