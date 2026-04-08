@@ -5,6 +5,8 @@ project(
   VERSION 3.0
   LANGUAGES CXX C)
 
+add_compile_options(-include cstdint)
+
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(utils)
 include(CMakeDependentOption)
