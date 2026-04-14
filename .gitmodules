@@ -11,3 +11,6 @@
 	path = multiqueue
 	url = https://github.com/marvinwilliams/multiqueue
 	branch = devel
+[submodule "third_party/multififo"]
+	path = third_party/multififo
+	url = https://github.com/ludvig-sandh/MultiLIFO
