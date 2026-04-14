@@ -189,6 +189,17 @@ add_library(mq_pq INTERFACE)
 target_link_libraries(mq_pq INTERFACE multiqueue::multiqueue)
 target_compile_definitions(mq_pq INTERFACE PQ_MQ_PQ)
 
+add_library(multilifo_support STATIC
+            ${CMAKE_SOURCE_DIR}/third_party/multififo/relaxed_concurrent_fifo/contenders/multififo/timestamp.cpp)
+target_include_directories(
+  multilifo_support PUBLIC ${CMAKE_SOURCE_DIR}/third_party
+                           ${CMAKE_SOURCE_DIR}/third_party/multififo/relaxed_concurrent_fifo/contenders/multififo)
+
+add_library(multilifo INTERFACE)
+set_property(TARGET multilifo PROPERTY pq_name multilifo)
+target_link_libraries(multilifo INTERFACE multilifo_support)
+target_compile_definitions(multilifo INTERFACE PQ_MULTILIFO)
+
 set(COMPETITORS
     ${MQ_VARIANTS}
     klsm4
@@ -202,6 +213,7 @@ set(COMPETITORS
     tbb_pq
     locked_pq
     mq_pq
+    multilifo
     PARENT_SCOPE)
 
 set(GENERIC_COMPETITORS
@@ -214,4 +226,5 @@ set(GENERIC_COMPETITORS
     tbb_pq
     locked_pq
     mq_pq
+    multilifo
     PARENT_SCOPE)
