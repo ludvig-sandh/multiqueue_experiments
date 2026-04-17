@@ -39,6 +39,9 @@
 #elif defined PQ_MQ_PQ
 #include "wrapper/mq_pq.hpp"
 #define PQ wrapper::mq_pq::MultiQueuePQ
+#elif defined PQ_MULTILIFO
+#include "wrapper/multilifo.hpp"
+#define PQ wrapper::multilifo::MultiLifo
 #else
 #error No valid PQ specified
 #endif
