@@ -10,7 +10,7 @@ target_include_directories(benchmark_base SYSTEM
 target_compile_definitions(benchmark_base
                            INTERFACE L1_CACHE_LINE_SIZE=${L1_CACHE_LINE_SIZE})
 target_compile_definitions(benchmark_base INTERFACE PAGE_SIZE=${PAGE_SIZE})
-target_compile_features(benchmark_base INTERFACE cxx_std_17)
+target_compile_features(benchmark_base INTERFACE cxx_std_20)
 target_link_libraries(benchmark_base INTERFACE threading)
 if(PAPI_FOUND)
   target_link_libraries(benchmark_base INTERFACE PAPI::PAPI)
@@ -117,6 +117,9 @@ target_link_libraries(max_clique_seq PRIVATE benchmark_base)
 
 add_executable(max_clique_seq_dfs max_clique_seq_dfs.cpp)
 target_link_libraries(max_clique_seq_dfs PRIVATE benchmark_base)
+
+add_executable(max_clique_work_stealing max_clique_work_stealing.cpp)
+target_link_libraries(max_clique_work_stealing PRIVATE benchmark_base)
 
 add_executable(mdkp_seq mdkp_seq.cpp)
 target_link_libraries(mdkp_seq PRIVATE benchmark_base)
