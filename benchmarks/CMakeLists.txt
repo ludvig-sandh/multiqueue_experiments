@@ -10,12 +10,50 @@ target_include_directories(benchmark_base SYSTEM
 target_compile_definitions(benchmark_base
                            INTERFACE L1_CACHE_LINE_SIZE=${L1_CACHE_LINE_SIZE})
 target_compile_definitions(benchmark_base INTERFACE PAGE_SIZE=${PAGE_SIZE})
-target_compile_features(benchmark_base INTERFACE cxx_std_17)
+target_compile_features(benchmark_base INTERFACE cxx_std_20)
 target_link_libraries(benchmark_base INTERFACE threading)
 if(PAPI_FOUND)
   target_link_libraries(benchmark_base INTERFACE PAPI::PAPI)
   target_compile_definitions(benchmark_base INTERFACE WITH_PAPI)
 endif()
+
+### PMC library
+find_package(OpenMP REQUIRED)
+
+add_library(pmc_core OBJECT
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs/pmc_utils.cpp
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs/pmc_graph.cpp
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs/pmc_clique_utils.cpp
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs/pmc_heu.cpp
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs/pmc_maxclique.cpp
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs/pmcx_maxclique.cpp
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs/pmcx_maxclique_basic.cpp
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs/pmc_cores.cpp
+)
+
+target_include_directories(pmc_core PUBLIC
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs
+)
+
+# GCC LTO fails to resolve PMC's internal cross-object references from the
+# archive in clean builds, so keep this third-party integration out of IPO.
+set_target_properties(pmc_core PROPERTIES INTERPROCEDURAL_OPTIMIZATION FALSE)
+target_compile_features(pmc_core PUBLIC cxx_std_17)
+target_link_libraries(pmc_core PUBLIC OpenMP::OpenMP_CXX)
+
+add_library(pmc STATIC
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs/pmc_lib.cpp
+  $<TARGET_OBJECTS:pmc_core>
+)
+
+target_include_directories(pmc PUBLIC
+  ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs
+)
+
+set_target_properties(pmc PROPERTIES INTERPROCEDURAL_OPTIMIZATION FALSE)
+target_compile_features(pmc PUBLIC cxx_std_17)
+target_link_libraries(pmc PUBLIC OpenMP::OpenMP_CXX)
+###
 
 add_library(monotonic_base INTERFACE)
 target_sources(monotonic_base INTERFACE monotonic.cpp)
@@ -117,6 +155,16 @@ target_link_libraries(max_clique_seq PRIVATE benchmark_base)
 
 add_executable(max_clique_seq_dfs max_clique_seq_dfs.cpp)
 target_link_libraries(max_clique_seq_dfs PRIVATE benchmark_base)
+
+add_executable(max_clique_work_stealing max_clique_work_stealing.cpp)
+target_link_libraries(max_clique_work_stealing PRIVATE benchmark_base)
+
+add_executable(max_clique_pmc max_clique_pmc.cpp)
+set_target_properties(max_clique_pmc PROPERTIES INTERPROCEDURAL_OPTIMIZATION FALSE)
+target_link_libraries(max_clique_pmc PRIVATE pmc benchmark_base)
+
+add_executable(knapsack_seq_dfs knapsack_seq_dfs.cpp)
+target_link_libraries(knapsack_seq_dfs PRIVATE benchmark_base)
 
 add_executable(mdkp_seq mdkp_seq.cpp)
 target_link_libraries(mdkp_seq PRIVATE benchmark_base)
