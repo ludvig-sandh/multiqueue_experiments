@@ -14,3 +14,6 @@
 [submodule "third_party/multififo"]
 	path = third_party/multififo
 	url = https://github.com/ludvig-sandh/MultiLIFO
+[submodule "third_party/pmc-dimacs"]
+	path = third_party/pmc-dimacs
+	url = https://github.com/ludvig-sandh/pmc-dimacs
