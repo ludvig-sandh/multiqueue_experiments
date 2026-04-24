@@ -40,8 +40,9 @@ def build_heatmap_data(rows: list[dict]):
 
     thread_values = sorted({row["threads"] for row in rows})
 
-    def row_key(row: dict) -> tuple[str, int | None, int | None]:
+    def row_key(row: dict) -> tuple[str, str, int | None, int | None]:
         return (
+            row["name"],
             row["pq_type"],
             row["batch"],
             row["stickiness"],
@@ -49,18 +50,13 @@ def build_heatmap_data(rows: list[dict]):
 
     unique_row_keys = sorted({row_key(row) for row in rows})
 
-    def format_row_label(key: tuple[str, int | None, int | None]) -> str:
-        pq_type, batch, stickiness = key
-        parts = [pq_type]
-        if batch is not None:
-            parts.append(f"b={batch}")
-        if stickiness is not None:
-            parts.append(f"k={stickiness}")
-        return "  ".join(parts)
+    def format_row_label(key: tuple[str, str, int | None, int | None]) -> str:
+        name, _pq_type, _batch, _stickiness = key
+        return name
 
     row_labels = [format_row_label(key) for key in unique_row_keys]
 
-    grid: dict[tuple[str, int | None, int | None], dict[int, float | None]] = defaultdict(dict)
+    grid: dict[tuple[str, str, int | None, int | None], dict[int, float | None]] = defaultdict(dict)
     for row in rows:
         key = row_key(row)
         threads = row["threads"]

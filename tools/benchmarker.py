@@ -12,6 +12,7 @@ NUM_REPETITIONS = 1
 CSV_FIELDNAMES = [
     "problem",
     "pq_type",
+    "name",
     "instance",
     "threads",
     "batch",
@@ -23,6 +24,7 @@ CSV_FIELDNAMES = [
 class Params:
     problem: str | None = None
     pq_type: str | None = None
+    name: str | None = None
     instance: str | None = None
     threads: int | None = None
     batch: int | None = None
@@ -56,13 +58,13 @@ params_fallback = Params(
 )
 
 params_x = [
-    Params(pq_type="pmc"),
-    Params(pq_type="seq_pq", threads=1, batch=1),
-    Params(pq_type="locked_pq", batch=1),
-    Params(pq_type="seq_stack", threads=1, batch=1),
-    Params(pq_type="mq_stick_swap", batch=16),
-    Params(pq_type="multilifo"),
-    Params(pq_type="work_stealing")
+    Params(pq_type="pmc", name="PMC library"),
+    Params(pq_type="seq_pq", name="Sequential PQ", threads=1),
+    Params(pq_type="locked_pq", name="Globally locked PQ"),
+    Params(pq_type="seq_stack", name="Sequential stack", threads=1),
+    Params(pq_type="mq_stick_swap", name="MultiQueue (stick swap, batch=16)", batch=16),
+    Params(pq_type="multilifo", name="MultiLIFO"),
+    Params(pq_type="work_stealing", name="Simple work stealing")
 ]
 
 params_y = [
@@ -94,6 +96,9 @@ def generate_all_benchmarks(params_x, params_y, params_fallback) -> List[Params]
                     else val_y if val_y is not None
                     else val_fallback
                 )
+
+            if combined["name"] is None:
+                combined["name"] = combined["pq_type"]
 
             params.append(Params(**combined))
     
