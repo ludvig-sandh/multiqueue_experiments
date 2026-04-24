@@ -147,14 +147,14 @@ add_executable(old_knapsack_float_seq old_knapsack_seq.cpp)
 target_link_libraries(old_knapsack_float_seq PRIVATE benchmark_base)
 target_compile_definitions(old_knapsack_float_seq PRIVATE FLOAT_INSTANCE)
 
-add_executable(knapsack_seq knapsack_seq.cpp)
-target_link_libraries(knapsack_seq PRIVATE benchmark_base)
+add_executable(knapsack_seq_pq knapsack_seq_pq.cpp)
+target_link_libraries(knapsack_seq_pq PRIVATE benchmark_base)
 
-add_executable(max_clique_seq max_clique_seq.cpp)
-target_link_libraries(max_clique_seq PRIVATE benchmark_base)
+add_executable(max_clique_seq_pq max_clique_seq_pq.cpp)
+target_link_libraries(max_clique_seq_pq PRIVATE benchmark_base)
 
-add_executable(max_clique_seq_dfs max_clique_seq_dfs.cpp)
-target_link_libraries(max_clique_seq_dfs PRIVATE benchmark_base)
+add_executable(max_clique_seq_stack max_clique_seq_stack.cpp)
+target_link_libraries(max_clique_seq_stack PRIVATE benchmark_base)
 
 add_executable(max_clique_work_stealing max_clique_work_stealing.cpp)
 target_link_libraries(max_clique_work_stealing PRIVATE benchmark_base)
@@ -163,8 +163,8 @@ add_executable(max_clique_pmc max_clique_pmc.cpp)
 set_target_properties(max_clique_pmc PROPERTIES INTERPROCEDURAL_OPTIMIZATION FALSE)
 target_link_libraries(max_clique_pmc PRIVATE pmc benchmark_base)
 
-add_executable(knapsack_seq_dfs knapsack_seq_dfs.cpp)
-target_link_libraries(knapsack_seq_dfs PRIVATE benchmark_base)
+add_executable(knapsack_seq_stack knapsack_seq_stack.cpp)
+target_link_libraries(knapsack_seq_stack PRIVATE benchmark_base)
 
-add_executable(mdkp_seq mdkp_seq.cpp)
-target_link_libraries(mdkp_seq PRIVATE benchmark_base)
+add_executable(mdkp_seq_pq mdkp_seq_pq.cpp)
+target_link_libraries(mdkp_seq_pq PRIVATE benchmark_base)

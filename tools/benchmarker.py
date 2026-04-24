@@ -57,9 +57,9 @@ params_fallback = Params(
 
 params_x = [
     Params(pq_type="pmc"),
-    Params(pq_type="seq", threads=1, batch=1),
+    Params(pq_type="seq_pq", threads=1, batch=1),
     Params(pq_type="locked_pq", batch=1),
-    Params(pq_type="seq_dfs", threads=1, batch=1),
+    Params(pq_type="seq_stack", threads=1, batch=1),
     Params(pq_type="mq_stick_swap", batch=16),
     Params(pq_type="multilifo"),
     Params(pq_type="work_stealing"),

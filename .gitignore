@@ -3,3 +3,7 @@
 /data/DIMACS_all_ascii
 pyvenv.cfg
 .venv
+/tools/__pycache__*
+benchmark_results.csv
+info.txt
+.codex
