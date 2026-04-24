@@ -49,7 +49,7 @@ class BenchmarkResult:
 ### Specify benchmark parameters here ###
 params_fallback = Params(
     problem="max_clique",
-    instance="data/DIMACS_all_ascii/brock400_4.clq",
+    instance="data/DIMACS_all_ascii/brock200_1.clq",
     threads=1,
     batch=1,
     stickiness=16
@@ -62,8 +62,7 @@ params_x = [
     Params(pq_type="seq_stack", threads=1, batch=1),
     Params(pq_type="mq_stick_swap", batch=16),
     Params(pq_type="multilifo"),
-    Params(pq_type="work_stealing"),
-    Params(pq_type="work_stealing", batch=16)
+    Params(pq_type="work_stealing")
 ]
 
 params_y = [
@@ -197,17 +196,18 @@ def instance_name(path: str | None) -> str | None:
         return None
     return Path(path).stem
 
+def reset_csv(csv_path: Path) -> None:
+    with csv_path.open("w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=CSV_FIELDNAMES)
+        writer.writeheader()
+
 def append_result_to_csv(csv_path: Path, result: BenchmarkResult) -> None:
     row = asdict(result.params)
     row["instance"] = instance_name(row["instance"])
     row["time_s"] = result.time_s if result.time_s is not None else ""
 
-    file_exists = csv_path.exists()
-
     with csv_path.open("a", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=CSV_FIELDNAMES)
-        if not file_exists:
-            writer.writeheader()
         writer.writerow(row)
 
 
@@ -220,6 +220,7 @@ def main():
     print(f"Writing results to {csv_path}")
 
     configure_build()
+    reset_csv(csv_path)
 
     built_targets: set[str] = set()
     results: list[BenchmarkResult] = []
