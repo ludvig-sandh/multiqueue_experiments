@@ -7,6 +7,18 @@ from dataclasses import asdict, dataclass, fields
 from pathlib import Path
 from typing import List
 
+TIMEOUT = 180  # Seconds allowed per benchmark
+NUM_REPETITIONS = 1
+CSV_FIELDNAMES = [
+    "problem",
+    "pq_type",
+    "instance",
+    "threads",
+    "batch",
+    "stickiness",
+    "time_s",
+]
+
 @dataclass(frozen=True)
 class Params:
     problem: str | None = None
@@ -32,28 +44,26 @@ class BenchmarkResult:
     params: Params
     target: str
     command: list[str]
-    time_s: float
+    time_s: float | None
 
 ### Specify benchmark parameters here ###
 params_fallback = Params(
     problem="max_clique",
-    instance="data/DIMACS_all_ascii/brock200_1.clq",
+    instance="data/DIMACS_all_ascii/brock400_4.clq",
     threads=1,
     batch=1,
     stickiness=16
 )
 
 params_x = [
+    Params(pq_type="pmc"),
     Params(pq_type="seq", threads=1, batch=1),
-    Params(pq_type="seq_dfs", threads=1, batch=1),
     Params(pq_type="locked_pq", batch=1),
-    Params(pq_type="mq_random", batch=1),
-    Params(pq_type="mq_stick_swap", batch=1),
+    Params(pq_type="seq_dfs", threads=1, batch=1),
     Params(pq_type="mq_stick_swap", batch=16),
-    Params(pq_type="mq_stick_swap", batch=128),
-    Params(pq_type="mq_stick_swap", batch=16, stickiness=4),
-    Params(pq_type="mq_stick_swap", batch=16, stickiness=16),
-    Params(pq_type="mq_stick_swap", batch=16, stickiness=64),
+    Params(pq_type="multilifo"),
+    Params(pq_type="work_stealing"),
+    Params(pq_type="work_stealing", batch=16)
 ]
 
 params_y = [
@@ -154,21 +164,32 @@ def configure_build():
 def run_benchmark(params: Params) -> BenchmarkResult:
     target = make_target_name(params)
     cmd = make_run_command(params)
+    quoted_cmd = " ".join(shlex.quote(x) for x in cmd)
+    total_time_s = 0.0
 
-    completed = subprocess.run(
-        cmd,
-        check=True,
-        text=True,
-        capture_output=True,
-    )
-
-    time_s = parse_time_seconds(completed.stdout)
+    for _ in range(NUM_REPETITIONS):
+        try:
+            completed = subprocess.run(
+                cmd,
+                check=True,
+                text=True,
+                capture_output=True,
+                timeout=TIMEOUT
+            )
+        except subprocess.TimeoutExpired:
+            return BenchmarkResult(
+                params=params,
+                target=target,
+                command=quoted_cmd,
+                time_s=None,
+            )
+        total_time_s += parse_time_seconds(completed.stdout)
 
     return BenchmarkResult(
         params=params,
         target=target,
-        command=" ".join(shlex.quote(x) for x in cmd),
-        time_s=time_s,
+        command=quoted_cmd,
+        time_s=total_time_s / NUM_REPETITIONS,
     )
 
 def instance_name(path: str | None) -> str | None:
@@ -179,22 +200,12 @@ def instance_name(path: str | None) -> str | None:
 def append_result_to_csv(csv_path: Path, result: BenchmarkResult) -> None:
     row = asdict(result.params)
     row["instance"] = instance_name(row["instance"])
-    row["time_s"] = result.time_s
-
-    fieldnames = [
-        "problem",
-        "pq_type",
-        "instance",
-        "threads",
-        "batch",
-        "stickiness",
-        "time_s",
-    ]
+    row["time_s"] = result.time_s if result.time_s is not None else ""
 
     file_exists = csv_path.exists()
 
     with csv_path.open("a", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=CSV_FIELDNAMES)
         if not file_exists:
             writer.writeheader()
         writer.writerow(row)
@@ -228,7 +239,10 @@ def main():
             results.append(result)
             append_result_to_csv(csv_path, result)
 
-            print(f"[{i}/{total}] DONE  {result.params}  time={result.time_s:.6f}s")
+            if result.time_s is None:
+                print(f"[{i}/{total}] TIMEOUT  {result.params}  after {TIMEOUT:.0f}s")
+            else:
+                print(f"[{i}/{total}] DONE  {result.params}  time={result.time_s:.6f}s")
         except subprocess.CalledProcessError as e:
             print(f"[{i}/{total}] FAIL  {params}  returncode={e.returncode}")
             if e.stdout:
@@ -241,11 +255,17 @@ def main():
             print(f"[{i}/{total}] FAIL  {params}  error={e}")
 
     print("\n=== Final summary ===")
-    print(f"Completed: {len(results)}/{total}")
+    completed_count = sum(result.time_s is not None for result in results)
+    timeout_count = sum(result.time_s is None for result in results)
+    print(f"Completed: {completed_count}/{total}")
+    print(f"Timed out: {timeout_count}/{total}")
     print(f"CSV file: {csv_path}")
 
     for r in results:
-        print(f"{r.params}, {r.time_s:.6f}s")
+        if r.time_s is None:
+            print(f"{r.params}, TIMEOUT after {TIMEOUT:.0f}s")
+        else:
+            print(f"{r.params}, {r.time_s:.6f}s")
 
 
 if __name__ == "__main__":

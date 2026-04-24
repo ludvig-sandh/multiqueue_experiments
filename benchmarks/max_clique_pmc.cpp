@@ -20,12 +20,14 @@
 
 struct Settings {
     int num_threads = 4;
+    int batch_size = 1; // Dummy value
     std::filesystem::path instance_file;
 };
 
 void register_cmd_options(Settings& settings, cxxopts::Options& cmd) {
     cmd.add_options()
         ("j,threads", "The number of threads", cxxopts::value<int>(settings.num_threads), "NUMBER")
+        ("b,batch", "Ignored batch size option", cxxopts::value<int>(settings.batch_size), "NUMBER")
         ("instance", "The instance file", cxxopts::value<std::filesystem::path>(settings.instance_file),
                       "PATH");
     cmd.parse_positional({"instance"});

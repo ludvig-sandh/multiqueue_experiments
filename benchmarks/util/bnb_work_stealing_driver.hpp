@@ -50,7 +50,7 @@ void write_settings_human_readable(RunConfig<Problem> const& cfg, std::ostream& 
 template <class Problem>
 void write_settings_json(RunConfig<Problem> const& cfg, std::ostream& out) {
     out << '{';
-    out << std::quoted("instance_file") << ':' << cfg.instance_file << ',';
+    out << std::quoted("instance_file") << ':' << cfg.instance_file;
     out << '}';
 }
 

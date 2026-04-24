@@ -18,7 +18,7 @@ def read_results(csv_path: Path) -> list[dict]:
             row["threads"] = int(row["threads"])
             row["batch"] = int(row["batch"]) if row["batch"] else None
             row["stickiness"] = int(row["stickiness"]) if row["stickiness"] else None
-            row["time_s"] = float(row["time_s"])
+            row["time_s"] = float(row["time_s"]) if row["time_s"] else None
             rows.append(row)
     return rows
 
@@ -60,12 +60,11 @@ def build_heatmap_data(rows: list[dict]):
 
     row_labels = [format_row_label(key) for key in unique_row_keys]
 
-    grid: dict[tuple[str, int | None, int | None], dict[int, float]] = defaultdict(dict)
+    grid: dict[tuple[str, int | None, int | None], dict[int, float | None]] = defaultdict(dict)
     for row in rows:
         key = row_key(row)
         threads = row["threads"]
-        time_s = row["time_s"]
-        grid[key][threads] = time_s
+        grid[key][threads] = row["time_s"]
 
     return problem, instance, unique_row_keys, row_labels, thread_values, grid
 
@@ -79,41 +78,53 @@ def plot_heatmap(
     grid,
 ) -> None:
     import matplotlib.colors as mcolors
+    from matplotlib.patches import Patch
 
     n_rows = len(row_keys)
     n_cols = len(thread_values)
 
     # Collect all times for normalization
     all_times = [
-        v
+        entry
         for row in grid.values()
-        for v in row.values()
-        if v is not None
+        for entry in row.values()
+        if entry is not None
     ]
 
-    if not all_times:
-        raise ValueError("No timing data available")
-
-    vmin = min(all_times)
-    vmax = max(all_times)
-
-    norm = mcolors.Normalize(vmin=vmin, vmax=vmax)
+    has_timing_data = bool(all_times)
+    if has_timing_data:
+        vmin = min(all_times)
+        vmax = max(all_times)
+        norm = mcolors.Normalize(vmin=vmin, vmax=vmax)
+    else:
+        norm = None
     cmap = plt.get_cmap("RdYlGn_r")  # reversed so green=fast, red=slow
 
     fig_width = max(8, 1.4 * n_cols + 3)
     fig_height = max(4, 0.7 * n_rows + 2)
     fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+    saw_timeout = False
 
     for row_idx in range(n_rows):
         for col_idx in range(n_cols):
             key = row_keys[row_idx]
             threads = thread_values[col_idx]
+            has_result = threads in grid[key]
             value = grid[key].get(threads)
 
-            if value is not None:
-                color = cmap(norm(value))
-            else:
+            label = None
+            hatch = None
+
+            if not has_result:
                 color = "white"
+            elif value is None:
+                color = "#d9d9d9"
+                hatch = "///"
+                label = "TO"
+                saw_timeout = True
+            else:
+                color = cmap(norm(value)) if norm is not None else "white"
+                label = f"{value:.3f}"
 
             rect = plt.Rectangle(
                 (col_idx, row_idx),
@@ -122,17 +133,18 @@ def plot_heatmap(
                 facecolor=color,
                 edgecolor="black",
                 linewidth=1.0,
+                hatch=hatch,
             )
             ax.add_patch(rect)
 
-            if value is not None:
+            if label is not None:
                 ax.text(
                     col_idx + 0.5,
                     row_idx + 0.5,
-                    f"{value:.3f}",
+                    label,
                     ha="center",
                     va="center",
-                    fontsize=10,
+                    fontsize=9,
                 )
 
     ax.set_xlim(0, n_cols)
@@ -153,10 +165,18 @@ def plot_heatmap(
     for spine in ax.spines.values():
         spine.set_visible(False)
 
-    # Optional colorbar
-    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
-    sm.set_array([])
-    plt.colorbar(sm, ax=ax, label="Time (s)")
+    if has_timing_data:
+        sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+        sm.set_array([])
+        plt.colorbar(sm, ax=ax, label="Time (s)")
+
+    if saw_timeout:
+        ax.legend(
+            handles=[Patch(facecolor="#d9d9d9", edgecolor="black", hatch="///", label="Timed out")],
+            loc="upper left",
+            bbox_to_anchor=(1.02, 1.0),
+            borderaxespad=0.0,
+        )
 
     plt.tight_layout()
     plt.show()
