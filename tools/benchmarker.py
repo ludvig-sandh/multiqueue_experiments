@@ -58,13 +58,14 @@ params_fallback = Params(
 )
 
 params_x = [
-    Params(pq_type="pmc", name="PMC library"),
+    Params(pq_type="seq_stack", name="Sequential Stack", threads=1),
+    Params(pq_type="locked_stack", name="Globally locked Stack"),
+    Params(pq_type="multilifo", name="MultiLIFO"),
+    Params(pq_type="work_stealing", name="Simple work stealing"),
     Params(pq_type="seq_pq", name="Sequential PQ", threads=1),
     Params(pq_type="locked_pq", name="Globally locked PQ"),
-    Params(pq_type="seq_stack", name="Sequential stack", threads=1),
     Params(pq_type="mq_stick_swap", name="MultiQueue (stick swap, batch=16)", batch=16),
-    Params(pq_type="multilifo", name="MultiLIFO"),
-    Params(pq_type="work_stealing", name="Simple work stealing")
+    Params(pq_type="pmc", name="PMC library")
 ]
 
 params_y = [
@@ -102,8 +103,8 @@ def generate_all_benchmarks(params_x, params_y, params_fallback) -> List[Params]
 
             params.append(Params(**combined))
     
-    # remove duplicates
-    return sorted(list(set(params)), key=lambda ps: str(ps))
+    # remove duplicates while preserving the order implied by params_x/params_y
+    return list(dict.fromkeys(params))
 
 def make_target_name(params: Params) -> str:
     if params.problem is None or params.pq_type is None:

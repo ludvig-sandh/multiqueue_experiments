@@ -36,6 +36,9 @@
 #elif defined PQ_LOCKED_PQ
 #include "wrapper/locked_pq.hpp"
 #define PQ wrapper::locked_pq::LockedPQ
+#elif defined PQ_LOCKED_STACK
+#include "wrapper/locked_stack.hpp"
+#define PQ wrapper::locked_stack::LockedStack
 #elif defined PQ_MQ_PQ
 #include "wrapper/mq_pq.hpp"
 #define PQ wrapper::mq_pq::MultiQueuePQ

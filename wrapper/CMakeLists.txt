@@ -185,6 +185,9 @@ endif()
 add_library(locked_pq INTERFACE)
 target_compile_definitions(locked_pq INTERFACE PQ_LOCKED_PQ)
 
+add_library(locked_stack INTERFACE)
+target_compile_definitions(locked_stack INTERFACE PQ_LOCKED_STACK)
+
 add_library(mq_pq INTERFACE)
 target_link_libraries(mq_pq INTERFACE multiqueue::multiqueue)
 target_compile_definitions(mq_pq INTERFACE PQ_MQ_PQ)
@@ -212,6 +215,7 @@ set(COMPETITORS
     spraylist
     tbb_pq
     locked_pq
+    locked_stack
     mq_pq
     multilifo
     PARENT_SCOPE)
@@ -225,6 +229,7 @@ set(GENERIC_COMPETITORS
     smq
     tbb_pq
     locked_pq
+    locked_stack
     mq_pq
     multilifo
     PARENT_SCOPE)

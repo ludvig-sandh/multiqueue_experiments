@@ -48,7 +48,11 @@ def build_heatmap_data(rows: list[dict]):
             row["stickiness"],
         )
 
-    unique_row_keys = sorted({row_key(row) for row in rows})
+    unique_row_keys: list[tuple[str, str, int | None, int | None]] = []
+    for row in rows:
+        key = row_key(row)
+        if key not in unique_row_keys:
+            unique_row_keys.append(key)
 
     def format_row_label(key: tuple[str, str, int | None, int | None]) -> str:
         name, _pq_type, _batch, _stickiness = key
