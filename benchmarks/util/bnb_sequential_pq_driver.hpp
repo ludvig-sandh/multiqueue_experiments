@@ -121,7 +121,7 @@ void branch_and_bound(Settings const& settings) noexcept {
 }
 
 template <class Problem>
-int bnb_sequential_solver(int argc, char **argv) {
+int bnb_sequential_pq_solver(int argc, char **argv) {
     write_build_info(std::clog);
     std::clog << '\n';
 
