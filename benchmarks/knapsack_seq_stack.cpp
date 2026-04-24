@@ -58,8 +58,8 @@ void branch_and_bound(Settings const& settings) noexcept {
 
     Problem problem(instance);
 
-    std::vector<node_type> kids;
-    kids.reserve(1 << 20);
+    std::vector<node_type> children;
+    children.reserve(1 << 20);
     std::stack<node_type> q;
 
     std::clog << "Working...\n";
@@ -79,10 +79,10 @@ void branch_and_bound(Settings const& settings) noexcept {
             continue;
         }
 
-        kids.clear();
-        problem.branch(node, best_value, kids);
-        std::reverse(kids.begin(), kids.end());
-        for (auto& c : kids) {
+        children.clear();
+        problem.branch(node, best_value, children);
+        std::reverse(children.begin(), children.end());
+        for (auto& c : children) {
             if (c.lower_bound > best_value) {
                 best_value = c.lower_bound;
                 std::cout << "new best lower bound found: " << c.lower_bound << "\n";
