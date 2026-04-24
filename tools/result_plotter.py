@@ -111,6 +111,8 @@ def plot_heatmap(
             threads = thread_values[col_idx]
             has_result = threads in grid[key]
             value = grid[key].get(threads)
+            baseline_threads = thread_values[0]
+            baseline_value = grid[key].get(baseline_threads)
 
             label = None
             hatch = None
@@ -124,7 +126,11 @@ def plot_heatmap(
                 saw_timeout = True
             else:
                 color = cmap(norm(value)) if norm is not None else "white"
-                label = f"{value:.3f}"
+                if baseline_value is not None:
+                    speedup = baseline_value / value
+                    label = f"{value:.3f}\n({speedup:.1f}x)"
+                else:
+                    label = f"{value:.3f}"
 
             rect = plt.Rectangle(
                 (col_idx, row_idx),
