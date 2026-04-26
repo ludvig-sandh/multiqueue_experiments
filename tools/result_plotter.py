@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -189,7 +190,8 @@ def plot_heatmap(
 
 
 def main() -> None:
-    rows = read_results(CSV_PATH)
+    csv_path = Path(sys.argv[1]) if len(sys.argv) > 1 else CSV_PATH
+    rows = read_results(csv_path)
     problem, instance, row_keys, row_labels, thread_values, grid = build_heatmap_data(rows)
     plot_heatmap(problem, instance, row_keys, row_labels, thread_values, grid)
 
