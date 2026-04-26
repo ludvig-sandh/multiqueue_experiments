@@ -213,10 +213,74 @@ def instance_name(path: str | None) -> str | None:
         return None
     return Path(path).stem
 
-def reset_csv(csv_path: Path) -> None:
+def cache_value(value) -> str:
+    return "" if value is None else str(value)
+
+def params_cache_key(params: Params) -> tuple[str, ...]:
+    return (
+        cache_value(params.problem),
+        cache_value(params.pq_type),
+        cache_value(params.name),
+        cache_value(instance_name(params.instance)),
+        cache_value(params.threads),
+        cache_value(params.batch),
+        cache_value(params.stickiness),
+        cache_value(params.num_repetitions),
+    )
+
+def row_cache_key(row: dict[str, str]) -> tuple[str, ...]:
+    return (
+        row.get("problem", ""),
+        row.get("pq_type", ""),
+        row.get("name", ""),
+        row.get("instance", ""),
+        row.get("threads", ""),
+        row.get("batch", ""),
+        row.get("stickiness", ""),
+        row.get("num_repetitions", "1"),
+    )
+
+def ensure_csv(csv_path: Path) -> None:
+    if not csv_path.exists() or csv_path.stat().st_size == 0:
+        write_csv_header(csv_path)
+        return
+
+    with csv_path.open(newline="") as f:
+        reader = csv.DictReader(f)
+        existing_fieldnames = reader.fieldnames or []
+        if existing_fieldnames == CSV_FIELDNAMES:
+            return
+
+        rows = list(reader)
+
     with csv_path.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=CSV_FIELDNAMES)
         writer.writeheader()
+        for row in rows:
+            normalized_row = {
+                field: row.get(field, "1" if field == "num_repetitions" else "")
+                for field in CSV_FIELDNAMES
+            }
+            writer.writerow(normalized_row)
+
+def write_csv_header(csv_path: Path) -> None:
+    with csv_path.open("w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=CSV_FIELDNAMES)
+        writer.writeheader()
+
+def load_cached_results(csv_path: Path) -> dict[tuple[str, ...], float | None]:
+    cached_results: dict[tuple[str, ...], float | None] = {}
+
+    if not csv_path.exists():
+        return cached_results
+
+    with csv_path.open(newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            time_s = float(row["time_s"]) if row.get("time_s") else None
+            cached_results[row_cache_key(row)] = time_s
+
+    return cached_results
 
 def append_result_to_csv(csv_path: Path, result: BenchmarkResult) -> None:
     row = asdict(result.params)
@@ -236,15 +300,43 @@ def main():
     print(f"Generated {total} benchmark configurations")
     print(f"Writing results to {csv_path}")
 
-    configure_build()
-    reset_csv(csv_path)
+    ensure_csv(csv_path)
+    cached_results = load_cached_results(csv_path)
+    missing_count = sum(
+        params_cache_key(params) not in cached_results
+        for params in benchmarks
+    )
+    cached_count = total - missing_count
+
+    print(f"Found {cached_count} cached results; {missing_count} benchmarks to run")
+
+    if missing_count > 0:
+        configure_build()
 
     built_targets: set[str] = set()
     results: list[BenchmarkResult] = []
+    ran_count = 0
+    skipped_count = 0
 
     for i, params in enumerate(benchmarks, start=1):
         remaining = total - i
         target = make_target_name(params)
+        cache_key = params_cache_key(params)
+
+        if cache_key in cached_results:
+            result = BenchmarkResult(
+                params=params,
+                target=target,
+                command=" ".join(shlex.quote(x) for x in make_run_command(params)),
+                time_s=cached_results[cache_key],
+            )
+            results.append(result)
+            skipped_count += 1
+            if result.time_s is None:
+                print(f"[{i}/{total}] CACHED  {params}  TIMEOUT")
+            else:
+                print(f"[{i}/{total}] CACHED  {params}  time={result.time_s:.6f}s")
+            continue
 
         print(f"[{i}/{total}] Running {params} ({remaining} left)")
 
@@ -256,6 +348,8 @@ def main():
             result = run_benchmark(params)
             results.append(result)
             append_result_to_csv(csv_path, result)
+            cached_results[cache_key] = result.time_s
+            ran_count += 1
 
             if result.time_s is None:
                 print(f"[{i}/{total}] TIMEOUT  {result.params}  after {TIMEOUT:.0f}s")
@@ -277,6 +371,8 @@ def main():
     timeout_count = sum(result.time_s is None for result in results)
     print(f"Completed: {completed_count}/{total}")
     print(f"Timed out: {timeout_count}/{total}")
+    print(f"Cached: {skipped_count}/{total}")
+    print(f"Ran: {ran_count}/{total}")
     print(f"CSV file: {csv_path}")
 
     for r in results:
