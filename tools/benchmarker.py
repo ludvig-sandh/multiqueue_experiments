@@ -1,9 +1,10 @@
+import argparse
 import csv
 import json
 import re
 import shlex
 import subprocess
-from dataclasses import asdict, dataclass, fields
+from dataclasses import asdict, dataclass, fields, replace
 from pathlib import Path
 from typing import List
 
@@ -55,7 +56,6 @@ class BenchmarkResult:
 # Omitted values resolve to 1 after benchmark parameters are combined.
 params_fallback = Params(
     problem="max_clique",
-    instance="data/DIMACS_all_ascii/brock200_1.clq",
     threads=1,
     batch=1,
     stickiness=16,
@@ -292,10 +292,18 @@ def append_result_to_csv(csv_path: Path, result: BenchmarkResult) -> None:
         writer.writerow(row)
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Run configured benchmark matrix for an input instance.")
+    parser.add_argument("instance", help="Path to the benchmark input instance")
+    return parser.parse_args()
+
+
 def main():
-    benchmarks = generate_all_benchmarks(params_x, params_y, params_fallback)
+    args = parse_args()
+    fallback = replace(params_fallback, instance=args.instance)
+    benchmarks = generate_all_benchmarks(params_x, params_y, fallback)
     total = len(benchmarks)
-    csv_path = Path("benchmark_results.csv")
+    csv_path = Path(f"benchmark_results_{instance_name(fallback.instance)}.csv")
 
     print(f"Generated {total} benchmark configurations")
     print(f"Writing results to {csv_path}")
