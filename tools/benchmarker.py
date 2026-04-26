@@ -7,8 +7,7 @@ from dataclasses import asdict, dataclass, fields
 from pathlib import Path
 from typing import List
 
-TIMEOUT = 180  # Seconds allowed per benchmark
-NUM_REPETITIONS = 1
+TIMEOUT = 60*5  # Seconds allowed per benchmark
 CSV_FIELDNAMES = [
     "problem",
     "pq_type",
@@ -17,6 +16,7 @@ CSV_FIELDNAMES = [
     "threads",
     "batch",
     "stickiness",
+    "num_repetitions",
     "time_s",
 ]
 
@@ -29,6 +29,7 @@ class Params:
     threads: int | None = None
     batch: int | None = None
     stickiness: int | None = None
+    num_repetitions: int | None = None
 
     def __str__(self):
         return (
@@ -36,6 +37,7 @@ class Params:
             f"_j={self.threads}"
             f"_b={self.batch}"
             f"_k={self.stickiness}"
+            f"_r={self.num_repetitions}"
         )
 
     def __repr__(self):
@@ -49,18 +51,21 @@ class BenchmarkResult:
     time_s: float | None
 
 ### Specify benchmark parameters here ###
+# Set num_repetitions in params_x, params_y, or params_fallback.
+# Omitted values resolve to 1 after benchmark parameters are combined.
 params_fallback = Params(
     problem="max_clique",
     instance="data/DIMACS_all_ascii/brock200_1.clq",
     threads=1,
     batch=1,
-    stickiness=16
+    stickiness=16,
+    num_repetitions=1
 )
 
 params_x = [
     Params(pq_type="seq_stack", name="Sequential Stack", threads=1),
     Params(pq_type="locked_stack", name="Globally locked Stack"),
-    Params(pq_type="multilifo", name="MultiLIFO"),
+    Params(pq_type="multilifo", name="MultiLIFO", num_repetitions=20),
     Params(pq_type="work_stealing", name="Simple work stealing"),
     Params(pq_type="seq_pq", name="Sequential PQ", threads=1),
     Params(pq_type="locked_pq", name="Globally locked PQ"),
@@ -100,6 +105,8 @@ def generate_all_benchmarks(params_x, params_y, params_fallback) -> List[Params]
 
             if combined["name"] is None:
                 combined["name"] = combined["pq_type"]
+            if combined["num_repetitions"] is None:
+                combined["num_repetitions"] = 1
 
             params.append(Params(**combined))
     
@@ -172,7 +179,11 @@ def run_benchmark(params: Params) -> BenchmarkResult:
     quoted_cmd = " ".join(shlex.quote(x) for x in cmd)
     total_time_s = 0.0
 
-    for _ in range(NUM_REPETITIONS):
+    num_repetitions = params.num_repetitions if params.num_repetitions is not None else 1
+    if num_repetitions < 1:
+        raise ValueError(f"num_repetitions must be at least 1 for {params}")
+
+    for _ in range(num_repetitions):
         try:
             completed = subprocess.run(
                 cmd,
@@ -194,7 +205,7 @@ def run_benchmark(params: Params) -> BenchmarkResult:
         params=params,
         target=target,
         command=quoted_cmd,
-        time_s=total_time_s / NUM_REPETITIONS,
+        time_s=total_time_s / num_repetitions,
     )
 
 def instance_name(path: str | None) -> str | None:
