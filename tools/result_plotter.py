@@ -17,8 +17,6 @@ def read_results(csv_path: Path) -> list[dict]:
         reader = csv.DictReader(f)
         for row in reader:
             row["threads"] = int(row["threads"])
-            row["batch"] = int(row["batch"]) if row["batch"] else None
-            row["stickiness"] = int(row["stickiness"]) if row["stickiness"] else None
             row["time_s"] = float(row["time_s"]) if row["time_s"] else None
             rows.append(row)
     return rows
@@ -41,31 +39,37 @@ def build_heatmap_data(rows: list[dict]):
 
     thread_values = sorted({row["threads"] for row in rows})
 
-    def row_key(row: dict) -> tuple[str, str, int | None, int | None]:
+    def row_key(row: dict) -> tuple[str, str]:
         return (
             row["name"],
             row["pq_type"],
-            row["batch"],
-            row["stickiness"],
         )
 
-    unique_row_keys: list[tuple[str, str, int | None, int | None]] = []
+    unique_row_keys: list[tuple[str, str]] = []
     for row in rows:
         key = row_key(row)
         if key not in unique_row_keys:
             unique_row_keys.append(key)
 
-    def format_row_label(key: tuple[str, str, int | None, int | None]) -> str:
-        name, _pq_type, _batch, _stickiness = key
+    def format_row_label(key: tuple[str, str]) -> str:
+        name, _pq_type = key
         return name
 
     row_labels = [format_row_label(key) for key in unique_row_keys]
 
-    grid: dict[tuple[str, str, int | None, int | None], dict[int, float | None]] = defaultdict(dict)
+    samples: dict[tuple[str, str], dict[int, list[float | None]]] = defaultdict(lambda: defaultdict(list))
     for row in rows:
         key = row_key(row)
         threads = row["threads"]
-        grid[key][threads] = row["time_s"]
+        samples[key][threads].append(row["time_s"])
+
+    grid: dict[tuple[str, str], dict[int, float | None]] = defaultdict(dict)
+    for key, row_samples in samples.items():
+        for threads, times in row_samples.items():
+            if any(time_s is None for time_s in times):
+                grid[key][threads] = None
+                continue
+            grid[key][threads] = sum(times) / len(times)
 
     return problem, instance, unique_row_keys, row_labels, thread_values, grid
 
