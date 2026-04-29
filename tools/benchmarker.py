@@ -62,7 +62,7 @@ params_fallback = Params(
 params_x = [
     Params(pq_type="seq_stack", name="Sequential Stack", threads=1),
     Params(pq_type="locked_stack", name="Globally locked Stack"),
-    Params(pq_type="multilifo", name="MultiLIFO", num_repetitions=20),
+    Params(pq_type="multilifo", name="MultiLIFO", num_repetitions=5),
     Params(pq_type="work_stealing", name="Simple work stealing"),
     Params(pq_type="seq_pq", name="Sequential PQ", threads=1),
     Params(pq_type="locked_pq", name="Globally locked PQ"),
@@ -71,13 +71,7 @@ params_x = [
 ]
 
 params_y = [
-    Params(threads=1),
-    Params(threads=2),
-    Params(threads=4),
-    Params(threads=8),
-    Params(threads=16),
-    Params(threads=24),
-    # Params(threads=72),
+    Params(threads=24)
 ]
 ### ###
 
