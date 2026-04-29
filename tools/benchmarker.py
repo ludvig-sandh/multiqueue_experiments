@@ -16,6 +16,8 @@ CSV_FIELDNAMES = [
     "instance",
     "threads",
     "time_s",
+    "processed_nodes",
+    "ignored_nodes",
 ]
 
 @dataclass(frozen=True)
@@ -47,6 +49,8 @@ class BenchmarkResult:
     target: str
     command: str
     time_s: float | None
+    processed_nodes: int | None
+    ignored_nodes: int | None
 
 ### Specify benchmark parameters here ###
 # Set num_repetitions in params_x, params_y, or params_fallback.
@@ -165,6 +169,18 @@ def parse_time_seconds(output: str) -> float:
 
     raise ValueError("Could not find benchmark time in output:\n" + output)
 
+def parse_processed_nodes(output: str) -> int | None:
+    m = re.search(r"^Processed nodes:\s*([0-9]+)\s*$", output, re.MULTILINE)
+    if m:
+        return int(m.group(1))
+    return None
+
+def parse_ignored_nodes(output: str) -> int | None:
+    m = re.search(r"^Ignored nodes:\s*([0-9]+)\s*$", output, re.MULTILINE)
+    if m:
+        return int(m.group(1))
+    return None
+
 def configure_build():
     cmd = ["cmake", "--preset", "default"]
     print(f"[configure] {' '.join(cmd)}")
@@ -191,16 +207,21 @@ def run_benchmark(params: Params, repetitions: int, csv_path: Path) -> list[Benc
                 target=target,
                 command=quoted_cmd,
                 time_s=None,
+                processed_nodes=None,
+                ignored_nodes=None,
             )
             append_result_to_csv(csv_path, result)
             results.append(result)
             break
 
+        output = completed.stdout + "\n" + completed.stderr
         result = BenchmarkResult(
             params=params,
             target=target,
             command=quoted_cmd,
-            time_s=parse_time_seconds(completed.stdout),
+            time_s=parse_time_seconds(output),
+            processed_nodes=parse_processed_nodes(output),
+            ignored_nodes=parse_ignored_nodes(output),
         )
         append_result_to_csv(csv_path, result)
         results.append(result)
@@ -295,6 +316,8 @@ def append_result_to_csv(csv_path: Path, result: BenchmarkResult) -> None:
         "instance": instance_name(result.params.instance),
         "threads": result.params.threads,
         "time_s": result.time_s if result.time_s is not None else "",
+        "processed_nodes": result.processed_nodes if result.processed_nodes is not None else "",
+        "ignored_nodes": result.ignored_nodes if result.ignored_nodes is not None else "",
     }
 
     with csv_path.open("a", newline="") as f:
@@ -353,6 +376,8 @@ def main():
                     target=target,
                     command=" ".join(shlex.quote(x) for x in make_run_command(params)),
                     time_s=time_s,
+                    processed_nodes=None,
+                    ignored_nodes=None,
                 )
                 for time_s in cached_times
             ]
@@ -383,6 +408,8 @@ def main():
                     target=target,
                     command=" ".join(shlex.quote(x) for x in make_run_command(params)),
                     time_s=time_s,
+                    processed_nodes=None,
+                    ignored_nodes=None,
                 )
                 for time_s in cached_times
             ]
