@@ -8,7 +8,7 @@ from dataclasses import dataclass, fields, replace
 from pathlib import Path
 from typing import List
 
-TIMEOUT = 60*5  # Seconds allowed per benchmark
+TIMEOUT = 60*20  # Seconds allowed per benchmark
 CSV_FIELDNAMES = [
     "problem",
     "pq_type",
@@ -56,22 +56,23 @@ params_fallback = Params(
     threads=1,
     batch=1,
     stickiness=16,
-    num_repetitions=1
+    num_repetitions=5
 )
 
 params_x = [
-    Params(pq_type="seq_stack", name="Sequential Stack", threads=1),
-    Params(pq_type="locked_stack", name="Globally locked Stack"),
-    Params(pq_type="multilifo", name="MultiLIFO", num_repetitions=5),
+    Params(pq_type="multilifo", name="MultiLIFO (batch=1)", num_repetitions=20, batch=1),
+    Params(pq_type="multilifo", name="MultiLIFO (batch=16)", num_repetitions=20, batch=16),
     Params(pq_type="work_stealing", name="Simple work stealing"),
-    Params(pq_type="seq_pq", name="Sequential PQ", threads=1),
-    Params(pq_type="locked_pq", name="Globally locked PQ"),
+    Params(pq_type="mq_stick_swap", name="MultiQueue (stick swap, batch=1)", batch=1),
     Params(pq_type="mq_stick_swap", name="MultiQueue (stick swap, batch=16)", batch=16),
     Params(pq_type="pmc", name="PMC library")
 ]
 
 params_y = [
-    Params(threads=24)
+    Params(threads=64),
+    Params(threads=128),
+    Params(threads=256),
+    Params(threads=512)
 ]
 ### ###
 
