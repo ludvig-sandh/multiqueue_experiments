@@ -17,6 +17,8 @@ MODE_AXES = {
     "batch": ("batch", "name"),
 }
 
+LAYOUTS = ("heatmap", "graph")
+
 
 def read_results(csv_path: Path) -> list[dict]:
     rows: list[dict] = []
@@ -38,6 +40,10 @@ def parse_axis_value(value: str):
         return float(value)
     except ValueError:
         return value
+
+
+def format_axis_label(axis: str) -> str:
+    return axis.replace("_", " ").title()
 
 
 def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str):
@@ -198,8 +204,8 @@ def plot_heatmap(
     ax.set_yticks([i + 0.5 for i in range(n_rows)])
     ax.set_yticklabels(row_labels)
 
-    ax.set_xlabel(x_axis.replace("_", " ").title())
-    ax.set_ylabel(y_axis.replace("_", " ").title())
+    ax.set_xlabel(format_axis_label(x_axis))
+    ax.set_ylabel(format_axis_label(y_axis))
     ax.set_title(f"{problem} — {instance}")
 
     ax.tick_params(length=0)
@@ -230,10 +236,55 @@ def plot_heatmap(
     plt.show()
 
 
+def plot_graph(
+    problem: str,
+    instance: str,
+    row_keys,
+    row_labels,
+    x_values,
+    grid,
+    x_axis: str,
+) -> None:
+    fig_width = max(8, 1.2 * len(x_values) + 3)
+    fig, ax = plt.subplots(figsize=(fig_width, 5))
+    x_positions = {x_value: idx for idx, x_value in enumerate(x_values)}
+
+    for row_idx, key in enumerate(row_keys):
+        points = [
+            (x_positions[x_value], grid[key].get(x_value))
+            for x_value in x_values
+            if grid[key].get(x_value) is not None
+        ]
+        if not points:
+            continue
+
+        line_x_values = [x_value for x_value, _time_s in points]
+        line_times = [time_s for _x_value, time_s in points]
+        ax.plot(
+            line_x_values,
+            line_times,
+            marker="o",
+            linewidth=2,
+            label=row_labels[row_idx],
+        )
+
+    ax.set_xticks(range(len(x_values)))
+    ax.set_xticklabels(x_values)
+    ax.set_xlabel(format_axis_label(x_axis))
+    ax.set_ylabel("Execution Time (s)")
+    ax.set_title(f"{problem} — {instance}")
+    ax.grid(True, linestyle="--", alpha=0.35)
+    ax.legend(loc="upper left", bbox_to_anchor=(1.02, 1.0), borderaxespad=0.0)
+
+    plt.tight_layout()
+    plt.show()
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("csv_path", nargs="?", type=Path, default=CSV_PATH)
     parser.add_argument("--mode", choices=MODE_AXES)
+    parser.add_argument("--layout", choices=LAYOUTS, default="heatmap")
     args = parser.parse_args()
 
     x_axis, y_axis = MODE_AXES[args.mode] if args.mode else (X_AXIS, Y_AXIS)
@@ -243,16 +294,19 @@ def main() -> None:
     problem, instance, row_keys, row_labels, x_values, grid = build_heatmap_data(
         rows, x_axis, y_axis
     )
-    plot_heatmap(
-        problem,
-        instance,
-        row_keys,
-        row_labels,
-        x_values,
-        grid,
-        x_axis,
-        y_axis,
-    )
+    if args.layout == "graph":
+        plot_graph(problem, instance, row_keys, row_labels, x_values, grid, x_axis)
+    else:
+        plot_heatmap(
+            problem,
+            instance,
+            row_keys,
+            row_labels,
+            x_values,
+            grid,
+            x_axis,
+            y_axis,
+        )
 
 
 if __name__ == "__main__":
