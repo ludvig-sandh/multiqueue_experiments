@@ -45,6 +45,9 @@
 #elif defined PQ_MULTILIFO
 #include "wrapper/multilifo.hpp"
 #define PQ wrapper::multilifo::MultiLifo
+#elif defined PQ_PR
+#include "wrapper/pr.hpp"
+#define PQ wrapper::pr::PR
 #else
 #error No valid PQ specified
 #endif

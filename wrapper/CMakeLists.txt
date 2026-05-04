@@ -203,6 +203,24 @@ set_property(TARGET multilifo PROPERTY pq_name multilifo)
 target_link_libraries(multilifo INTERFACE multilifo_support)
 target_compile_definitions(multilifo INTERFACE PQ_MULTILIFO)
 
+set(PR_DIR "${CMAKE_SOURCE_DIR}/third_party/PR-bench-impl")
+
+add_library(
+  pr_support STATIC
+  ${PR_DIR}/common.c
+  ${PR_DIR}/prioq.c
+  ${PR_DIR}/gc/gc.c
+  ${PR_DIR}/gc/ptst.c)
+target_include_directories(pr_support SYSTEM PUBLIC ${PR_DIR} ${PR_DIR}/gc)
+target_compile_options(pr_support PRIVATE -w -std=gnu11)
+target_compile_definitions(pr_support PUBLIC INTEL _GNU_SOURCE
+                                             CACHE_LINE_SIZE=${L1_CACHE_LINE_SIZE})
+
+add_library(pr INTERFACE)
+set_property(TARGET pr PROPERTY pq_name pr)
+target_link_libraries(pr INTERFACE pr_support)
+target_compile_definitions(pr INTERFACE PQ_PR)
+
 set(COMPETITORS
     ${MQ_VARIANTS}
     klsm4
@@ -218,6 +236,7 @@ set(COMPETITORS
     locked_stack
     mq_pq
     multilifo
+    pr
     PARENT_SCOPE)
 
 set(GENERIC_COMPETITORS
@@ -232,4 +251,5 @@ set(GENERIC_COMPETITORS
     locked_stack
     mq_pq
     multilifo
+    pr
     PARENT_SCOPE)
