@@ -69,10 +69,11 @@ params_x = [
     Params(pq_type="locked_stack", name="Globally locked Stack"),
     Params(pq_type="multilifo", name="MultiLIFO", num_repetitions=20),
     Params(pq_type="work_stealing", name="Simple work stealing"),
+    Params(pq_type="pmc", name="PMC library"),
     Params(pq_type="seq_pq", name="Sequential PQ", threads=1),
     Params(pq_type="locked_pq", name="Globally locked PQ"),
     Params(pq_type="mq_stick_swap", name="MultiQueue (stick swap, batch=16)", batch=16),
-    Params(pq_type="pmc", name="PMC library")
+    Params(pq_type="pr", name="PR (batch=16)", batch=16),
 ]
 
 params_y = [
