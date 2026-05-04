@@ -17,3 +17,6 @@
 [submodule "third_party/pmc-dimacs"]
 	path = third_party/pmc-dimacs
 	url = https://github.com/ludvig-sandh/pmc-dimacs
+[submodule "third_party/PR-bench-impl"]
+	path = third_party/PR-bench-impl
+	url = https://github.com/ludvig-sandh/PR-bench-impl
