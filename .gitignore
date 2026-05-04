@@ -7,3 +7,4 @@ pyvenv.cfg
 benchmark_results.csv
 info.txt
 .codex
+*.csv
