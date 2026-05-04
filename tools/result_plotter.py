@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import statistics
 from collections import defaultdict
 from pathlib import Path
 
@@ -18,6 +19,7 @@ MODE_AXES = {
 }
 
 LAYOUTS = ("heatmap", "graph")
+SPREADS = ("none", "minmax", "stddev", "minmax_band", "stddev_band")
 
 
 def read_results(csv_path: Path) -> list[dict]:
@@ -105,7 +107,7 @@ def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str):
                 continue
             grid[key][x_value] = sum(times) / len(times)
 
-    return problem, instance, unique_row_keys, row_labels, x_values, grid
+    return problem, instance, unique_row_keys, row_labels, x_values, grid, samples
 
 
 def plot_heatmap(
@@ -243,30 +245,82 @@ def plot_graph(
     row_labels,
     x_values,
     grid,
+    samples,
     x_axis: str,
+    spread: str,
 ) -> None:
     fig_width = max(8, 1.2 * len(x_values) + 3)
     fig, ax = plt.subplots(figsize=(fig_width, 5))
     x_positions = {x_value: idx for idx, x_value in enumerate(x_values)}
+    band_spread = spread.endswith("_band")
+    spread_kind = spread.removesuffix("_band")
 
     for row_idx, key in enumerate(row_keys):
-        points = [
-            (x_positions[x_value], grid[key].get(x_value))
-            for x_value in x_values
-            if grid[key].get(x_value) is not None
-        ]
+        points = []
+        yerr_lower = []
+        yerr_upper = []
+
+        for x_value in x_values:
+            mean_time = grid[key].get(x_value)
+            if mean_time is None:
+                continue
+
+            points.append((x_positions[x_value], mean_time))
+            raw_times = [
+                time_s
+                for time_s in samples[key][x_value]
+                if time_s is not None
+            ]
+
+            if spread_kind == "minmax" and raw_times:
+                yerr_lower.append(mean_time - min(raw_times))
+                yerr_upper.append(max(raw_times) - mean_time)
+            elif spread_kind == "stddev" and len(raw_times) > 1:
+                stddev = statistics.stdev(raw_times)
+                yerr_lower.append(stddev)
+                yerr_upper.append(stddev)
+            else:
+                yerr_lower.append(0)
+                yerr_upper.append(0)
+
         if not points:
             continue
 
         line_x_values = [x_value for x_value, _time_s in points]
         line_times = [time_s for _x_value, time_s in points]
-        ax.plot(
-            line_x_values,
-            line_times,
-            marker="o",
-            linewidth=2,
-            label=row_labels[row_idx],
-        )
+        if band_spread:
+            line = ax.plot(
+                line_x_values,
+                line_times,
+                marker="o",
+                linewidth=2,
+                label=row_labels[row_idx],
+            )[0]
+            lower = [
+                time_s - err for time_s, err in zip(line_times, yerr_lower)
+            ]
+            upper = [
+                time_s + err for time_s, err in zip(line_times, yerr_upper)
+            ]
+            ax.fill_between(
+                line_x_values,
+                lower,
+                upper,
+                color=line.get_color(),
+                alpha=0.18,
+                linewidth=0,
+            )
+        else:
+            yerr = [yerr_lower, yerr_upper] if spread != "none" else None
+            ax.errorbar(
+                line_x_values,
+                line_times,
+                yerr=yerr,
+                marker="o",
+                linewidth=2,
+                capsize=4 if spread != "none" else 0,
+                label=row_labels[row_idx],
+            )
 
     ax.set_xticks(range(len(x_values)))
     ax.set_xticklabels(x_values)
@@ -285,17 +339,34 @@ def main() -> None:
     parser.add_argument("csv_path", nargs="?", type=Path, default=CSV_PATH)
     parser.add_argument("--mode", choices=MODE_AXES)
     parser.add_argument("--layout", choices=LAYOUTS, default="heatmap")
+    parser.add_argument("--spread", choices=SPREADS, default="none")
     args = parser.parse_args()
 
     x_axis, y_axis = MODE_AXES[args.mode] if args.mode else (X_AXIS, Y_AXIS)
 
     csv_path = args.csv_path
     rows = read_results(csv_path)
-    problem, instance, row_keys, row_labels, x_values, grid = build_heatmap_data(
-        rows, x_axis, y_axis
-    )
+    (
+        problem,
+        instance,
+        row_keys,
+        row_labels,
+        x_values,
+        grid,
+        samples,
+    ) = build_heatmap_data(rows, x_axis, y_axis)
     if args.layout == "graph":
-        plot_graph(problem, instance, row_keys, row_labels, x_values, grid, x_axis)
+        plot_graph(
+            problem,
+            instance,
+            row_keys,
+            row_labels,
+            x_values,
+            grid,
+            samples,
+            x_axis,
+            args.spread,
+        )
     else:
         plot_heatmap(
             problem,

@@ -100,3 +100,30 @@ Example:
 ```bash
 ./build/benchmarks/knapsack_mq_stick_swap --instance data/kplib/04AlmostStronglyCorrelated/n00500/R01000/s069.kp -j 8 -b 4 --queue-factor 2 --stickiness 32
 ```
+
+## Plotting Results
+
+Create benchmark CSV files with `tools/benchmarker.py` by passing the path to an input instance; edit the benchmark matrix in the script to choose what to run.
+
+```bash
+python3 tools/benchmarker.py data/DIMACS_all_ascii/brock200_1.clq
+```
+
+Use `tools/result_plotter.py` to plot benchmark CSV files.
+
+Arguments:
+
+```text
+csv_path                  CSV file to plot
+--mode threads|batch      X-axis values (default: threads)
+--layout heatmap|graph    Plot type (default: heatmap)
+--spread none|minmax|stddev|minmax_band|stddev_band
+                          Spread display for graph layout (default: minmax)
+```
+
+Examples:
+
+```bash
+python3 tools/result_plotter.py benchmark_results_brock200_1.csv
+python3 tools/result_plotter.py batch_results.csv --mode batch --layout graph --spread minmax_band
+```
