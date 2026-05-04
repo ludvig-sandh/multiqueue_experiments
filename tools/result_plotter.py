@@ -1,7 +1,7 @@
 from __future__ import annotations
 
+import argparse
 import csv
-import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -9,6 +9,13 @@ import matplotlib.pyplot as plt
 
 
 CSV_PATH = Path("benchmark_results.csv")
+X_AXIS = "threads"
+Y_AXIS = "name"
+
+MODE_AXES = {
+    "threads": ("threads", "name"),
+    "batch": ("batch", "name"),
+}
 
 
 def read_results(csv_path: Path) -> list[dict]:
@@ -16,15 +23,34 @@ def read_results(csv_path: Path) -> list[dict]:
     with csv_path.open(newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            row["threads"] = int(row["threads"])
             row["time_s"] = float(row["time_s"]) if row["time_s"] else None
             rows.append(row)
     return rows
 
 
-def build_heatmap_data(rows: list[dict]):
+def parse_axis_value(value: str):
+    try:
+        return int(value)
+    except ValueError:
+        pass
+
+    try:
+        return float(value)
+    except ValueError:
+        return value
+
+
+def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str):
     if not rows:
         raise ValueError("CSV file contains no benchmark rows")
+
+    missing_axes = sorted(
+        axis for axis in {x_axis, y_axis} if axis not in rows[0]
+    )
+    if missing_axes:
+        raise ValueError(
+            f"CSV file is missing required column(s): {', '.join(missing_axes)}"
+        )
 
     problems = {row["problem"] for row in rows}
     instances = {row["instance"] for row in rows}
@@ -37,11 +63,11 @@ def build_heatmap_data(rows: list[dict]):
     problem = next(iter(problems))
     instance = next(iter(instances))
 
-    thread_values = sorted({row["threads"] for row in rows})
+    x_values = sorted({parse_axis_value(row[x_axis]) for row in rows})
 
     def row_key(row: dict) -> tuple[str, str]:
         return (
-            row["name"],
+            row[y_axis],
             row["pq_type"],
         )
 
@@ -52,26 +78,28 @@ def build_heatmap_data(rows: list[dict]):
             unique_row_keys.append(key)
 
     def format_row_label(key: tuple[str, str]) -> str:
-        name, _pq_type = key
-        return name
+        y_value, _pq_type = key
+        return y_value
 
     row_labels = [format_row_label(key) for key in unique_row_keys]
 
-    samples: dict[tuple[str, str], dict[int, list[float | None]]] = defaultdict(lambda: defaultdict(list))
+    samples: dict[tuple[str, str], dict[object, list[float | None]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
     for row in rows:
         key = row_key(row)
-        threads = row["threads"]
-        samples[key][threads].append(row["time_s"])
+        x_value = parse_axis_value(row[x_axis])
+        samples[key][x_value].append(row["time_s"])
 
-    grid: dict[tuple[str, str], dict[int, float | None]] = defaultdict(dict)
+    grid: dict[tuple[str, str], dict[object, float | None]] = defaultdict(dict)
     for key, row_samples in samples.items():
-        for threads, times in row_samples.items():
+        for x_value, times in row_samples.items():
             if any(time_s is None for time_s in times):
-                grid[key][threads] = None
+                grid[key][x_value] = None
                 continue
-            grid[key][threads] = sum(times) / len(times)
+            grid[key][x_value] = sum(times) / len(times)
 
-    return problem, instance, unique_row_keys, row_labels, thread_values, grid
+    return problem, instance, unique_row_keys, row_labels, x_values, grid
 
 
 def plot_heatmap(
@@ -79,14 +107,16 @@ def plot_heatmap(
     instance: str,
     row_keys,
     row_labels,
-    thread_values,
+    x_values,
     grid,
+    x_axis: str,
+    y_axis: str,
 ) -> None:
     import matplotlib.colors as mcolors
     from matplotlib.patches import Patch
 
     n_rows = len(row_keys)
-    n_cols = len(thread_values)
+    n_cols = len(x_values)
 
     # Collect all times for normalization
     all_times = [
@@ -113,11 +143,11 @@ def plot_heatmap(
     for row_idx in range(n_rows):
         for col_idx in range(n_cols):
             key = row_keys[row_idx]
-            threads = thread_values[col_idx]
-            has_result = threads in grid[key]
-            value = grid[key].get(threads)
-            baseline_threads = thread_values[0]
-            baseline_value = grid[key].get(baseline_threads)
+            x_value = x_values[col_idx]
+            has_result = x_value in grid[key]
+            value = grid[key].get(x_value)
+            baseline_x_value = x_values[0]
+            baseline_value = grid[key].get(baseline_x_value)
 
             label = None
             hatch = None
@@ -163,13 +193,13 @@ def plot_heatmap(
     ax.invert_yaxis()
 
     ax.set_xticks([i + 0.5 for i in range(n_cols)])
-    ax.set_xticklabels(thread_values)
+    ax.set_xticklabels(x_values)
 
     ax.set_yticks([i + 0.5 for i in range(n_rows)])
     ax.set_yticklabels(row_labels)
 
-    ax.set_xlabel("Threads")
-    ax.set_ylabel("Priority Queue / Parameters")
+    ax.set_xlabel(x_axis.replace("_", " ").title())
+    ax.set_ylabel(y_axis.replace("_", " ").title())
     ax.set_title(f"{problem} — {instance}")
 
     ax.tick_params(length=0)
@@ -183,7 +213,14 @@ def plot_heatmap(
 
     if saw_timeout:
         ax.legend(
-            handles=[Patch(facecolor="#d9d9d9", edgecolor="black", hatch="///", label="Timed out")],
+            handles=[
+                Patch(
+                    facecolor="#d9d9d9",
+                    edgecolor="black",
+                    hatch="///",
+                    label="Timed out",
+                )
+            ],
             loc="upper left",
             bbox_to_anchor=(1.02, 1.0),
             borderaxespad=0.0,
@@ -194,10 +231,28 @@ def plot_heatmap(
 
 
 def main() -> None:
-    csv_path = Path(sys.argv[1]) if len(sys.argv) > 1 else CSV_PATH
+    parser = argparse.ArgumentParser()
+    parser.add_argument("csv_path", nargs="?", type=Path, default=CSV_PATH)
+    parser.add_argument("--mode", choices=MODE_AXES)
+    args = parser.parse_args()
+
+    x_axis, y_axis = MODE_AXES[args.mode] if args.mode else (X_AXIS, Y_AXIS)
+
+    csv_path = args.csv_path
     rows = read_results(csv_path)
-    problem, instance, row_keys, row_labels, thread_values, grid = build_heatmap_data(rows)
-    plot_heatmap(problem, instance, row_keys, row_labels, thread_values, grid)
+    problem, instance, row_keys, row_labels, x_values, grid = build_heatmap_data(
+        rows, x_axis, y_axis
+    )
+    plot_heatmap(
+        problem,
+        instance,
+        row_keys,
+        row_labels,
+        x_values,
+        grid,
+        x_axis,
+        y_axis,
+    )
 
 
 if __name__ == "__main__":

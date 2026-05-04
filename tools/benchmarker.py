@@ -15,6 +15,7 @@ CSV_FIELDNAMES = [
     "name",
     "instance",
     "threads",
+    "batch",
     "time_s",
     "processed_nodes",
     "ignored_nodes",
@@ -243,6 +244,7 @@ def params_cache_key(params: Params) -> tuple[str, ...]:
         cache_value(params.name),
         cache_value(instance_name(params.instance)),
         cache_value(params.threads),
+        cache_value(params.batch),
     )
 
 def row_cache_key(row: dict[str, str]) -> tuple[str, ...]:
@@ -252,6 +254,7 @@ def row_cache_key(row: dict[str, str]) -> tuple[str, ...]:
         row.get("name", ""),
         row.get("instance", ""),
         row.get("threads", ""),
+        row.get("batch", ""),
     )
 
 def num_repetitions(params: Params) -> int:
@@ -315,6 +318,7 @@ def append_result_to_csv(csv_path: Path, result: BenchmarkResult) -> None:
         "name": result.params.name,
         "instance": instance_name(result.params.instance),
         "threads": result.params.threads,
+        "batch": result.params.batch,
         "time_s": result.time_s if result.time_s is not None else "",
         "processed_nodes": result.processed_nodes if result.processed_nodes is not None else "",
         "ignored_nodes": result.ignored_nodes if result.ignored_nodes is not None else "",
