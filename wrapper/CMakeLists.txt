@@ -239,6 +239,31 @@ set_property(TARGET 2d_stack PROPERTY pq_name 2d_stack)
 target_link_libraries(2d_stack INTERFACE 2d_stack_support)
 target_compile_definitions(2d_stack INTERFACE PQ_2D_STACK)
 
+set(LIBCDS_DIR "${CMAKE_SOURCE_DIR}/third_party/libcds")
+
+add_library(
+  libcds_support STATIC
+  ${LIBCDS_DIR}/src/init.cpp
+  ${LIBCDS_DIR}/src/hp.cpp
+  ${LIBCDS_DIR}/src/hp_thread_local.cpp
+  ${LIBCDS_DIR}/src/dhp.cpp
+  ${LIBCDS_DIR}/src/urcu_gp.cpp
+  ${LIBCDS_DIR}/src/urcu_sh.cpp
+  ${LIBCDS_DIR}/src/thread_data.cpp
+  ${LIBCDS_DIR}/src/topology_hpux.cpp
+  ${LIBCDS_DIR}/src/topology_linux.cpp
+  ${LIBCDS_DIR}/src/topology_osx.cpp
+  ${LIBCDS_DIR}/src/dllmain.cpp)
+target_include_directories(libcds_support SYSTEM PUBLIC ${LIBCDS_DIR})
+target_compile_options(libcds_support PRIVATE -w)
+target_compile_options(libcds_support PUBLIC -mcx16)
+target_link_libraries(libcds_support PUBLIC Threads::Threads atomic)
+
+add_library(treiber_stack INTERFACE)
+set_property(TARGET treiber_stack PROPERTY pq_name treiber_stack)
+target_link_libraries(treiber_stack INTERFACE libcds_support)
+target_compile_definitions(treiber_stack INTERFACE PQ_TREIBER_STACK)
+
 set(COMPETITORS
     ${MQ_VARIANTS}
     klsm4
@@ -256,6 +281,7 @@ set(COMPETITORS
     multilifo
     pr
     2d_stack
+    treiber_stack
     PARENT_SCOPE)
 
 set(GENERIC_COMPETITORS
@@ -272,4 +298,5 @@ set(GENERIC_COMPETITORS
     multilifo
     pr
     2d_stack
+    treiber_stack
     PARENT_SCOPE)
