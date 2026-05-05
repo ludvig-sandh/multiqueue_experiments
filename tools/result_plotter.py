@@ -28,6 +28,7 @@ def read_results(csv_path: Path) -> list[dict]:
         reader = csv.DictReader(f)
         for row in reader:
             row["time_s"] = float(row["time_s"]) if row["time_s"] else None
+            row["status"] = row.get("status") or ("ok" if row["time_s"] is not None else "timeout")
             rows.append(row)
     return rows
 
@@ -46,6 +47,17 @@ def parse_axis_value(value: str):
 
 def format_axis_label(axis: str) -> str:
     return axis.replace("_", " ").title()
+
+
+def failure_status(statuses: list[str]) -> str | None:
+    non_ok_statuses = [status.strip() for status in statuses if status.strip() and status.strip() != "ok"]
+    if not non_ok_statuses:
+        return None
+    if "oom" in non_ok_statuses:
+        return "oom"
+    if "timeout" in non_ok_statuses:
+        return "timeout"
+    return "failed"
 
 
 def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str):
@@ -94,20 +106,35 @@ def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str):
     samples: dict[tuple[str, str], dict[object, list[float | None]]] = defaultdict(
         lambda: defaultdict(list)
     )
+    sample_statuses: dict[tuple[str, str], dict[object, list[str]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
     for row in rows:
         key = row_key(row)
         x_value = parse_axis_value(row[x_axis])
         samples[key][x_value].append(row["time_s"])
+        sample_statuses[key][x_value].append(row["status"])
 
     grid: dict[tuple[str, str], dict[object, float | None]] = defaultdict(dict)
+    failure_grid: dict[tuple[str, str], dict[object, str | None]] = defaultdict(dict)
     for key, row_samples in samples.items():
         for x_value, times in row_samples.items():
-            if any(time_s is None for time_s in times):
+            status = failure_status(sample_statuses[key][x_value])
+            failure_grid[key][x_value] = status
+            if status is not None or any(time_s is None for time_s in times):
                 grid[key][x_value] = None
                 continue
             grid[key][x_value] = sum(times) / len(times)
 
-    return problem, instance, unique_row_keys, row_labels, x_values, grid, samples
+    return problem, instance, unique_row_keys, row_labels, x_values, grid, failure_grid, samples
+
+
+def failure_style(status: str) -> tuple[str, str, str, str]:
+    if status == "oom":
+        return "#bdb2ff", "xx", "OOM", "Out of memory"
+    if status == "timeout":
+        return "#d9d9d9", "///", "TO", "Timed out"
+    return "#f4b6b6", "\\\\\\", "FAIL", "Failed"
 
 
 def plot_heatmap(
@@ -117,6 +144,7 @@ def plot_heatmap(
     row_labels,
     x_values,
     grid,
+    failure_grid,
     x_axis: str,
     y_axis: str,
 ) -> None:
@@ -146,7 +174,7 @@ def plot_heatmap(
     fig_width = max(8, 1.4 * n_cols + 3)
     fig_height = max(4, 0.7 * n_rows + 2)
     fig, ax = plt.subplots(figsize=(fig_width, fig_height))
-    saw_timeout = False
+    seen_failures: set[str] = set()
 
     for row_idx in range(n_rows):
         for col_idx in range(n_cols):
@@ -154,6 +182,7 @@ def plot_heatmap(
             x_value = x_values[col_idx]
             has_result = x_value in grid[key]
             value = grid[key].get(x_value)
+            status = failure_grid[key].get(x_value)
             baseline_x_value = x_values[0]
             baseline_value = grid[key].get(baseline_x_value)
 
@@ -162,11 +191,12 @@ def plot_heatmap(
 
             if not has_result:
                 color = "white"
+            elif status is not None:
+                color, hatch, label, _legend_label = failure_style(status)
+                seen_failures.add(status)
             elif value is None:
-                color = "#d9d9d9"
-                hatch = "///"
-                label = "TO"
-                saw_timeout = True
+                color, hatch, label, _legend_label = failure_style("timeout")
+                seen_failures.add("timeout")
             else:
                 color = cmap(norm(value)) if norm is not None else "white"
                 if baseline_value is not None:
@@ -219,16 +249,22 @@ def plot_heatmap(
         sm.set_array([])
         plt.colorbar(sm, ax=ax, label="Time (s)")
 
-    if saw_timeout:
-        ax.legend(
-            handles=[
+    if seen_failures:
+        handles = []
+        for status in ("timeout", "oom", "failed"):
+            if status not in seen_failures:
+                continue
+            color, hatch, _label, legend_label = failure_style(status)
+            handles.append(
                 Patch(
-                    facecolor="#d9d9d9",
+                    facecolor=color,
                     edgecolor="black",
-                    hatch="///",
-                    label="Timed out",
+                    hatch=hatch,
+                    label=legend_label,
                 )
-            ],
+            )
+        ax.legend(
+            handles=handles,
             loc="upper left",
             bbox_to_anchor=(1.02, 1.0),
             borderaxespad=0.0,
@@ -353,6 +389,7 @@ def main() -> None:
         row_labels,
         x_values,
         grid,
+        failure_grid,
         samples,
     ) = build_heatmap_data(rows, x_axis, y_axis)
     if args.layout == "graph":
@@ -375,6 +412,7 @@ def main() -> None:
             row_labels,
             x_values,
             grid,
+            failure_grid,
             x_axis,
             y_axis,
         )

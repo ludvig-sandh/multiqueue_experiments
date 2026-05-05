@@ -2,13 +2,15 @@ import argparse
 import csv
 import json
 import re
+import signal
 import shlex
 import subprocess
 from dataclasses import dataclass, fields, replace
 from pathlib import Path
 from typing import List
 
-TIMEOUT = 60*5  # Seconds allowed per benchmark
+TIMEOUT = 60*10  # Seconds allowed per benchmark
+TERMINAL_STATUSES = {"timeout", "oom"}
 CSV_FIELDNAMES = [
     "problem",
     "pq_type",
@@ -16,6 +18,8 @@ CSV_FIELDNAMES = [
     "instance",
     "threads",
     "batch",
+    "status",
+    "returncode",
     "time_s",
     "processed_nodes",
     "ignored_nodes",
@@ -49,6 +53,8 @@ class BenchmarkResult:
     params: Params
     target: str
     command: str
+    status: str
+    returncode: int | None
     time_s: float | None
     processed_nodes: int | None
     ignored_nodes: int | None
@@ -58,10 +64,9 @@ class BenchmarkResult:
 # Omitted values resolve to 1 after benchmark parameters are combined.
 params_fallback = Params(
     problem="max_clique",
-    threads=1,
-    batch=1,
+    batch=None,
     stickiness=16,
-    num_repetitions=1
+    num_repetitions=2
 )
 
 params_x = [
@@ -84,8 +89,7 @@ params_y = [
     Params(threads=4),
     Params(threads=8),
     Params(threads=16),
-    Params(threads=24),
-    # Params(threads=72),
+    Params(threads=24)
 ]
 ### ###
 
@@ -185,6 +189,24 @@ def parse_ignored_nodes(output: str) -> int | None:
         return int(m.group(1))
     return None
 
+def is_oom_failure(returncode: int, output: str) -> bool:
+    if returncode == -signal.SIGKILL:
+        return True
+
+    oom_patterns = [
+        "std::bad_alloc",
+        "bad allocation",
+        "cannot allocate memory",
+        "out of memory",
+    ]
+    output_lower = output.lower()
+    return any(pattern in output_lower for pattern in oom_patterns)
+
+def failure_status(returncode: int, output: str) -> str:
+    if is_oom_failure(returncode, output):
+        return "oom"
+    return "failed"
+
 def configure_build():
     cmd = ["cmake", "--preset", "default"]
     print(f"[configure] {' '.join(cmd)}")
@@ -200,7 +222,6 @@ def run_benchmark(params: Params, repetitions: int, csv_path: Path) -> list[Benc
         try:
             completed = subprocess.run(
                 cmd,
-                check=True,
                 text=True,
                 capture_output=True,
                 timeout=TIMEOUT
@@ -210,6 +231,8 @@ def run_benchmark(params: Params, repetitions: int, csv_path: Path) -> list[Benc
                 params=params,
                 target=target,
                 command=quoted_cmd,
+                status="timeout",
+                returncode=None,
                 time_s=None,
                 processed_nodes=None,
                 ignored_nodes=None,
@@ -219,10 +242,27 @@ def run_benchmark(params: Params, repetitions: int, csv_path: Path) -> list[Benc
             break
 
         output = completed.stdout + "\n" + completed.stderr
+        if completed.returncode != 0:
+            result = BenchmarkResult(
+                params=params,
+                target=target,
+                command=quoted_cmd,
+                status=failure_status(completed.returncode, output),
+                returncode=completed.returncode,
+                time_s=None,
+                processed_nodes=parse_processed_nodes(output),
+                ignored_nodes=parse_ignored_nodes(output),
+            )
+            append_result_to_csv(csv_path, result)
+            results.append(result)
+            break
+
         result = BenchmarkResult(
             params=params,
             target=target,
             command=quoted_cmd,
+            status="ok",
+            returncode=completed.returncode,
             time_s=parse_time_seconds(output),
             processed_nodes=parse_processed_nodes(output),
             ignored_nodes=parse_ignored_nodes(output),
@@ -239,6 +279,11 @@ def instance_name(path: str | None) -> str | None:
 
 def cache_value(value) -> str:
     return "" if value is None else str(value)
+
+def parse_optional_int(value: str | None) -> int | None:
+    if value is None or not value.strip():
+        return None
+    return int(value)
 
 def params_cache_key(params: Params) -> tuple[str, ...]:
     return (
@@ -266,15 +311,22 @@ def num_repetitions(params: Params) -> int:
         raise ValueError(f"num_repetitions must be at least 1 for {params}")
     return value
 
+def has_terminal_result(results: list[BenchmarkResult]) -> bool:
+    return any(result.status in TERMINAL_STATUSES for result in results)
+
 def missing_repetitions(
-    cached_results: dict[tuple[str, ...], list[float | None]],
+    cached_results: dict[tuple[str, ...], list[BenchmarkResult]],
     params: Params,
 ) -> int:
-    cached_count = len(cached_results.get(params_cache_key(params), []))
+    cached_rows = cached_results.get(params_cache_key(params), [])
+    if has_terminal_result(cached_rows):
+        return 0
+
+    cached_count = len(cached_rows)
     return max(0, num_repetitions(params) - cached_count)
 
 def has_complete_cached_results(
-    cached_results: dict[tuple[str, ...], list[float | None]],
+    cached_results: dict[tuple[str, ...], list[BenchmarkResult]],
     params: Params,
 ) -> bool:
     return missing_repetitions(cached_results, params) == 0
@@ -284,11 +336,26 @@ def ensure_csv(csv_path: Path) -> None:
         write_csv_header(csv_path)
         return
 
+    rows_to_migrate: list[dict[str, str]] | None = None
     with csv_path.open(newline="") as f:
         reader = csv.DictReader(f)
         existing_fieldnames = reader.fieldnames or []
         if existing_fieldnames == CSV_FIELDNAMES:
             return
+
+        old_fieldnames = [name for name in CSV_FIELDNAMES if name not in {"status", "returncode"}]
+        if existing_fieldnames == old_fieldnames:
+            rows_to_migrate = list(reader)
+
+    if rows_to_migrate is not None:
+        with csv_path.open("w", newline="") as out:
+            writer = csv.DictWriter(out, fieldnames=CSV_FIELDNAMES)
+            writer.writeheader()
+            for row in rows_to_migrate:
+                row["status"] = "ok" if row.get("time_s") else "timeout"
+                row["returncode"] = ""
+                writer.writerow(row)
+        return
 
     raise ValueError(
         f"{csv_path} uses CSV fields {existing_fieldnames}, expected {CSV_FIELDNAMES}. "
@@ -300,8 +367,8 @@ def write_csv_header(csv_path: Path) -> None:
         writer = csv.DictWriter(f, fieldnames=CSV_FIELDNAMES)
         writer.writeheader()
 
-def load_cached_results(csv_path: Path) -> dict[tuple[str, ...], list[float | None]]:
-    cached_results: dict[tuple[str, ...], list[float | None]] = {}
+def load_cached_results(csv_path: Path) -> dict[tuple[str, ...], list[BenchmarkResult]]:
+    cached_results: dict[tuple[str, ...], list[BenchmarkResult]] = {}
 
     if not csv_path.exists():
         return cached_results
@@ -310,7 +377,28 @@ def load_cached_results(csv_path: Path) -> dict[tuple[str, ...], list[float | No
         reader = csv.DictReader(f)
         for row in reader:
             time_s = float(row["time_s"]) if row.get("time_s") else None
-            cached_results.setdefault(row_cache_key(row), []).append(time_s)
+            params = Params(
+                problem=row.get("problem") or None,
+                pq_type=row.get("pq_type") or None,
+                name=row.get("name") or None,
+                instance=row.get("instance") or None,
+                threads=parse_optional_int(row.get("threads")),
+                batch=parse_optional_int(row.get("batch")),
+            )
+            returncode = parse_optional_int(row.get("returncode"))
+            target = make_target_name(params)
+            cached_results.setdefault(row_cache_key(row), []).append(
+                BenchmarkResult(
+                    params=params,
+                    target=target,
+                    command="",
+                    status=row.get("status") or ("ok" if time_s is not None else "timeout"),
+                    returncode=returncode,
+                    time_s=time_s,
+                    processed_nodes=parse_optional_int(row.get("processed_nodes")),
+                    ignored_nodes=parse_optional_int(row.get("ignored_nodes")),
+                )
+            )
 
     return cached_results
 
@@ -322,6 +410,8 @@ def append_result_to_csv(csv_path: Path, result: BenchmarkResult) -> None:
         "instance": instance_name(result.params.instance),
         "threads": result.params.threads,
         "batch": result.params.batch,
+        "status": result.status,
+        "returncode": result.returncode if result.returncode is not None else "",
         "time_s": result.time_s if result.time_s is not None else "",
         "processed_nodes": result.processed_nodes if result.processed_nodes is not None else "",
         "ignored_nodes": result.ignored_nodes if result.ignored_nodes is not None else "",
@@ -330,6 +420,16 @@ def append_result_to_csv(csv_path: Path, result: BenchmarkResult) -> None:
     with csv_path.open("a", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=CSV_FIELDNAMES)
         writer.writerow(row)
+
+def result_summary_label(results: list[BenchmarkResult]) -> str:
+    statuses = sorted({result.status for result in results})
+    return ", ".join(status.upper() for status in statuses)
+
+def average_completed_time(results: list[BenchmarkResult]) -> float | None:
+    completed_times = [result.time_s for result in results if result.time_s is not None]
+    if not completed_times:
+        return None
+    return sum(completed_times) / len(completed_times)
 
 
 def parse_args() -> argparse.Namespace:
@@ -373,35 +473,27 @@ def main():
         remaining = total - i
         target = make_target_name(params)
         cache_key = params_cache_key(params)
-        cached_times = cached_results.get(cache_key, [])
+        cached_result_rows = cached_results.get(cache_key, [])
         missing_rows_for_params = missing_repetitions(cached_results, params)
 
         if missing_rows_for_params == 0:
-            cached_result_rows = [
-                BenchmarkResult(
-                    params=params,
-                    target=target,
-                    command=" ".join(shlex.quote(x) for x in make_run_command(params)),
-                    time_s=time_s,
-                    processed_nodes=None,
-                    ignored_nodes=None,
-                )
-                for time_s in cached_times
-            ]
             results.extend(cached_result_rows)
             skipped_count += 1
-            if any(result.time_s is None for result in cached_result_rows):
-                print(f"[{i}/{total}] CACHED  {params}  {len(cached_result_rows)} rows, includes TIMEOUT")
+            average_time_s = average_completed_time(cached_result_rows)
+            if average_time_s is None:
+                print(f"[{i}/{total}] CACHED  {params}  {len(cached_result_rows)} rows, {result_summary_label(cached_result_rows)}")
+            elif any(result.status != "ok" for result in cached_result_rows):
+                print(
+                    f"[{i}/{total}] CACHED  {params}  {len(cached_result_rows)} rows, "
+                    f"{result_summary_label(cached_result_rows)}, avg completed={average_time_s:.6f}s"
+                )
             else:
-                average_time_s = sum(
-                    result.time_s for result in cached_result_rows if result.time_s is not None
-                ) / len(cached_result_rows)
                 print(f"[{i}/{total}] CACHED  {params}  {len(cached_result_rows)} rows, avg={average_time_s:.6f}s")
             continue
 
         print(
             f"[{i}/{total}] Running {params} "
-            f"({missing_rows_for_params} missing rows, {len(cached_times)} cached, {remaining} configs left)"
+            f"({missing_rows_for_params} missing rows, {len(cached_result_rows)} cached, {remaining} configs left)"
         )
 
         if target not in built_targets:
@@ -409,29 +501,21 @@ def main():
             built_targets.add(target)
 
         try:
-            cached_result_rows = [
-                BenchmarkResult(
-                    params=params,
-                    target=target,
-                    command=" ".join(shlex.quote(x) for x in make_run_command(params)),
-                    time_s=time_s,
-                    processed_nodes=None,
-                    ignored_nodes=None,
-                )
-                for time_s in cached_times
-            ]
             result_rows = run_benchmark(params, missing_rows_for_params, csv_path)
             results.extend(cached_result_rows)
             results.extend(result_rows)
-            cached_results[cache_key] = cached_times + [result.time_s for result in result_rows]
+            cached_results[cache_key] = cached_result_rows + result_rows
             ran_count += 1
 
-            if any(result.time_s is None for result in result_rows):
-                print(f"[{i}/{total}] TIMEOUT  {params}  after {TIMEOUT:.0f}s")
+            average_time_s = average_completed_time(result_rows)
+            if average_time_s is None:
+                print(f"[{i}/{total}] {result_summary_label(result_rows)}  {params}")
+            elif any(result.status != "ok" for result in result_rows):
+                print(
+                    f"[{i}/{total}] {result_summary_label(result_rows)}  {params}  "
+                    f"added {len(result_rows)} rows, avg completed={average_time_s:.6f}s"
+                )
             else:
-                average_time_s = sum(
-                    result.time_s for result in result_rows if result.time_s is not None
-                ) / len(result_rows)
                 print(
                     f"[{i}/{total}] DONE  {params}  "
                     f"added {len(result_rows)} rows, avg added={average_time_s:.6f}s"
@@ -448,19 +532,24 @@ def main():
             print(f"[{i}/{total}] FAIL  {params}  error={e}")
 
     print("\n=== Final summary ===")
-    completed_count = sum(result.time_s is not None for result in results)
-    timeout_count = sum(result.time_s is None for result in results)
+    completed_count = sum(result.status == "ok" for result in results)
     print(f"Completed rows: {completed_count}/{len(results)}")
-    print(f"Timed-out rows: {timeout_count}/{len(results)}")
+    for status in sorted({result.status for result in results if result.status != "ok"}):
+        status_count = sum(result.status == status for result in results)
+        print(f"{status.title()} rows: {status_count}/{len(results)}")
     print(f"Cached: {skipped_count}/{total}")
     print(f"Ran: {ran_count}/{total}")
     print(f"CSV file: {csv_path}")
 
     for r in results:
-        if r.time_s is None:
-            print(f"{r.params}, TIMEOUT after {TIMEOUT:.0f}s")
-        else:
+        if r.status == "ok" and r.time_s is not None:
             print(f"{r.params}, {r.time_s:.6f}s")
+        elif r.status == "timeout":
+            print(f"{r.params}, TIMEOUT after {TIMEOUT:.0f}s")
+        elif r.status == "oom":
+            print(f"{r.params}, OOM returncode={r.returncode}")
+        else:
+            print(f"{r.params}, FAIL status={r.status} returncode={r.returncode}")
 
 
 if __name__ == "__main__":
