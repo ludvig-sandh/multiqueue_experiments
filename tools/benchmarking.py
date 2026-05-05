@@ -50,7 +50,7 @@ class Params:
 
 @dataclass(frozen=True)
 class BenchmarkGroup:
-    name: str = ""
+    name: str
     params_fallback: Params
     params_x: list[Params]
     params_y: list[Params]
