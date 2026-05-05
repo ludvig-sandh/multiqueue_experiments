@@ -233,7 +233,7 @@ def run_benchmark(params: Params, repetitions: int, csv_path: Path) -> list[Benc
                 command=quoted_cmd,
                 status="timeout",
                 returncode=None,
-                time_s=None,
+                time_s=TIMEOUT,
                 processed_nodes=None,
                 ignored_nodes=None,
             )
