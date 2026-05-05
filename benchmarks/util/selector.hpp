@@ -48,6 +48,9 @@
 #elif defined PQ_PR
 #include "wrapper/pr.hpp"
 #define PQ wrapper::pr::PR
+#elif defined PQ_2D_STACK
+#include "wrapper/2d_stack.hpp"
+#define PQ wrapper::two_d_stack::TwoDStack
 #else
 #error No valid PQ specified
 #endif

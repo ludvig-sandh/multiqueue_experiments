@@ -221,6 +221,24 @@ set_property(TARGET pr PROPERTY pq_name pr)
 target_link_libraries(pr INTERFACE pr_support)
 target_compile_definitions(pr INTERFACE PQ_PR)
 
+set(TWO_D_STACK_DIR "${CMAKE_SOURCE_DIR}/third_party/2d-stacks")
+
+add_library(
+  2d_stack_support STATIC
+  ${TWO_D_STACK_DIR}/2Dc-stack.c
+  ${TWO_D_STACK_DIR}/ssmem.c
+  ${TWO_D_STACK_DIR}/ssalloc.c)
+target_include_directories(2d_stack_support SYSTEM PUBLIC ${TWO_D_STACK_DIR})
+target_compile_options(2d_stack_support PRIVATE -w -std=gnu11 -mcx16)
+target_compile_definitions(2d_stack_support PUBLIC GC=1 GCCLAIM=0
+                                                   CORES_PER_SOCKET=1 NO_SET_CPU)
+target_link_libraries(2d_stack_support PUBLIC atomic m)
+
+add_library(2d_stack INTERFACE)
+set_property(TARGET 2d_stack PROPERTY pq_name 2d_stack)
+target_link_libraries(2d_stack INTERFACE 2d_stack_support)
+target_compile_definitions(2d_stack INTERFACE PQ_2D_STACK)
+
 set(COMPETITORS
     ${MQ_VARIANTS}
     klsm4
@@ -237,6 +255,7 @@ set(COMPETITORS
     mq_pq
     multilifo
     pr
+    2d_stack
     PARENT_SCOPE)
 
 set(GENERIC_COMPETITORS
@@ -252,4 +271,5 @@ set(GENERIC_COMPETITORS
     mq_pq
     multilifo
     pr
+    2d_stack
     PARENT_SCOPE)
