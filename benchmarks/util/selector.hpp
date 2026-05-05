@@ -51,6 +51,9 @@
 #elif defined PQ_2D_STACK
 #include "wrapper/2d_stack.hpp"
 #define PQ wrapper::two_d_stack::TwoDStack
+#elif defined PQ_TREIBER_STACK
+#include "wrapper/treiber_stack.hpp"
+#define PQ wrapper::treiber_stack::TreiberStack
 #else
 #error No valid PQ specified
 #endif
