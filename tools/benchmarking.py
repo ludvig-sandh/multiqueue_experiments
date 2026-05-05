@@ -46,7 +46,14 @@ class Params:
         )
 
     def __repr__(self):
-        return self.__str__(self)
+        return self.__str__()
+
+@dataclass(frozen=True)
+class BenchmarkGroup:
+    name: str = ""
+    params_fallback: Params
+    params_x: list[Params]
+    params_y: list[Params]
 
 @dataclass
 class BenchmarkResult:
@@ -58,40 +65,6 @@ class BenchmarkResult:
     time_s: float | None
     processed_nodes: int | None
     ignored_nodes: int | None
-
-### Specify benchmark parameters here ###
-# Set num_repetitions in params_x, params_y, or params_fallback.
-# Omitted values resolve to 1 after benchmark parameters are combined.
-params_fallback = Params(
-    problem="max_clique",
-    batch=None,
-    stickiness=16,
-    num_repetitions=2
-)
-
-params_x = [
-    Params(pq_type="seq_stack", name="Sequential Stack", threads=1),
-    Params(pq_type="locked_stack", name="Globally locked Stack"),
-    Params(pq_type="pmc", name="PMC library"),
-    Params(pq_type="work_stealing", name="Simple work stealing"),
-    Params(pq_type="multilifo", name="MultiLIFO", num_repetitions=20),
-    Params(pq_type="treiber_stack", name="Treiber stack (elimination)"),
-    Params(pq_type="2d_stack", name="2D stack"),
-    Params(pq_type="seq_pq", name="Sequential PQ", threads=1),
-    Params(pq_type="locked_pq", name="Globally locked PQ"),
-    Params(pq_type="pr", name="PR (batch=16)", batch=16),
-    Params(pq_type="mq_stick_swap", name="MultiQueue (stick swap, batch=16)", batch=16),
-]
-
-params_y = [
-    Params(threads=1),
-    Params(threads=2),
-    Params(threads=4),
-    Params(threads=8),
-    Params(threads=16),
-    Params(threads=24)
-]
-### ###
 
 
 def generate_all_benchmarks(params_x, params_y, params_fallback) -> List[Params]:
@@ -432,19 +405,17 @@ def average_completed_time(results: list[BenchmarkResult]) -> float | None:
     return sum(completed_times) / len(completed_times)
 
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run configured benchmark matrix for an input instance.")
-    parser.add_argument("instance", help="Path to the benchmark input instance")
-    return parser.parse_args()
+def benchmark_csv_path(group: BenchmarkGroup, instance: str | None) -> Path:
+    return Path(f"{group.name}_{instance_name(instance)}.csv")
 
 
-def main():
-    args = parse_args()
-    fallback = replace(params_fallback, instance=args.instance)
-    benchmarks = generate_all_benchmarks(params_x, params_y, fallback)
+def run_benchmark_group(group: BenchmarkGroup, instance: str) -> list[BenchmarkResult]:
+    fallback = replace(group.params_fallback, instance=instance)
+    benchmarks = generate_all_benchmarks(group.params_x, group.params_y, fallback)
     total = len(benchmarks)
-    csv_path = Path(f"benchmark_results_{instance_name(fallback.instance)}.csv")
+    csv_path = benchmark_csv_path(group, fallback.instance)
 
+    print(f"Benchmark group: {group.name}")
     print(f"Generated {total} benchmark configurations")
     print(f"Writing results to {csv_path}")
 
@@ -551,6 +522,10 @@ def main():
         else:
             print(f"{r.params}, FAIL status={r.status} returncode={r.returncode}")
 
+    return results
 
-if __name__ == "__main__":
-    main()
+
+def parse_instance_arg(description: str) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=description)
+    parser.add_argument("instance", help="Path to the benchmark input instance")
+    return parser.parse_args()

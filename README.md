@@ -103,10 +103,10 @@ Example:
 
 ## Plotting Results
 
-Create benchmark CSV files with `tools/benchmarker.py` by passing the path to an input instance; edit the benchmark matrix in the script to choose what to run.
+Create benchmark CSV files with a benchmark group entry script by passing the path to an input instance. Benchmark group parameter matrices live in scripts such as `tools/benchmark_scalability.py`, while the shared runner API lives in `tools/benchmarking.py`.
 
 ```bash
-python3 tools/benchmarker.py data/DIMACS_all_ascii/brock200_1.clq
+python3 tools/benchmark_scalability.py data/DIMACS_all_ascii/brock200_1.clq
 ```
 
 Use `tools/result_plotter.py` to plot benchmark CSV files.
