@@ -20,3 +20,6 @@
 [submodule "third_party/PR-bench-impl"]
 	path = third_party/PR-bench-impl
 	url = https://github.com/ludvig-sandh/PR-bench-impl
+[submodule "third_party/libcds"]
+	path = third_party/libcds
+	url = https://github.com/khizmax/libcds
