@@ -16,6 +16,7 @@ Y_AXIS = "name"
 MODE_AXES = {
     "threads": ("threads", "name"),
     "batch": ("batch", "name"),
+    "comparison": ("name", "instance"),
 }
 
 LAYOUTS = ("heatmap", "graph")
@@ -49,6 +50,10 @@ def format_axis_label(axis: str) -> str:
     return axis.replace("_", " ").title()
 
 
+def unique_in_order(values):
+    return list(dict.fromkeys(values))
+
+
 def failure_status(statuses: list[str]) -> str | None:
     non_ok_statuses = [status.strip() for status in statuses if status.strip() and status.strip() != "ok"]
     if not non_ok_statuses:
@@ -58,6 +63,24 @@ def failure_status(statuses: list[str]) -> str | None:
     if "timeout" in non_ok_statuses:
         return "timeout"
     return "failed"
+
+
+def combine_samples(
+    samples: dict[tuple[str, str], dict[object, list[float | None]]],
+    sample_statuses: dict[tuple[str, str], dict[object, list[str]]],
+):
+    grid: dict[tuple[str, str], dict[object, float | None]] = defaultdict(dict)
+    failure_grid: dict[tuple[str, str], dict[object, str | None]] = defaultdict(dict)
+    for key, row_samples in samples.items():
+        for x_value, times in row_samples.items():
+            status = failure_status(sample_statuses[key][x_value])
+            failure_grid[key][x_value] = status
+            if status is not None or any(time_s is None for time_s in times):
+                grid[key][x_value] = None
+                continue
+            grid[key][x_value] = sum(times) / len(times)
+
+    return grid, failure_grid
 
 
 def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str):
@@ -115,18 +138,47 @@ def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str):
         samples[key][x_value].append(row["time_s"])
         sample_statuses[key][x_value].append(row["status"])
 
-    grid: dict[tuple[str, str], dict[object, float | None]] = defaultdict(dict)
-    failure_grid: dict[tuple[str, str], dict[object, str | None]] = defaultdict(dict)
-    for key, row_samples in samples.items():
-        for x_value, times in row_samples.items():
-            status = failure_status(sample_statuses[key][x_value])
-            failure_grid[key][x_value] = status
-            if status is not None or any(time_s is None for time_s in times):
-                grid[key][x_value] = None
-                continue
-            grid[key][x_value] = sum(times) / len(times)
+    grid, failure_grid = combine_samples(samples, sample_statuses)
 
     return problem, instance, unique_row_keys, row_labels, x_values, grid, failure_grid, samples
+
+
+def build_comparison_data(rows: list[dict]):
+    if not rows:
+        raise ValueError("CSV file contains no benchmark rows")
+
+    missing_axes = sorted(
+        axis for axis in {"problem", "instance", "name"} if axis not in rows[0]
+    )
+    if missing_axes:
+        raise ValueError(
+            f"CSV file is missing required column(s): {', '.join(missing_axes)}"
+        )
+
+    problems = {row["problem"] for row in rows}
+    if len(problems) != 1:
+        raise ValueError("Comparison mode expects the CSV to contain exactly one problem.")
+
+    problem = next(iter(problems))
+    x_values = unique_in_order(row["name"] for row in rows)
+    row_labels = unique_in_order(row["instance"] for row in rows)
+    row_keys = [(instance, instance) for instance in row_labels]
+
+    samples: dict[tuple[str, str], dict[object, list[float | None]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
+    sample_statuses: dict[tuple[str, str], dict[object, list[str]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
+    for row in rows:
+        key = (row["instance"], row["instance"])
+        x_value = row["name"]
+        samples[key][x_value].append(row["time_s"])
+        sample_statuses[key][x_value].append(row["status"])
+
+    grid, failure_grid = combine_samples(samples, sample_statuses)
+
+    return problem, "DIMACS comparison", row_keys, row_labels, x_values, grid, failure_grid, samples
 
 
 def failure_style(status: str) -> tuple[str, str, str, str]:
@@ -232,6 +284,10 @@ def plot_heatmap(
 
     ax.set_xticks([i + 0.5 for i in range(n_cols)])
     ax.set_xticklabels(x_values)
+    if x_axis == "name":
+        ax.tick_params(axis="x", labelrotation=35)
+        for label in ax.get_xticklabels():
+            label.set_horizontalalignment("right")
 
     ax.set_yticks([i + 0.5 for i in range(n_rows)])
     ax.set_yticklabels(row_labels)
@@ -382,16 +438,30 @@ def main() -> None:
 
     csv_path = args.csv_path
     rows = read_results(csv_path)
-    (
-        problem,
-        instance,
-        row_keys,
-        row_labels,
-        x_values,
-        grid,
-        failure_grid,
-        samples,
-    ) = build_heatmap_data(rows, x_axis, y_axis)
+    if args.mode == "comparison":
+        if args.layout == "graph":
+            raise ValueError("Comparison mode is only supported with --layout heatmap.")
+        (
+            problem,
+            instance,
+            row_keys,
+            row_labels,
+            x_values,
+            grid,
+            failure_grid,
+            samples,
+        ) = build_comparison_data(rows)
+    else:
+        (
+            problem,
+            instance,
+            row_keys,
+            row_labels,
+            x_values,
+            grid,
+            failure_grid,
+            samples,
+        ) = build_heatmap_data(rows, x_axis, y_axis)
     if args.layout == "graph":
         plot_graph(
             problem,
