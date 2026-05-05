@@ -27,7 +27,6 @@ GROUP = BenchmarkGroup(
         Params(pq_type="multilifo", name="MultiLIFO", num_repetitions=20),
         Params(pq_type="treiber_stack", name="Treiber stack (elimination)"),
         Params(pq_type="2d_stack", name="2D stack"),
-        Params(pq_type="seq_pq", name="Sequential PQ", threads=1),
         Params(pq_type="locked_pq", name="Globally locked PQ"),
         Params(pq_type="pr", name="PR (batch=16)", batch=16),
         Params(pq_type="mq_stick_swap", name="MultiQueue (stick swap, batch=16)", batch=16),
