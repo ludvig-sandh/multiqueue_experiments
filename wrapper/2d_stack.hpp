@@ -24,19 +24,13 @@ class TwoDStack {
     using value_type = std::pair<key_type, mapped_type>;
 
     struct Settings {
-        std::uint64_t width = 64;
-        std::uint64_t depth = 1024;
+        std::uint64_t depth = 64;
 
         void register_cmd_options(cxxopts::Options& cmd) {
-            cmd.add_options()("two-d-width", "The 2D stack width", cxxopts::value<std::uint64_t>(width), "NUMBER");
             cmd.add_options()("two-d-depth", "The 2D stack depth", cxxopts::value<std::uint64_t>(depth), "NUMBER");
         }
 
         [[nodiscard]] bool validate() const {
-            if (width == 0) {
-                std::cerr << "Error: 2D stack width must be at least 1\n";
-                return false;
-            }
             if (depth == 0) {
                 std::cerr << "Error: 2D stack depth must be at least 1\n";
                 return false;
@@ -45,13 +39,13 @@ class TwoDStack {
         }
 
         void write_human_readable(std::ostream& out) const {
-            out << "2D stack width: " << width << '\n';
+            out << "2D stack width: 2 * threads\n";
             out << "2D stack depth: " << depth << '\n';
         }
 
         void write_json(std::ostream& out) const {
             out << '{';
-            out << std::quoted("width") << ':' << width << ',';
+            out << std::quoted("width") << ':' << std::quoted("2 * threads") << ',';
             out << std::quoted("depth") << ':' << depth;
             out << '}';
         }
@@ -88,6 +82,13 @@ class TwoDStack {
     using settings_type = Settings;
 
    private:
+    static std::uint64_t width_from_threads(int num_threads) {
+        if (num_threads <= 0) {
+            throw std::invalid_argument("2D stack thread count must be at least 1");
+        }
+        return static_cast<std::uint64_t>(num_threads) * 2;
+    }
+
     static std::uint64_t require_positive(std::uint64_t value, char const* name) {
         if (value == 0) {
             throw std::invalid_argument(std::string{"2D stack "} + name + " must be at least 1");
@@ -99,8 +100,8 @@ class TwoDStack {
     std::atomic<int> next_thread_id_{0};
 
    public:
-    explicit TwoDStack(int /*num_threads*/, std::size_t /*initial_capacity*/, Settings const& settings)
-        : stack_{require_positive(settings.width, "width"), require_positive(settings.depth, "depth")} {
+    explicit TwoDStack(int num_threads, std::size_t /*initial_capacity*/, Settings const& settings)
+        : stack_{width_from_threads(num_threads), require_positive(settings.depth, "depth")} {
         (void)Min;
     }
 
