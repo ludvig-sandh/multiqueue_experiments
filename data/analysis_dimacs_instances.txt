@@ -1,0 +1,3 @@
+data/DIMACS_all_ascii/brock400_4.clq
+data/DIMACS_all_ascii/DSJC1000_5.clq
+data/DIMACS_all_ascii/gen200_p0.9_44.clq
