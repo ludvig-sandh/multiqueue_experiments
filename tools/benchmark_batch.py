@@ -8,7 +8,7 @@ GROUP = BenchmarkGroup(
     timeout=60*30,
     params_fallback=Params(
         problem="max_clique",
-        num_repetitions=50,
+        num_repetitions=25,
         threads=512
     ),
     params_x=[
@@ -28,7 +28,6 @@ GROUP = BenchmarkGroup(
         Params(batch=64),
         Params(batch=256),
         Params(batch=1024),
-        Params(batch=4096),
     ],
 )
 
