@@ -55,7 +55,9 @@ void write_settings_json(RunConfig<Problem> const& cfg, std::ostream& out) {
 }
 
 struct Counter {
-    long long pushed_nodes{0};
+    long long queue_pushed_nodes{0};
+    long long queue_processed_nodes{0};
+    long long queue_ignored_nodes{0};
     long long processed_nodes{0};
     long long ignored_nodes{0};
 };
@@ -89,6 +91,7 @@ void process_node(typename Problem::node_type const& first_node,
                   std::size_t batch_size) {
     auto incumbent = data.incumbent.load(std::memory_order_relaxed);
     if (first_node.upper_bound <= incumbent) {
+        ++counter.queue_ignored_nodes;
         ++counter.ignored_nodes;
         return;
     }
@@ -105,6 +108,7 @@ void process_node(typename Problem::node_type const& first_node,
         batch.pop_back();
 
         if (node.upper_bound <= incumbent) {
+            ++counter.ignored_nodes;
             continue;
         }
 
@@ -123,9 +127,12 @@ void process_node(typename Problem::node_type const& first_node,
             auto child_ub = child.upper_bound;
             if (child_ub > incumbent) {
                 batch.push_back(std::move(child));
+            }else {
+                ++counter.ignored_nodes;
             }
         }
 
+        ++counter.processed_nodes;
     }
 
     // Push the rest of the batch (unprocessed nodes) into the shared PQ.
@@ -133,11 +140,11 @@ void process_node(typename Problem::node_type const& first_node,
         auto child_ub = child.upper_bound;
         if (child_ub > incumbent) {
             my_deque.emplace(new Problem::node_type(child));
-            ++counter.pushed_nodes;
+            ++counter.queue_pushed_nodes;
         }
     }
 
-    ++counter.processed_nodes;
+    ++counter.queue_processed_nodes;
 }
 
 template <class Problem>
@@ -160,7 +167,7 @@ template <class Problem>
         auto root_ub = root->upper_bound;
         if (root_ub > initial_best) {
             my_deque.emplace(root);
-            ++counter.pushed_nodes;
+            ++counter.queue_pushed_nodes;
         }
     }
 
@@ -192,7 +199,7 @@ template <class Problem>
             delete *item;
         }
 
-        data.missing_nodes.fetch_add(counter.pushed_nodes - counter.processed_nodes - counter.ignored_nodes,
+        data.missing_nodes.fetch_add(counter.queue_pushed_nodes - counter.queue_processed_nodes - counter.queue_ignored_nodes,
                                      std::memory_order_relaxed);
         
         thread_context.synchronize();
@@ -242,7 +249,9 @@ void run_benchmark(RunConfig<Problem> const& cfg) {
     std::clog << "Done\n";
     auto total_counts =
         std::accumulate(thread_counter.begin(), thread_counter.end(), Counter{}, [](auto sum, auto const& counter) {
-            sum.pushed_nodes += counter.pushed_nodes;
+            sum.queue_pushed_nodes += counter.queue_pushed_nodes;
+            sum.queue_processed_nodes += counter.queue_processed_nodes;
+            sum.queue_ignored_nodes += counter.queue_ignored_nodes;
             sum.processed_nodes += counter.processed_nodes;
             sum.ignored_nodes += counter.ignored_nodes;
             return sum;
@@ -254,7 +263,7 @@ void run_benchmark(RunConfig<Problem> const& cfg) {
     std::clog << "Solution: " << shared_data.incumbent.load() << '\n';
     std::clog << "Processed nodes: " << total_counts.processed_nodes << '\n';
     std::clog << "Ignored nodes: " << total_counts.ignored_nodes << '\n';
-    if (total_counts.processed_nodes + total_counts.ignored_nodes != total_counts.pushed_nodes) {
+    if (total_counts.queue_processed_nodes + total_counts.queue_ignored_nodes != total_counts.queue_pushed_nodes) {
         std::cerr << "Warning: Not all nodes were popped\n";
         std::cerr << "Probably the priority queue discards duplicate keys\n";
     }
@@ -265,8 +274,8 @@ void run_benchmark(RunConfig<Problem> const& cfg) {
     std::cout << std::quoted("results") << ':';
     std::cout << '{';
     std::cout << std::quoted("time_ns") << ':' << std::chrono::nanoseconds{end_time - start_time}.count() << ',';
-    std::cout << std::quoted("processed_nodes") << ':' << total_counts.processed_nodes << ',';
-    std::cout << std::quoted("ignored_nodes") << ':' << total_counts.ignored_nodes << ',';
+    std::cout << std::quoted("queue_processed_nodes") << ':' << total_counts.queue_processed_nodes << ',';
+    std::cout << std::quoted("queue_ignored_nodes") << ':' << total_counts.queue_ignored_nodes << ',';
     std::cout << std::quoted("solution") << ':' << shared_data.incumbent.load();
     std::cout << '}';
     std::cout << '}' << '\n';

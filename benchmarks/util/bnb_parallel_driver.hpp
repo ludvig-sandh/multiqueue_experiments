@@ -141,6 +141,8 @@ void process_node(pq_value<Problem> const& item,
             auto child_ub = child.upper_bound;
             if (child_ub > incumbent) {
                 batch.push_back(std::move(child));
+            }else {
+                ++counter.ignored_nodes;
             }
         }
 

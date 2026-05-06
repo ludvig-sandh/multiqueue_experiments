@@ -38,6 +38,7 @@ void branch_and_bound(Settings const& settings) noexcept {
     using instance_type = typename Problem::instance_type;
 
     long long processed_nodes{0};
+    long long ignored_nodes{0};
     std::size_t sum_sizes{0};
     std::size_t max_size{0};
 
@@ -74,6 +75,7 @@ void branch_and_bound(Settings const& settings) noexcept {
 
         if (node.upper_bound <= incumbent) {
             // for best-first, this implies all remaining nodes are also <= incumbent, so safe to break
+            ++ignored_nodes;
             break;
         }
 
@@ -86,6 +88,8 @@ void branch_and_bound(Settings const& settings) noexcept {
             }
             if (c.upper_bound > incumbent) {
                 pq.push(std::move(c));
+            }else {
+                ++ignored_nodes;
             }
         }
 
@@ -101,6 +105,7 @@ void branch_and_bound(Settings const& settings) noexcept {
               << std::chrono::duration<double>(t_end - t_start).count() << '\n';
     std::clog << "Solution: " << incumbent << '\n';
     std::clog << "Processed nodes: " << processed_nodes << '\n';
+    std::clog << "Ignored nodes: " << ignored_nodes << '\n';
     std::clog << "Average PQ size: " << static_cast<double>(sum_sizes) / static_cast<double>(processed_nodes) << '\n';
     std::clog << "Max PQ size: " << max_size << '\n';
 
