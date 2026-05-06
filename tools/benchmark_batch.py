@@ -5,13 +5,11 @@ from benchmarking import BenchmarkGroup, Params, parse_instance_arg, run_benchma
 # Omitted values resolve to 1 after benchmark parameters are combined.
 GROUP = BenchmarkGroup(
     name="batch",
-    timeout=60*10,
+    timeout=60*30,
     params_fallback=Params(
         problem="max_clique",
-        batch=None,
-        stickiness=16,
         num_repetitions=50,
-        threads=24
+        threads=512
     ),
     params_x=[
         Params(pq_type="locked_stack", name="Globally locked Stack"),
