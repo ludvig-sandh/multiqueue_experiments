@@ -10,6 +10,7 @@ DIMACS_INSTANCES_PATH = Path("data/dimacs_instances.txt")
 # Omitted values resolve to 1 after benchmark parameters are combined.
 GROUP = BenchmarkGroup(
     name="comparison",
+    timeout=60*10,
     params_fallback=Params(
         problem="max_clique",
         batch=None,
@@ -42,6 +43,7 @@ def main() -> None:
     ]
     group = BenchmarkGroup(
         name=GROUP.name,
+        timeout=GROUP.timeout,
         params_fallback=GROUP.params_fallback,
         params_x=[Params(instance=instance) for instance in dimacs_instances],
         params_y=GROUP.params_y,

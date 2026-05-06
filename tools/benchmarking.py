@@ -9,7 +9,6 @@ from dataclasses import dataclass, fields, replace
 from pathlib import Path
 from typing import List
 
-TIMEOUT = 60*10  # Seconds allowed per benchmark
 TERMINAL_STATUSES = {"timeout", "oom"}
 CSV_FIELDNAMES = [
     "problem",
@@ -51,6 +50,7 @@ class Params:
 @dataclass(frozen=True)
 class BenchmarkGroup:
     name: str
+    timeout: int  # Seconds allowed per benchmark
     params_fallback: Params
     params_x: list[Params]
     params_y: list[Params]
@@ -185,7 +185,7 @@ def configure_build():
     print(f"[configure] {' '.join(cmd)}")
     subprocess.run(cmd, check=True)
 
-def run_benchmark(params: Params, repetitions: int, csv_path: Path) -> list[BenchmarkResult]:
+def run_benchmark(params: Params, repetitions: int, csv_path: Path, timeout: int) -> list[BenchmarkResult]:
     target = make_target_name(params)
     cmd = make_run_command(params)
     quoted_cmd = " ".join(shlex.quote(x) for x in cmd)
@@ -197,7 +197,7 @@ def run_benchmark(params: Params, repetitions: int, csv_path: Path) -> list[Benc
                 cmd,
                 text=True,
                 capture_output=True,
-                timeout=TIMEOUT
+                timeout=timeout
             )
         except subprocess.TimeoutExpired:
             result = BenchmarkResult(
@@ -206,7 +206,7 @@ def run_benchmark(params: Params, repetitions: int, csv_path: Path) -> list[Benc
                 command=quoted_cmd,
                 status="timeout",
                 returncode=None,
-                time_s=TIMEOUT,
+                time_s=timeout,
                 processed_nodes=None,
                 ignored_nodes=None,
             )
@@ -472,7 +472,7 @@ def run_benchmark_group(group: BenchmarkGroup, instance: str) -> list[BenchmarkR
             built_targets.add(target)
 
         try:
-            result_rows = run_benchmark(params, missing_rows_for_params, csv_path)
+            result_rows = run_benchmark(params, missing_rows_for_params, csv_path, group.timeout)
             results.extend(cached_result_rows)
             results.extend(result_rows)
             cached_results[cache_key] = cached_result_rows + result_rows
@@ -516,7 +516,7 @@ def run_benchmark_group(group: BenchmarkGroup, instance: str) -> list[BenchmarkR
         if r.status == "ok" and r.time_s is not None:
             print(f"{r.params}, {r.time_s:.6f}s")
         elif r.status == "timeout":
-            print(f"{r.params}, TIMEOUT after {TIMEOUT:.0f}s")
+            print(f"{r.params}, TIMEOUT after {group.timeout:.0f}s")
         elif r.status == "oom":
             print(f"{r.params}, OOM returncode={r.returncode}")
         else:

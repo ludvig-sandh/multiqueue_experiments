@@ -7,10 +7,11 @@ from benchmarking import BenchmarkGroup, Params, benchmark_csv_path, run_benchma
 DIMACS_INSTANCES_PATH = Path("data/dimacs_instances.txt")
 FILTERED_DIMACS_INSTANCES_PATH = Path("dimacs_instances_filtered.txt")
 MIN_TIME_S = 1.0
-
+MAX_TIME_S = 60 * 30  # 30 mins
 
 GROUP = BenchmarkGroup(
     name="filter",
+    timeout=MAX_TIME_S,
     params_fallback=Params(
         problem="max_clique",
         batch=None,
@@ -77,6 +78,7 @@ def main() -> None:
     dimacs_instances = read_dimacs_instances(DIMACS_INSTANCES_PATH)
     group = BenchmarkGroup(
         name=GROUP.name,
+        timeout=GROUP.timeout,
         params_fallback=GROUP.params_fallback,
         params_x=[Params(instance=instance) for instance in dimacs_instances],
         params_y=GROUP.params_y,

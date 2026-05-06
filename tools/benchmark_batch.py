@@ -5,6 +5,7 @@ from benchmarking import BenchmarkGroup, Params, parse_instance_arg, run_benchma
 # Omitted values resolve to 1 after benchmark parameters are combined.
 GROUP = BenchmarkGroup(
     name="batch",
+    timeout=60*10,
     params_fallback=Params(
         problem="max_clique",
         batch=None,
