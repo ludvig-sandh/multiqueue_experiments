@@ -9,7 +9,7 @@ from dataclasses import dataclass, fields, replace
 from pathlib import Path
 from typing import List
 
-TERMINAL_STATUSES = {"timeout", "oom"}
+TERMINAL_STATUSES = {"timeout", "oom", "failed"}
 CSV_FIELDNAMES = [
     "problem",
     "pq_type",
