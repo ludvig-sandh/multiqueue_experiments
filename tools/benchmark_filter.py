@@ -5,7 +5,7 @@ from benchmarking import BenchmarkGroup, Params, benchmark_csv_path, run_benchma
 
 
 DIMACS_INSTANCES_PATH = Path("data/dimacs_instances.txt")
-FILTERED_DIMACS_INSTANCES_PATH = Path("dimacs_instances_filtered.txt")
+FILTERED_DIMACS_INSTANCES_PATH = Path("filtered_dimacs_instances.txt")
 MIN_TIME_S = 1.0
 MAX_TIME_S = 60 * 30  # 30 mins
 
