@@ -189,6 +189,18 @@ def failure_style(status: str) -> tuple[str, str, str, str]:
     return "#f4b6b6", "\\\\\\", "FAIL", "Failed"
 
 
+def graph_colors(count: int):
+    colors = []
+    for cmap_name in ("tab20", "tab20b", "tab20c"):
+        colors.extend(plt.get_cmap(cmap_name).colors)
+    if count <= len(colors):
+        return colors[:count]
+
+    fallback_cmap = plt.get_cmap("hsv")
+    colors.extend(fallback_cmap(i / (count - len(colors))) for i in range(count - len(colors)))
+    return colors
+
+
 def plot_heatmap(
     problem: str,
     instance: str,
@@ -321,10 +333,11 @@ def plot_heatmap(
                     label=legend_label,
                 )
             )
+        legend_x = 1.22 if has_timing_data else 1.02
         ax.legend(
             handles=handles,
             loc="upper left",
-            bbox_to_anchor=(1.02, 1.0),
+            bbox_to_anchor=(legend_x, 1.0),
             borderaxespad=0.0,
         )
 
@@ -348,8 +361,10 @@ def plot_graph(
     x_positions = {x_value: idx for idx, x_value in enumerate(x_values)}
     band_spread = spread.endswith("_band")
     spread_kind = spread.removesuffix("_band")
+    colors = graph_colors(len(row_keys))
 
     for row_idx, key in enumerate(row_keys):
+        color = colors[row_idx]
         points = []
         yerr_lower = []
         yerr_upper = []
@@ -388,6 +403,7 @@ def plot_graph(
                 line_times,
                 marker="o",
                 linewidth=2,
+                color=color,
                 label=row_labels[row_idx],
             )[0]
             lower = [
@@ -420,6 +436,7 @@ def plot_graph(
                 yerr=yerr,
                 marker="o",
                 linewidth=2,
+                color=color,
                 capsize=4 if spread != "none" else 0,
                 label=row_labels[row_idx],
             )
