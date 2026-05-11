@@ -218,7 +218,9 @@ def plot_heatmap(
     if has_timing_data:
         vmin = min(all_times)
         vmax = max(all_times)
-        norm = mcolors.Normalize(vmin=vmin, vmax=vmax)
+        if vmin <= 0:
+            raise ValueError("Logarithmic heatmap colors require all timing values to be positive.")
+        norm = mcolors.LogNorm(vmin=vmin, vmax=vmax)
     else:
         norm = None
     cmap = plt.get_cmap("RdYlGn_r")  # reversed so green=fast, red=slow
@@ -389,7 +391,8 @@ def plot_graph(
                 label=row_labels[row_idx],
             )[0]
             lower = [
-                time_s - err for time_s, err in zip(line_times, yerr_lower)
+                max(time_s - err, time_s * 1e-12)
+                for time_s, err in zip(line_times, yerr_lower)
             ]
             upper = [
                 time_s + err for time_s, err in zip(line_times, yerr_upper)
@@ -403,7 +406,14 @@ def plot_graph(
                 linewidth=0,
             )
         else:
-            yerr = [yerr_lower, yerr_upper] if spread != "none" else None
+            if spread != "none":
+                log_yerr_lower = [
+                    min(err, time_s * (1 - 1e-12))
+                    for time_s, err in zip(line_times, yerr_lower)
+                ]
+                yerr = [log_yerr_lower, yerr_upper]
+            else:
+                yerr = None
             ax.errorbar(
                 line_x_values,
                 line_times,
@@ -418,6 +428,7 @@ def plot_graph(
     ax.set_xticklabels(x_values)
     ax.set_xlabel(format_axis_label(x_axis))
     ax.set_ylabel("Execution Time (s)")
+    ax.set_yscale("log")
     ax.set_title(f"{problem} — {instance}")
     ax.grid(True, linestyle="--", alpha=0.35)
     ax.legend(loc="upper left", bbox_to_anchor=(1.02, 1.0), borderaxespad=0.0)
