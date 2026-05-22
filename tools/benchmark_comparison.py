@@ -21,16 +21,16 @@ GROUP = BenchmarkGroup(
         
     ],
     params_y=[
-        Params(pq_type="locked_stack", name="Globally locked Stack", batch=16),
-        Params(pq_type="pmc", name="PMC library"),
+        # Params(pq_type="locked_stack", name="Globally locked Stack", batch=16),
+        # Params(pq_type="pmc", name="PMC library"),
         Params(pq_type="ciaranm", name="CiaranM solver"),
-        Params(pq_type="work_stealing", name="Simple work stealing", batch=16),
-        Params(pq_type="multilifo", name="MultiLIFO", num_repetitions=20, batch=16),
-        Params(pq_type="treiber_stack", name="Treiber stack (elimination)", batch=16),
-        Params(pq_type="2d_stack", name="2D stack", batch=16),
-        Params(pq_type="locked_pq", name="Globally locked PQ", batch=16),
-        Params(pq_type="pr", name="PR", batch=16),
-        Params(pq_type="mq_stick_swap", name="MultiQueue (stick swap)", batch=16),
+        # Params(pq_type="work_stealing", name="Simple work stealing", batch=16),
+        # Params(pq_type="multilifo", name="MultiLIFO", num_repetitions=20, batch=16),
+        # Params(pq_type="treiber_stack", name="Treiber stack (elimination)", batch=16),
+        # Params(pq_type="2d_stack", name="2D stack", batch=16),
+        # Params(pq_type="locked_pq", name="Globally locked PQ", batch=16),
+        # Params(pq_type="pr", name="PR", batch=16),
+        # Params(pq_type="mq_stick_swap", name="MultiQueue (stick swap)", batch=16),
     ],
 )
 
