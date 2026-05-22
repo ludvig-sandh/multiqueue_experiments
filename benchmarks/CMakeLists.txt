@@ -19,7 +19,6 @@ endif()
 
 ### PMC library
 find_package(OpenMP REQUIRED)
-find_package(Boost REQUIRED COMPONENTS regex)
 
 add_library(pmc_core OBJECT
   ${CMAKE_SOURCE_DIR}/third_party/pmc-dimacs/pmc_utils.cpp
@@ -60,7 +59,6 @@ target_link_libraries(pmc PUBLIC OpenMP::OpenMP_CXX)
 add_library(ciaranm_max_clique STATIC
   ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/graph.cc
   ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/bit_graph.cc
-  ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/dimacs.cc
   ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/max_clique_params.cc
   ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/colourise.cc
   ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/degree_sort.cc
@@ -75,7 +73,7 @@ target_include_directories(ciaranm_max_clique SYSTEM PUBLIC
 set_target_properties(ciaranm_max_clique PROPERTIES INTERPROCEDURAL_OPTIMIZATION FALSE)
 target_compile_features(ciaranm_max_clique PUBLIC cxx_std_17)
 target_compile_options(ciaranm_max_clique PRIVATE -w)
-target_link_libraries(ciaranm_max_clique PUBLIC Boost::regex Threads::Threads)
+target_link_libraries(ciaranm_max_clique PUBLIC Threads::Threads)
 ###
 
 add_library(monotonic_base INTERFACE)

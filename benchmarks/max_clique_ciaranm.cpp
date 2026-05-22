@@ -2,7 +2,6 @@
 
 #include "cxxopts.hpp"
 
-#include <clique/dimacs.hh>
 #include <clique/max_clique_params.hh>
 #include <clique/tbmcsa1_max_clique.hh>
 
@@ -11,7 +10,9 @@
 #include <cstdlib>
 #include <filesystem>
 #include <iomanip>
+#include <fstream>
 #include <iostream>
+#include <sstream>
 #include <stdexcept>
 #include <string>
 
@@ -41,9 +42,69 @@ void write_settings_json(Settings const& settings, std::ostream& out) {
     out << '}';
 }
 
+clique::Graph read_dimacs(std::filesystem::path const& path) {
+    std::ifstream in(path);
+    if (!in) {
+        throw std::runtime_error("unable to open instance file: " + path.string());
+    }
+
+    clique::Graph graph;
+    std::string line;
+    while (std::getline(in, line)) {
+        if (line.empty()) {
+            continue;
+        }
+
+        std::istringstream line_stream(line);
+        char type = '\0';
+        line_stream >> type;
+        if (!line_stream || type == 'c') {
+            continue;
+        }
+
+        if (type == 'p') {
+            std::string format;
+            int num_vertices = 0;
+            int num_edges = 0;
+            if (!(line_stream >> format >> num_vertices >> num_edges) || (format != "edge" && format != "col")) {
+                throw std::runtime_error("invalid DIMACS problem line: " + line);
+            }
+            if (graph.size() != 0) {
+                throw std::runtime_error("multiple DIMACS problem lines in: " + path.string());
+            }
+            graph.resize(num_vertices);
+            continue;
+        }
+
+        if (type == 'e') {
+            int a = 0;
+            int b = 0;
+            if (!(line_stream >> a >> b)) {
+                throw std::runtime_error("invalid DIMACS edge line: " + line);
+            }
+            if (a <= 0 || b <= 0 || a > graph.size() || b > graph.size()) {
+                throw std::runtime_error("DIMACS edge index out of bounds: " + line);
+            }
+            if (a == b) {
+                throw std::runtime_error("DIMACS self-loop: " + line);
+            }
+            graph.add_edge(a - 1, b - 1);
+            continue;
+        }
+
+        throw std::runtime_error("invalid DIMACS line: " + line);
+    }
+
+    if (!in.eof()) {
+        throw std::runtime_error("error reading instance file: " + path.string());
+    }
+
+    return graph;
+}
+
 void benchmark_ciaranm(Settings const& settings) {
     std::clog << "Reading instance...\n";
-    clique::Graph graph = clique::read_dimacs(settings.instance_file.string());
+    clique::Graph graph = read_dimacs(settings.instance_file);
 
     clique::MaxCliqueParams params;
     params.n_threads = static_cast<unsigned>(settings.num_threads);
