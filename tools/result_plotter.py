@@ -308,7 +308,7 @@ def plot_heatmap(
 
     ax.set_xlabel(format_axis_label(x_axis))
     ax.set_ylabel(format_axis_label(y_axis))
-    ax.set_title(f"{problem} — {instance}")
+    ax.set_title(f"{problem} - {instance}")
 
     ax.tick_params(length=0)
     for spine in ax.spines.values():

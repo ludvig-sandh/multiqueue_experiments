@@ -7,7 +7,7 @@ GROUP = BenchmarkGroup(
     name="stickiness",
     timeout=60*30,
     params_fallback=Params(
-        problem="max_clique",
+        problem="Maximum Clique Problem",
         num_repetitions=5,
         threads=512
     ),
