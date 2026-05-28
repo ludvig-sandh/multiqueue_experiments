@@ -17,6 +17,7 @@ CSV_FIELDNAMES = [
     "instance",
     "threads",
     "batch",
+    "stickiness",
     "status",
     "returncode",
     "time_s",
@@ -266,6 +267,7 @@ def params_cache_key(params: Params) -> tuple[str, ...]:
         cache_value(instance_name(params.instance)),
         cache_value(params.threads),
         cache_value(params.batch),
+        cache_value(params.stickiness),
     )
 
 def row_cache_key(row: dict[str, str]) -> tuple[str, ...]:
@@ -276,6 +278,7 @@ def row_cache_key(row: dict[str, str]) -> tuple[str, ...]:
         row.get("instance", ""),
         row.get("threads", ""),
         row.get("batch", ""),
+        row.get("stickiness", ""),
     )
 
 def num_repetitions(params: Params) -> int:
@@ -316,8 +319,11 @@ def ensure_csv(csv_path: Path) -> None:
         if existing_fieldnames == CSV_FIELDNAMES:
             return
 
-        old_fieldnames = [name for name in CSV_FIELDNAMES if name not in {"status", "returncode"}]
-        if existing_fieldnames == old_fieldnames:
+        legacy_fieldnames = [
+            [name for name in CSV_FIELDNAMES if name not in {"stickiness"}],
+            [name for name in CSV_FIELDNAMES if name not in {"stickiness", "status", "returncode"}],
+        ]
+        if existing_fieldnames in legacy_fieldnames:
             rows_to_migrate = list(reader)
 
     if rows_to_migrate is not None:
@@ -325,8 +331,9 @@ def ensure_csv(csv_path: Path) -> None:
             writer = csv.DictWriter(out, fieldnames=CSV_FIELDNAMES)
             writer.writeheader()
             for row in rows_to_migrate:
-                row["status"] = "ok" if row.get("time_s") else "timeout"
-                row["returncode"] = ""
+                row.setdefault("stickiness", "")
+                row.setdefault("status", "ok" if row.get("time_s") else "timeout")
+                row.setdefault("returncode", "")
                 writer.writerow(row)
         return
 
@@ -357,6 +364,7 @@ def load_cached_results(csv_path: Path) -> dict[tuple[str, ...], list[BenchmarkR
                 instance=row.get("instance") or None,
                 threads=parse_optional_int(row.get("threads")),
                 batch=parse_optional_int(row.get("batch")),
+                stickiness=parse_optional_int(row.get("stickiness")),
             )
             returncode = parse_optional_int(row.get("returncode"))
             target = make_target_name(params)
@@ -383,6 +391,7 @@ def append_result_to_csv(csv_path: Path, result: BenchmarkResult) -> None:
         "instance": instance_name(result.params.instance),
         "threads": result.params.threads,
         "batch": result.params.batch,
+        "stickiness": result.params.stickiness,
         "status": result.status,
         "returncode": result.returncode if result.returncode is not None else "",
         "time_s": result.time_s if result.time_s is not None else "",
