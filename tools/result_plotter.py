@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import math
 import statistics
 from collections import defaultdict
 from pathlib import Path
@@ -22,6 +23,7 @@ MODE_AXES = {
 LAYOUTS = ("heatmap", "graph")
 SPREADS = ("none", "minmax", "stddev", "minmax_band", "stddev_band")
 HEATMAP_COLOR_MODES = ("time", "row-slowdown", "row_slowdown")
+HEATMAP_WIDTH_MODES = ("auto", "regular", "compact")
 
 TITLE_FONT_SIZE = 15
 AXIS_LABEL_FONT_SIZE = 13
@@ -30,6 +32,8 @@ CELL_LABEL_FONT_SIZE = 11
 LEGEND_FONT_SIZE = 11
 COLORBAR_LABEL_FONT_SIZE = 12
 COLORBAR_TICK_FONT_SIZE = 11
+BEST_TILE_EDGE_COLOR = "#f2b705"
+BEST_TILE_LINE_WIDTH = 2.6
 
 
 def read_results(csv_path: Path) -> list[dict]:
@@ -63,6 +67,12 @@ def format_multiplier(value: float) -> str:
     if value < 10:
         return f"{value:.1f}x"
     return f"{value:g}x"
+
+
+def mark_best_label(label: str) -> str:
+    lines = label.splitlines()
+    lines[0] += r" $\star$"
+    return "\n".join(lines)
 
 
 def unique_in_order(values):
@@ -227,6 +237,8 @@ def plot_heatmap(
     x_axis: str,
     y_axis: str,
     color_mode: str,
+    mark_row_best: bool = False,
+    compact_columns: bool = False,
 ) -> None:
     import matplotlib.colors as mcolors
     from matplotlib.patches import Patch
@@ -276,7 +288,10 @@ def plot_heatmap(
         colorbar_label = "Time (s)"
     cmap = plt.get_cmap("RdYlGn_r")  # reversed so green=fast, red=slow
 
-    fig_width = max(7.8, 1.2 * n_cols + 2.8)
+    if compact_columns:
+        fig_width = max(6.6, 0.75 * n_cols + 2.4)
+    else:
+        fig_width = max(7.8, 1.2 * n_cols + 2.8)
     fig_height = max(3.2, 0.42 * n_rows + 1.8)
     fig, ax = plt.subplots(figsize=(fig_width, fig_height))
     seen_failures: set[str] = set()
@@ -294,6 +309,12 @@ def plot_heatmap(
 
             label = None
             hatch = None
+            is_row_best = (
+                mark_row_best
+                and value is not None
+                and best_value is not None
+                and math.isclose(value, best_value)
+            )
 
             if not has_result:
                 color = "white"
@@ -315,14 +336,16 @@ def plot_heatmap(
                         label = f"{value:.3f}\n({speedup:.1f}x)"
                     else:
                         label = f"{value:.3f}"
+                if is_row_best:
+                    label = mark_best_label(label)
 
             rect = plt.Rectangle(
                 (col_idx, row_idx),
                 1,
                 1,
                 facecolor=color,
-                edgecolor="black",
-                linewidth=1.0,
+                edgecolor=BEST_TILE_EDGE_COLOR if is_row_best else "black",
+                linewidth=BEST_TILE_LINE_WIDTH if is_row_best else 1.0,
                 hatch=hatch,
             )
             ax.add_patch(rect)
@@ -335,6 +358,7 @@ def plot_heatmap(
                     ha="center",
                     va="center",
                     fontsize=CELL_LABEL_FONT_SIZE,
+                    fontweight="bold" if is_row_best else "normal",
                     linespacing=0.9,
                 )
 
@@ -529,8 +553,13 @@ def main() -> None:
     parser.add_argument("--layout", choices=LAYOUTS, default="heatmap")
     parser.add_argument("--spread", choices=SPREADS, default="none")
     parser.add_argument("--heatmap-colors", choices=HEATMAP_COLOR_MODES, default="time")
+    parser.add_argument("--heatmap-width", choices=HEATMAP_WIDTH_MODES, default="auto")
     args = parser.parse_args()
     heatmap_colors = args.heatmap_colors.replace("_", "-")
+    compact_heatmap = (
+        args.heatmap_width == "compact"
+        or (args.heatmap_width == "auto" and args.mode == "comparison")
+    )
 
     x_axis, y_axis = MODE_AXES[args.mode] if args.mode else (X_AXIS, Y_AXIS)
 
@@ -584,6 +613,8 @@ def main() -> None:
             x_axis,
             y_axis,
             heatmap_colors,
+            mark_row_best=args.mode == "comparison",
+            compact_columns=compact_heatmap,
         )
 
 
