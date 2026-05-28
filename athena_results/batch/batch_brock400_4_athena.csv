@@ -449,306 +449,306 @@ max_clique,multilifo,MultiLIFO,brock400_4,512,1024,ok,0,0.312689453,5681363,1971
 max_clique,multilifo,MultiLIFO,brock400_4,512,1024,ok,0,0.306872358,5477092,19357612
 max_clique,multilifo,MultiLIFO,brock400_4,512,1024,ok,0,0.303950146,5390474,19005116
 max_clique,multilifo,MultiLIFO,brock400_4,512,1024,ok,0,0.335018729,6565513,22449684
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,42.361738658,15440223,44192775
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,13.097956761,4233209,16148940
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,70.374139352,25267199,72469622
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,81.530490857,30675798,80353811
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,13.804461108,4513073,16827227
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,64.318011115,23907910,65024951
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,51.691148069,19060050,53356423
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,53.953376779,19929567,55086568
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,49.953061483,18177487,52495218
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,43.643917052,15900137,45373232
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,69.964788578,24939137,73446722
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,94.054456128,34024064,97029354
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,86.293552411,31974843,85717977
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,60.481610498,21959889,61091059
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,54.697505465,19583565,57912798
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,14.389986416,4744226,17290230
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,42.415349849,15485689,44255021
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,42.070703375,15282519,43805934
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,47.357149102,16989984,49551479
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,42.622410438,15451981,44288808
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,94.71328103,35298306,93221502
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,104.05698263,37781668,106878126
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,42.231500584,15399804,44065378
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,50.581442503,18410377,52360680
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1,ok,0,43.071809038,15634484,44602133
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,45.151241287,22626473,64454447
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,45.169824359,22145961,65292269
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,163.273862764,84797658,223397453
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,94.228169345,47179841,133053562
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,64.434365699,32451832,90531410
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,60.134137314,30983957,83413086
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,146.590659798,75544149,196994301
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,31.610252127,15734074,45417277
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,34.126747678,16861194,49111596
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,35.694416984,17546719,51462776
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,112.879383465,56548977,156187945
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,100.621974369,51385132,138424272
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,141.638685149,73009164,193516930
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,98.188874704,49872191,133450210
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,51.822992886,26219192,71495970
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,124.657936198,63897560,170470161
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,48.375725969,23562729,69020345
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,117.194428126,60184549,158231060
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,50.023793922,25119805,69177764
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,43.076640351,20934373,61579632
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,95.479658046,47979153,132135505
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,46.424460629,23395368,65354042
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,55.226454423,27592039,78660415
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,46.096763207,22833892,66050601
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,4,ok,0,72.705196621,36807462,101755458
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,42.724604479,39197991,105579412
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,24.05882388,21695931,61235715
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,106.308488785,99994572,258897070
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,18.308055123,16290899,47203478
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,18.292547618,16319371,46580098
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,100.458578523,92593125,243420069
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,27.887112423,24773399,71976169
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,18.006871108,15953737,46167254
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,20.799709096,18972828,52317623
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,34.623738991,30722578,88949892
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,43.178229041,39159418,107374971
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,19.780591745,17517524,51172843
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,24.286563799,21167287,61984365
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,33.258617912,30614243,80958480
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,37.98498225,35074682,94523526
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,24.295415897,21493038,63092207
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,68.777868543,63718516,168393944
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,23.208534709,20326412,59280902
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,23.596506148,21298977,59394535
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,20.853698894,18346240,54181420
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,29.498116416,26227142,74419325
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,28.423636849,25313299,73307845
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,67.685459179,62523740,165839373
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,69.739578076,64038605,173655463
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,25.501003941,22482667,65529289
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,10.702600597,19849823,58118052
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,29.859072847,59724080,154630580
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,13.17795078,24878656,71023571
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,7.318264877,13316851,40017604
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,13.729166441,25651375,75118728
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,25.914534931,51153655,135342300
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,9.456217629,17805856,50693867
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,9.292019959,17155514,49872457
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,11.958600404,22801704,63420832
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,19.015787643,37982824,97326153
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,18.663046084,35750148,98188494
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,9.348183574,17809772,50179124
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,9.076601492,16762381,48728080
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,8.562908343,16002168,46384402
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,17.072881189,33352119,89368206
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,10.34251759,19821799,55489010
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,23.357105556,45531140,122086496
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,4.564063018,7416828,26342306
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,12.739561152,23791807,68318025
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,24.326634973,46822662,127503779
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,3.450276392,5571615,20062848
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,48.979274829,95887185,254601177
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,20.967453375,40168040,110157928
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,30.88262188,60810141,159123506
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,64,ok,0,10.177243933,19074942,54529336
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,8.234545601,37910281,101732112
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,1.320941622,4396882,16668567
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,1.847799867,6865559,25011486
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,13.570057541,63488933,167929808
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,6.993361579,32028520,86333715
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,3.405357238,14682490,42838482
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,1.778402763,6342133,23117374
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,16.020007171,76347752,198741514
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,7.59928523,34594666,93943937
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,8.350527155,38964229,102704856
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,7.24162947,33128662,89563935
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,14.73521369,70170047,183898912
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,2.7112966,11038149,34197226
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,3.809614719,16882034,48460388
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,12.397977169,58132901,154826884
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,2.254354324,8380527,29845231
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,18.098006425,85810330,226953692
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,2.603180901,9844161,33725220
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,5.257079852,24068209,66371023
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,4.308707013,19055983,52753976
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,6.525284263,30825766,81055915
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,3.11808061,13824151,38130753
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,18.326204275,87211079,226504819
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,5.242242265,23493005,65303565
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,256,ok,0,6.375713053,27805029,79306699
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,0.837741157,5461885,19694843
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.620611646,16031920,53087501
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.580978406,13741330,40552090
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.62970311,15549228,49596741
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.204500329,8676521,28875661
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,0.874468391,5688181,20408704
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.644933648,13916469,42276177
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.197471117,8952926,31124868
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,6.013208862,65021451,171556245
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.14481525,8644502,30399278
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,0.997326714,7006550,24847498
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,3.273389229,33605189,93431587
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.202255777,9023437,31350226
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,0.986703178,6936404,24735159
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,4.166458222,42762888,118223469
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.374293003,11482370,38426903
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.126986677,8056816,27241995
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,2.892459251,28005444,84358258
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,3.227690128,32297662,93618688
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,0.797929593,5249580,19140541
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,3.41501405,36684145,96786388
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,3.555559729,37288433,100762872
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.54339985,13222814,41733095
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,1.039783285,7499367,25976210
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,1024,ok,0,2.809422331,27544185,80525504
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.289984809,4435907,16868234
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.297959078,4910885,18189303
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.289071097,4593580,17436794
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.376873409,6555224,24048042
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.287495524,4469010,16990894
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.291942134,4404607,16755054
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.352223429,6122886,22312082
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.359739387,6358502,22868769
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.311437231,5163290,18966465
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.292683736,4539914,17107233
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.370627473,6603782,24048276
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.294007549,4780277,17903353
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.291916364,4700030,17794054
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.321861205,5526647,19879342
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.466186673,10249292,32893823
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.287678024,4439461,16867373
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.340604191,6158358,21597942
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.272029236,4261730,16384480
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.302523389,4822099,17898652
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.307477692,4998550,18769636
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.31941257,5265414,19620590
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.301718517,4810402,18054204
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.284242305,4355524,16629346
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.283230202,4354327,16635221
-max_clique,2d_stack,2D stack,brock400_4,512,1,ok,0,0.352563719,6266714,22363289
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.299424272,4976278,18391886
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.278500922,4404276,16738093
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.403541262,7580354,27219708
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.632391814,16094566,49703890
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.370439303,6946862,24883347
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.355487817,6379024,23442953
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.490120121,10224217,34935386
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.312460003,5330817,19614055
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.283138332,4536610,17140284
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.291905954,4672560,17399295
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.509805759,10445864,36281239
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,1.097046204,33058437,92201660
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.437474605,8865233,30453433
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.349869033,6030446,22185694
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.317510114,5424722,19961305
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.387596464,7162775,25388714
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.278718562,4461613,16942213
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.278525972,4426525,16820186
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.281633848,4509657,17081314
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.298539119,4940817,18484924
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.525786347,13784434,40141169
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.345496193,6092916,22439533
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.623360734,16760522,48828435
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.334562212,5767107,21205265
-max_clique,2d_stack,2D stack,brock400_4,512,4,ok,0,0.317796732,5388772,19631985
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.279971961,4636185,17452035
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.26714651,4317884,16518324
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.434845512,9210809,31719019
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.397090471,7741436,27600593
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.337280619,6163329,22532420
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.446098869,8894683,31544465
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.368776614,6815762,24705579
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.331208573,5928362,21754041
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.483626689,10109031,34745422
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.429273739,9680808,31519010
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.383001068,7179134,26051574
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.353330117,6520175,24012060
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.280711332,4586412,17297908
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.430379542,8556854,30313114
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.285512274,4747641,17776266
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.277034094,4618086,17299365
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.277824616,4675649,17524541
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.422188622,9456980,31047580
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.278255467,4665109,17491873
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.406053253,8075857,28777094
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.489268952,10095072,35474626
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.408150528,7971556,28444888
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.288080691,4760988,17631482
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.315502327,5457642,20349964
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.445319397,8879718,31687685
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.269522075,4577696,17256601
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.370953859,7407909,26466660
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.302988866,5663343,20343220
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.29220612,5432444,19253721
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.376819273,7229020,26221659
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.266541959,4373971,16638839
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.373822656,8811373,27675197
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.301971984,5618047,19984279
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.436710597,8910928,31574310
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,1.534908219,55819509,147738954
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.36702556,7113030,25603080
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.304996961,5458805,20251107
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.516842159,12495275,40615220
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.271127979,4645648,17369851
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,1.002386813,36247499,94437810
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.270391599,4500318,16896179
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.551113571,12407168,42509587
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.444358635,9329375,32869291
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.27540253,4644071,17385766
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.522056471,14386627,43143141
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.927302503,29847685,83375970
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.267934872,4483559,16926351
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.266664529,4566881,17151967
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.453044996,10086213,34418683
-max_clique,2d_stack,2D stack,brock400_4,512,64,ok,0,0.265812757,4538688,17085086
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.274832729,4691445,17375379
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.379197829,8396922,28136480
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.381500634,7655161,27152072
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.310874975,5590965,20042230
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.320209318,5886476,21466275
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,1.301040248,40869630,119979531
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.301901174,5353195,19523638
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.332908618,6217398,22451162
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.366470118,6863369,24796482
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.463566211,10085375,34862166
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.27548756,4600214,17160976
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.275590831,4653604,17310393
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.359498112,7023456,24714589
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.29186359,5273775,19049889
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.52151833,13360668,41446337
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.441403158,10303940,33428296
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.281975055,4759482,17631212
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.281725525,4790659,17660471
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,1.010817973,33457057,92731066
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.431263893,9339000,31965756
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.317589181,5845571,21228716
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,2.125409224,81424898,212630998
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.275029289,4655801,17368878
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.355695063,6831784,24601952
-max_clique,2d_stack,2D stack,brock400_4,512,256,ok,0,0.362507839,7119623,25428388
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.302887126,5087052,18379517
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.394258235,6973977,24700038
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.437915639,9268612,30277545
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.341901529,6065396,21131183
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.403722628,7785220,27022333
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.310444264,5467964,19505192
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.324106877,5285431,18718532
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.300603261,5005198,18136850
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.347914564,6697522,22451527
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.398438606,7611864,26431547
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.299025026,4939187,17979899
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.327334805,5359350,19438838
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.313655092,5236897,18751401
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.418319433,8064705,27807859
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.346590591,6281582,21915435
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.36317116,6751231,23213584
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.322648803,5806580,20057425
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.337463929,6332774,21925307
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.30884131,5311602,18945617
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.340419676,6327444,21436074
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.318127104,5597382,19841699
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.308163679,5204730,18610638
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.312419819,5277911,18769362
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.431385793,9557979,30133393
-max_clique,2d_stack,2D stack,brock400_4,512,1024,ok,0,0.374123316,6754340,24046244
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,42.361738658,15440223,44192775
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,13.097956761,4233209,16148940
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,70.374139352,25267199,72469622
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,81.530490857,30675798,80353811
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,13.804461108,4513073,16827227
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,64.318011115,23907910,65024951
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,51.691148069,19060050,53356423
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,53.953376779,19929567,55086568
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,49.953061483,18177487,52495218
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,43.643917052,15900137,45373232
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,69.964788578,24939137,73446722
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,94.054456128,34024064,97029354
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,86.293552411,31974843,85717977
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,60.481610498,21959889,61091059
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,54.697505465,19583565,57912798
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,14.389986416,4744226,17290230
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,42.415349849,15485689,44255021
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,42.070703375,15282519,43805934
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,47.357149102,16989984,49551479
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,42.622410438,15451981,44288808
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,94.71328103,35298306,93221502
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,104.05698263,37781668,106878126
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,42.231500584,15399804,44065378
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,50.581442503,18410377,52360680
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1,ok,0,43.071809038,15634484,44602133
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,45.151241287,22626473,64454447
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,45.169824359,22145961,65292269
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,163.273862764,84797658,223397453
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,94.228169345,47179841,133053562
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,64.434365699,32451832,90531410
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,60.134137314,30983957,83413086
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,146.590659798,75544149,196994301
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,31.610252127,15734074,45417277
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,34.126747678,16861194,49111596
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,35.694416984,17546719,51462776
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,112.879383465,56548977,156187945
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,100.621974369,51385132,138424272
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,141.638685149,73009164,193516930
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,98.188874704,49872191,133450210
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,51.822992886,26219192,71495970
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,124.657936198,63897560,170470161
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,48.375725969,23562729,69020345
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,117.194428126,60184549,158231060
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,50.023793922,25119805,69177764
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,43.076640351,20934373,61579632
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,95.479658046,47979153,132135505
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,46.424460629,23395368,65354042
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,55.226454423,27592039,78660415
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,46.096763207,22833892,66050601
+max_clique,treiber_stack,Treiber stack,brock400_4,512,4,ok,0,72.705196621,36807462,101755458
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,42.724604479,39197991,105579412
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,24.05882388,21695931,61235715
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,106.308488785,99994572,258897070
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,18.308055123,16290899,47203478
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,18.292547618,16319371,46580098
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,100.458578523,92593125,243420069
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,27.887112423,24773399,71976169
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,18.006871108,15953737,46167254
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,20.799709096,18972828,52317623
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,34.623738991,30722578,88949892
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,43.178229041,39159418,107374971
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,19.780591745,17517524,51172843
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,24.286563799,21167287,61984365
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,33.258617912,30614243,80958480
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,37.98498225,35074682,94523526
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,24.295415897,21493038,63092207
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,68.777868543,63718516,168393944
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,23.208534709,20326412,59280902
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,23.596506148,21298977,59394535
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,20.853698894,18346240,54181420
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,29.498116416,26227142,74419325
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,28.423636849,25313299,73307845
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,67.685459179,62523740,165839373
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,69.739578076,64038605,173655463
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,25.501003941,22482667,65529289
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,10.702600597,19849823,58118052
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,29.859072847,59724080,154630580
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,13.17795078,24878656,71023571
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,7.318264877,13316851,40017604
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,13.729166441,25651375,75118728
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,25.914534931,51153655,135342300
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,9.456217629,17805856,50693867
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,9.292019959,17155514,49872457
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,11.958600404,22801704,63420832
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,19.015787643,37982824,97326153
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,18.663046084,35750148,98188494
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,9.348183574,17809772,50179124
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,9.076601492,16762381,48728080
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,8.562908343,16002168,46384402
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,17.072881189,33352119,89368206
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,10.34251759,19821799,55489010
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,23.357105556,45531140,122086496
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,4.564063018,7416828,26342306
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,12.739561152,23791807,68318025
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,24.326634973,46822662,127503779
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,3.450276392,5571615,20062848
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,48.979274829,95887185,254601177
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,20.967453375,40168040,110157928
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,30.88262188,60810141,159123506
+max_clique,treiber_stack,Treiber stack,brock400_4,512,64,ok,0,10.177243933,19074942,54529336
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,8.234545601,37910281,101732112
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,1.320941622,4396882,16668567
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,1.847799867,6865559,25011486
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,13.570057541,63488933,167929808
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,6.993361579,32028520,86333715
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,3.405357238,14682490,42838482
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,1.778402763,6342133,23117374
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,16.020007171,76347752,198741514
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,7.59928523,34594666,93943937
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,8.350527155,38964229,102704856
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,7.24162947,33128662,89563935
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,14.73521369,70170047,183898912
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,2.7112966,11038149,34197226
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,3.809614719,16882034,48460388
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,12.397977169,58132901,154826884
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,2.254354324,8380527,29845231
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,18.098006425,85810330,226953692
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,2.603180901,9844161,33725220
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,5.257079852,24068209,66371023
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,4.308707013,19055983,52753976
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,6.525284263,30825766,81055915
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,3.11808061,13824151,38130753
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,18.326204275,87211079,226504819
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,5.242242265,23493005,65303565
+max_clique,treiber_stack,Treiber stack,brock400_4,512,256,ok,0,6.375713053,27805029,79306699
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,0.837741157,5461885,19694843
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.620611646,16031920,53087501
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.580978406,13741330,40552090
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.62970311,15549228,49596741
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.204500329,8676521,28875661
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,0.874468391,5688181,20408704
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.644933648,13916469,42276177
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.197471117,8952926,31124868
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,6.013208862,65021451,171556245
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.14481525,8644502,30399278
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,0.997326714,7006550,24847498
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,3.273389229,33605189,93431587
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.202255777,9023437,31350226
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,0.986703178,6936404,24735159
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,4.166458222,42762888,118223469
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.374293003,11482370,38426903
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.126986677,8056816,27241995
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,2.892459251,28005444,84358258
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,3.227690128,32297662,93618688
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,0.797929593,5249580,19140541
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,3.41501405,36684145,96786388
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,3.555559729,37288433,100762872
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.54339985,13222814,41733095
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,1.039783285,7499367,25976210
+max_clique,treiber_stack,Treiber stack,brock400_4,512,1024,ok,0,2.809422331,27544185,80525504
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.289984809,4435907,16868234
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.297959078,4910885,18189303
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.289071097,4593580,17436794
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.376873409,6555224,24048042
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.287495524,4469010,16990894
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.291942134,4404607,16755054
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.352223429,6122886,22312082
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.359739387,6358502,22868769
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.311437231,5163290,18966465
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.292683736,4539914,17107233
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.370627473,6603782,24048276
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.294007549,4780277,17903353
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.291916364,4700030,17794054
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.321861205,5526647,19879342
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.466186673,10249292,32893823
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.287678024,4439461,16867373
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.340604191,6158358,21597942
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.272029236,4261730,16384480
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.302523389,4822099,17898652
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.307477692,4998550,18769636
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.31941257,5265414,19620590
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.301718517,4810402,18054204
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.284242305,4355524,16629346
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.283230202,4354327,16635221
+max_clique,2d_stack,2D-stack,brock400_4,512,1,ok,0,0.352563719,6266714,22363289
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.299424272,4976278,18391886
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.278500922,4404276,16738093
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.403541262,7580354,27219708
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.632391814,16094566,49703890
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.370439303,6946862,24883347
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.355487817,6379024,23442953
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.490120121,10224217,34935386
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.312460003,5330817,19614055
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.283138332,4536610,17140284
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.291905954,4672560,17399295
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.509805759,10445864,36281239
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,1.097046204,33058437,92201660
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.437474605,8865233,30453433
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.349869033,6030446,22185694
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.317510114,5424722,19961305
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.387596464,7162775,25388714
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.278718562,4461613,16942213
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.278525972,4426525,16820186
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.281633848,4509657,17081314
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.298539119,4940817,18484924
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.525786347,13784434,40141169
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.345496193,6092916,22439533
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.623360734,16760522,48828435
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.334562212,5767107,21205265
+max_clique,2d_stack,2D-stack,brock400_4,512,4,ok,0,0.317796732,5388772,19631985
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.279971961,4636185,17452035
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.26714651,4317884,16518324
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.434845512,9210809,31719019
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.397090471,7741436,27600593
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.337280619,6163329,22532420
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.446098869,8894683,31544465
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.368776614,6815762,24705579
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.331208573,5928362,21754041
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.483626689,10109031,34745422
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.429273739,9680808,31519010
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.383001068,7179134,26051574
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.353330117,6520175,24012060
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.280711332,4586412,17297908
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.430379542,8556854,30313114
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.285512274,4747641,17776266
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.277034094,4618086,17299365
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.277824616,4675649,17524541
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.422188622,9456980,31047580
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.278255467,4665109,17491873
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.406053253,8075857,28777094
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.489268952,10095072,35474626
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.408150528,7971556,28444888
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.288080691,4760988,17631482
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.315502327,5457642,20349964
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.445319397,8879718,31687685
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.269522075,4577696,17256601
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.370953859,7407909,26466660
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.302988866,5663343,20343220
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.29220612,5432444,19253721
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.376819273,7229020,26221659
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.266541959,4373971,16638839
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.373822656,8811373,27675197
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.301971984,5618047,19984279
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.436710597,8910928,31574310
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,1.534908219,55819509,147738954
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.36702556,7113030,25603080
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.304996961,5458805,20251107
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.516842159,12495275,40615220
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.271127979,4645648,17369851
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,1.002386813,36247499,94437810
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.270391599,4500318,16896179
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.551113571,12407168,42509587
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.444358635,9329375,32869291
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.27540253,4644071,17385766
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.522056471,14386627,43143141
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.927302503,29847685,83375970
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.267934872,4483559,16926351
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.266664529,4566881,17151967
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.453044996,10086213,34418683
+max_clique,2d_stack,2D-stack,brock400_4,512,64,ok,0,0.265812757,4538688,17085086
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.274832729,4691445,17375379
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.379197829,8396922,28136480
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.381500634,7655161,27152072
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.310874975,5590965,20042230
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.320209318,5886476,21466275
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,1.301040248,40869630,119979531
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.301901174,5353195,19523638
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.332908618,6217398,22451162
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.366470118,6863369,24796482
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.463566211,10085375,34862166
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.27548756,4600214,17160976
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.275590831,4653604,17310393
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.359498112,7023456,24714589
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.29186359,5273775,19049889
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.52151833,13360668,41446337
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.441403158,10303940,33428296
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.281975055,4759482,17631212
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.281725525,4790659,17660471
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,1.010817973,33457057,92731066
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.431263893,9339000,31965756
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.317589181,5845571,21228716
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,2.125409224,81424898,212630998
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.275029289,4655801,17368878
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.355695063,6831784,24601952
+max_clique,2d_stack,2D-stack,brock400_4,512,256,ok,0,0.362507839,7119623,25428388
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.302887126,5087052,18379517
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.394258235,6973977,24700038
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.437915639,9268612,30277545
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.341901529,6065396,21131183
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.403722628,7785220,27022333
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.310444264,5467964,19505192
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.324106877,5285431,18718532
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.300603261,5005198,18136850
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.347914564,6697522,22451527
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.398438606,7611864,26431547
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.299025026,4939187,17979899
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.327334805,5359350,19438838
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.313655092,5236897,18751401
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.418319433,8064705,27807859
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.346590591,6281582,21915435
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.36317116,6751231,23213584
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.322648803,5806580,20057425
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.337463929,6332774,21925307
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.30884131,5311602,18945617
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.340419676,6327444,21436074
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.318127104,5597382,19841699
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.308163679,5204730,18610638
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.312419819,5277911,18769362
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.431385793,9557979,30133393
+max_clique,2d_stack,2D-stack,brock400_4,512,1024,ok,0,0.374123316,6754340,24046244
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,1,ok,0,582.601208428,5802336,126434240
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,1,ok,0,616.981469389,5797759,126396044
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,1,ok,0,619.106425816,5857857,127775941
@@ -899,117 +899,117 @@ max_clique,locked_pq,Globally locked PQ,brock400_4,512,1024,ok,0,2.541693385,653
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,1024,ok,0,2.566599039,6520088,22043486
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,1024,ok,0,2.472915882,6522736,22069636
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,1024,ok,0,2.548725303,6446001,21855074
-max_clique,pr,PR,brock400_4,512,1,ok,0,119.83925675,4271368,104823339
-max_clique,pr,PR,brock400_4,512,1,ok,0,126.601148313,4271826,104830913
-max_clique,pr,PR,brock400_4,512,1,ok,0,124.748878022,4271401,104827957
-max_clique,pr,PR,brock400_4,512,1,ok,0,123.105314826,4271438,104826008
-max_clique,pr,PR,brock400_4,512,1,ok,0,125.182362723,4271542,104832192
-max_clique,pr,PR,brock400_4,512,1,failed,-6,,,
-max_clique,pr,PR,brock400_4,512,4,ok,0,47.416968444,8701007,62877882
-max_clique,pr,PR,brock400_4,512,4,ok,0,49.637994117,8699733,62934075
-max_clique,pr,PR,brock400_4,512,4,ok,0,48.702724648,8682756,62752106
-max_clique,pr,PR,brock400_4,512,4,ok,0,49.583419321,8684584,62774970
-max_clique,pr,PR,brock400_4,512,4,failed,-6,,,
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.059208567,4883365,19498329
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.116492526,4918849,19653157
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.396611095,4914212,19629342
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.44681545,4836205,19292178
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.431152285,4899595,19581405
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.875551773,4907984,19607085
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.541138495,4901608,19571291
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.675767402,4896358,19551967
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.35202584,4911363,19617805
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.433530683,4789350,19076795
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.276397009,4910838,19622916
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.232620698,4906334,19596719
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.51928107,4902947,19595363
-max_clique,pr,PR,brock400_4,512,16,ok,0,3.788090918,4904531,19587462
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.422055203,4907489,19605494
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.00826796,4913087,19640693
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.493498744,4920363,19823446
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.261436172,4880143,19480876
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.370289809,4911872,19622438
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.229549547,4908316,19628960
-max_clique,pr,PR,brock400_4,512,16,ok,0,3.998169848,4828186,19247830
-max_clique,pr,PR,brock400_4,512,16,ok,0,3.991936025,4910460,19624563
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.724543099,4917725,19822153
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.386135025,4892221,19530675
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.302129021,4817043,19162813
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.490677013,6152189,23139819
-max_clique,pr,PR,brock400_4,512,64,ok,0,1.985503696,6220451,23416392
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.269284719,6236399,23468110
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.594664347,6231195,23455422
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.394085275,6127831,23067575
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.100662859,6218584,23406803
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.002459305,6236081,23472038
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.316262114,6230658,23457224
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.112714061,6227883,23441161
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.228080245,6219581,23410377
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.222754287,6226280,23442673
-max_clique,pr,PR,brock400_4,512,64,ok,0,1.962381665,6230677,23442170
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.157609678,6226039,23441518
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.127336742,6236454,23481646
-max_clique,pr,PR,brock400_4,512,64,ok,0,1.982926982,6215390,23392965
-max_clique,pr,PR,brock400_4,512,64,ok,0,1.789050396,6214120,23400319
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.018208939,6234422,23482972
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.041317123,6214499,23397157
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.104689227,6176883,23244627
-max_clique,pr,PR,brock400_4,512,64,ok,0,1.979688087,6244013,23511371
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.384209674,6216484,23409739
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.038847314,6227852,23448388
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.153693536,6111555,23013651
-max_clique,pr,PR,brock400_4,512,64,ok,0,2.248367455,6206131,23363996
-max_clique,pr,PR,brock400_4,512,64,ok,0,1.920857421,6191945,23297481
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.580083013,4853320,18135028
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.749434525,6863844,24998798
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.732954144,6894917,25066321
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.794145189,6889308,25075901
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.710577202,6867509,24972456
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.738721665,6918092,25164000
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.719896966,6736159,24514636
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.735361083,6726274,24486649
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.730666796,6805528,24781477
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.726816882,6891750,25053951
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.748348191,6974253,25286968
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.768072344,6889047,25052044
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.736456417,6910548,25135015
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.759726363,6940780,25254013
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.736216687,6927586,25221565
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.743768864,6892404,25083727
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.752648716,6842579,24898484
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.776363904,6977548,25339665
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.698384387,6857243,24984823
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.700683856,6893250,25119940
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.762940334,6942350,25245187
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.742073388,6895072,25048031
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.839516666,7168830,25942706
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.772297049,6869057,25009446
-max_clique,pr,PR,brock400_4,512,256,ok,0,0.714049564,6858956,24972401
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.53591043,8147399,28141887
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.493876345,7801038,27377321
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.534443385,7937417,27598782
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.394954912,5124122,18303629
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.377468428,5096161,18241631
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.501504464,7719942,27011509
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.50596371,7921897,27774580
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.503954962,7899157,27587296
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.373289513,4951661,17896313
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.34804937,4940150,17983867
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.498826714,7823054,27338558
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.499244195,7832055,27440226
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.507348305,7919115,27729853
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.376845175,4873071,17572741
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.430880284,5491248,19283642
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.366482057,4949974,17852271
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.372298869,5062459,18096432
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.36182234,4878593,17718044
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.501949785,7956143,27756074
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.399479988,5241970,18548257
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.454514431,6952725,24808527
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.368348814,4949288,17934250
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.520545713,8123410,28101941
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.548815337,8050902,27893211
-max_clique,pr,PR,brock400_4,512,1024,ok,0,0.404933769,5207005,18477104
+max_clique,pr,Linden,brock400_4,512,1,ok,0,119.83925675,4271368,104823339
+max_clique,pr,Linden,brock400_4,512,1,ok,0,126.601148313,4271826,104830913
+max_clique,pr,Linden,brock400_4,512,1,ok,0,124.748878022,4271401,104827957
+max_clique,pr,Linden,brock400_4,512,1,ok,0,123.105314826,4271438,104826008
+max_clique,pr,Linden,brock400_4,512,1,ok,0,125.182362723,4271542,104832192
+max_clique,pr,Linden,brock400_4,512,1,failed,-6,,,
+max_clique,pr,Linden,brock400_4,512,4,ok,0,47.416968444,8701007,62877882
+max_clique,pr,Linden,brock400_4,512,4,ok,0,49.637994117,8699733,62934075
+max_clique,pr,Linden,brock400_4,512,4,ok,0,48.702724648,8682756,62752106
+max_clique,pr,Linden,brock400_4,512,4,ok,0,49.583419321,8684584,62774970
+max_clique,pr,Linden,brock400_4,512,4,failed,-6,,,
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.059208567,4883365,19498329
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.116492526,4918849,19653157
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.396611095,4914212,19629342
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.44681545,4836205,19292178
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.431152285,4899595,19581405
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.875551773,4907984,19607085
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.541138495,4901608,19571291
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.675767402,4896358,19551967
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.35202584,4911363,19617805
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.433530683,4789350,19076795
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.276397009,4910838,19622916
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.232620698,4906334,19596719
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.51928107,4902947,19595363
+max_clique,pr,Linden,brock400_4,512,16,ok,0,3.788090918,4904531,19587462
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.422055203,4907489,19605494
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.00826796,4913087,19640693
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.493498744,4920363,19823446
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.261436172,4880143,19480876
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.370289809,4911872,19622438
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.229549547,4908316,19628960
+max_clique,pr,Linden,brock400_4,512,16,ok,0,3.998169848,4828186,19247830
+max_clique,pr,Linden,brock400_4,512,16,ok,0,3.991936025,4910460,19624563
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.724543099,4917725,19822153
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.386135025,4892221,19530675
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.302129021,4817043,19162813
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.490677013,6152189,23139819
+max_clique,pr,Linden,brock400_4,512,64,ok,0,1.985503696,6220451,23416392
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.269284719,6236399,23468110
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.594664347,6231195,23455422
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.394085275,6127831,23067575
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.100662859,6218584,23406803
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.002459305,6236081,23472038
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.316262114,6230658,23457224
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.112714061,6227883,23441161
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.228080245,6219581,23410377
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.222754287,6226280,23442673
+max_clique,pr,Linden,brock400_4,512,64,ok,0,1.962381665,6230677,23442170
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.157609678,6226039,23441518
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.127336742,6236454,23481646
+max_clique,pr,Linden,brock400_4,512,64,ok,0,1.982926982,6215390,23392965
+max_clique,pr,Linden,brock400_4,512,64,ok,0,1.789050396,6214120,23400319
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.018208939,6234422,23482972
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.041317123,6214499,23397157
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.104689227,6176883,23244627
+max_clique,pr,Linden,brock400_4,512,64,ok,0,1.979688087,6244013,23511371
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.384209674,6216484,23409739
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.038847314,6227852,23448388
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.153693536,6111555,23013651
+max_clique,pr,Linden,brock400_4,512,64,ok,0,2.248367455,6206131,23363996
+max_clique,pr,Linden,brock400_4,512,64,ok,0,1.920857421,6191945,23297481
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.580083013,4853320,18135028
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.749434525,6863844,24998798
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.732954144,6894917,25066321
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.794145189,6889308,25075901
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.710577202,6867509,24972456
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.738721665,6918092,25164000
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.719896966,6736159,24514636
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.735361083,6726274,24486649
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.730666796,6805528,24781477
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.726816882,6891750,25053951
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.748348191,6974253,25286968
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.768072344,6889047,25052044
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.736456417,6910548,25135015
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.759726363,6940780,25254013
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.736216687,6927586,25221565
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.743768864,6892404,25083727
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.752648716,6842579,24898484
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.776363904,6977548,25339665
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.698384387,6857243,24984823
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.700683856,6893250,25119940
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.762940334,6942350,25245187
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.742073388,6895072,25048031
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.839516666,7168830,25942706
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.772297049,6869057,25009446
+max_clique,pr,Linden,brock400_4,512,256,ok,0,0.714049564,6858956,24972401
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.53591043,8147399,28141887
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.493876345,7801038,27377321
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.534443385,7937417,27598782
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.394954912,5124122,18303629
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.377468428,5096161,18241631
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.501504464,7719942,27011509
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.50596371,7921897,27774580
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.503954962,7899157,27587296
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.373289513,4951661,17896313
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.34804937,4940150,17983867
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.498826714,7823054,27338558
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.499244195,7832055,27440226
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.507348305,7919115,27729853
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.376845175,4873071,17572741
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.430880284,5491248,19283642
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.366482057,4949974,17852271
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.372298869,5062459,18096432
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.36182234,4878593,17718044
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.501949785,7956143,27756074
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.399479988,5241970,18548257
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.454514431,6952725,24808527
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.368348814,4949288,17934250
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.520545713,8123410,28101941
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.548815337,8050902,27893211
+max_clique,pr,Linden,brock400_4,512,1024,ok,0,0.404933769,5207005,18477104
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_4,512,1,ok,0,7.632284503,5081226,115759094
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_4,512,1,ok,0,7.316024803,5034899,114651782
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_4,512,1,ok,0,7.326293037,4826741,111597279

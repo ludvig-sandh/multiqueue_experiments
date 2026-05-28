@@ -4,11 +4,11 @@ max_clique,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,12.86752568
 max_clique,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,12.163802468,18220552,77121479
 max_clique,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,13.21309992,19948091,82504404
 max_clique,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,13.026210716,19423030,80973893
-max_clique,pmc,PMC library,DSJC1000_5,512,,ok,0,1.969715918,,
-max_clique,pmc,PMC library,DSJC1000_5,512,,ok,0,1.960740663,,
-max_clique,pmc,PMC library,DSJC1000_5,512,,ok,0,1.964879639,,
-max_clique,pmc,PMC library,DSJC1000_5,512,,ok,0,1.964274319,,
-max_clique,pmc,PMC library,DSJC1000_5,512,,ok,0,1.973201564,,
+max_clique,pmc,PMC,DSJC1000_5,512,,ok,0,1.969715918,,
+max_clique,pmc,PMC,DSJC1000_5,512,,ok,0,1.960740663,,
+max_clique,pmc,PMC,DSJC1000_5,512,,ok,0,1.964879639,,
+max_clique,pmc,PMC,DSJC1000_5,512,,ok,0,1.964274319,,
+max_clique,pmc,PMC,DSJC1000_5,512,,ok,0,1.973201564,,
 max_clique,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.749585208,18835709,79050391
 max_clique,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.746729094,18421360,77747766
 max_clique,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.736827658,18438888,77817759
@@ -34,26 +34,26 @@ max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.704121193,18031746,76500
 max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.704724053,17971793,76309643
 max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.720678521,18560735,78167902
 max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.730454637,19198899,80212656
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,512,16,ok,0,26.679825693,18134694,76818975
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,512,16,ok,0,27.525784907,18861155,79068570
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,512,16,ok,0,26.195926846,18001169,76387897
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,512,16,ok,0,26.783201405,18356432,77525043
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,512,16,ok,0,29.871778631,20363520,83790669
-max_clique,2d_stack,2D stack,DSJC1000_5,512,16,ok,0,0.729826199,18215646,77085490
-max_clique,2d_stack,2D stack,DSJC1000_5,512,16,ok,0,0.728545192,18176252,76939181
-max_clique,2d_stack,2D stack,DSJC1000_5,512,16,ok,0,0.729860218,18322199,77388967
-max_clique,2d_stack,2D stack,DSJC1000_5,512,16,ok,0,0.727711218,18112340,76729742
-max_clique,2d_stack,2D stack,DSJC1000_5,512,16,ok,0,0.722904364,18307191,77359252
+max_clique,treiber_stack,Treiber stack,DSJC1000_5,512,16,ok,0,26.679825693,18134694,76818975
+max_clique,treiber_stack,Treiber stack,DSJC1000_5,512,16,ok,0,27.525784907,18861155,79068570
+max_clique,treiber_stack,Treiber stack,DSJC1000_5,512,16,ok,0,26.195926846,18001169,76387897
+max_clique,treiber_stack,Treiber stack,DSJC1000_5,512,16,ok,0,26.783201405,18356432,77525043
+max_clique,treiber_stack,Treiber stack,DSJC1000_5,512,16,ok,0,29.871778631,20363520,83790669
+max_clique,2d_stack,2D-stack,DSJC1000_5,512,16,ok,0,0.729826199,18215646,77085490
+max_clique,2d_stack,2D-stack,DSJC1000_5,512,16,ok,0,0.728545192,18176252,76939181
+max_clique,2d_stack,2D-stack,DSJC1000_5,512,16,ok,0,0.729860218,18322199,77388967
+max_clique,2d_stack,2D-stack,DSJC1000_5,512,16,ok,0,0.727711218,18112340,76729742
+max_clique,2d_stack,2D-stack,DSJC1000_5,512,16,ok,0,0.722904364,18307191,77359252
 max_clique,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,93.040290594,18237521,77500843
 max_clique,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,94.159508128,18236206,77501665
 max_clique,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,93.096688754,18240934,77513536
 max_clique,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,92.826275894,18231248,77478813
 max_clique,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,92.376745967,18227180,77462539
-max_clique,pr,PR,DSJC1000_5,512,16,ok,0,15.508167679,18239650,77459542
-max_clique,pr,PR,DSJC1000_5,512,16,ok,0,17.53951211,18116079,77068123
-max_clique,pr,PR,DSJC1000_5,512,16,ok,0,15.554265516,18272629,77572640
-max_clique,pr,PR,DSJC1000_5,512,16,ok,0,16.286768123,18189489,77286301
-max_clique,pr,PR,DSJC1000_5,512,16,ok,0,16.922297377,18115519,77071551
+max_clique,pr,Linden,DSJC1000_5,512,16,ok,0,15.508167679,18239650,77459542
+max_clique,pr,Linden,DSJC1000_5,512,16,ok,0,17.53951211,18116079,77068123
+max_clique,pr,Linden,DSJC1000_5,512,16,ok,0,15.554265516,18272629,77572640
+max_clique,pr,Linden,DSJC1000_5,512,16,ok,0,16.286768123,18189489,77286301
+max_clique,pr,Linden,DSJC1000_5,512,16,ok,0,16.922297377,18115519,77071551
 max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.410742078,18136597,77139286
 max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.3835391,18160941,77229981
 max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.368988173,18105906,77023808
@@ -64,11 +64,11 @@ max_clique,locked_stack,Globally locked Stack,DSJC500_5,512,16,ok,0,0.378033562,
 max_clique,locked_stack,Globally locked Stack,DSJC500_5,512,16,ok,0,0.389913011,337329,1196238
 max_clique,locked_stack,Globally locked Stack,DSJC500_5,512,16,ok,0,0.410178051,361469,1264511
 max_clique,locked_stack,Globally locked Stack,DSJC500_5,512,16,ok,0,0.406705173,352127,1238554
-max_clique,pmc,PMC library,DSJC500_5,512,,ok,0,0.111130797,,
-max_clique,pmc,PMC library,DSJC500_5,512,,ok,0,0.105912224,,
-max_clique,pmc,PMC library,DSJC500_5,512,,ok,0,0.108718531,,
-max_clique,pmc,PMC library,DSJC500_5,512,,ok,0,0.115861268,,
-max_clique,pmc,PMC library,DSJC500_5,512,,ok,0,0.11254466,,
+max_clique,pmc,PMC,DSJC500_5,512,,ok,0,0.111130797,,
+max_clique,pmc,PMC,DSJC500_5,512,,ok,0,0.105912224,,
+max_clique,pmc,PMC,DSJC500_5,512,,ok,0,0.108718531,,
+max_clique,pmc,PMC,DSJC500_5,512,,ok,0,0.115861268,,
+max_clique,pmc,PMC,DSJC500_5,512,,ok,0,0.11254466,,
 max_clique,work_stealing,Simple work stealing,DSJC500_5,512,16,ok,0,0.071401407,327197,1170871
 max_clique,work_stealing,Simple work stealing,DSJC500_5,512,16,ok,0,0.069067972,323894,1160353
 max_clique,work_stealing,Simple work stealing,DSJC500_5,512,16,ok,0,0.082976797,320614,1152176
@@ -94,54 +94,54 @@ max_clique,multilifo,MultiLIFO,DSJC500_5,512,16,ok,0,0.079454518,303183,1104803
 max_clique,multilifo,MultiLIFO,DSJC500_5,512,16,ok,0,0.082245355,300539,1095926
 max_clique,multilifo,MultiLIFO,DSJC500_5,512,16,ok,0,0.081733143,310185,1123362
 max_clique,multilifo,MultiLIFO,DSJC500_5,512,16,ok,0,0.08028302,312436,1128980
-max_clique,treiber_stack,Treiber stack (elimination),DSJC500_5,512,16,ok,0,0.493036218,294226,1077464
-max_clique,treiber_stack,Treiber stack (elimination),DSJC500_5,512,16,ok,0,0.508980447,294804,1078853
-max_clique,treiber_stack,Treiber stack (elimination),DSJC500_5,512,16,ok,0,0.495435194,293646,1075573
-max_clique,treiber_stack,Treiber stack (elimination),DSJC500_5,512,16,ok,0,0.496461467,293739,1075773
-max_clique,treiber_stack,Treiber stack (elimination),DSJC500_5,512,16,ok,0,0.499239573,292801,1073673
-max_clique,2d_stack,2D stack,DSJC500_5,512,16,ok,0,0.063001987,332173,1184912
-max_clique,2d_stack,2D stack,DSJC500_5,512,16,ok,0,0.060407461,311757,1127551
-max_clique,2d_stack,2D stack,DSJC500_5,512,16,ok,0,0.065204172,311255,1127275
-max_clique,2d_stack,2D stack,DSJC500_5,512,16,ok,0,0.063147427,303235,1105677
-max_clique,2d_stack,2D stack,DSJC500_5,512,16,ok,0,0.061834604,318126,1146744
+max_clique,treiber_stack,Treiber stack,DSJC500_5,512,16,ok,0,0.493036218,294226,1077464
+max_clique,treiber_stack,Treiber stack,DSJC500_5,512,16,ok,0,0.508980447,294804,1078853
+max_clique,treiber_stack,Treiber stack,DSJC500_5,512,16,ok,0,0.495435194,293646,1075573
+max_clique,treiber_stack,Treiber stack,DSJC500_5,512,16,ok,0,0.496461467,293739,1075773
+max_clique,treiber_stack,Treiber stack,DSJC500_5,512,16,ok,0,0.499239573,292801,1073673
+max_clique,2d_stack,2D-stack,DSJC500_5,512,16,ok,0,0.063001987,332173,1184912
+max_clique,2d_stack,2D-stack,DSJC500_5,512,16,ok,0,0.060407461,311757,1127551
+max_clique,2d_stack,2D-stack,DSJC500_5,512,16,ok,0,0.065204172,311255,1127275
+max_clique,2d_stack,2D-stack,DSJC500_5,512,16,ok,0,0.063147427,303235,1105677
+max_clique,2d_stack,2D-stack,DSJC500_5,512,16,ok,0,0.061834604,318126,1146744
 max_clique,locked_pq,Globally locked PQ,DSJC500_5,512,16,ok,0,1.304434858,337954,1204299
 max_clique,locked_pq,Globally locked PQ,DSJC500_5,512,16,ok,0,1.451356394,345183,1231137
 max_clique,locked_pq,Globally locked PQ,DSJC500_5,512,16,ok,0,1.362236463,341169,1214996
 max_clique,locked_pq,Globally locked PQ,DSJC500_5,512,16,ok,0,1.367114995,345146,1225843
 max_clique,locked_pq,Globally locked PQ,DSJC500_5,512,16,ok,0,1.376744098,343791,1224424
-max_clique,pr,PR,DSJC500_5,512,16,ok,0,0.324389368,296935,1088529
-max_clique,pr,PR,DSJC500_5,512,16,ok,0,0.299532566,295644,1084715
-max_clique,pr,PR,DSJC500_5,512,16,ok,0,0.319040724,296624,1087417
-max_clique,pr,PR,DSJC500_5,512,16,ok,0,0.306918735,293941,1079468
-max_clique,pr,PR,DSJC500_5,512,16,ok,0,0.327462926,294112,1080041
+max_clique,pr,Linden,DSJC500_5,512,16,ok,0,0.324389368,296935,1088529
+max_clique,pr,Linden,DSJC500_5,512,16,ok,0,0.299532566,295644,1084715
+max_clique,pr,Linden,DSJC500_5,512,16,ok,0,0.319040724,296624,1087417
+max_clique,pr,Linden,DSJC500_5,512,16,ok,0,0.306918735,293941,1079468
+max_clique,pr,Linden,DSJC500_5,512,16,ok,0,0.327462926,294112,1080041
 max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC500_5,512,16,ok,0,0.073453423,297628,1089764
 max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC500_5,512,16,ok,0,0.07623487,308749,1121303
 max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC500_5,512,16,ok,0,0.075779788,297805,1090089
 max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC500_5,512,16,ok,0,0.074308885,301424,1101098
 max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC500_5,512,16,ok,0,0.079816179,297497,1089619
 max_clique,locked_stack,Globally locked Stack,MANN_a45,512,16,timeout,,1800,,
-max_clique,pmc,PMC library,MANN_a45,512,,ok,0,316.994244767,,
-max_clique,pmc,PMC library,MANN_a45,512,,ok,0,311.105167518,,
-max_clique,pmc,PMC library,MANN_a45,512,,ok,0,304.856626336,,
-max_clique,pmc,PMC library,MANN_a45,512,,ok,0,307.965925314,,
-max_clique,pmc,PMC library,MANN_a45,512,,ok,0,310.356609798,,
+max_clique,pmc,PMC,MANN_a45,512,,ok,0,316.994244767,,
+max_clique,pmc,PMC,MANN_a45,512,,ok,0,311.105167518,,
+max_clique,pmc,PMC,MANN_a45,512,,ok,0,304.856626336,,
+max_clique,pmc,PMC,MANN_a45,512,,ok,0,307.965925314,,
+max_clique,pmc,PMC,MANN_a45,512,,ok,0,310.356609798,,
 max_clique,work_stealing,Simple work stealing,MANN_a45,512,16,timeout,,1800,,
 max_clique,multilifo,MultiLIFO,MANN_a45,512,16,timeout,,1800,,
-max_clique,treiber_stack,Treiber stack (elimination),MANN_a45,512,16,timeout,,1800,,
-max_clique,2d_stack,2D stack,MANN_a45,512,16,timeout,,1800,,
+max_clique,treiber_stack,Treiber stack,MANN_a45,512,16,timeout,,1800,,
+max_clique,2d_stack,2D-stack,MANN_a45,512,16,timeout,,1800,,
 max_clique,locked_pq,Globally locked PQ,MANN_a45,512,16,timeout,,1800,,
-max_clique,pr,PR,MANN_a45,512,16,failed,-6,,,
+max_clique,pr,Linden,MANN_a45,512,16,failed,-6,,,
 max_clique,mq_stick_swap,MultiQueue (stick swap),MANN_a45,512,16,oom,-9,,,
 max_clique,locked_stack,Globally locked Stack,brock400_1,512,16,ok,0,114.672148626,237476275,584524487
 max_clique,locked_stack,Globally locked Stack,brock400_1,512,16,ok,0,75.684265783,149354612,394492481
 max_clique,locked_stack,Globally locked Stack,brock400_1,512,16,ok,0,111.880217386,227600421,562620150
 max_clique,locked_stack,Globally locked Stack,brock400_1,512,16,ok,0,90.501854381,189648003,480383877
 max_clique,locked_stack,Globally locked Stack,brock400_1,512,16,ok,0,42.954751951,83804265,237809681
-max_clique,pmc,PMC library,brock400_1,512,,ok,0,12.608792811,,
-max_clique,pmc,PMC library,brock400_1,512,,ok,0,12.456476563,,
-max_clique,pmc,PMC library,brock400_1,512,,ok,0,12.679645813,,
-max_clique,pmc,PMC library,brock400_1,512,,ok,0,12.055757727,,
-max_clique,pmc,PMC library,brock400_1,512,,ok,0,12.611826745,,
+max_clique,pmc,PMC,brock400_1,512,,ok,0,12.608792811,,
+max_clique,pmc,PMC,brock400_1,512,,ok,0,12.456476563,,
+max_clique,pmc,PMC,brock400_1,512,,ok,0,12.679645813,,
+max_clique,pmc,PMC,brock400_1,512,,ok,0,12.055757727,,
+max_clique,pmc,PMC,brock400_1,512,,ok,0,12.611826745,,
 max_clique,work_stealing,Simple work stealing,brock400_1,512,16,ok,0,5.325666036,205022361,532193898
 max_clique,work_stealing,Simple work stealing,brock400_1,512,16,ok,0,5.047756818,195237518,506784840
 max_clique,work_stealing,Simple work stealing,brock400_1,512,16,ok,0,4.1447817,151960194,404158236
@@ -167,23 +167,23 @@ max_clique,multilifo,MultiLIFO,brock400_1,512,16,ok,0,4.189433202,156250751,4110
 max_clique,multilifo,MultiLIFO,brock400_1,512,16,ok,0,3.907351624,139371660,377434690
 max_clique,multilifo,MultiLIFO,brock400_1,512,16,ok,0,5.265987851,204732926,524431926
 max_clique,multilifo,MultiLIFO,brock400_1,512,16,ok,0,5.073071533,198617926,507434472
-max_clique,treiber_stack,Treiber stack (elimination),brock400_1,512,16,ok,0,154.189059057,141289195,376935392
-max_clique,treiber_stack,Treiber stack (elimination),brock400_1,512,16,ok,0,191.5770589,179809538,462550519
-max_clique,treiber_stack,Treiber stack (elimination),brock400_1,512,16,ok,0,154.039488318,143340490,375722592
-max_clique,treiber_stack,Treiber stack (elimination),brock400_1,512,16,ok,0,173.331881026,161665666,419185391
-max_clique,treiber_stack,Treiber stack (elimination),brock400_1,512,16,ok,0,216.106492083,203624278,514264243
-max_clique,2d_stack,2D stack,brock400_1,512,16,ok,0,6.330887429,257242081,632467533
-max_clique,2d_stack,2D stack,brock400_1,512,16,ok,0,4.259265452,153957171,409530833
-max_clique,2d_stack,2D stack,brock400_1,512,16,ok,0,5.372373682,202817623,523896678
-max_clique,2d_stack,2D stack,brock400_1,512,16,ok,0,2.783325485,92257835,256995952
-max_clique,2d_stack,2D stack,brock400_1,512,16,ok,0,5.147338708,196600956,504761851
+max_clique,treiber_stack,Treiber stack,brock400_1,512,16,ok,0,154.189059057,141289195,376935392
+max_clique,treiber_stack,Treiber stack,brock400_1,512,16,ok,0,191.5770589,179809538,462550519
+max_clique,treiber_stack,Treiber stack,brock400_1,512,16,ok,0,154.039488318,143340490,375722592
+max_clique,treiber_stack,Treiber stack,brock400_1,512,16,ok,0,173.331881026,161665666,419185391
+max_clique,treiber_stack,Treiber stack,brock400_1,512,16,ok,0,216.106492083,203624278,514264243
+max_clique,2d_stack,2D-stack,brock400_1,512,16,ok,0,6.330887429,257242081,632467533
+max_clique,2d_stack,2D-stack,brock400_1,512,16,ok,0,4.259265452,153957171,409530833
+max_clique,2d_stack,2D-stack,brock400_1,512,16,ok,0,5.372373682,202817623,523896678
+max_clique,2d_stack,2D-stack,brock400_1,512,16,ok,0,2.783325485,92257835,256995952
+max_clique,2d_stack,2D-stack,brock400_1,512,16,ok,0,5.147338708,196600956,504761851
 max_clique,locked_pq,Globally locked PQ,brock400_1,512,16,ok,0,969.327468981,109268503,332125414
 max_clique,locked_pq,Globally locked PQ,brock400_1,512,16,ok,0,966.707560971,109436340,332629715
 max_clique,locked_pq,Globally locked PQ,brock400_1,512,16,ok,0,930.739519375,104583322,317573054
 max_clique,locked_pq,Globally locked PQ,brock400_1,512,16,ok,0,908.621237382,104550081,317466246
 max_clique,locked_pq,Globally locked PQ,brock400_1,512,16,ok,0,970.114626621,109563574,333031484
-max_clique,pr,PR,brock400_1,512,16,ok,0,111.375491586,115383789,350628312
-max_clique,pr,PR,brock400_1,512,16,failed,-6,,,
+max_clique,pr,Linden,brock400_1,512,16,ok,0,111.375491586,115383789,350628312
+max_clique,pr,Linden,brock400_1,512,16,failed,-6,,,
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_1,512,16,ok,0,7.103802395,107916825,328026200
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_1,512,16,ok,0,6.944579025,107231372,325824011
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_1,512,16,ok,0,7.040105965,107177261,325692389
@@ -194,11 +194,11 @@ max_clique,locked_stack,Globally locked Stack,brock400_2,512,16,ok,0,14.26944400
 max_clique,locked_stack,Globally locked Stack,brock400_2,512,16,ok,0,53.10132619,107724583,287316571
 max_clique,locked_stack,Globally locked Stack,brock400_2,512,16,ok,0,68.205119566,137637392,360223827
 max_clique,locked_stack,Globally locked Stack,brock400_2,512,16,ok,0,34.431345356,67865593,186081723
-max_clique,pmc,PMC library,brock400_2,512,,ok,0,6.070339162,,
-max_clique,pmc,PMC library,brock400_2,512,,ok,0,6.068530476,,
-max_clique,pmc,PMC library,brock400_2,512,,ok,0,6.142637674,,
-max_clique,pmc,PMC library,brock400_2,512,,ok,0,6.109983012,,
-max_clique,pmc,PMC library,brock400_2,512,,ok,0,6.087541157,,
+max_clique,pmc,PMC,brock400_2,512,,ok,0,6.070339162,,
+max_clique,pmc,PMC,brock400_2,512,,ok,0,6.068530476,,
+max_clique,pmc,PMC,brock400_2,512,,ok,0,6.142637674,,
+max_clique,pmc,PMC,brock400_2,512,,ok,0,6.109983012,,
+max_clique,pmc,PMC,brock400_2,512,,ok,0,6.087541157,,
 max_clique,work_stealing,Simple work stealing,brock400_2,512,16,ok,0,1.751835967,55552689,162586089
 max_clique,work_stealing,Simple work stealing,brock400_2,512,16,ok,0,1.626561604,51265432,149523121
 max_clique,work_stealing,Simple work stealing,brock400_2,512,16,ok,0,2.03399281,63957023,185350740
@@ -224,26 +224,26 @@ max_clique,multilifo,MultiLIFO,brock400_2,512,16,ok,0,2.994301863,111158353,2929
 max_clique,multilifo,MultiLIFO,brock400_2,512,16,ok,0,1.875763144,63857881,173147196
 max_clique,multilifo,MultiLIFO,brock400_2,512,16,ok,0,2.631702934,92836217,252613835
 max_clique,multilifo,MultiLIFO,brock400_2,512,16,ok,0,2.410777451,86684511,232274676
-max_clique,treiber_stack,Treiber stack (elimination),brock400_2,512,16,ok,0,62.254369763,55119684,159913503
-max_clique,treiber_stack,Treiber stack (elimination),brock400_2,512,16,ok,0,77.526007306,68810340,195738408
-max_clique,treiber_stack,Treiber stack (elimination),brock400_2,512,16,ok,0,76.348849613,67790435,192421938
-max_clique,treiber_stack,Treiber stack (elimination),brock400_2,512,16,ok,0,39.870704066,35029023,104035730
-max_clique,treiber_stack,Treiber stack (elimination),brock400_2,512,16,ok,0,84.133655247,75241059,210641216
-max_clique,2d_stack,2D stack,brock400_2,512,16,ok,0,1.555539349,46504449,138632043
-max_clique,2d_stack,2D stack,brock400_2,512,16,ok,0,1.920767135,60729352,174138130
-max_clique,2d_stack,2D stack,brock400_2,512,16,ok,0,3.908497744,147606033,380024609
-max_clique,2d_stack,2D stack,brock400_2,512,16,ok,0,1.606019827,51670876,145136730
-max_clique,2d_stack,2D stack,brock400_2,512,16,ok,0,2.696111223,95351514,255686438
+max_clique,treiber_stack,Treiber stack,brock400_2,512,16,ok,0,62.254369763,55119684,159913503
+max_clique,treiber_stack,Treiber stack,brock400_2,512,16,ok,0,77.526007306,68810340,195738408
+max_clique,treiber_stack,Treiber stack,brock400_2,512,16,ok,0,76.348849613,67790435,192421938
+max_clique,treiber_stack,Treiber stack,brock400_2,512,16,ok,0,39.870704066,35029023,104035730
+max_clique,treiber_stack,Treiber stack,brock400_2,512,16,ok,0,84.133655247,75241059,210641216
+max_clique,2d_stack,2D-stack,brock400_2,512,16,ok,0,1.555539349,46504449,138632043
+max_clique,2d_stack,2D-stack,brock400_2,512,16,ok,0,1.920767135,60729352,174138130
+max_clique,2d_stack,2D-stack,brock400_2,512,16,ok,0,3.908497744,147606033,380024609
+max_clique,2d_stack,2D-stack,brock400_2,512,16,ok,0,1.606019827,51670876,145136730
+max_clique,2d_stack,2D-stack,brock400_2,512,16,ok,0,2.696111223,95351514,255686438
 max_clique,locked_pq,Globally locked PQ,brock400_2,512,16,ok,0,361.618501434,36160539,129440385
 max_clique,locked_pq,Globally locked PQ,brock400_2,512,16,ok,0,373.555076332,35938207,128611213
 max_clique,locked_pq,Globally locked PQ,brock400_2,512,16,ok,0,361.753785341,35955652,128703281
 max_clique,locked_pq,Globally locked PQ,brock400_2,512,16,ok,0,376.62830399,36081626,129163432
 max_clique,locked_pq,Globally locked PQ,brock400_2,512,16,ok,0,372.789550017,35883079,128433321
-max_clique,pr,PR,brock400_2,512,16,ok,0,50.430916875,35530694,127373863
-max_clique,pr,PR,brock400_2,512,16,ok,0,52.80489191,35548353,127433979
-max_clique,pr,PR,brock400_2,512,16,ok,0,49.895982042,35533315,127377020
-max_clique,pr,PR,brock400_2,512,16,ok,0,50.129477853,35604545,127644047
-max_clique,pr,PR,brock400_2,512,16,failed,-6,,,
+max_clique,pr,Linden,brock400_2,512,16,ok,0,50.430916875,35530694,127373863
+max_clique,pr,Linden,brock400_2,512,16,ok,0,52.80489191,35548353,127433979
+max_clique,pr,Linden,brock400_2,512,16,ok,0,49.895982042,35533315,127377020
+max_clique,pr,Linden,brock400_2,512,16,ok,0,50.129477853,35604545,127644047
+max_clique,pr,Linden,brock400_2,512,16,failed,-6,,,
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_2,512,16,ok,0,3.189653289,34343519,122673095
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_2,512,16,ok,0,3.302004293,36404905,130293644
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_2,512,16,ok,0,3.20592265,36353874,130158955
@@ -254,11 +254,11 @@ max_clique,locked_stack,Globally locked Stack,brock400_3,512,16,ok,0,29.13219180
 max_clique,locked_stack,Globally locked Stack,brock400_3,512,16,ok,0,25.826991781,51600100,135343597
 max_clique,locked_stack,Globally locked Stack,brock400_3,512,16,ok,0,55.471664155,113376466,286623369
 max_clique,locked_stack,Globally locked Stack,brock400_3,512,16,ok,0,54.985573807,112789389,286099370
-max_clique,pmc,PMC library,brock400_3,512,,ok,0,2.502552371,,
-max_clique,pmc,PMC library,brock400_3,512,,ok,0,2.571378343,,
-max_clique,pmc,PMC library,brock400_3,512,,ok,0,2.592964548,,
-max_clique,pmc,PMC library,brock400_3,512,,ok,0,2.571136273,,
-max_clique,pmc,PMC library,brock400_3,512,,ok,0,2.651091698,,
+max_clique,pmc,PMC,brock400_3,512,,ok,0,2.502552371,,
+max_clique,pmc,PMC,brock400_3,512,,ok,0,2.571378343,,
+max_clique,pmc,PMC,brock400_3,512,,ok,0,2.592964548,,
+max_clique,pmc,PMC,brock400_3,512,,ok,0,2.571136273,,
+max_clique,pmc,PMC,brock400_3,512,,ok,0,2.651091698,,
 max_clique,work_stealing,Simple work stealing,brock400_3,512,16,ok,0,1.076359004,33883943,97115109
 max_clique,work_stealing,Simple work stealing,brock400_3,512,16,ok,0,1.246156906,39464972,113556108
 max_clique,work_stealing,Simple work stealing,brock400_3,512,16,ok,0,1.348753062,45200879,127145228
@@ -284,26 +284,26 @@ max_clique,multilifo,MultiLIFO,brock400_3,512,16,ok,0,0.443147814,8667474,314807
 max_clique,multilifo,MultiLIFO,brock400_3,512,16,ok,0,0.73004817,20970229,61524539
 max_clique,multilifo,MultiLIFO,brock400_3,512,16,ok,0,1.896773868,71518494,184709608
 max_clique,multilifo,MultiLIFO,brock400_3,512,16,ok,0,2.442653245,87942727,236401301
-max_clique,treiber_stack,Treiber stack (elimination),brock400_3,512,16,ok,0,59.516741295,55342312,146463402
-max_clique,treiber_stack,Treiber stack (elimination),brock400_3,512,16,ok,0,75.751675442,69971376,184816471
-max_clique,treiber_stack,Treiber stack (elimination),brock400_3,512,16,ok,0,47.685804069,44126506,117530927
-max_clique,treiber_stack,Treiber stack (elimination),brock400_3,512,16,ok,0,41.612192621,38345946,102714403
-max_clique,treiber_stack,Treiber stack (elimination),brock400_3,512,16,ok,0,35.557397921,33226113,88197849
-max_clique,2d_stack,2D stack,brock400_3,512,16,ok,0,0.594506559,13285050,45999104
-max_clique,2d_stack,2D stack,brock400_3,512,16,ok,0,0.565181656,12426160,42970845
-max_clique,2d_stack,2D stack,brock400_3,512,16,ok,0,2.64133636,100266731,256994007
-max_clique,2d_stack,2D stack,brock400_3,512,16,ok,0,3.117955051,113495613,300635608
-max_clique,2d_stack,2D stack,brock400_3,512,16,ok,0,1.715368869,58388807,159081284
+max_clique,treiber_stack,Treiber stack,brock400_3,512,16,ok,0,59.516741295,55342312,146463402
+max_clique,treiber_stack,Treiber stack,brock400_3,512,16,ok,0,75.751675442,69971376,184816471
+max_clique,treiber_stack,Treiber stack,brock400_3,512,16,ok,0,47.685804069,44126506,117530927
+max_clique,treiber_stack,Treiber stack,brock400_3,512,16,ok,0,41.612192621,38345946,102714403
+max_clique,treiber_stack,Treiber stack,brock400_3,512,16,ok,0,35.557397921,33226113,88197849
+max_clique,2d_stack,2D-stack,brock400_3,512,16,ok,0,0.594506559,13285050,45999104
+max_clique,2d_stack,2D-stack,brock400_3,512,16,ok,0,0.565181656,12426160,42970845
+max_clique,2d_stack,2D-stack,brock400_3,512,16,ok,0,2.64133636,100266731,256994007
+max_clique,2d_stack,2D-stack,brock400_3,512,16,ok,0,3.117955051,113495613,300635608
+max_clique,2d_stack,2D-stack,brock400_3,512,16,ok,0,1.715368869,58388807,159081284
 max_clique,locked_pq,Globally locked PQ,brock400_3,512,16,ok,0,78.162263724,11577098,44359143
 max_clique,locked_pq,Globally locked PQ,brock400_3,512,16,ok,0,78.055629798,11576887,44367989
 max_clique,locked_pq,Globally locked PQ,brock400_3,512,16,ok,0,82.303232834,11582886,44425686
 max_clique,locked_pq,Globally locked PQ,brock400_3,512,16,ok,0,79.817854196,11574582,44409473
 max_clique,locked_pq,Globally locked PQ,brock400_3,512,16,ok,0,81.959030804,11593836,44459870
-max_clique,pr,PR,brock400_3,512,16,ok,0,10.960687466,11144976,42979033
-max_clique,pr,PR,brock400_3,512,16,ok,0,10.331582743,11133439,42997727
-max_clique,pr,PR,brock400_3,512,16,ok,0,12.797014721,11145479,43067786
-max_clique,pr,PR,brock400_3,512,16,ok,0,11.944442397,11141972,43033977
-max_clique,pr,PR,brock400_3,512,16,ok,0,10.82462558,11149986,43052504
+max_clique,pr,Linden,brock400_3,512,16,ok,0,10.960687466,11144976,42979033
+max_clique,pr,Linden,brock400_3,512,16,ok,0,10.331582743,11133439,42997727
+max_clique,pr,Linden,brock400_3,512,16,ok,0,12.797014721,11145479,43067786
+max_clique,pr,Linden,brock400_3,512,16,ok,0,11.944442397,11141972,43033977
+max_clique,pr,Linden,brock400_3,512,16,ok,0,10.82462558,11149986,43052504
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_3,512,16,ok,0,0.896026714,11466677,44044888
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_3,512,16,ok,0,0.915727566,11512792,44319198
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_3,512,16,ok,0,1.09606598,13480403,52358638
@@ -314,11 +314,11 @@ max_clique,locked_stack,Globally locked Stack,brock400_4,512,16,ok,0,10.46220529
 max_clique,locked_stack,Globally locked Stack,brock400_4,512,16,ok,0,3.774718758,6126400,22675937
 max_clique,locked_stack,Globally locked Stack,brock400_4,512,16,ok,0,4.471036827,7369718,26596040
 max_clique,locked_stack,Globally locked Stack,brock400_4,512,16,ok,0,4.958947949,8335210,28869805
-max_clique,pmc,PMC library,brock400_4,512,,ok,0,1.497765757,,
-max_clique,pmc,PMC library,brock400_4,512,,ok,0,1.533549095,,
-max_clique,pmc,PMC library,brock400_4,512,,ok,0,1.480310936,,
-max_clique,pmc,PMC library,brock400_4,512,,ok,0,1.43544562,,
-max_clique,pmc,PMC library,brock400_4,512,,ok,0,1.562492106,,
+max_clique,pmc,PMC,brock400_4,512,,ok,0,1.497765757,,
+max_clique,pmc,PMC,brock400_4,512,,ok,0,1.533549095,,
+max_clique,pmc,PMC,brock400_4,512,,ok,0,1.480310936,,
+max_clique,pmc,PMC,brock400_4,512,,ok,0,1.43544562,,
+max_clique,pmc,PMC,brock400_4,512,,ok,0,1.562492106,,
 max_clique,work_stealing,Simple work stealing,brock400_4,512,16,ok,0,0.341276803,6226095,22160518
 max_clique,work_stealing,Simple work stealing,brock400_4,512,16,ok,0,0.351112631,6532284,22903062
 max_clique,work_stealing,Simple work stealing,brock400_4,512,16,ok,0,0.35785322,6504819,22880351
@@ -344,26 +344,26 @@ max_clique,multilifo,MultiLIFO,brock400_4,512,16,ok,0,0.35804227,6145785,2279692
 max_clique,multilifo,MultiLIFO,brock400_4,512,16,ok,0,0.364893179,7777182,25195643
 max_clique,multilifo,MultiLIFO,brock400_4,512,16,ok,0,1.009835922,31996581,89792084
 max_clique,multilifo,MultiLIFO,brock400_4,512,16,ok,0,0.542285106,12919823,40425376
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,34.008316687,31607067,83067649
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,78.773907544,73759597,191383371
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,29.714938339,26692827,73607069
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,41.66844796,37930863,104961754
-max_clique,treiber_stack,Treiber stack (elimination),brock400_4,512,16,ok,0,22.626788177,20232354,56564244
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.358751988,6776784,24594410
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.844273232,25993606,72518774
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.279656465,4605824,17402253
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.534536814,11540484,39835060
-max_clique,2d_stack,2D stack,brock400_4,512,16,ok,0,0.316118011,5603693,20723138
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,34.008316687,31607067,83067649
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,78.773907544,73759597,191383371
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,29.714938339,26692827,73607069
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,41.66844796,37930863,104961754
+max_clique,treiber_stack,Treiber stack,brock400_4,512,16,ok,0,22.626788177,20232354,56564244
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.358751988,6776784,24594410
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.844273232,25993606,72518774
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.279656465,4605824,17402253
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.534536814,11540484,39835060
+max_clique,2d_stack,2D-stack,brock400_4,512,16,ok,0,0.316118011,5603693,20723138
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,16,ok,0,29.586193181,4887527,19541137
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,16,ok,0,29.824513968,4898591,19589507
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,16,ok,0,29.824418678,4886972,19575341
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,16,ok,0,29.37684382,4872898,19495528
 max_clique,locked_pq,Globally locked PQ,brock400_4,512,16,ok,0,29.746834375,4880766,19525080
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.153801941,4925742,19643272
-max_clique,pr,PR,brock400_4,512,16,ok,0,3.805349877,4908955,19608433
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.14237607,4914406,19637488
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.219148182,4901804,19676610
-max_clique,pr,PR,brock400_4,512,16,ok,0,4.751325354,4906357,19606090
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.153801941,4925742,19643272
+max_clique,pr,Linden,brock400_4,512,16,ok,0,3.805349877,4908955,19608433
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.14237607,4914406,19637488
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.219148182,4901804,19676610
+max_clique,pr,Linden,brock400_4,512,16,ok,0,4.751325354,4906357,19606090
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_4,512,16,ok,0,0.346985093,4771438,18967976
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_4,512,16,ok,0,0.369098563,4806116,19377205
 max_clique,mq_stick_swap,MultiQueue (stick swap),brock400_4,512,16,ok,0,0.407203226,4842827,19848815
@@ -374,11 +374,11 @@ max_clique,locked_stack,Globally locked Stack,gen200_p0.9_44,512,16,ok,0,7.07210
 max_clique,locked_stack,Globally locked Stack,gen200_p0.9_44,512,16,ok,0,6.397990365,17527743,25736782
 max_clique,locked_stack,Globally locked Stack,gen200_p0.9_44,512,16,ok,0,1.400890429,3350347,5380058
 max_clique,locked_stack,Globally locked Stack,gen200_p0.9_44,512,16,ok,0,2.234394112,5609767,8797390
-max_clique,pmc,PMC library,gen200_p0.9_44,512,,ok,0,0.111940271,,
-max_clique,pmc,PMC library,gen200_p0.9_44,512,,ok,0,0.121165526,,
-max_clique,pmc,PMC library,gen200_p0.9_44,512,,ok,0,0.116844494,,
-max_clique,pmc,PMC library,gen200_p0.9_44,512,,ok,0,0.118321978,,
-max_clique,pmc,PMC library,gen200_p0.9_44,512,,ok,0,0.117231595,,
+max_clique,pmc,PMC,gen200_p0.9_44,512,,ok,0,0.111940271,,
+max_clique,pmc,PMC,gen200_p0.9_44,512,,ok,0,0.121165526,,
+max_clique,pmc,PMC,gen200_p0.9_44,512,,ok,0,0.116844494,,
+max_clique,pmc,PMC,gen200_p0.9_44,512,,ok,0,0.118321978,,
+max_clique,pmc,PMC,gen200_p0.9_44,512,,ok,0,0.117231595,,
 max_clique,work_stealing,Simple work stealing,gen200_p0.9_44,512,16,ok,0,0.346668652,10775161,16379638
 max_clique,work_stealing,Simple work stealing,gen200_p0.9_44,512,16,ok,0,0.381466057,11954076,17925191
 max_clique,work_stealing,Simple work stealing,gen200_p0.9_44,512,16,ok,0,0.163949901,3144552,5185387
@@ -404,37 +404,37 @@ max_clique,multilifo,MultiLIFO,gen200_p0.9_44,512,16,ok,0,0.185265998,3545427,59
 max_clique,multilifo,MultiLIFO,gen200_p0.9_44,512,16,ok,0,0.262189425,6954632,11037574
 max_clique,multilifo,MultiLIFO,gen200_p0.9_44,512,16,ok,0,0.209608743,4341606,7148687
 max_clique,multilifo,MultiLIFO,gen200_p0.9_44,512,16,ok,0,0.194215886,3779392,6295959
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,18.830021927,27017521,37968326
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,8.540286316,11978435,17528949
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,13.826322739,19665357,28253472
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,20.186467869,29101473,40812353
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,5.224923161,7293115,10906432
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.164093915,3613043,6061283
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.198438338,4884580,7942642
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.181521152,4428385,7201181
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.213120318,5442226,8812272
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.19169488,4667573,7625692
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,18.830021927,27017521,37968326
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,8.540286316,11978435,17528949
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,13.826322739,19665357,28253472
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,20.186467869,29101473,40812353
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,5.224923161,7293115,10906432
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.164093915,3613043,6061283
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.198438338,4884580,7942642
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.181521152,4428385,7201181
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.213120318,5442226,8812272
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.19169488,4667573,7625692
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,16,ok,0,43.38832962,9531205,18526841
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,16,ok,0,40.848242223,9161449,18056447
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,16,ok,0,37.209153873,8086248,16729627
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,16,ok,0,35.97850885,7939440,16501876
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,16,ok,0,44.68853622,9684224,18796897
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,10.726148772,8458595,17637733
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.391815605,8458172,17631591
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,10.13834329,8461714,17639721
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.61035012,8445336,17592887
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.581681034,8453196,17638181
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,10.726148772,8458595,17637733
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.391815605,8458172,17631591
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,10.13834329,8461714,17639721
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.61035012,8445336,17592887
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.581681034,8453196,17638181
 max_clique,mq_stick_swap,MultiQueue (stick swap),gen200_p0.9_44,512,16,ok,0,0.393069366,7392172,15908047
 max_clique,mq_stick_swap,MultiQueue (stick swap),gen200_p0.9_44,512,16,ok,0,0.384976661,7191126,15207853
 max_clique,mq_stick_swap,MultiQueue (stick swap),gen200_p0.9_44,512,16,ok,0,0.411039729,8187567,16440231
 max_clique,mq_stick_swap,MultiQueue (stick swap),gen200_p0.9_44,512,16,ok,0,0.414268349,8208398,17138269
 max_clique,mq_stick_swap,MultiQueue (stick swap),gen200_p0.9_44,512,16,ok,0,0.418792243,8040056,16805337
 max_clique,locked_stack,Globally locked Stack,p_hat1000-2,512,16,timeout,,1800,,
-max_clique,pmc,PMC library,p_hat1000-2,512,,ok,0,7.542484936,,
-max_clique,pmc,PMC library,p_hat1000-2,512,,ok,0,7.450090136,,
-max_clique,pmc,PMC library,p_hat1000-2,512,,ok,0,7.384639723,,
-max_clique,pmc,PMC library,p_hat1000-2,512,,ok,0,7.334278558,,
-max_clique,pmc,PMC library,p_hat1000-2,512,,ok,0,7.489669091,,
+max_clique,pmc,PMC,p_hat1000-2,512,,ok,0,7.542484936,,
+max_clique,pmc,PMC,p_hat1000-2,512,,ok,0,7.450090136,,
+max_clique,pmc,PMC,p_hat1000-2,512,,ok,0,7.384639723,,
+max_clique,pmc,PMC,p_hat1000-2,512,,ok,0,7.334278558,,
+max_clique,pmc,PMC,p_hat1000-2,512,,ok,0,7.489669091,,
 max_clique,work_stealing,Simple work stealing,p_hat1000-2,512,16,ok,0,442.859294151,7351618675,17053770694
 max_clique,work_stealing,Simple work stealing,p_hat1000-2,512,16,ok,0,461.546136706,7703806920,17726196318
 max_clique,work_stealing,Simple work stealing,p_hat1000-2,512,16,ok,0,516.107586943,8786722397,19988243075
@@ -460,14 +460,14 @@ max_clique,multilifo,MultiLIFO,p_hat1000-2,512,16,ok,0,396.488871404,6458513876,
 max_clique,multilifo,MultiLIFO,p_hat1000-2,512,16,ok,0,595.840029397,10315225762,22826085398
 max_clique,multilifo,MultiLIFO,p_hat1000-2,512,16,ok,0,525.38418384,8972007071,20126387661
 max_clique,multilifo,MultiLIFO,p_hat1000-2,512,16,ok,0,572.468780744,10001909453,22027630737
-max_clique,treiber_stack,Treiber stack (elimination),p_hat1000-2,512,16,timeout,,1800,,
-max_clique,2d_stack,2D stack,p_hat1000-2,512,16,ok,0,397.137788953,6264878652,14641405357
-max_clique,2d_stack,2D stack,p_hat1000-2,512,16,ok,0,509.750349968,8430592707,18929186901
-max_clique,2d_stack,2D stack,p_hat1000-2,512,16,ok,0,428.052790649,6878262160,15845070303
-max_clique,2d_stack,2D stack,p_hat1000-2,512,16,ok,0,400.347888483,6340134933,14782875920
-max_clique,2d_stack,2D stack,p_hat1000-2,512,16,ok,0,438.650899588,7071409391,16198773408
+max_clique,treiber_stack,Treiber stack,p_hat1000-2,512,16,timeout,,1800,,
+max_clique,2d_stack,2D-stack,p_hat1000-2,512,16,ok,0,397.137788953,6264878652,14641405357
+max_clique,2d_stack,2D-stack,p_hat1000-2,512,16,ok,0,509.750349968,8430592707,18929186901
+max_clique,2d_stack,2D-stack,p_hat1000-2,512,16,ok,0,428.052790649,6878262160,15845070303
+max_clique,2d_stack,2D-stack,p_hat1000-2,512,16,ok,0,400.347888483,6340134933,14782875920
+max_clique,2d_stack,2D-stack,p_hat1000-2,512,16,ok,0,438.650899588,7071409391,16198773408
 max_clique,locked_pq,Globally locked PQ,p_hat1000-2,512,16,timeout,,1800,,
-max_clique,pr,PR,p_hat1000-2,512,16,failed,-6,,,
+max_clique,pr,Linden,p_hat1000-2,512,16,failed,-6,,,
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat1000-2,512,16,ok,0,634.307118087,8048461025,19101419221
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat1000-2,512,16,ok,0,660.542296425,8337627510,19713995289
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat1000-2,512,16,ok,0,655.555947988,8336843714,19713263821
@@ -478,11 +478,11 @@ max_clique,locked_stack,Globally locked Stack,p_hat1500-1,512,16,ok,0,0.52315184
 max_clique,locked_stack,Globally locked Stack,p_hat1500-1,512,16,ok,0,0.565557001,342236,1885589
 max_clique,locked_stack,Globally locked Stack,p_hat1500-1,512,16,ok,0,0.512196351,284431,1652812
 max_clique,locked_stack,Globally locked Stack,p_hat1500-1,512,16,ok,0,0.522725972,284200,1649253
-max_clique,pmc,PMC library,p_hat1500-1,512,,ok,0,0.138887256,,
-max_clique,pmc,PMC library,p_hat1500-1,512,,ok,0,0.143539112,,
-max_clique,pmc,PMC library,p_hat1500-1,512,,ok,0,0.13814542,,
-max_clique,pmc,PMC library,p_hat1500-1,512,,ok,0,0.145775879,,
-max_clique,pmc,PMC library,p_hat1500-1,512,,ok,0,0.133737447,,
+max_clique,pmc,PMC,p_hat1500-1,512,,ok,0,0.138887256,,
+max_clique,pmc,PMC,p_hat1500-1,512,,ok,0,0.143539112,,
+max_clique,pmc,PMC,p_hat1500-1,512,,ok,0,0.13814542,,
+max_clique,pmc,PMC,p_hat1500-1,512,,ok,0,0.145775879,,
+max_clique,pmc,PMC,p_hat1500-1,512,,ok,0,0.133737447,,
 max_clique,work_stealing,Simple work stealing,p_hat1500-1,512,16,ok,0,0.097321858,247410,1502083
 max_clique,work_stealing,Simple work stealing,p_hat1500-1,512,16,ok,0,0.105914333,360042,1947104
 max_clique,work_stealing,Simple work stealing,p_hat1500-1,512,16,ok,0,0.101031356,386277,2051147
@@ -508,26 +508,26 @@ max_clique,multilifo,MultiLIFO,p_hat1500-1,512,16,ok,0,0.103688219,303142,171654
 max_clique,multilifo,MultiLIFO,p_hat1500-1,512,16,ok,0,0.107231857,221948,1398535
 max_clique,multilifo,MultiLIFO,p_hat1500-1,512,16,ok,0,0.099577847,260577,1550859
 max_clique,multilifo,MultiLIFO,p_hat1500-1,512,16,ok,0,0.101910376,244521,1485450
-max_clique,treiber_stack,Treiber stack (elimination),p_hat1500-1,512,16,ok,0,0.600629809,286202,1628120
-max_clique,treiber_stack,Treiber stack (elimination),p_hat1500-1,512,16,ok,0,0.50331901,237252,1437085
-max_clique,treiber_stack,Treiber stack (elimination),p_hat1500-1,512,16,ok,0,0.61885845,308735,1711388
-max_clique,treiber_stack,Treiber stack (elimination),p_hat1500-1,512,16,ok,0,0.52546514,244763,1462949
-max_clique,treiber_stack,Treiber stack (elimination),p_hat1500-1,512,16,ok,0,0.466293005,213154,1338485
-max_clique,2d_stack,2D stack,p_hat1500-1,512,16,ok,0,0.103441478,370984,1994431
-max_clique,2d_stack,2D stack,p_hat1500-1,512,16,ok,0,0.094281027,277379,1637997
-max_clique,2d_stack,2D stack,p_hat1500-1,512,16,ok,0,0.098974512,369217,1988069
-max_clique,2d_stack,2D stack,p_hat1500-1,512,16,ok,0,0.097754503,373036,2002337
-max_clique,2d_stack,2D stack,p_hat1500-1,512,16,ok,0,0.096889416,355928,1934491
+max_clique,treiber_stack,Treiber stack,p_hat1500-1,512,16,ok,0,0.600629809,286202,1628120
+max_clique,treiber_stack,Treiber stack,p_hat1500-1,512,16,ok,0,0.50331901,237252,1437085
+max_clique,treiber_stack,Treiber stack,p_hat1500-1,512,16,ok,0,0.61885845,308735,1711388
+max_clique,treiber_stack,Treiber stack,p_hat1500-1,512,16,ok,0,0.52546514,244763,1462949
+max_clique,treiber_stack,Treiber stack,p_hat1500-1,512,16,ok,0,0.466293005,213154,1338485
+max_clique,2d_stack,2D-stack,p_hat1500-1,512,16,ok,0,0.103441478,370984,1994431
+max_clique,2d_stack,2D-stack,p_hat1500-1,512,16,ok,0,0.094281027,277379,1637997
+max_clique,2d_stack,2D-stack,p_hat1500-1,512,16,ok,0,0.098974512,369217,1988069
+max_clique,2d_stack,2D-stack,p_hat1500-1,512,16,ok,0,0.097754503,373036,2002337
+max_clique,2d_stack,2D-stack,p_hat1500-1,512,16,ok,0,0.096889416,355928,1934491
 max_clique,locked_pq,Globally locked PQ,p_hat1500-1,512,16,ok,0,1.274141851,304828,1752931
 max_clique,locked_pq,Globally locked PQ,p_hat1500-1,512,16,ok,0,1.275448331,307121,1752090
 max_clique,locked_pq,Globally locked PQ,p_hat1500-1,512,16,ok,0,1.273519096,301565,1737215
 max_clique,locked_pq,Globally locked PQ,p_hat1500-1,512,16,ok,0,1.223800393,308024,1750793
 max_clique,locked_pq,Globally locked PQ,p_hat1500-1,512,16,ok,0,1.243850028,301207,1726499
-max_clique,pr,PR,p_hat1500-1,512,16,ok,0,0.2101839,308252,1734979
-max_clique,pr,PR,p_hat1500-1,512,16,ok,0,0.288768035,202073,1339992
-max_clique,pr,PR,p_hat1500-1,512,16,ok,0,0.216076695,309287,1741903
-max_clique,pr,PR,p_hat1500-1,512,16,ok,0,0.222108302,330458,1814983
-max_clique,pr,PR,p_hat1500-1,512,16,ok,0,0.414430434,304427,1850145
+max_clique,pr,Linden,p_hat1500-1,512,16,ok,0,0.2101839,308252,1734979
+max_clique,pr,Linden,p_hat1500-1,512,16,ok,0,0.288768035,202073,1339992
+max_clique,pr,Linden,p_hat1500-1,512,16,ok,0,0.216076695,309287,1741903
+max_clique,pr,Linden,p_hat1500-1,512,16,ok,0,0.222108302,330458,1814983
+max_clique,pr,Linden,p_hat1500-1,512,16,ok,0,0.414430434,304427,1850145
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat1500-1,512,16,ok,0,0.097714343,229392,1452863
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat1500-1,512,16,ok,0,0.095447786,214984,1376694
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat1500-1,512,16,ok,0,0.108230335,244738,1514649
@@ -538,11 +538,11 @@ max_clique,locked_stack,Globally locked Stack,p_hat300-3,512,16,ok,0,4.463702976
 max_clique,locked_stack,Globally locked Stack,p_hat300-3,512,16,ok,0,4.256455868,9305907,20452338
 max_clique,locked_stack,Globally locked Stack,p_hat300-3,512,16,ok,0,4.386904843,9816047,21358299
 max_clique,locked_stack,Globally locked Stack,p_hat300-3,512,16,ok,0,4.460912503,9930526,21450948
-max_clique,pmc,PMC library,p_hat300-3,512,,ok,0,0.142805981,,
-max_clique,pmc,PMC library,p_hat300-3,512,,ok,0,0.140560013,,
-max_clique,pmc,PMC library,p_hat300-3,512,,ok,0,0.141277149,,
-max_clique,pmc,PMC library,p_hat300-3,512,,ok,0,0.142020535,,
-max_clique,pmc,PMC library,p_hat300-3,512,,ok,0,0.144812536,,
+max_clique,pmc,PMC,p_hat300-3,512,,ok,0,0.142805981,,
+max_clique,pmc,PMC,p_hat300-3,512,,ok,0,0.140560013,,
+max_clique,pmc,PMC,p_hat300-3,512,,ok,0,0.141277149,,
+max_clique,pmc,PMC,p_hat300-3,512,,ok,0,0.142020535,,
+max_clique,pmc,PMC,p_hat300-3,512,,ok,0,0.144812536,,
 max_clique,work_stealing,Simple work stealing,p_hat300-3,512,16,ok,0,0.382955562,9764446,21292789
 max_clique,work_stealing,Simple work stealing,p_hat300-3,512,16,ok,0,0.431423135,11633811,24722404
 max_clique,work_stealing,Simple work stealing,p_hat300-3,512,16,ok,0,0.441813675,11345495,24417015
@@ -568,37 +568,37 @@ max_clique,multilifo,MultiLIFO,p_hat300-3,512,16,ok,0,0.389613703,9869536,214807
 max_clique,multilifo,MultiLIFO,p_hat300-3,512,16,ok,0,0.463380052,13037550,27392754
 max_clique,multilifo,MultiLIFO,p_hat300-3,512,16,ok,0,0.368974015,9064582,19954663
 max_clique,multilifo,MultiLIFO,p_hat300-3,512,16,ok,0,0.454322052,12884649,27087996
-max_clique,treiber_stack,Treiber stack (elimination),p_hat300-3,512,16,ok,0,7.92705749,9158670,20058416
-max_clique,treiber_stack,Treiber stack (elimination),p_hat300-3,512,16,ok,0,8.009761358,9197775,20126375
-max_clique,treiber_stack,Treiber stack (elimination),p_hat300-3,512,16,ok,0,7.974903681,9114148,19991595
-max_clique,treiber_stack,Treiber stack (elimination),p_hat300-3,512,16,ok,0,8.02923821,9230241,20166850
-max_clique,treiber_stack,Treiber stack (elimination),p_hat300-3,512,16,ok,0,8.011410608,9207959,20131656
-max_clique,2d_stack,2D stack,p_hat300-3,512,16,ok,0,0.369264663,9955066,21621344
-max_clique,2d_stack,2D stack,p_hat300-3,512,16,ok,0,0.505220318,15271904,31768247
-max_clique,2d_stack,2D stack,p_hat300-3,512,16,ok,0,0.363374499,9842956,21390065
-max_clique,2d_stack,2D stack,p_hat300-3,512,16,ok,0,0.382262338,10559312,22782321
-max_clique,2d_stack,2D stack,p_hat300-3,512,16,ok,0,0.346866248,9103672,20023942
+max_clique,treiber_stack,Treiber stack,p_hat300-3,512,16,ok,0,7.92705749,9158670,20058416
+max_clique,treiber_stack,Treiber stack,p_hat300-3,512,16,ok,0,8.009761358,9197775,20126375
+max_clique,treiber_stack,Treiber stack,p_hat300-3,512,16,ok,0,7.974903681,9114148,19991595
+max_clique,treiber_stack,Treiber stack,p_hat300-3,512,16,ok,0,8.02923821,9230241,20166850
+max_clique,treiber_stack,Treiber stack,p_hat300-3,512,16,ok,0,8.011410608,9207959,20131656
+max_clique,2d_stack,2D-stack,p_hat300-3,512,16,ok,0,0.369264663,9955066,21621344
+max_clique,2d_stack,2D-stack,p_hat300-3,512,16,ok,0,0.505220318,15271904,31768247
+max_clique,2d_stack,2D-stack,p_hat300-3,512,16,ok,0,0.363374499,9842956,21390065
+max_clique,2d_stack,2D-stack,p_hat300-3,512,16,ok,0,0.382262338,10559312,22782321
+max_clique,2d_stack,2D-stack,p_hat300-3,512,16,ok,0,0.346866248,9103672,20023942
 max_clique,locked_pq,Globally locked PQ,p_hat300-3,512,16,ok,0,45.675938187,12403314,27554065
 max_clique,locked_pq,Globally locked PQ,p_hat300-3,512,16,ok,0,45.506892913,12408552,27574675
 max_clique,locked_pq,Globally locked PQ,p_hat300-3,512,16,ok,0,45.633515831,12404814,27567587
 max_clique,locked_pq,Globally locked PQ,p_hat300-3,512,16,ok,0,45.691675177,12409566,27578334
 max_clique,locked_pq,Globally locked PQ,p_hat300-3,512,16,ok,0,45.6406335,12405487,27568592
-max_clique,pr,PR,p_hat300-3,512,16,ok,0,8.007793404,11906222,26476929
-max_clique,pr,PR,p_hat300-3,512,16,ok,0,6.667938836,11898817,26479625
-max_clique,pr,PR,p_hat300-3,512,16,ok,0,7.984813068,11906667,26478556
-max_clique,pr,PR,p_hat300-3,512,16,ok,0,7.978493798,11902662,26486724
-max_clique,pr,PR,p_hat300-3,512,16,ok,0,7.591086946,11906653,26476734
+max_clique,pr,Linden,p_hat300-3,512,16,ok,0,8.007793404,11906222,26476929
+max_clique,pr,Linden,p_hat300-3,512,16,ok,0,6.667938836,11898817,26479625
+max_clique,pr,Linden,p_hat300-3,512,16,ok,0,7.984813068,11906667,26478556
+max_clique,pr,Linden,p_hat300-3,512,16,ok,0,7.978493798,11902662,26486724
+max_clique,pr,Linden,p_hat300-3,512,16,ok,0,7.591086946,11906653,26476734
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat300-3,512,16,ok,0,0.462026651,11670075,25936948
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat300-3,512,16,ok,0,0.487482194,12403922,27406591
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat300-3,512,16,ok,0,0.481795273,12244594,27099307
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat300-3,512,16,ok,0,0.491981505,12275386,27157288
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat300-3,512,16,ok,0,0.48754972,11988945,26592691
 max_clique,locked_stack,Globally locked Stack,p_hat500-3,512,16,timeout,,1800,,
-max_clique,pmc,PMC library,p_hat500-3,512,,ok,0,8.566899553,,
-max_clique,pmc,PMC library,p_hat500-3,512,,ok,0,8.450248053,,
-max_clique,pmc,PMC library,p_hat500-3,512,,ok,0,8.476221183,,
-max_clique,pmc,PMC library,p_hat500-3,512,,ok,0,8.865253083,,
-max_clique,pmc,PMC library,p_hat500-3,512,,ok,0,8.81006953,,
+max_clique,pmc,PMC,p_hat500-3,512,,ok,0,8.566899553,,
+max_clique,pmc,PMC,p_hat500-3,512,,ok,0,8.450248053,,
+max_clique,pmc,PMC,p_hat500-3,512,,ok,0,8.476221183,,
+max_clique,pmc,PMC,p_hat500-3,512,,ok,0,8.865253083,,
+max_clique,pmc,PMC,p_hat500-3,512,,ok,0,8.81006953,,
 max_clique,work_stealing,Simple work stealing,p_hat500-3,512,16,ok,0,537.900928282,12022569483,26171854624
 max_clique,work_stealing,Simple work stealing,p_hat500-3,512,16,ok,0,431.333362397,9453547459,20963624731
 max_clique,work_stealing,Simple work stealing,p_hat500-3,512,16,ok,0,738.655778693,16958966301,36023758002
@@ -624,14 +624,14 @@ max_clique,multilifo,MultiLIFO,p_hat500-3,512,16,ok,0,648.832791408,14294967766,
 max_clique,multilifo,MultiLIFO,p_hat500-3,512,16,ok,0,662.960628181,14594960255,31306087565
 max_clique,multilifo,MultiLIFO,p_hat500-3,512,16,ok,0,554.836415948,12045428269,26108658559
 max_clique,multilifo,MultiLIFO,p_hat500-3,512,16,ok,0,480.894648435,10270410827,22481734071
-max_clique,treiber_stack,Treiber stack (elimination),p_hat500-3,512,16,timeout,,1800,,
-max_clique,2d_stack,2D stack,p_hat500-3,512,16,ok,0,465.64193254,10001664109,21942600577
-max_clique,2d_stack,2D stack,p_hat500-3,512,16,ok,0,432.429792842,9231749097,20405100244
-max_clique,2d_stack,2D stack,p_hat500-3,512,16,ok,0,502.616263623,10872753454,23794271735
-max_clique,2d_stack,2D stack,p_hat500-3,512,16,ok,0,463.020202918,9989276590,21889474595
-max_clique,2d_stack,2D stack,p_hat500-3,512,16,ok,0,541.458398983,11868543650,25691600936
+max_clique,treiber_stack,Treiber stack,p_hat500-3,512,16,timeout,,1800,,
+max_clique,2d_stack,2D-stack,p_hat500-3,512,16,ok,0,465.64193254,10001664109,21942600577
+max_clique,2d_stack,2D-stack,p_hat500-3,512,16,ok,0,432.429792842,9231749097,20405100244
+max_clique,2d_stack,2D-stack,p_hat500-3,512,16,ok,0,502.616263623,10872753454,23794271735
+max_clique,2d_stack,2D-stack,p_hat500-3,512,16,ok,0,463.020202918,9989276590,21889474595
+max_clique,2d_stack,2D-stack,p_hat500-3,512,16,ok,0,541.458398983,11868543650,25691600936
 max_clique,locked_pq,Globally locked PQ,p_hat500-3,512,16,timeout,,1800,,
-max_clique,pr,PR,p_hat500-3,512,16,failed,-6,,,
+max_clique,pr,Linden,p_hat500-3,512,16,failed,-6,,,
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat500-3,512,16,ok,0,606.40999477,10613117319,24293845913
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat500-3,512,16,ok,0,604.122503207,10618451410,24307397075
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat500-3,512,16,ok,0,601.473786672,10613073075,24293955511
@@ -642,11 +642,11 @@ max_clique,locked_stack,Globally locked Stack,p_hat700-2,512,16,ok,0,34.55181384
 max_clique,locked_stack,Globally locked Stack,p_hat700-2,512,16,ok,0,32.244475853,73290481,164478027
 max_clique,locked_stack,Globally locked Stack,p_hat700-2,512,16,ok,0,47.895173388,110299659,234944350
 max_clique,locked_stack,Globally locked Stack,p_hat700-2,512,16,ok,0,42.802529595,97644252,213277693
-max_clique,pmc,PMC library,p_hat700-2,512,,ok,0,0.216201042,,
-max_clique,pmc,PMC library,p_hat700-2,512,,ok,0,0.228786486,,
-max_clique,pmc,PMC library,p_hat700-2,512,,ok,0,0.222597374,,
-max_clique,pmc,PMC library,p_hat700-2,512,,ok,0,0.222566605,,
-max_clique,pmc,PMC library,p_hat700-2,512,,ok,0,0.222689296,,
+max_clique,pmc,PMC,p_hat700-2,512,,ok,0,0.216201042,,
+max_clique,pmc,PMC,p_hat700-2,512,,ok,0,0.228786486,,
+max_clique,pmc,PMC,p_hat700-2,512,,ok,0,0.222597374,,
+max_clique,pmc,PMC,p_hat700-2,512,,ok,0,0.222566605,,
+max_clique,pmc,PMC,p_hat700-2,512,,ok,0,0.222689296,,
 max_clique,work_stealing,Simple work stealing,p_hat700-2,512,16,ok,0,6.492473832,143087777,302174449
 max_clique,work_stealing,Simple work stealing,p_hat700-2,512,16,ok,0,5.402848143,113818590,248795993
 max_clique,work_stealing,Simple work stealing,p_hat700-2,512,16,ok,0,4.812103712,102363860,221379470
@@ -672,54 +672,54 @@ max_clique,multilifo,MultiLIFO,p_hat700-2,512,16,ok,0,3.567666302,72993082,16096
 max_clique,multilifo,MultiLIFO,p_hat700-2,512,16,ok,0,4.685326814,98938979,215177998
 max_clique,multilifo,MultiLIFO,p_hat700-2,512,16,ok,0,3.212715258,63761472,144003142
 max_clique,multilifo,MultiLIFO,p_hat700-2,512,16,ok,0,3.092746972,59904038,137128508
-max_clique,treiber_stack,Treiber stack (elimination),p_hat700-2,512,16,ok,0,72.488913683,82954877,181782796
-max_clique,treiber_stack,Treiber stack (elimination),p_hat700-2,512,16,ok,0,64.019866829,72627348,161655487
-max_clique,treiber_stack,Treiber stack (elimination),p_hat700-2,512,16,ok,0,56.273545828,63029242,142810583
-max_clique,treiber_stack,Treiber stack (elimination),p_hat700-2,512,16,ok,0,81.002277176,91778461,203046418
-max_clique,treiber_stack,Treiber stack (elimination),p_hat700-2,512,16,ok,0,76.962378248,87984664,189791973
-max_clique,2d_stack,2D stack,p_hat700-2,512,16,ok,0,5.75706356,122848139,262545149
-max_clique,2d_stack,2D stack,p_hat700-2,512,16,ok,0,3.724331567,73862730,165359114
-max_clique,2d_stack,2D stack,p_hat700-2,512,16,ok,0,3.321890183,64713620,146158235
-max_clique,2d_stack,2D stack,p_hat700-2,512,16,ok,0,3.180076806,60639647,138773088
-max_clique,2d_stack,2D stack,p_hat700-2,512,16,ok,0,3.297957132,64170796,145589542
+max_clique,treiber_stack,Treiber stack,p_hat700-2,512,16,ok,0,72.488913683,82954877,181782796
+max_clique,treiber_stack,Treiber stack,p_hat700-2,512,16,ok,0,64.019866829,72627348,161655487
+max_clique,treiber_stack,Treiber stack,p_hat700-2,512,16,ok,0,56.273545828,63029242,142810583
+max_clique,treiber_stack,Treiber stack,p_hat700-2,512,16,ok,0,81.002277176,91778461,203046418
+max_clique,treiber_stack,Treiber stack,p_hat700-2,512,16,ok,0,76.962378248,87984664,189791973
+max_clique,2d_stack,2D-stack,p_hat700-2,512,16,ok,0,5.75706356,122848139,262545149
+max_clique,2d_stack,2D-stack,p_hat700-2,512,16,ok,0,3.724331567,73862730,165359114
+max_clique,2d_stack,2D-stack,p_hat700-2,512,16,ok,0,3.321890183,64713620,146158235
+max_clique,2d_stack,2D-stack,p_hat700-2,512,16,ok,0,3.180076806,60639647,138773088
+max_clique,2d_stack,2D-stack,p_hat700-2,512,16,ok,0,3.297957132,64170796,145589542
 max_clique,locked_pq,Globally locked PQ,p_hat700-2,512,16,ok,0,258.216798628,60837802,141579122
 max_clique,locked_pq,Globally locked PQ,p_hat700-2,512,16,ok,0,271.999833586,60852119,141616836
 max_clique,locked_pq,Globally locked PQ,p_hat700-2,512,16,ok,0,273.881772516,60849966,141607339
 max_clique,locked_pq,Globally locked PQ,p_hat700-2,512,16,ok,0,283.014749257,60846987,141600968
 max_clique,locked_pq,Globally locked PQ,p_hat700-2,512,16,ok,0,273.210471789,60851395,141638493
-max_clique,pr,PR,p_hat700-2,512,16,ok,0,29.400836335,60714381,141047108
-max_clique,pr,PR,p_hat700-2,512,16,ok,0,28.515008868,60720664,141100601
-max_clique,pr,PR,p_hat700-2,512,16,ok,0,32.40724455,60722335,141079004
-max_clique,pr,PR,p_hat700-2,512,16,ok,0,29.669297979,60704989,141056972
-max_clique,pr,PR,p_hat700-2,512,16,ok,0,28.67384273,60716407,141082627
+max_clique,pr,Linden,p_hat700-2,512,16,ok,0,29.400836335,60714381,141047108
+max_clique,pr,Linden,p_hat700-2,512,16,ok,0,28.515008868,60720664,141100601
+max_clique,pr,Linden,p_hat700-2,512,16,ok,0,32.40724455,60722335,141079004
+max_clique,pr,Linden,p_hat700-2,512,16,ok,0,29.669297979,60704989,141056972
+max_clique,pr,Linden,p_hat700-2,512,16,ok,0,28.67384273,60716407,141082627
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat700-2,512,16,ok,0,3.788317348,60651586,141048025
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat700-2,512,16,ok,0,3.759014399,60541986,140686102
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat700-2,512,16,ok,0,3.81531612,60530370,140685019
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat700-2,512,16,ok,0,3.764273483,60599997,140868179
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat700-2,512,16,ok,0,3.726306431,60432455,140501036
 max_clique,locked_stack,Globally locked Stack,p_hat700-3,512,16,timeout,,1800,,
-max_clique,pmc,PMC library,p_hat700-3,512,,ok,0,269.82834379,,
-max_clique,pmc,PMC library,p_hat700-3,512,,ok,0,260.148119758,,
-max_clique,pmc,PMC library,p_hat700-3,512,,ok,0,278.217475574,,
-max_clique,pmc,PMC library,p_hat700-3,512,,ok,0,263.896390968,,
-max_clique,pmc,PMC library,p_hat700-3,512,,ok,0,268.485991304,,
+max_clique,pmc,PMC,p_hat700-3,512,,ok,0,269.82834379,,
+max_clique,pmc,PMC,p_hat700-3,512,,ok,0,260.148119758,,
+max_clique,pmc,PMC,p_hat700-3,512,,ok,0,278.217475574,,
+max_clique,pmc,PMC,p_hat700-3,512,,ok,0,263.896390968,,
+max_clique,pmc,PMC,p_hat700-3,512,,ok,0,268.485991304,,
 max_clique,work_stealing,Simple work stealing,p_hat700-3,512,16,timeout,,1800,,
 max_clique,multilifo,MultiLIFO,p_hat700-3,512,16,timeout,,1800,,
-max_clique,treiber_stack,Treiber stack (elimination),p_hat700-3,512,16,timeout,,1800,,
-max_clique,2d_stack,2D stack,p_hat700-3,512,16,timeout,,1800,,
+max_clique,treiber_stack,Treiber stack,p_hat700-3,512,16,timeout,,1800,,
+max_clique,2d_stack,2D-stack,p_hat700-3,512,16,timeout,,1800,,
 max_clique,locked_pq,Globally locked PQ,p_hat700-3,512,16,timeout,,1800,,
-max_clique,pr,PR,p_hat700-3,512,16,oom,-9,,,
+max_clique,pr,Linden,p_hat700-3,512,16,oom,-9,,,
 max_clique,mq_stick_swap,MultiQueue (stick swap),p_hat700-3,512,16,oom,-9,,,
 max_clique,locked_stack,Globally locked Stack,san1000,512,16,ok,0,0.232935796,30448,126297
 max_clique,locked_stack,Globally locked Stack,san1000,512,16,ok,0,0.22991762,28727,120426
 max_clique,locked_stack,Globally locked Stack,san1000,512,16,ok,0,0.247386176,31031,127894
 max_clique,locked_stack,Globally locked Stack,san1000,512,16,ok,0,0.218826175,29435,123922
 max_clique,locked_stack,Globally locked Stack,san1000,512,16,ok,0,0.238095221,29732,122970
-max_clique,pmc,PMC library,san1000,512,,ok,0,0.167798232,,
-max_clique,pmc,PMC library,san1000,512,,ok,0,0.170057713,,
-max_clique,pmc,PMC library,san1000,512,,ok,0,0.171711051,,
-max_clique,pmc,PMC library,san1000,512,,ok,0,0.172903967,,
-max_clique,pmc,PMC library,san1000,512,,ok,0,0.166641336,,
+max_clique,pmc,PMC,san1000,512,,ok,0,0.167798232,,
+max_clique,pmc,PMC,san1000,512,,ok,0,0.170057713,,
+max_clique,pmc,PMC,san1000,512,,ok,0,0.171711051,,
+max_clique,pmc,PMC,san1000,512,,ok,0,0.172903967,,
+max_clique,pmc,PMC,san1000,512,,ok,0,0.166641336,,
 max_clique,work_stealing,Simple work stealing,san1000,512,16,ok,0,0.080109128,24007,103576
 max_clique,work_stealing,Simple work stealing,san1000,512,16,ok,0,0.079975816,35352,135382
 max_clique,work_stealing,Simple work stealing,san1000,512,16,ok,0,0.079242944,26949,112578
@@ -745,26 +745,26 @@ max_clique,multilifo,MultiLIFO,san1000,512,16,ok,0,0.080003207,32445,115412
 max_clique,multilifo,MultiLIFO,san1000,512,16,ok,0,0.073003182,10129,49775
 max_clique,multilifo,MultiLIFO,san1000,512,16,ok,0,0.079976957,14259,60063
 max_clique,multilifo,MultiLIFO,san1000,512,16,ok,0,0.074464809,11394,53159
-max_clique,treiber_stack,Treiber stack (elimination),san1000,512,16,ok,0,0.091308163,8991,40338
-max_clique,treiber_stack,Treiber stack (elimination),san1000,512,16,ok,0,0.109257293,9408,43594
-max_clique,treiber_stack,Treiber stack (elimination),san1000,512,16,ok,0,0.121650703,10220,54153
-max_clique,treiber_stack,Treiber stack (elimination),san1000,512,16,ok,0,0.113173721,9997,51873
-max_clique,treiber_stack,Treiber stack (elimination),san1000,512,16,ok,0,0.103918765,8858,39914
-max_clique,2d_stack,2D stack,san1000,512,16,ok,0,0.069566145,33390,134864
-max_clique,2d_stack,2D stack,san1000,512,16,ok,0,0.067352354,34375,128306
-max_clique,2d_stack,2D stack,san1000,512,16,ok,0,0.06644103,42846,154672
-max_clique,2d_stack,2D stack,san1000,512,16,ok,0,0.065615755,25874,107847
-max_clique,2d_stack,2D stack,san1000,512,16,ok,0,0.065905057,23413,103835
+max_clique,treiber_stack,Treiber stack,san1000,512,16,ok,0,0.091308163,8991,40338
+max_clique,treiber_stack,Treiber stack,san1000,512,16,ok,0,0.109257293,9408,43594
+max_clique,treiber_stack,Treiber stack,san1000,512,16,ok,0,0.121650703,10220,54153
+max_clique,treiber_stack,Treiber stack,san1000,512,16,ok,0,0.113173721,9997,51873
+max_clique,treiber_stack,Treiber stack,san1000,512,16,ok,0,0.103918765,8858,39914
+max_clique,2d_stack,2D-stack,san1000,512,16,ok,0,0.069566145,33390,134864
+max_clique,2d_stack,2D-stack,san1000,512,16,ok,0,0.067352354,34375,128306
+max_clique,2d_stack,2D-stack,san1000,512,16,ok,0,0.06644103,42846,154672
+max_clique,2d_stack,2D-stack,san1000,512,16,ok,0,0.065615755,25874,107847
+max_clique,2d_stack,2D-stack,san1000,512,16,ok,0,0.065905057,23413,103835
 max_clique,locked_pq,Globally locked PQ,san1000,512,16,ok,0,0.448222423,29974,122741
 max_clique,locked_pq,Globally locked PQ,san1000,512,16,ok,0,0.435056908,29485,121881
 max_clique,locked_pq,Globally locked PQ,san1000,512,16,ok,0,0.409824602,30380,124448
 max_clique,locked_pq,Globally locked PQ,san1000,512,16,ok,0,0.404494007,29178,123190
 max_clique,locked_pq,Globally locked PQ,san1000,512,16,ok,0,0.439888062,29709,123542
-max_clique,pr,PR,san1000,512,16,ok,0,0.091628424,7407,39363
-max_clique,pr,PR,san1000,512,16,ok,0,0.09669729,32469,134215
-max_clique,pr,PR,san1000,512,16,ok,0,0.078232738,6228,31535
-max_clique,pr,PR,san1000,512,16,ok,0,0.100026936,29491,123977
-max_clique,pr,PR,san1000,512,16,ok,0,0.076044247,7601,38408
+max_clique,pr,Linden,san1000,512,16,ok,0,0.091628424,7407,39363
+max_clique,pr,Linden,san1000,512,16,ok,0,0.09669729,32469,134215
+max_clique,pr,Linden,san1000,512,16,ok,0,0.078232738,6228,31535
+max_clique,pr,Linden,san1000,512,16,ok,0,0.100026936,29491,123977
+max_clique,pr,Linden,san1000,512,16,ok,0,0.076044247,7601,38408
 max_clique,mq_stick_swap,MultiQueue (stick swap),san1000,512,16,ok,0,0.076910531,14692,68955
 max_clique,mq_stick_swap,MultiQueue (stick swap),san1000,512,16,ok,0,0.080115217,31738,131457
 max_clique,mq_stick_swap,MultiQueue (stick swap),san1000,512,16,ok,0,0.08480333,15062,68166
@@ -775,11 +775,11 @@ max_clique,locked_stack,Globally locked Stack,san200_0.9_3,512,16,ok,0,1.1688097
 max_clique,locked_stack,Globally locked Stack,san200_0.9_3,512,16,ok,0,2.694919727,6324138,11538978
 max_clique,locked_stack,Globally locked Stack,san200_0.9_3,512,16,ok,0,2.630089724,6415081,11682611
 max_clique,locked_stack,Globally locked Stack,san200_0.9_3,512,16,ok,0,4.960722513,12338423,20792954
-max_clique,pmc,PMC library,san200_0.9_3,512,,ok,0,0.104126311,,
-max_clique,pmc,PMC library,san200_0.9_3,512,,ok,0,0.113846639,,
-max_clique,pmc,PMC library,san200_0.9_3,512,,ok,0,0.109811886,,
-max_clique,pmc,PMC library,san200_0.9_3,512,,ok,0,0.113939751,,
-max_clique,pmc,PMC library,san200_0.9_3,512,,ok,0,0.117011708,,
+max_clique,pmc,PMC,san200_0.9_3,512,,ok,0,0.104126311,,
+max_clique,pmc,PMC,san200_0.9_3,512,,ok,0,0.113846639,,
+max_clique,pmc,PMC,san200_0.9_3,512,,ok,0,0.109811886,,
+max_clique,pmc,PMC,san200_0.9_3,512,,ok,0,0.113939751,,
+max_clique,pmc,PMC,san200_0.9_3,512,,ok,0,0.117011708,,
 max_clique,work_stealing,Simple work stealing,san200_0.9_3,512,16,ok,0,0.428465286,13560917,23267081
 max_clique,work_stealing,Simple work stealing,san200_0.9_3,512,16,ok,0,0.365537045,10933998,19213960
 max_clique,work_stealing,Simple work stealing,san200_0.9_3,512,16,ok,0,0.383022219,11448187,20182207
@@ -805,26 +805,26 @@ max_clique,multilifo,MultiLIFO,san200_0.9_3,512,16,ok,0,0.33675845,8522066,15727
 max_clique,multilifo,MultiLIFO,san200_0.9_3,512,16,ok,0,0.26586233,6356338,12124155
 max_clique,multilifo,MultiLIFO,san200_0.9_3,512,16,ok,0,0.215309195,4172530,8170576
 max_clique,multilifo,MultiLIFO,san200_0.9_3,512,16,ok,0,0.36966832,10640517,18391006
-max_clique,treiber_stack,Treiber stack (elimination),san200_0.9_3,512,16,ok,0,27.279338017,36460071,59788612
-max_clique,treiber_stack,Treiber stack (elimination),san200_0.9_3,512,16,ok,0,25.397599827,33905604,55446738
-max_clique,treiber_stack,Treiber stack (elimination),san200_0.9_3,512,16,ok,0,15.69077899,21103528,34004511
-max_clique,treiber_stack,Treiber stack (elimination),san200_0.9_3,512,16,ok,0,21.869645576,29639430,47590247
-max_clique,treiber_stack,Treiber stack (elimination),san200_0.9_3,512,16,ok,0,17.540918237,23411392,38732481
-max_clique,2d_stack,2D stack,san200_0.9_3,512,16,ok,0,0.171522991,3629852,7091548
-max_clique,2d_stack,2D stack,san200_0.9_3,512,16,ok,0,0.151781131,2989270,5848842
-max_clique,2d_stack,2D stack,san200_0.9_3,512,16,ok,0,0.293682951,8202233,15032360
-max_clique,2d_stack,2D stack,san200_0.9_3,512,16,ok,0,0.168475245,3588201,6864718
-max_clique,2d_stack,2D stack,san200_0.9_3,512,16,ok,0,0.154687905,3112279,6110750
+max_clique,treiber_stack,Treiber stack,san200_0.9_3,512,16,ok,0,27.279338017,36460071,59788612
+max_clique,treiber_stack,Treiber stack,san200_0.9_3,512,16,ok,0,25.397599827,33905604,55446738
+max_clique,treiber_stack,Treiber stack,san200_0.9_3,512,16,ok,0,15.69077899,21103528,34004511
+max_clique,treiber_stack,Treiber stack,san200_0.9_3,512,16,ok,0,21.869645576,29639430,47590247
+max_clique,treiber_stack,Treiber stack,san200_0.9_3,512,16,ok,0,17.540918237,23411392,38732481
+max_clique,2d_stack,2D-stack,san200_0.9_3,512,16,ok,0,0.171522991,3629852,7091548
+max_clique,2d_stack,2D-stack,san200_0.9_3,512,16,ok,0,0.151781131,2989270,5848842
+max_clique,2d_stack,2D-stack,san200_0.9_3,512,16,ok,0,0.293682951,8202233,15032360
+max_clique,2d_stack,2D-stack,san200_0.9_3,512,16,ok,0,0.168475245,3588201,6864718
+max_clique,2d_stack,2D-stack,san200_0.9_3,512,16,ok,0,0.154687905,3112279,6110750
 max_clique,locked_pq,Globally locked PQ,san200_0.9_3,512,16,ok,0,72.2932026,15726461,37578819
 max_clique,locked_pq,Globally locked PQ,san200_0.9_3,512,16,ok,0,71.552807555,15652181,37521060
 max_clique,locked_pq,Globally locked PQ,san200_0.9_3,512,16,ok,0,72.103201418,15740250,37695853
 max_clique,locked_pq,Globally locked PQ,san200_0.9_3,512,16,ok,0,72.676754133,15718701,37641141
 max_clique,locked_pq,Globally locked PQ,san200_0.9_3,512,16,ok,0,71.153947104,14443848,35154162
-max_clique,pr,PR,san200_0.9_3,512,16,ok,0,16.451446287,12697254,32541302
-max_clique,pr,PR,san200_0.9_3,512,16,ok,0,14.972125568,12701535,32538718
-max_clique,pr,PR,san200_0.9_3,512,16,ok,0,15.598073626,12707376,32542171
-max_clique,pr,PR,san200_0.9_3,512,16,ok,0,15.351902032,12700859,32543706
-max_clique,pr,PR,san200_0.9_3,512,16,ok,0,18.071709188,12682158,32478585
+max_clique,pr,Linden,san200_0.9_3,512,16,ok,0,16.451446287,12697254,32541302
+max_clique,pr,Linden,san200_0.9_3,512,16,ok,0,14.972125568,12701535,32538718
+max_clique,pr,Linden,san200_0.9_3,512,16,ok,0,15.598073626,12707376,32542171
+max_clique,pr,Linden,san200_0.9_3,512,16,ok,0,15.351902032,12700859,32543706
+max_clique,pr,Linden,san200_0.9_3,512,16,ok,0,18.071709188,12682158,32478585
 max_clique,mq_stick_swap,MultiQueue (stick swap),san200_0.9_3,512,16,ok,0,0.770822365,14786399,35938659
 max_clique,mq_stick_swap,MultiQueue (stick swap),san200_0.9_3,512,16,ok,0,0.774676248,14515512,35788325
 max_clique,mq_stick_swap,MultiQueue (stick swap),san200_0.9_3,512,16,ok,0,0.777094496,14491384,36005880
@@ -835,11 +835,11 @@ max_clique,locked_stack,Globally locked Stack,san400_0.7_2,512,16,ok,0,0.3309197
 max_clique,locked_stack,Globally locked Stack,san400_0.7_2,512,16,ok,0,0.23363954,151634,525443
 max_clique,locked_stack,Globally locked Stack,san400_0.7_2,512,16,ok,0,0.259726251,182091,580303
 max_clique,locked_stack,Globally locked Stack,san400_0.7_2,512,16,ok,0,0.330650157,339793,1131748
-max_clique,pmc,PMC library,san400_0.7_2,512,,ok,0,0.081093641,,
-max_clique,pmc,PMC library,san400_0.7_2,512,,ok,0,0.090059203,,
-max_clique,pmc,PMC library,san400_0.7_2,512,,ok,0,0.091281417,,
-max_clique,pmc,PMC library,san400_0.7_2,512,,ok,0,0.085589957,,
-max_clique,pmc,PMC library,san400_0.7_2,512,,ok,0,0.087885305,,
+max_clique,pmc,PMC,san400_0.7_2,512,,ok,0,0.081093641,,
+max_clique,pmc,PMC,san400_0.7_2,512,,ok,0,0.090059203,,
+max_clique,pmc,PMC,san400_0.7_2,512,,ok,0,0.091281417,,
+max_clique,pmc,PMC,san400_0.7_2,512,,ok,0,0.085589957,,
+max_clique,pmc,PMC,san400_0.7_2,512,,ok,0,0.087885305,,
 max_clique,work_stealing,Simple work stealing,san400_0.7_2,512,16,ok,0,0.082459806,226335,822505
 max_clique,work_stealing,Simple work stealing,san400_0.7_2,512,16,ok,0,0.077298678,204974,694966
 max_clique,work_stealing,Simple work stealing,san400_0.7_2,512,16,ok,0,0.072681842,137801,511511
@@ -865,26 +865,26 @@ max_clique,multilifo,MultiLIFO,san400_0.7_2,512,16,ok,0,0.073243175,127391,46572
 max_clique,multilifo,MultiLIFO,san400_0.7_2,512,16,ok,0,0.079502096,143598,476820
 max_clique,multilifo,MultiLIFO,san400_0.7_2,512,16,ok,0,0.07218883,126731,431916
 max_clique,multilifo,MultiLIFO,san400_0.7_2,512,16,ok,0,0.079279322,310422,1037105
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.7_2,512,16,ok,0,0.43958643,335455,926974
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.7_2,512,16,ok,0,0.424417608,315512,847582
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.7_2,512,16,ok,0,0.411839661,314700,838205
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.7_2,512,16,ok,0,0.502636458,429301,1162035
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.7_2,512,16,ok,0,0.230972965,118794,402757
-max_clique,2d_stack,2D stack,san400_0.7_2,512,16,ok,0,0.062630988,134929,477257
-max_clique,2d_stack,2D stack,san400_0.7_2,512,16,ok,0,0.062846968,122753,464345
-max_clique,2d_stack,2D stack,san400_0.7_2,512,16,ok,0,0.061489777,122287,432579
-max_clique,2d_stack,2D stack,san400_0.7_2,512,16,ok,0,0.065034172,118532,435073
-max_clique,2d_stack,2D stack,san400_0.7_2,512,16,ok,0,0.062246937,90041,340005
+max_clique,treiber_stack,Treiber stack,san400_0.7_2,512,16,ok,0,0.43958643,335455,926974
+max_clique,treiber_stack,Treiber stack,san400_0.7_2,512,16,ok,0,0.424417608,315512,847582
+max_clique,treiber_stack,Treiber stack,san400_0.7_2,512,16,ok,0,0.411839661,314700,838205
+max_clique,treiber_stack,Treiber stack,san400_0.7_2,512,16,ok,0,0.502636458,429301,1162035
+max_clique,treiber_stack,Treiber stack,san400_0.7_2,512,16,ok,0,0.230972965,118794,402757
+max_clique,2d_stack,2D-stack,san400_0.7_2,512,16,ok,0,0.062630988,134929,477257
+max_clique,2d_stack,2D-stack,san400_0.7_2,512,16,ok,0,0.062846968,122753,464345
+max_clique,2d_stack,2D-stack,san400_0.7_2,512,16,ok,0,0.061489777,122287,432579
+max_clique,2d_stack,2D-stack,san400_0.7_2,512,16,ok,0,0.065034172,118532,435073
+max_clique,2d_stack,2D-stack,san400_0.7_2,512,16,ok,0,0.062246937,90041,340005
 max_clique,locked_pq,Globally locked PQ,san400_0.7_2,512,16,ok,0,1.164271132,143998,573729
 max_clique,locked_pq,Globally locked PQ,san400_0.7_2,512,16,ok,0,1.199296361,130436,534718
 max_clique,locked_pq,Globally locked PQ,san400_0.7_2,512,16,ok,0,1.115626132,143071,563563
 max_clique,locked_pq,Globally locked PQ,san400_0.7_2,512,16,ok,0,1.089408056,150683,584546
 max_clique,locked_pq,Globally locked PQ,san400_0.7_2,512,16,ok,0,1.146345677,145665,579318
-max_clique,pr,PR,san400_0.7_2,512,16,ok,0,0.121248751,48862,258229
-max_clique,pr,PR,san400_0.7_2,512,16,ok,0,0.103396026,35413,176774
-max_clique,pr,PR,san400_0.7_2,512,16,ok,0,0.089357316,35302,177426
-max_clique,pr,PR,san400_0.7_2,512,16,ok,0,0.101606033,35577,183042
-max_clique,pr,PR,san400_0.7_2,512,16,ok,0,0.150911142,56178,288071
+max_clique,pr,Linden,san400_0.7_2,512,16,ok,0,0.121248751,48862,258229
+max_clique,pr,Linden,san400_0.7_2,512,16,ok,0,0.103396026,35413,176774
+max_clique,pr,Linden,san400_0.7_2,512,16,ok,0,0.089357316,35302,177426
+max_clique,pr,Linden,san400_0.7_2,512,16,ok,0,0.101606033,35577,183042
+max_clique,pr,Linden,san400_0.7_2,512,16,ok,0,0.150911142,56178,288071
 max_clique,mq_stick_swap,MultiQueue (stick swap),san400_0.7_2,512,16,ok,0,0.079350772,84943,372792
 max_clique,mq_stick_swap,MultiQueue (stick swap),san400_0.7_2,512,16,ok,0,0.088466364,109169,488433
 max_clique,mq_stick_swap,MultiQueue (stick swap),san400_0.7_2,512,16,ok,0,0.087915244,126816,572641
@@ -895,11 +895,11 @@ max_clique,locked_stack,Globally locked Stack,san400_0.7_3,512,16,ok,0,1.1226258
 max_clique,locked_stack,Globally locked Stack,san400_0.7_3,512,16,ok,0,0.492313974,642217,2044265
 max_clique,locked_stack,Globally locked Stack,san400_0.7_3,512,16,ok,0,0.942441229,1654655,4670909
 max_clique,locked_stack,Globally locked Stack,san400_0.7_3,512,16,ok,0,1.349421473,2557156,6882294
-max_clique,pmc,PMC library,san400_0.7_3,512,,ok,0,0.090729658,,
-max_clique,pmc,PMC library,san400_0.7_3,512,,ok,0,0.089767507,,
-max_clique,pmc,PMC library,san400_0.7_3,512,,ok,0,0.109643715,,
-max_clique,pmc,PMC library,san400_0.7_3,512,,ok,0,0.09881738,,
-max_clique,pmc,PMC library,san400_0.7_3,512,,ok,0,0.086736922,,
+max_clique,pmc,PMC,san400_0.7_3,512,,ok,0,0.090729658,,
+max_clique,pmc,PMC,san400_0.7_3,512,,ok,0,0.089767507,,
+max_clique,pmc,PMC,san400_0.7_3,512,,ok,0,0.109643715,,
+max_clique,pmc,PMC,san400_0.7_3,512,,ok,0,0.09881738,,
+max_clique,pmc,PMC,san400_0.7_3,512,,ok,0,0.086736922,,
 max_clique,work_stealing,Simple work stealing,san400_0.7_3,512,16,ok,0,0.122203022,1779246,4870495
 max_clique,work_stealing,Simple work stealing,san400_0.7_3,512,16,ok,0,0.100639381,1298760,3634693
 max_clique,work_stealing,Simple work stealing,san400_0.7_3,512,16,ok,0,0.110046155,1376121,3823315
@@ -925,26 +925,26 @@ max_clique,multilifo,MultiLIFO,san400_0.7_3,512,16,ok,0,0.095550995,836175,25606
 max_clique,multilifo,MultiLIFO,san400_0.7_3,512,16,ok,0,0.097081147,620595,1963247
 max_clique,multilifo,MultiLIFO,san400_0.7_3,512,16,ok,0,0.100873672,879831,2661584
 max_clique,multilifo,MultiLIFO,san400_0.7_3,512,16,ok,0,0.126394598,1848436,5139761
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.7_3,512,16,ok,0,2.973094022,2978458,7870344
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.7_3,512,16,ok,0,2.050253951,2021158,5525530
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.7_3,512,16,ok,0,1.661752166,1589704,4391466
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.7_3,512,16,ok,0,1.304923846,1200028,3409940
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.7_3,512,16,ok,0,1.051105513,930550,2771440
-max_clique,2d_stack,2D stack,san400_0.7_3,512,16,ok,0,0.087832177,940421,2820139
-max_clique,2d_stack,2D stack,san400_0.7_3,512,16,ok,0,0.101449163,1635942,4530378
-max_clique,2d_stack,2D stack,san400_0.7_3,512,16,ok,0,0.08231333,792783,2392589
-max_clique,2d_stack,2D stack,san400_0.7_3,512,16,ok,0,0.085442049,943448,2832479
-max_clique,2d_stack,2D stack,san400_0.7_3,512,16,ok,0,0.101106032,1675163,4629453
+max_clique,treiber_stack,Treiber stack,san400_0.7_3,512,16,ok,0,2.973094022,2978458,7870344
+max_clique,treiber_stack,Treiber stack,san400_0.7_3,512,16,ok,0,2.050253951,2021158,5525530
+max_clique,treiber_stack,Treiber stack,san400_0.7_3,512,16,ok,0,1.661752166,1589704,4391466
+max_clique,treiber_stack,Treiber stack,san400_0.7_3,512,16,ok,0,1.304923846,1200028,3409940
+max_clique,treiber_stack,Treiber stack,san400_0.7_3,512,16,ok,0,1.051105513,930550,2771440
+max_clique,2d_stack,2D-stack,san400_0.7_3,512,16,ok,0,0.087832177,940421,2820139
+max_clique,2d_stack,2D-stack,san400_0.7_3,512,16,ok,0,0.101449163,1635942,4530378
+max_clique,2d_stack,2D-stack,san400_0.7_3,512,16,ok,0,0.08231333,792783,2392589
+max_clique,2d_stack,2D-stack,san400_0.7_3,512,16,ok,0,0.085442049,943448,2832479
+max_clique,2d_stack,2D-stack,san400_0.7_3,512,16,ok,0,0.101106032,1675163,4629453
 max_clique,locked_pq,Globally locked PQ,san400_0.7_3,512,16,ok,0,5.797192273,1231072,4141277
 max_clique,locked_pq,Globally locked PQ,san400_0.7_3,512,16,ok,0,6.265747697,1339468,4194225
 max_clique,locked_pq,Globally locked PQ,san400_0.7_3,512,16,ok,0,6.211827481,1327365,4199990
 max_clique,locked_pq,Globally locked PQ,san400_0.7_3,512,16,ok,0,5.721353574,1213339,4117680
 max_clique,locked_pq,Globally locked PQ,san400_0.7_3,512,16,ok,0,5.813188855,1211621,4116264
-max_clique,pr,PR,san400_0.7_3,512,16,ok,0,1.040147248,1164851,3931051
-max_clique,pr,PR,san400_0.7_3,512,16,ok,0,0.989319651,1185376,4016566
-max_clique,pr,PR,san400_0.7_3,512,16,ok,0,1.003091746,1160387,3912789
-max_clique,pr,PR,san400_0.7_3,512,16,ok,0,0.96476461,1163442,3923004
-max_clique,pr,PR,san400_0.7_3,512,16,ok,0,0.973178908,1164153,3920603
+max_clique,pr,Linden,san400_0.7_3,512,16,ok,0,1.040147248,1164851,3931051
+max_clique,pr,Linden,san400_0.7_3,512,16,ok,0,0.989319651,1185376,4016566
+max_clique,pr,Linden,san400_0.7_3,512,16,ok,0,1.003091746,1160387,3912789
+max_clique,pr,Linden,san400_0.7_3,512,16,ok,0,0.96476461,1163442,3923004
+max_clique,pr,Linden,san400_0.7_3,512,16,ok,0,0.973178908,1164153,3920603
 max_clique,mq_stick_swap,MultiQueue (stick swap),san400_0.7_3,512,16,ok,0,0.114994266,1245442,4152036
 max_clique,mq_stick_swap,MultiQueue (stick swap),san400_0.7_3,512,16,ok,0,0.111964146,1212923,4092946
 max_clique,mq_stick_swap,MultiQueue (stick swap),san400_0.7_3,512,16,ok,0,0.115044017,1352910,4251549
@@ -955,11 +955,11 @@ max_clique,locked_stack,Globally locked Stack,san400_0.9_1,512,16,ok,0,0.8475240
 max_clique,locked_stack,Globally locked Stack,san400_0.9_1,512,16,ok,0,10.293990976,20311873,60981748
 max_clique,locked_stack,Globally locked Stack,san400_0.9_1,512,16,ok,0,1.116527037,1166334,4908859
 max_clique,locked_stack,Globally locked Stack,san400_0.9_1,512,16,ok,0,4.666950384,7879129,27937680
-max_clique,pmc,PMC library,san400_0.9_1,512,,ok,0,0.10271947,,
-max_clique,pmc,PMC library,san400_0.9_1,512,,ok,0,0.097373384,,
-max_clique,pmc,PMC library,san400_0.9_1,512,,ok,0,0.103746074,,
-max_clique,pmc,PMC library,san400_0.9_1,512,,ok,0,0.104429426,,
-max_clique,pmc,PMC library,san400_0.9_1,512,,ok,0,0.101982069,,
+max_clique,pmc,PMC,san400_0.9_1,512,,ok,0,0.10271947,,
+max_clique,pmc,PMC,san400_0.9_1,512,,ok,0,0.097373384,,
+max_clique,pmc,PMC,san400_0.9_1,512,,ok,0,0.103746074,,
+max_clique,pmc,PMC,san400_0.9_1,512,,ok,0,0.104429426,,
+max_clique,pmc,PMC,san400_0.9_1,512,,ok,0,0.101982069,,
 max_clique,work_stealing,Simple work stealing,san400_0.9_1,512,16,ok,0,0.321056783,2145405,7962614
 max_clique,work_stealing,Simple work stealing,san400_0.9_1,512,16,ok,0,0.334952717,2106933,8000084
 max_clique,work_stealing,Simple work stealing,san400_0.9_1,512,16,ok,0,0.314332582,1967412,7504599
@@ -985,26 +985,26 @@ max_clique,multilifo,MultiLIFO,san400_0.9_1,512,16,ok,0,0.299710446,1655368,6856
 max_clique,multilifo,MultiLIFO,san400_0.9_1,512,16,ok,0,0.231077691,1042646,4583084
 max_clique,multilifo,MultiLIFO,san400_0.9_1,512,16,ok,0,0.247700864,1142971,4988404
 max_clique,multilifo,MultiLIFO,san400_0.9_1,512,16,ok,0,0.309390256,1663993,6983941
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.9_1,512,16,ok,0,285.119663529,374872064,718662971
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.9_1,512,16,ok,0,258.965569536,345542134,650069997
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.9_1,512,16,ok,0,303.626033687,394707600,755399928
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.9_1,512,16,ok,0,304.555694789,399808442,771828008
-max_clique,treiber_stack,Treiber stack (elimination),san400_0.9_1,512,16,ok,0,306.945506539,403764092,778968979
-max_clique,2d_stack,2D stack,san400_0.9_1,512,16,ok,0,0.259201881,1184885,5146106
-max_clique,2d_stack,2D stack,san400_0.9_1,512,16,ok,0,0.477718092,3003855,12476611
-max_clique,2d_stack,2D stack,san400_0.9_1,512,16,ok,0,0.199271359,814033,3610600
-max_clique,2d_stack,2D stack,san400_0.9_1,512,16,ok,0,0.276721699,1313847,5775507
-max_clique,2d_stack,2D stack,san400_0.9_1,512,16,ok,0,0.353459546,1970849,8274965
+max_clique,treiber_stack,Treiber stack,san400_0.9_1,512,16,ok,0,285.119663529,374872064,718662971
+max_clique,treiber_stack,Treiber stack,san400_0.9_1,512,16,ok,0,258.965569536,345542134,650069997
+max_clique,treiber_stack,Treiber stack,san400_0.9_1,512,16,ok,0,303.626033687,394707600,755399928
+max_clique,treiber_stack,Treiber stack,san400_0.9_1,512,16,ok,0,304.555694789,399808442,771828008
+max_clique,treiber_stack,Treiber stack,san400_0.9_1,512,16,ok,0,306.945506539,403764092,778968979
+max_clique,2d_stack,2D-stack,san400_0.9_1,512,16,ok,0,0.259201881,1184885,5146106
+max_clique,2d_stack,2D-stack,san400_0.9_1,512,16,ok,0,0.477718092,3003855,12476611
+max_clique,2d_stack,2D-stack,san400_0.9_1,512,16,ok,0,0.199271359,814033,3610600
+max_clique,2d_stack,2D-stack,san400_0.9_1,512,16,ok,0,0.276721699,1313847,5775507
+max_clique,2d_stack,2D-stack,san400_0.9_1,512,16,ok,0,0.353459546,1970849,8274965
 max_clique,locked_pq,Globally locked PQ,san400_0.9_1,512,16,ok,0,5.421704288,854014,4051963
 max_clique,locked_pq,Globally locked PQ,san400_0.9_1,512,16,ok,0,5.630380153,843076,4064203
 max_clique,locked_pq,Globally locked PQ,san400_0.9_1,512,16,ok,0,5.723409514,839857,4092396
 max_clique,locked_pq,Globally locked PQ,san400_0.9_1,512,16,ok,0,6.210102111,863418,4120405
 max_clique,locked_pq,Globally locked PQ,san400_0.9_1,512,16,ok,0,5.690503666,836429,4071412
-max_clique,pr,PR,san400_0.9_1,512,16,ok,0,0.589880216,820693,4124698
-max_clique,pr,PR,san400_0.9_1,512,16,ok,0,0.518953214,815075,4028585
-max_clique,pr,PR,san400_0.9_1,512,16,ok,0,0.568932479,809496,4004600
-max_clique,pr,PR,san400_0.9_1,512,16,ok,0,0.570716855,811998,4042621
-max_clique,pr,PR,san400_0.9_1,512,16,ok,0,0.591048479,809615,4068770
+max_clique,pr,Linden,san400_0.9_1,512,16,ok,0,0.589880216,820693,4124698
+max_clique,pr,Linden,san400_0.9_1,512,16,ok,0,0.518953214,815075,4028585
+max_clique,pr,Linden,san400_0.9_1,512,16,ok,0,0.568932479,809496,4004600
+max_clique,pr,Linden,san400_0.9_1,512,16,ok,0,0.570716855,811998,4042621
+max_clique,pr,Linden,san400_0.9_1,512,16,ok,0,0.591048479,809615,4068770
 max_clique,mq_stick_swap,MultiQueue (stick swap),san400_0.9_1,512,16,ok,0,0.213672688,790603,4185230
 max_clique,mq_stick_swap,MultiQueue (stick swap),san400_0.9_1,512,16,ok,0,0.232109408,811225,4427264
 max_clique,mq_stick_swap,MultiQueue (stick swap),san400_0.9_1,512,16,ok,0,0.221031988,688236,4089669
@@ -1015,11 +1015,11 @@ max_clique,locked_stack,Globally locked Stack,sanr200_0.9,512,16,ok,0,24.0534789
 max_clique,locked_stack,Globally locked Stack,sanr200_0.9,512,16,ok,0,24.63831267,64952576,103904161
 max_clique,locked_stack,Globally locked Stack,sanr200_0.9,512,16,ok,0,35.807533696,94797332,147889046
 max_clique,locked_stack,Globally locked Stack,sanr200_0.9,512,16,ok,0,24.011015729,64526291,103408254
-max_clique,pmc,PMC library,sanr200_0.9,512,,ok,0,2.658425958,,
-max_clique,pmc,PMC library,sanr200_0.9,512,,ok,0,2.781953723,,
-max_clique,pmc,PMC library,sanr200_0.9,512,,ok,0,2.634951865,,
-max_clique,pmc,PMC library,sanr200_0.9,512,,ok,0,2.774284446,,
-max_clique,pmc,PMC library,sanr200_0.9,512,,ok,0,2.629249175,,
+max_clique,pmc,PMC,sanr200_0.9,512,,ok,0,2.658425958,,
+max_clique,pmc,PMC,sanr200_0.9,512,,ok,0,2.781953723,,
+max_clique,pmc,PMC,sanr200_0.9,512,,ok,0,2.634951865,,
+max_clique,pmc,PMC,sanr200_0.9,512,,ok,0,2.774284446,,
+max_clique,pmc,PMC,sanr200_0.9,512,,ok,0,2.629249175,,
 max_clique,work_stealing,Simple work stealing,sanr200_0.9,512,16,ok,0,1.867511053,67082650,107141090
 max_clique,work_stealing,Simple work stealing,sanr200_0.9,512,16,ok,0,1.887008301,66958220,107028951
 max_clique,work_stealing,Simple work stealing,sanr200_0.9,512,16,ok,0,1.876200503,67275165,107388594
@@ -1045,26 +1045,26 @@ max_clique,multilifo,MultiLIFO,sanr200_0.9,512,16,ok,0,3.349663232,130290550,200
 max_clique,multilifo,MultiLIFO,sanr200_0.9,512,16,ok,0,3.105853794,120377627,185810864
 max_clique,multilifo,MultiLIFO,sanr200_0.9,512,16,ok,0,2.598152663,100595399,156523735
 max_clique,multilifo,MultiLIFO,sanr200_0.9,512,16,ok,0,2.594178639,99441836,154185217
-max_clique,treiber_stack,Treiber stack (elimination),sanr200_0.9,512,16,ok,0,77.585771771,104562458,160817951
-max_clique,treiber_stack,Treiber stack (elimination),sanr200_0.9,512,16,ok,0,48.869472497,64351791,103105933
-max_clique,treiber_stack,Treiber stack (elimination),sanr200_0.9,512,16,ok,0,75.918311727,100694679,155807667
-max_clique,treiber_stack,Treiber stack (elimination),sanr200_0.9,512,16,ok,0,70.004249248,93510555,145587445
-max_clique,treiber_stack,Treiber stack (elimination),sanr200_0.9,512,16,ok,0,84.507681603,112765563,173180229
-max_clique,2d_stack,2D stack,sanr200_0.9,512,16,ok,0,1.805798524,66319001,105992065
-max_clique,2d_stack,2D stack,sanr200_0.9,512,16,ok,0,1.786968649,65140230,104264194
-max_clique,2d_stack,2D stack,sanr200_0.9,512,16,ok,0,2.569042835,97416457,150692909
-max_clique,2d_stack,2D stack,sanr200_0.9,512,16,ok,0,2.587585058,98317285,152532413
-max_clique,2d_stack,2D stack,sanr200_0.9,512,16,ok,0,1.785834995,65014759,104105500
+max_clique,treiber_stack,Treiber stack,sanr200_0.9,512,16,ok,0,77.585771771,104562458,160817951
+max_clique,treiber_stack,Treiber stack,sanr200_0.9,512,16,ok,0,48.869472497,64351791,103105933
+max_clique,treiber_stack,Treiber stack,sanr200_0.9,512,16,ok,0,75.918311727,100694679,155807667
+max_clique,treiber_stack,Treiber stack,sanr200_0.9,512,16,ok,0,70.004249248,93510555,145587445
+max_clique,treiber_stack,Treiber stack,sanr200_0.9,512,16,ok,0,84.507681603,112765563,173180229
+max_clique,2d_stack,2D-stack,sanr200_0.9,512,16,ok,0,1.805798524,66319001,105992065
+max_clique,2d_stack,2D-stack,sanr200_0.9,512,16,ok,0,1.786968649,65140230,104264194
+max_clique,2d_stack,2D-stack,sanr200_0.9,512,16,ok,0,2.569042835,97416457,150692909
+max_clique,2d_stack,2D-stack,sanr200_0.9,512,16,ok,0,2.587585058,98317285,152532413
+max_clique,2d_stack,2D-stack,sanr200_0.9,512,16,ok,0,1.785834995,65014759,104105500
 max_clique,locked_pq,Globally locked PQ,sanr200_0.9,512,16,ok,0,320.803033645,84825782,141861757
 max_clique,locked_pq,Globally locked PQ,sanr200_0.9,512,16,ok,0,321.708682979,84846533,141910595
 max_clique,locked_pq,Globally locked PQ,sanr200_0.9,512,16,ok,0,324.22554845,84951024,142064163
 max_clique,locked_pq,Globally locked PQ,sanr200_0.9,512,16,ok,0,321.301359287,84984867,142130300
 max_clique,locked_pq,Globally locked PQ,sanr200_0.9,512,16,ok,0,323.642680153,84790230,141806005
-max_clique,pr,PR,sanr200_0.9,512,16,ok,0,41.487087414,88414072,147445859
-max_clique,pr,PR,sanr200_0.9,512,16,ok,0,61.327942673,88343295,147307521
-max_clique,pr,PR,sanr200_0.9,512,16,ok,0,54.517548291,88408591,147408447
-max_clique,pr,PR,sanr200_0.9,512,16,ok,0,63.420664081,88407735,147412112
-max_clique,pr,PR,sanr200_0.9,512,16,ok,0,60.903973172,88406874,147398314
+max_clique,pr,Linden,sanr200_0.9,512,16,ok,0,41.487087414,88414072,147445859
+max_clique,pr,Linden,sanr200_0.9,512,16,ok,0,61.327942673,88343295,147307521
+max_clique,pr,Linden,sanr200_0.9,512,16,ok,0,54.517548291,88408591,147408447
+max_clique,pr,Linden,sanr200_0.9,512,16,ok,0,63.420664081,88407735,147412112
+max_clique,pr,Linden,sanr200_0.9,512,16,ok,0,60.903973172,88406874,147398314
 max_clique,mq_stick_swap,MultiQueue (stick swap),sanr200_0.9,512,16,ok,0,3.166552197,88985506,148586602
 max_clique,mq_stick_swap,MultiQueue (stick swap),sanr200_0.9,512,16,ok,0,3.188947218,91223704,152124230
 max_clique,mq_stick_swap,MultiQueue (stick swap),sanr200_0.9,512,16,ok,0,3.202406343,89969398,150162275
@@ -1075,11 +1075,11 @@ max_clique,locked_stack,Globally locked Stack,sanr400_0.7,512,16,ok,0,16.5924710
 max_clique,locked_stack,Globally locked Stack,sanr400_0.7,512,16,ok,0,16.566705175,32890419,87193423
 max_clique,locked_stack,Globally locked Stack,sanr400_0.7,512,16,ok,0,16.720994105,32780046,86973625
 max_clique,locked_stack,Globally locked Stack,sanr400_0.7,512,16,ok,0,17.121957579,33430532,88340779
-max_clique,pmc,PMC library,sanr400_0.7,512,,ok,0,3.880116172,,
-max_clique,pmc,PMC library,sanr400_0.7,512,,ok,0,4.028695111,,
-max_clique,pmc,PMC library,sanr400_0.7,512,,ok,0,3.913622785,,
-max_clique,pmc,PMC library,sanr400_0.7,512,,ok,0,3.974395184,,
-max_clique,pmc,PMC library,sanr400_0.7,512,,ok,0,3.875519826,,
+max_clique,pmc,PMC,sanr400_0.7,512,,ok,0,3.880116172,,
+max_clique,pmc,PMC,sanr400_0.7,512,,ok,0,4.028695111,,
+max_clique,pmc,PMC,sanr400_0.7,512,,ok,0,3.913622785,,
+max_clique,pmc,PMC,sanr400_0.7,512,,ok,0,3.974395184,,
+max_clique,pmc,PMC,sanr400_0.7,512,,ok,0,3.875519826,,
 max_clique,work_stealing,Simple work stealing,sanr400_0.7,512,16,ok,0,0.831550246,32511613,86375557
 max_clique,work_stealing,Simple work stealing,sanr400_0.7,512,16,ok,0,0.846067709,32479520,86299086
 max_clique,work_stealing,Simple work stealing,sanr400_0.7,512,16,ok,0,0.822375483,32527604,86416977
@@ -1105,202 +1105,202 @@ max_clique,multilifo,MultiLIFO,sanr400_0.7,512,16,ok,0,0.8051918,33209082,878635
 max_clique,multilifo,MultiLIFO,sanr400_0.7,512,16,ok,0,0.802717623,32752644,86894792
 max_clique,multilifo,MultiLIFO,sanr400_0.7,512,16,ok,0,0.822695947,33130782,87728966
 max_clique,multilifo,MultiLIFO,sanr400_0.7,512,16,ok,0,0.824616533,33717919,88934526
-max_clique,treiber_stack,Treiber stack (elimination),sanr400_0.7,512,16,ok,0,36.662366152,33125305,87641266
-max_clique,treiber_stack,Treiber stack (elimination),sanr400_0.7,512,16,ok,0,36.991293277,33592305,88603894
-max_clique,treiber_stack,Treiber stack (elimination),sanr400_0.7,512,16,ok,0,37.270876134,33738632,88910317
-max_clique,treiber_stack,Treiber stack (elimination),sanr400_0.7,512,16,ok,0,36.54957243,33341921,88082163
-max_clique,treiber_stack,Treiber stack (elimination),sanr400_0.7,512,16,ok,0,35.942796495,32535895,86398787
-max_clique,2d_stack,2D stack,sanr400_0.7,512,16,ok,0,0.803023624,32714527,86827932
-max_clique,2d_stack,2D stack,sanr400_0.7,512,16,ok,0,0.806450665,32698007,86791777
-max_clique,2d_stack,2D stack,sanr400_0.7,512,16,ok,0,0.805255928,32515860,86385438
-max_clique,2d_stack,2D stack,sanr400_0.7,512,16,ok,0,0.803890129,32667332,86723028
-max_clique,2d_stack,2D stack,sanr400_0.7,512,16,ok,0,0.806607946,32697385,86789315
+max_clique,treiber_stack,Treiber stack,sanr400_0.7,512,16,ok,0,36.662366152,33125305,87641266
+max_clique,treiber_stack,Treiber stack,sanr400_0.7,512,16,ok,0,36.991293277,33592305,88603894
+max_clique,treiber_stack,Treiber stack,sanr400_0.7,512,16,ok,0,37.270876134,33738632,88910317
+max_clique,treiber_stack,Treiber stack,sanr400_0.7,512,16,ok,0,36.54957243,33341921,88082163
+max_clique,treiber_stack,Treiber stack,sanr400_0.7,512,16,ok,0,35.942796495,32535895,86398787
+max_clique,2d_stack,2D-stack,sanr400_0.7,512,16,ok,0,0.803023624,32714527,86827932
+max_clique,2d_stack,2D-stack,sanr400_0.7,512,16,ok,0,0.806450665,32698007,86791777
+max_clique,2d_stack,2D-stack,sanr400_0.7,512,16,ok,0,0.805255928,32515860,86385438
+max_clique,2d_stack,2D-stack,sanr400_0.7,512,16,ok,0,0.803890129,32667332,86723028
+max_clique,2d_stack,2D-stack,sanr400_0.7,512,16,ok,0,0.806607946,32697385,86789315
 max_clique,locked_pq,Globally locked PQ,sanr400_0.7,512,16,ok,0,132.569313796,32724990,87031609
 max_clique,locked_pq,Globally locked PQ,sanr400_0.7,512,16,ok,0,133.824329504,32728724,87036151
 max_clique,locked_pq,Globally locked PQ,sanr400_0.7,512,16,ok,0,135.09419413,32728776,87037849
 max_clique,locked_pq,Globally locked PQ,sanr400_0.7,512,16,ok,0,136.024482436,32722222,87021292
 max_clique,locked_pq,Globally locked PQ,sanr400_0.7,512,16,ok,0,135.441642533,32726707,87035694
-max_clique,pr,PR,sanr400_0.7,512,16,ok,0,20.271718611,32673888,86882915
-max_clique,pr,PR,sanr400_0.7,512,16,ok,0,20.668358592,32670499,86871929
-max_clique,pr,PR,sanr400_0.7,512,16,ok,0,20.176247569,32677133,86893834
-max_clique,pr,PR,sanr400_0.7,512,16,ok,0,19.805484033,32667638,86866938
-max_clique,pr,PR,sanr400_0.7,512,16,ok,0,20.401603116,32671422,86876246
+max_clique,pr,Linden,sanr400_0.7,512,16,ok,0,20.271718611,32673888,86882915
+max_clique,pr,Linden,sanr400_0.7,512,16,ok,0,20.668358592,32670499,86871929
+max_clique,pr,Linden,sanr400_0.7,512,16,ok,0,20.176247569,32677133,86893834
+max_clique,pr,Linden,sanr400_0.7,512,16,ok,0,19.805484033,32667638,86866938
+max_clique,pr,Linden,sanr400_0.7,512,16,ok,0,20.401603116,32671422,86876246
 max_clique,mq_stick_swap,MultiQueue (stick swap),sanr400_0.7,512,16,ok,0,1.091438216,32710383,86994892
 max_clique,mq_stick_swap,MultiQueue (stick swap),sanr400_0.7,512,16,ok,0,1.085846991,32664801,86852067
 max_clique,mq_stick_swap,MultiQueue (stick swap),sanr400_0.7,512,16,ok,0,1.088879989,32783096,87187334
 max_clique,mq_stick_swap,MultiQueue (stick swap),sanr400_0.7,512,16,ok,0,1.087121025,32711424,86984480
 max_clique,mq_stick_swap,MultiQueue (stick swap),sanr400_0.7,512,16,ok,0,1.086603783,32702276,86967266
-max_clique,pbs,PBS (SOTA),DSJC1000_5,512,,timeout,,1800,,
-max_clique,pbs,PBS (SOTA),DSJC500_5,512,,timeout,,1800,,
-max_clique,pbs,PBS (SOTA),MANN_a45,512,,timeout,,1800,,
-max_clique,pbs,PBS (SOTA),brock400_1,512,,ok,0,4.2046,,
-max_clique,pbs,PBS (SOTA),brock400_1,512,,ok,0,4.366,,
-max_clique,pbs,PBS (SOTA),brock400_1,512,,ok,0,4.1313,,
-max_clique,pbs,PBS (SOTA),brock400_1,512,,ok,0,4.1403,,
-max_clique,pbs,PBS (SOTA),brock400_1,512,,ok,0,4.323,,
-max_clique,pbs,PBS (SOTA),brock400_2,512,,ok,0,2.7382,,
-max_clique,pbs,PBS (SOTA),brock400_2,512,,ok,0,2.4555,,
-max_clique,pbs,PBS (SOTA),brock400_2,512,,ok,0,2.4511,,
-max_clique,pbs,PBS (SOTA),brock400_2,512,,ok,0,2.3602,,
-max_clique,pbs,PBS (SOTA),brock400_2,512,,ok,0,2.3948,,
-max_clique,pbs,PBS (SOTA),brock400_3,512,,ok,0,6.5126,,
-max_clique,pbs,PBS (SOTA),brock400_3,512,,ok,0,6.97,,
-max_clique,pbs,PBS (SOTA),brock400_3,512,,ok,0,6.711,,
-max_clique,pbs,PBS (SOTA),brock400_3,512,,ok,0,6.7342,,
-max_clique,pbs,PBS (SOTA),brock400_3,512,,ok,0,6.4306,,
-max_clique,pbs,PBS (SOTA),brock400_4,512,,ok,0,3.5346,,
-max_clique,pbs,PBS (SOTA),brock400_4,512,,ok,0,3.4291,,
-max_clique,pbs,PBS (SOTA),brock400_4,512,,ok,0,3.6041,,
-max_clique,pbs,PBS (SOTA),brock400_4,512,,ok,0,3.6862,,
-max_clique,pbs,PBS (SOTA),brock400_4,512,,ok,0,3.4735,,
-max_clique,pbs,PBS (SOTA),gen200_p0.9_44,512,,ok,0,0.33,,
-max_clique,pbs,PBS (SOTA),gen200_p0.9_44,512,,ok,0,0.3408,,
-max_clique,pbs,PBS (SOTA),gen200_p0.9_44,512,,ok,0,0.3464,,
-max_clique,pbs,PBS (SOTA),gen200_p0.9_44,512,,ok,0,0.3241,,
-max_clique,pbs,PBS (SOTA),gen200_p0.9_44,512,,ok,0,0.373,,
-max_clique,pbs,PBS (SOTA),p_hat1000-2,512,,timeout,,1800,,
-max_clique,pbs,PBS (SOTA),p_hat1500-1,512,,timeout,,1800,,
-max_clique,pbs,PBS (SOTA),p_hat300-3,512,,ok,0,0.357,,
-max_clique,pbs,PBS (SOTA),p_hat300-3,512,,ok,0,0.3921,,
-max_clique,pbs,PBS (SOTA),p_hat300-3,512,,ok,0,0.4275,,
-max_clique,pbs,PBS (SOTA),p_hat300-3,512,,ok,0,0.3693,,
-max_clique,pbs,PBS (SOTA),p_hat300-3,512,,ok,0,0.3691,,
-max_clique,pbs,PBS (SOTA),p_hat500-3,512,,timeout,,1800,,
-max_clique,pbs,PBS (SOTA),p_hat700-2,512,,timeout,,1800,,
-max_clique,pbs,PBS (SOTA),p_hat700-3,512,,timeout,,1800,,
-max_clique,pbs,PBS (SOTA),san1000,512,,timeout,,1800,,
-max_clique,pbs,PBS (SOTA),san200_0.9_3,512,,ok,0,0.3371,,
-max_clique,pbs,PBS (SOTA),san200_0.9_3,512,,ok,0,0.3305,,
-max_clique,pbs,PBS (SOTA),san200_0.9_3,512,,ok,0,0.3315,,
-max_clique,pbs,PBS (SOTA),san200_0.9_3,512,,ok,0,0.3407,,
-max_clique,pbs,PBS (SOTA),san200_0.9_3,512,,ok,0,0.3349,,
-max_clique,pbs,PBS (SOTA),san400_0.7_2,512,,ok,0,0.3662,,
-max_clique,pbs,PBS (SOTA),san400_0.7_2,512,,ok,0,0.3513,,
-max_clique,pbs,PBS (SOTA),san400_0.7_2,512,,ok,0,0.3524,,
-max_clique,pbs,PBS (SOTA),san400_0.7_2,512,,ok,0,0.36,,
-max_clique,pbs,PBS (SOTA),san400_0.7_2,512,,ok,0,0.3962,,
-max_clique,pbs,PBS (SOTA),san400_0.7_3,512,,ok,0,0.3404,,
-max_clique,pbs,PBS (SOTA),san400_0.7_3,512,,ok,0,0.3616,,
-max_clique,pbs,PBS (SOTA),san400_0.7_3,512,,ok,0,0.3322,,
-max_clique,pbs,PBS (SOTA),san400_0.7_3,512,,ok,0,0.3473,,
-max_clique,pbs,PBS (SOTA),san400_0.7_3,512,,ok,0,0.3482,,
-max_clique,pbs,PBS (SOTA),san400_0.9_1,512,,ok,0,0.4419,,
-max_clique,pbs,PBS (SOTA),san400_0.9_1,512,,ok,0,0.456,,
-max_clique,pbs,PBS (SOTA),san400_0.9_1,512,,ok,0,0.4375,,
-max_clique,pbs,PBS (SOTA),san400_0.9_1,512,,ok,0,0.4517,,
-max_clique,pbs,PBS (SOTA),san400_0.9_1,512,,ok,0,0.4585,,
-max_clique,pbs,PBS (SOTA),sanr200_0.9,512,,ok,0,0.4433,,
-max_clique,pbs,PBS (SOTA),sanr200_0.9,512,,ok,0,0.4384,,
-max_clique,pbs,PBS (SOTA),sanr200_0.9,512,,ok,0,0.439,,
-max_clique,pbs,PBS (SOTA),sanr200_0.9,512,,ok,0,0.4302,,
-max_clique,pbs,PBS (SOTA),sanr200_0.9,512,,ok,0,0.4187,,
-max_clique,pbs,PBS (SOTA),sanr400_0.7,512,,ok,0,2.3711,,
-max_clique,pbs,PBS (SOTA),sanr400_0.7,512,,ok,0,1.7798,,
-max_clique,pbs,PBS (SOTA),sanr400_0.7,512,,ok,0,1.9481,,
-max_clique,pbs,PBS (SOTA),sanr400_0.7,512,,ok,0,1.8281,,
-max_clique,pbs,PBS (SOTA),sanr400_0.7,512,,ok,0,1.812,,
-max_clique,ciaranm,CiaranM solver,DSJC1000_5,512,,ok,0,0.483101569,76942266,
-max_clique,ciaranm,CiaranM solver,DSJC1000_5,512,,ok,0,0.454108775,76984343,
-max_clique,ciaranm,CiaranM solver,DSJC1000_5,512,,ok,0,0.466060617,76985629,
-max_clique,ciaranm,CiaranM solver,DSJC1000_5,512,,ok,0,0.464955795,76984778,
-max_clique,ciaranm,CiaranM solver,DSJC1000_5,512,,ok,0,0.468621092,76985896,
-max_clique,ciaranm,CiaranM solver,DSJC500_5,512,,ok,0,0.028668403,1122356,
-max_clique,ciaranm,CiaranM solver,DSJC500_5,512,,ok,0,0.028747784,1121260,
-max_clique,ciaranm,CiaranM solver,DSJC500_5,512,,ok,0,0.028732433,1122391,
-max_clique,ciaranm,CiaranM solver,DSJC500_5,512,,ok,0,0.028840053,1121768,
-max_clique,ciaranm,CiaranM solver,DSJC500_5,512,,ok,0,0.028366523,1122011,
-max_clique,ciaranm,CiaranM solver,MANN_a45,512,,ok,0,16.173325958,2857823,
-max_clique,ciaranm,CiaranM solver,MANN_a45,512,,ok,0,16.203424444,2858381,
-max_clique,ciaranm,CiaranM solver,MANN_a45,512,,ok,0,16.201926532,2857533,
-max_clique,ciaranm,CiaranM solver,MANN_a45,512,,ok,0,16.218935064,2857057,
-max_clique,ciaranm,CiaranM solver,MANN_a45,512,,ok,0,16.202957744,2855966,
-max_clique,ciaranm,CiaranM solver,brock400_1,512,,ok,0,4.276850557,154706879,
-max_clique,ciaranm,CiaranM solver,brock400_1,512,,ok,0,4.288415618,154633918,
-max_clique,ciaranm,CiaranM solver,brock400_1,512,,ok,0,4.281175685,154653131,
-max_clique,ciaranm,CiaranM solver,brock400_1,512,,ok,0,4.280210323,154965269,
-max_clique,ciaranm,CiaranM solver,brock400_1,512,,ok,0,4.27975622,154631221,
-max_clique,ciaranm,CiaranM solver,brock400_2,512,,ok,0,2.530600434,115284237,
-max_clique,ciaranm,CiaranM solver,brock400_2,512,,ok,0,2.533892299,115299595,
-max_clique,ciaranm,CiaranM solver,brock400_2,512,,ok,0,2.538332388,115416118,
-max_clique,ciaranm,CiaranM solver,brock400_2,512,,ok,0,2.531560516,115324963,
-max_clique,ciaranm,CiaranM solver,brock400_2,512,,ok,0,2.531628717,115264491,
-max_clique,ciaranm,CiaranM solver,brock400_3,512,,ok,0,1.468232826,101405092,
-max_clique,ciaranm,CiaranM solver,brock400_3,512,,ok,0,1.466867093,101392939,
-max_clique,ciaranm,CiaranM solver,brock400_3,512,,ok,0,1.466312872,101427967,
-max_clique,ciaranm,CiaranM solver,brock400_3,512,,ok,0,1.467090643,101510730,
-max_clique,ciaranm,CiaranM solver,brock400_3,512,,ok,0,1.472384702,101600124,
-max_clique,ciaranm,CiaranM solver,brock400_4,512,,ok,0,0.378429459,16235859,
-max_clique,ciaranm,CiaranM solver,brock400_4,512,,ok,0,0.378223349,16258800,
-max_clique,ciaranm,CiaranM solver,brock400_4,512,,ok,0,0.378916359,16264529,
-max_clique,ciaranm,CiaranM solver,brock400_4,512,,ok,0,0.380944523,16308925,
-max_clique,ciaranm,CiaranM solver,brock400_4,512,,ok,0,0.378001048,16229427,
-max_clique,ciaranm,CiaranM solver,gen200_p0.9_44,512,,ok,0,0.041477192,374714,
-max_clique,ciaranm,CiaranM solver,gen200_p0.9_44,512,,ok,0,0.041498253,375783,
-max_clique,ciaranm,CiaranM solver,gen200_p0.9_44,512,,ok,0,0.041488832,376854,
-max_clique,ciaranm,CiaranM solver,gen200_p0.9_44,512,,ok,0,0.041202572,375316,
-max_clique,ciaranm,CiaranM solver,gen200_p0.9_44,512,,ok,0,0.041484552,375998,
-max_clique,ciaranm,CiaranM solver,p_hat1000-2,512,,ok,0,1.392589914,24566676,
-max_clique,ciaranm,CiaranM solver,p_hat1000-2,512,,ok,0,1.38512915,24770977,
-max_clique,ciaranm,CiaranM solver,p_hat1000-2,512,,ok,0,1.398055274,24795837,
-max_clique,ciaranm,CiaranM solver,p_hat1000-2,512,,ok,0,1.39014124,24833649,
-max_clique,ciaranm,CiaranM solver,p_hat1000-2,512,,ok,0,1.382245455,24528518,
-max_clique,ciaranm,CiaranM solver,p_hat1500-1,512,,ok,0,0.042705204,1250368,
-max_clique,ciaranm,CiaranM solver,p_hat1500-1,512,,ok,0,0.043110655,1226925,
-max_clique,ciaranm,CiaranM solver,p_hat1500-1,512,,ok,0,0.042642744,1309967,
-max_clique,ciaranm,CiaranM solver,p_hat1500-1,512,,ok,0,0.042101914,1251543,
-max_clique,ciaranm,CiaranM solver,p_hat1500-1,512,,ok,0,0.042078564,1254660,
-max_clique,ciaranm,CiaranM solver,p_hat300-3,512,,ok,0,0.029289401,518365,
-max_clique,ciaranm,CiaranM solver,p_hat300-3,512,,ok,0,0.029531602,521358,
-max_clique,ciaranm,CiaranM solver,p_hat300-3,512,,ok,0,0.029237631,519678,
-max_clique,ciaranm,CiaranM solver,p_hat300-3,512,,ok,0,0.028884041,514556,
-max_clique,ciaranm,CiaranM solver,p_hat300-3,512,,ok,0,0.02893296,513845,
-max_clique,ciaranm,CiaranM solver,p_hat500-3,512,,ok,0,1.571727246,20543046,
-max_clique,ciaranm,CiaranM solver,p_hat500-3,512,,ok,0,1.575611963,20522015,
-max_clique,ciaranm,CiaranM solver,p_hat500-3,512,,ok,0,1.573806019,20541142,
-max_clique,ciaranm,CiaranM solver,p_hat500-3,512,,ok,0,1.581377942,20556939,
-max_clique,ciaranm,CiaranM solver,p_hat500-3,512,,ok,0,1.573747069,20549795,
-max_clique,ciaranm,CiaranM solver,p_hat700-2,512,,ok,0,0.062369019,794579,
-max_clique,ciaranm,CiaranM solver,p_hat700-2,512,,ok,0,0.061102027,754600,
-max_clique,ciaranm,CiaranM solver,p_hat700-2,512,,ok,0,0.062117317,763187,
-max_clique,ciaranm,CiaranM solver,p_hat700-2,512,,ok,0,0.061817118,787001,
-max_clique,ciaranm,CiaranM solver,p_hat700-2,512,,ok,0,0.061749697,773122,
-max_clique,ciaranm,CiaranM solver,p_hat700-3,512,,ok,0,20.217127297,164012011,
-max_clique,ciaranm,CiaranM solver,p_hat700-3,512,,ok,0,20.358402944,163938798,
-max_clique,ciaranm,CiaranM solver,p_hat700-3,512,,ok,0,20.232271274,163901534,
-max_clique,ciaranm,CiaranM solver,p_hat700-3,512,,ok,0,20.219321242,163863076,
-max_clique,ciaranm,CiaranM solver,p_hat700-3,512,,ok,0,20.21868751,163842792,
-max_clique,ciaranm,CiaranM solver,san1000,512,,ok,0,0.029892002,54782,
-max_clique,ciaranm,CiaranM solver,san1000,512,,ok,0,0.029249631,47086,
-max_clique,ciaranm,CiaranM solver,san1000,512,,ok,0,0.030137582,65649,
-max_clique,ciaranm,CiaranM solver,san1000,512,,ok,0,0.029462031,53548,
-max_clique,ciaranm,CiaranM solver,san1000,512,,ok,0,0.02901023,54319,
-max_clique,ciaranm,CiaranM solver,san200_0.9_3,512,,ok,0,0.127812373,1701937,
-max_clique,ciaranm,CiaranM solver,san200_0.9_3,512,,ok,0,0.128200523,1725902,
-max_clique,ciaranm,CiaranM solver,san200_0.9_3,512,,ok,0,0.128244293,1718628,
-max_clique,ciaranm,CiaranM solver,san200_0.9_3,512,,ok,0,0.129176205,1721814,
-max_clique,ciaranm,CiaranM solver,san200_0.9_3,512,,ok,0,0.129065384,1730675,
-max_clique,ciaranm,CiaranM solver,san400_0.7_2,512,,ok,0,0.025300094,101882,
-max_clique,ciaranm,CiaranM solver,san400_0.7_2,512,,ok,0,0.024886814,99861,
-max_clique,ciaranm,CiaranM solver,san400_0.7_2,512,,ok,0,0.025535815,99583,
-max_clique,ciaranm,CiaranM solver,san400_0.7_2,512,,ok,0,0.024451922,99128,
-max_clique,ciaranm,CiaranM solver,san400_0.7_2,512,,ok,0,0.026370016,98358,
-max_clique,ciaranm,CiaranM solver,san400_0.7_3,512,,ok,0,0.026729516,343655,
-max_clique,ciaranm,CiaranM solver,san400_0.7_3,512,,ok,0,0.027281488,344202,
-max_clique,ciaranm,CiaranM solver,san400_0.7_3,512,,ok,0,0.027487048,347899,
-max_clique,ciaranm,CiaranM solver,san400_0.7_3,512,,ok,0,0.02877613,349783,
-max_clique,ciaranm,CiaranM solver,san400_0.7_3,512,,ok,0,0.027290018,342680,
-max_clique,ciaranm,CiaranM solver,san400_0.9_1,512,,ok,0,0.069710551,334770,
-max_clique,ciaranm,CiaranM solver,san400_0.9_1,512,,ok,0,0.069475071,334881,
-max_clique,ciaranm,CiaranM solver,san400_0.9_1,512,,ok,0,0.069943522,334794,
-max_clique,ciaranm,CiaranM solver,san400_0.9_1,512,,ok,0,0.070355443,334961,
-max_clique,ciaranm,CiaranM solver,san400_0.9_1,512,,ok,0,0.069781501,334870,
-max_clique,ciaranm,CiaranM solver,sanr200_0.9,512,,ok,0,1.477144101,20034252,
-max_clique,ciaranm,CiaranM solver,sanr200_0.9,512,,ok,0,1.474610926,20018305,
-max_clique,ciaranm,CiaranM solver,sanr200_0.9,512,,ok,0,1.480151456,19980053,
-max_clique,ciaranm,CiaranM solver,sanr200_0.9,512,,ok,0,1.47652227,19979769,
-max_clique,ciaranm,CiaranM solver,sanr200_0.9,512,,ok,0,1.475809338,20012129,
-max_clique,ciaranm,CiaranM solver,sanr400_0.7,512,,ok,0,1.288834213,65123033,
-max_clique,ciaranm,CiaranM solver,sanr400_0.7,512,,ok,0,1.289347834,65154148,
-max_clique,ciaranm,CiaranM solver,sanr400_0.7,512,,ok,0,1.287974951,65181530,
-max_clique,ciaranm,CiaranM solver,sanr400_0.7,512,,ok,0,1.287385901,65315549,
-max_clique,ciaranm,CiaranM solver,sanr400_0.7,512,,ok,0,1.290170865,65214514,
+max_clique,pbs,PBS,DSJC1000_5,512,,timeout,,1800,,
+max_clique,pbs,PBS,DSJC500_5,512,,timeout,,1800,,
+max_clique,pbs,PBS,MANN_a45,512,,timeout,,1800,,
+max_clique,pbs,PBS,brock400_1,512,,ok,0,4.2046,,
+max_clique,pbs,PBS,brock400_1,512,,ok,0,4.366,,
+max_clique,pbs,PBS,brock400_1,512,,ok,0,4.1313,,
+max_clique,pbs,PBS,brock400_1,512,,ok,0,4.1403,,
+max_clique,pbs,PBS,brock400_1,512,,ok,0,4.323,,
+max_clique,pbs,PBS,brock400_2,512,,ok,0,2.7382,,
+max_clique,pbs,PBS,brock400_2,512,,ok,0,2.4555,,
+max_clique,pbs,PBS,brock400_2,512,,ok,0,2.4511,,
+max_clique,pbs,PBS,brock400_2,512,,ok,0,2.3602,,
+max_clique,pbs,PBS,brock400_2,512,,ok,0,2.3948,,
+max_clique,pbs,PBS,brock400_3,512,,ok,0,6.5126,,
+max_clique,pbs,PBS,brock400_3,512,,ok,0,6.97,,
+max_clique,pbs,PBS,brock400_3,512,,ok,0,6.711,,
+max_clique,pbs,PBS,brock400_3,512,,ok,0,6.7342,,
+max_clique,pbs,PBS,brock400_3,512,,ok,0,6.4306,,
+max_clique,pbs,PBS,brock400_4,512,,ok,0,3.5346,,
+max_clique,pbs,PBS,brock400_4,512,,ok,0,3.4291,,
+max_clique,pbs,PBS,brock400_4,512,,ok,0,3.6041,,
+max_clique,pbs,PBS,brock400_4,512,,ok,0,3.6862,,
+max_clique,pbs,PBS,brock400_4,512,,ok,0,3.4735,,
+max_clique,pbs,PBS,gen200_p0.9_44,512,,ok,0,0.33,,
+max_clique,pbs,PBS,gen200_p0.9_44,512,,ok,0,0.3408,,
+max_clique,pbs,PBS,gen200_p0.9_44,512,,ok,0,0.3464,,
+max_clique,pbs,PBS,gen200_p0.9_44,512,,ok,0,0.3241,,
+max_clique,pbs,PBS,gen200_p0.9_44,512,,ok,0,0.373,,
+max_clique,pbs,PBS,p_hat1000-2,512,,timeout,,1800,,
+max_clique,pbs,PBS,p_hat1500-1,512,,timeout,,1800,,
+max_clique,pbs,PBS,p_hat300-3,512,,ok,0,0.357,,
+max_clique,pbs,PBS,p_hat300-3,512,,ok,0,0.3921,,
+max_clique,pbs,PBS,p_hat300-3,512,,ok,0,0.4275,,
+max_clique,pbs,PBS,p_hat300-3,512,,ok,0,0.3693,,
+max_clique,pbs,PBS,p_hat300-3,512,,ok,0,0.3691,,
+max_clique,pbs,PBS,p_hat500-3,512,,timeout,,1800,,
+max_clique,pbs,PBS,p_hat700-2,512,,timeout,,1800,,
+max_clique,pbs,PBS,p_hat700-3,512,,timeout,,1800,,
+max_clique,pbs,PBS,san1000,512,,timeout,,1800,,
+max_clique,pbs,PBS,san200_0.9_3,512,,ok,0,0.3371,,
+max_clique,pbs,PBS,san200_0.9_3,512,,ok,0,0.3305,,
+max_clique,pbs,PBS,san200_0.9_3,512,,ok,0,0.3315,,
+max_clique,pbs,PBS,san200_0.9_3,512,,ok,0,0.3407,,
+max_clique,pbs,PBS,san200_0.9_3,512,,ok,0,0.3349,,
+max_clique,pbs,PBS,san400_0.7_2,512,,ok,0,0.3662,,
+max_clique,pbs,PBS,san400_0.7_2,512,,ok,0,0.3513,,
+max_clique,pbs,PBS,san400_0.7_2,512,,ok,0,0.3524,,
+max_clique,pbs,PBS,san400_0.7_2,512,,ok,0,0.36,,
+max_clique,pbs,PBS,san400_0.7_2,512,,ok,0,0.3962,,
+max_clique,pbs,PBS,san400_0.7_3,512,,ok,0,0.3404,,
+max_clique,pbs,PBS,san400_0.7_3,512,,ok,0,0.3616,,
+max_clique,pbs,PBS,san400_0.7_3,512,,ok,0,0.3322,,
+max_clique,pbs,PBS,san400_0.7_3,512,,ok,0,0.3473,,
+max_clique,pbs,PBS,san400_0.7_3,512,,ok,0,0.3482,,
+max_clique,pbs,PBS,san400_0.9_1,512,,ok,0,0.4419,,
+max_clique,pbs,PBS,san400_0.9_1,512,,ok,0,0.456,,
+max_clique,pbs,PBS,san400_0.9_1,512,,ok,0,0.4375,,
+max_clique,pbs,PBS,san400_0.9_1,512,,ok,0,0.4517,,
+max_clique,pbs,PBS,san400_0.9_1,512,,ok,0,0.4585,,
+max_clique,pbs,PBS,sanr200_0.9,512,,ok,0,0.4433,,
+max_clique,pbs,PBS,sanr200_0.9,512,,ok,0,0.4384,,
+max_clique,pbs,PBS,sanr200_0.9,512,,ok,0,0.439,,
+max_clique,pbs,PBS,sanr200_0.9,512,,ok,0,0.4302,,
+max_clique,pbs,PBS,sanr200_0.9,512,,ok,0,0.4187,,
+max_clique,pbs,PBS,sanr400_0.7,512,,ok,0,2.3711,,
+max_clique,pbs,PBS,sanr400_0.7,512,,ok,0,1.7798,,
+max_clique,pbs,PBS,sanr400_0.7,512,,ok,0,1.9481,,
+max_clique,pbs,PBS,sanr400_0.7,512,,ok,0,1.8281,,
+max_clique,pbs,PBS,sanr400_0.7,512,,ok,0,1.812,,
+max_clique,ciaranm,McCreesh,DSJC1000_5,512,,ok,0,0.483101569,76942266,
+max_clique,ciaranm,McCreesh,DSJC1000_5,512,,ok,0,0.454108775,76984343,
+max_clique,ciaranm,McCreesh,DSJC1000_5,512,,ok,0,0.466060617,76985629,
+max_clique,ciaranm,McCreesh,DSJC1000_5,512,,ok,0,0.464955795,76984778,
+max_clique,ciaranm,McCreesh,DSJC1000_5,512,,ok,0,0.468621092,76985896,
+max_clique,ciaranm,McCreesh,DSJC500_5,512,,ok,0,0.028668403,1122356,
+max_clique,ciaranm,McCreesh,DSJC500_5,512,,ok,0,0.028747784,1121260,
+max_clique,ciaranm,McCreesh,DSJC500_5,512,,ok,0,0.028732433,1122391,
+max_clique,ciaranm,McCreesh,DSJC500_5,512,,ok,0,0.028840053,1121768,
+max_clique,ciaranm,McCreesh,DSJC500_5,512,,ok,0,0.028366523,1122011,
+max_clique,ciaranm,McCreesh,MANN_a45,512,,ok,0,16.173325958,2857823,
+max_clique,ciaranm,McCreesh,MANN_a45,512,,ok,0,16.203424444,2858381,
+max_clique,ciaranm,McCreesh,MANN_a45,512,,ok,0,16.201926532,2857533,
+max_clique,ciaranm,McCreesh,MANN_a45,512,,ok,0,16.218935064,2857057,
+max_clique,ciaranm,McCreesh,MANN_a45,512,,ok,0,16.202957744,2855966,
+max_clique,ciaranm,McCreesh,brock400_1,512,,ok,0,4.276850557,154706879,
+max_clique,ciaranm,McCreesh,brock400_1,512,,ok,0,4.288415618,154633918,
+max_clique,ciaranm,McCreesh,brock400_1,512,,ok,0,4.281175685,154653131,
+max_clique,ciaranm,McCreesh,brock400_1,512,,ok,0,4.280210323,154965269,
+max_clique,ciaranm,McCreesh,brock400_1,512,,ok,0,4.27975622,154631221,
+max_clique,ciaranm,McCreesh,brock400_2,512,,ok,0,2.530600434,115284237,
+max_clique,ciaranm,McCreesh,brock400_2,512,,ok,0,2.533892299,115299595,
+max_clique,ciaranm,McCreesh,brock400_2,512,,ok,0,2.538332388,115416118,
+max_clique,ciaranm,McCreesh,brock400_2,512,,ok,0,2.531560516,115324963,
+max_clique,ciaranm,McCreesh,brock400_2,512,,ok,0,2.531628717,115264491,
+max_clique,ciaranm,McCreesh,brock400_3,512,,ok,0,1.468232826,101405092,
+max_clique,ciaranm,McCreesh,brock400_3,512,,ok,0,1.466867093,101392939,
+max_clique,ciaranm,McCreesh,brock400_3,512,,ok,0,1.466312872,101427967,
+max_clique,ciaranm,McCreesh,brock400_3,512,,ok,0,1.467090643,101510730,
+max_clique,ciaranm,McCreesh,brock400_3,512,,ok,0,1.472384702,101600124,
+max_clique,ciaranm,McCreesh,brock400_4,512,,ok,0,0.378429459,16235859,
+max_clique,ciaranm,McCreesh,brock400_4,512,,ok,0,0.378223349,16258800,
+max_clique,ciaranm,McCreesh,brock400_4,512,,ok,0,0.378916359,16264529,
+max_clique,ciaranm,McCreesh,brock400_4,512,,ok,0,0.380944523,16308925,
+max_clique,ciaranm,McCreesh,brock400_4,512,,ok,0,0.378001048,16229427,
+max_clique,ciaranm,McCreesh,gen200_p0.9_44,512,,ok,0,0.041477192,374714,
+max_clique,ciaranm,McCreesh,gen200_p0.9_44,512,,ok,0,0.041498253,375783,
+max_clique,ciaranm,McCreesh,gen200_p0.9_44,512,,ok,0,0.041488832,376854,
+max_clique,ciaranm,McCreesh,gen200_p0.9_44,512,,ok,0,0.041202572,375316,
+max_clique,ciaranm,McCreesh,gen200_p0.9_44,512,,ok,0,0.041484552,375998,
+max_clique,ciaranm,McCreesh,p_hat1000-2,512,,ok,0,1.392589914,24566676,
+max_clique,ciaranm,McCreesh,p_hat1000-2,512,,ok,0,1.38512915,24770977,
+max_clique,ciaranm,McCreesh,p_hat1000-2,512,,ok,0,1.398055274,24795837,
+max_clique,ciaranm,McCreesh,p_hat1000-2,512,,ok,0,1.39014124,24833649,
+max_clique,ciaranm,McCreesh,p_hat1000-2,512,,ok,0,1.382245455,24528518,
+max_clique,ciaranm,McCreesh,p_hat1500-1,512,,ok,0,0.042705204,1250368,
+max_clique,ciaranm,McCreesh,p_hat1500-1,512,,ok,0,0.043110655,1226925,
+max_clique,ciaranm,McCreesh,p_hat1500-1,512,,ok,0,0.042642744,1309967,
+max_clique,ciaranm,McCreesh,p_hat1500-1,512,,ok,0,0.042101914,1251543,
+max_clique,ciaranm,McCreesh,p_hat1500-1,512,,ok,0,0.042078564,1254660,
+max_clique,ciaranm,McCreesh,p_hat300-3,512,,ok,0,0.029289401,518365,
+max_clique,ciaranm,McCreesh,p_hat300-3,512,,ok,0,0.029531602,521358,
+max_clique,ciaranm,McCreesh,p_hat300-3,512,,ok,0,0.029237631,519678,
+max_clique,ciaranm,McCreesh,p_hat300-3,512,,ok,0,0.028884041,514556,
+max_clique,ciaranm,McCreesh,p_hat300-3,512,,ok,0,0.02893296,513845,
+max_clique,ciaranm,McCreesh,p_hat500-3,512,,ok,0,1.571727246,20543046,
+max_clique,ciaranm,McCreesh,p_hat500-3,512,,ok,0,1.575611963,20522015,
+max_clique,ciaranm,McCreesh,p_hat500-3,512,,ok,0,1.573806019,20541142,
+max_clique,ciaranm,McCreesh,p_hat500-3,512,,ok,0,1.581377942,20556939,
+max_clique,ciaranm,McCreesh,p_hat500-3,512,,ok,0,1.573747069,20549795,
+max_clique,ciaranm,McCreesh,p_hat700-2,512,,ok,0,0.062369019,794579,
+max_clique,ciaranm,McCreesh,p_hat700-2,512,,ok,0,0.061102027,754600,
+max_clique,ciaranm,McCreesh,p_hat700-2,512,,ok,0,0.062117317,763187,
+max_clique,ciaranm,McCreesh,p_hat700-2,512,,ok,0,0.061817118,787001,
+max_clique,ciaranm,McCreesh,p_hat700-2,512,,ok,0,0.061749697,773122,
+max_clique,ciaranm,McCreesh,p_hat700-3,512,,ok,0,20.217127297,164012011,
+max_clique,ciaranm,McCreesh,p_hat700-3,512,,ok,0,20.358402944,163938798,
+max_clique,ciaranm,McCreesh,p_hat700-3,512,,ok,0,20.232271274,163901534,
+max_clique,ciaranm,McCreesh,p_hat700-3,512,,ok,0,20.219321242,163863076,
+max_clique,ciaranm,McCreesh,p_hat700-3,512,,ok,0,20.21868751,163842792,
+max_clique,ciaranm,McCreesh,san1000,512,,ok,0,0.029892002,54782,
+max_clique,ciaranm,McCreesh,san1000,512,,ok,0,0.029249631,47086,
+max_clique,ciaranm,McCreesh,san1000,512,,ok,0,0.030137582,65649,
+max_clique,ciaranm,McCreesh,san1000,512,,ok,0,0.029462031,53548,
+max_clique,ciaranm,McCreesh,san1000,512,,ok,0,0.02901023,54319,
+max_clique,ciaranm,McCreesh,san200_0.9_3,512,,ok,0,0.127812373,1701937,
+max_clique,ciaranm,McCreesh,san200_0.9_3,512,,ok,0,0.128200523,1725902,
+max_clique,ciaranm,McCreesh,san200_0.9_3,512,,ok,0,0.128244293,1718628,
+max_clique,ciaranm,McCreesh,san200_0.9_3,512,,ok,0,0.129176205,1721814,
+max_clique,ciaranm,McCreesh,san200_0.9_3,512,,ok,0,0.129065384,1730675,
+max_clique,ciaranm,McCreesh,san400_0.7_2,512,,ok,0,0.025300094,101882,
+max_clique,ciaranm,McCreesh,san400_0.7_2,512,,ok,0,0.024886814,99861,
+max_clique,ciaranm,McCreesh,san400_0.7_2,512,,ok,0,0.025535815,99583,
+max_clique,ciaranm,McCreesh,san400_0.7_2,512,,ok,0,0.024451922,99128,
+max_clique,ciaranm,McCreesh,san400_0.7_2,512,,ok,0,0.026370016,98358,
+max_clique,ciaranm,McCreesh,san400_0.7_3,512,,ok,0,0.026729516,343655,
+max_clique,ciaranm,McCreesh,san400_0.7_3,512,,ok,0,0.027281488,344202,
+max_clique,ciaranm,McCreesh,san400_0.7_3,512,,ok,0,0.027487048,347899,
+max_clique,ciaranm,McCreesh,san400_0.7_3,512,,ok,0,0.02877613,349783,
+max_clique,ciaranm,McCreesh,san400_0.7_3,512,,ok,0,0.027290018,342680,
+max_clique,ciaranm,McCreesh,san400_0.9_1,512,,ok,0,0.069710551,334770,
+max_clique,ciaranm,McCreesh,san400_0.9_1,512,,ok,0,0.069475071,334881,
+max_clique,ciaranm,McCreesh,san400_0.9_1,512,,ok,0,0.069943522,334794,
+max_clique,ciaranm,McCreesh,san400_0.9_1,512,,ok,0,0.070355443,334961,
+max_clique,ciaranm,McCreesh,san400_0.9_1,512,,ok,0,0.069781501,334870,
+max_clique,ciaranm,McCreesh,sanr200_0.9,512,,ok,0,1.477144101,20034252,
+max_clique,ciaranm,McCreesh,sanr200_0.9,512,,ok,0,1.474610926,20018305,
+max_clique,ciaranm,McCreesh,sanr200_0.9,512,,ok,0,1.480151456,19980053,
+max_clique,ciaranm,McCreesh,sanr200_0.9,512,,ok,0,1.47652227,19979769,
+max_clique,ciaranm,McCreesh,sanr200_0.9,512,,ok,0,1.475809338,20012129,
+max_clique,ciaranm,McCreesh,sanr400_0.7,512,,ok,0,1.288834213,65123033,
+max_clique,ciaranm,McCreesh,sanr400_0.7,512,,ok,0,1.289347834,65154148,
+max_clique,ciaranm,McCreesh,sanr400_0.7,512,,ok,0,1.287974951,65181530,
+max_clique,ciaranm,McCreesh,sanr400_0.7,512,,ok,0,1.287385901,65315549,
+max_clique,ciaranm,McCreesh,sanr400_0.7,512,,ok,0,1.290170865,65214514,

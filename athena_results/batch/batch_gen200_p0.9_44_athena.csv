@@ -449,306 +449,306 @@ max_clique,multilifo,MultiLIFO,gen200_p0.9_44,512,1024,ok,0,0.240704919,5545124,
 max_clique,multilifo,MultiLIFO,gen200_p0.9_44,512,1024,ok,0,0.270369946,7109764,11141825
 max_clique,multilifo,MultiLIFO,gen200_p0.9_44,512,1024,ok,0,0.215724381,4643955,7368999
 max_clique,multilifo,MultiLIFO,gen200_p0.9_44,512,1024,ok,0,0.208107578,4261952,6840896
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,44.201789741,22616679,32025007
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,63.412874847,32764464,46356194
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,50.892912322,26139962,37021068
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,8.449819017,4020940,6437977
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,42.729474436,21823496,30844966
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,8.781483527,4092249,6619320
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,7.825786111,3603942,6040461
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,21.575047505,10821204,16038501
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,7.296732437,3413748,5571320
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,9.593562216,4602204,7333921
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,42.139069081,21504324,30733879
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,24.643933868,12318935,17991593
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,66.649315695,34548453,47227176
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,10.182329533,4865110,7691456
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,9.143013016,4319561,6957081
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,9.143818621,4334904,6933332
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,46.011498265,23899623,33735769
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,49.158090567,24964798,36040250
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,46.689515818,24187327,34059146
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,9.515211051,4517026,7212363
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,8.784852913,4211584,6724036
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,42.542847157,21893792,31035562
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,41.646264932,21501848,30395162
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,42.393981425,21517262,30761942
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1,ok,0,39.466541487,20150296,28724409
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,36.214968021,26481305,37776379
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,33.178250348,24685085,34765725
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,32.33912345,23813017,33670539
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,28.980453333,21533488,30477368
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,21.930179431,16021273,23188949
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,34.873367856,25603557,36603611
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,44.7059943,33546946,46420233
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,30.569835709,22588290,31987667
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,34.018456789,25109074,35695673
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,37.996070998,28081683,39486337
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,32.450310215,24051595,33844110
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,43.451627507,32332265,44495015
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,30.704705071,22560152,31963124
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,45.099342314,33222593,46574633
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,41.019920714,29837355,42779164
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,43.960830691,32605244,45271548
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,35.931281696,26566614,37205453
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,36.285388692,26763906,37546396
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,34.512015178,25407233,36373297
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,36.20210216,26941437,38039263
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,35.78612095,26386320,37430589
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,38.617983598,28432936,40201439
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,35.877765688,26648506,37520834
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,29.162455659,21219230,30390092
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,4,ok,0,39.722810349,29326421,41280338
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,19.382598927,28157681,39007095
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,10.144008432,14332811,20686285
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,5.288822472,7366593,11166255
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,19.400669535,27856110,39330907
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,5.687558757,7783618,11839997
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,15.599396407,22203813,31591401
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,20.288914961,29242696,41281806
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,27.082308624,39080688,54096355
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,10.803329789,15300836,22017045
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,20.717110409,29848493,41782847
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,12.634706984,17914362,25769233
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,7.276976039,10335651,15006284
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,15.84799887,22655403,32141785
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,21.518993372,31224967,42674295
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,8.449761342,12089760,17397018
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,10.966829719,15498581,22796033
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,23.383386261,33804295,46705127
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,23.872681824,34463437,47645716
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,11.937508614,17028600,24534642
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,9.961369637,14180438,20452617
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,10.803556472,15264463,22174085
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,20.066620192,28659618,40598254
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,19.664557948,28440601,39335224
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,14.671760056,20774091,29811312
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,16,ok,0,14.841967231,21089315,29976648
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,7.011766903,22190304,31929002
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,1.860705512,5544933,8284170
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,7.315062254,23238845,32712486
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,6.937730268,22099384,31422525
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,5.051538832,15867499,23185288
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,4.57654597,14469665,20895932
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,6.953411797,22037737,31339493
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,9.847986684,31407082,43754290
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,8.1475675,25994102,36697503
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,1.175490729,3306422,5301348
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,10.301317903,32895072,46038022
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,1.977886852,5936674,9158150
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,3.297898934,9950758,15159764
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,7.793780745,24713551,35319556
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,2.853398548,8973615,12696267
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,9.517612568,30381200,42404954
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,9.826813404,31823854,43414131
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,2.796548876,8460706,12930719
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,2.36397312,7089121,10857636
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,8.045893495,25762783,36394255
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,3.909943967,12277926,17412436
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,2.34577722,7132781,10797922
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,11.395876388,36890203,50325631
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,6.891951921,21816583,31274363
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,64,ok,0,8.064645926,25427132,36280797
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.838861698,5267559,8150416
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.658768579,11801250,17026285
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.665934377,11770828,17057344
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.467528126,10039912,15007390
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.910386725,5913686,9115431
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,2.376838127,16884474,24931387
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.910872196,5902359,8816626
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.821008833,5114991,8064601
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.444891512,2264614,3845854
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.847108338,5422198,8305050
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.42493177,9690522,14806032
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.916148969,5871948,8988618
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.414578624,9754743,14347397
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.496652338,10391873,15461923
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.650442091,3832113,6343397
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.716164614,4403313,7071061
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,2.136372761,15359668,22148083
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.699427783,4074155,6689353
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.151956283,7715487,11487297
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,0.971007925,6086334,9526980
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.073230068,7055070,10712008
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.972543236,13814790,20491425
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.112732336,7320956,11467736
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,1.562875492,10823072,15822921
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,256,ok,0,2.991817271,22593070,30777116
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.551090405,7785396,12019874
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.413144023,5016460,7586913
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.550954075,8052821,12229737
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.54690071,7684526,11908847
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.513742358,7235456,11255331
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.424858328,4925092,7827409
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.811359542,13304168,19328735
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.450737462,5439928,8674202
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.392201228,4715484,7431400
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.611610989,8811685,13274492
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.615654009,9353615,14326419
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.623807568,9397451,13833424
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.71326418,11484918,16830929
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.474948442,6427593,9672092
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.622610636,9383044,14401490
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.549005355,7494826,11821294
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.481103017,6412312,9904417
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.627086477,9645664,14384391
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.648607401,9957738,13930030
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.485889639,6468824,10208297
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.502095129,6680462,10387456
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.588674512,8164959,12606231
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.671454086,10901248,16476153
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.83481566,13888486,20927034
-max_clique,treiber_stack,Treiber stack (elimination),gen200_p0.9_44,512,1024,ok,0,0.617322963,8948757,13820089
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.129326179,2067100,3617968
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.150121831,2955793,5048927
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.1580264,3117077,5279085
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.127093174,2246312,3891640
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.142350491,2762886,4642108
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.143437064,2687562,4593000
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.184630145,4181759,6976540
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.144281296,2737180,4657304
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.150392581,2843601,4856181
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.159999285,3261065,5485616
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.142863892,2603105,4465503
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.217120196,5168177,8475686
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.188236235,4094443,6830918
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.171112742,3544987,5971010
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.178159979,3939022,6576450
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.147654294,2816062,4808155
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.203627652,4479855,7335207
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.163177572,3366125,5702238
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.16181984,3260771,5518587
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.167711504,3536535,5943960
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.180953036,4105600,6706932
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.149411879,2835893,4853292
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.187232822,4148333,6831186
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.197509478,4497575,7357203
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1,ok,0,0.167173563,3329936,5593552
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.206100348,4712530,7743649
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.160860766,3499062,5755231
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.236850854,6091977,9756288
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.156369676,3083288,5191875
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.286015296,8049324,12503214
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.184395565,3972992,6625858
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.168292645,3681082,6083751
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.170469871,3711473,6194796
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.22309215,5706888,9234390
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.197282106,4698244,7696945
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.192730725,4529197,7492187
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.18619929,4282362,7039161
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.214456419,5184738,8457211
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.251966772,6552005,10613480
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.185267927,4224848,7024898
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.156182065,3244014,5486596
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.154755522,3084067,5187446
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.212331924,5177608,8421777
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.171046452,3727829,6269578
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.151228013,2931063,4982627
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.176440775,4046742,6709466
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.240145103,6264442,10107140
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.21080751,5242207,8573779
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.169143997,3452742,5781927
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,4,ok,0,0.188344265,4309138,7141475
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.17821563,4285312,6884639
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.220542764,5639100,9149185
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.202260859,4970643,8019570
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.235799352,6277104,9982449
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.172509456,3949807,6528210
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.252773644,6888543,10902428
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.214179549,5226841,8502676
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.205888718,5104247,8319932
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.20309061,5018246,8089572
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.161501538,3342280,5636167
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.190963301,4421259,7303896
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.192052534,4732159,7703590
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.158677651,3449050,5748421
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.144749806,3004462,5041247
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.130887622,2518357,4223866
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.366596615,11965053,17652529
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.155088873,3252321,5436321
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.206850291,4885544,8016889
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.213401686,5444672,8777769
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.21521813,5524490,8933069
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.176808436,4209061,6890171
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.159700694,3361070,5586499
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.170766622,3776358,6236538
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.17431659,3704495,6056676
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,16,ok,0,0.178000839,4180053,6863060
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.213876228,5498276,8906294
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.209755927,5376359,8774281
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.180936557,4275808,6965017
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.172456035,3837785,6409106
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.232625954,6492748,10377790
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.231925583,6088149,9832637
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.223650462,5856222,9464508
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.222433438,5773273,9368679
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.156627297,3482522,5805724
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.161161628,3565144,5843682
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.185459337,4569128,7365097
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.173629168,4002376,6538190
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.245872876,6586025,10599861
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.138522022,2630250,4397909
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.22702148,6135664,9830751
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.289586445,8458482,13307092
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.286120466,8278427,13064439
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.197564118,4966787,8146906
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.199480212,5132302,8129506
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.236919844,6655101,10557620
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.156455926,3339939,5595356
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.169490578,3764159,6247229
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.168958717,3843453,6412306
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.259830761,7341214,11804210
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,64,ok,0,0.284538402,8572544,13388994
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.201425907,5116134,8008327
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.187045822,4391859,7269960
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.209596177,5024968,8135089
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.244697934,6329809,10115354
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.242333218,6131450,9883885
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.197445378,4652351,7576117
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.236840694,6216981,9927709
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.152814827,2942201,4856523
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.219700542,5395032,8703584
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.15786972,3234595,5385661
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.190389559,4425044,7117202
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.196527555,4385670,7197817
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.19049926,4324374,7066721
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.208380914,5178529,8292179
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.197398737,4752267,7715865
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.226582439,5738109,9185512
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.190487119,4554009,7254673
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.201662238,4950967,7905077
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.191136872,4244291,6983345
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.192647905,4639885,7259857
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.215432791,5224347,8396543
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.179380893,4069758,6551225
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.231657231,6166586,9859779
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.156101216,3313614,5312979
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,256,ok,0,0.228706914,5918955,9443355
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.33247717,8625202,13371921
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.285147864,6814317,10487211
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.254779909,6645168,10388359
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.228325463,5112472,8169314
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.228259743,4857727,7846965
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.261148124,5881364,9319476
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.311641428,7919836,12354197
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.28741337,6701833,10514182
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.244178302,5266274,8284009
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.21076237,4439781,7142785
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.320820061,8796198,13771814
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.253616406,5134925,8257119
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.247887332,5247146,8414629
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.256105782,6330130,9869705
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.231380031,5151387,8230118
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.271558699,6677711,10266339
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.264890263,5956443,9404913
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.23879065,5329516,8412777
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.261128615,6216993,9844692
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.249600486,5286107,8410864
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.294857697,8110106,12565260
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.229302815,4986603,8041933
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.262184487,6339864,9993905
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.262404518,6348442,9734885
-max_clique,2d_stack,2D stack,gen200_p0.9_44,512,1024,ok,0,0.291802951,7762122,12118269
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,44.201789741,22616679,32025007
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,63.412874847,32764464,46356194
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,50.892912322,26139962,37021068
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,8.449819017,4020940,6437977
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,42.729474436,21823496,30844966
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,8.781483527,4092249,6619320
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,7.825786111,3603942,6040461
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,21.575047505,10821204,16038501
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,7.296732437,3413748,5571320
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,9.593562216,4602204,7333921
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,42.139069081,21504324,30733879
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,24.643933868,12318935,17991593
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,66.649315695,34548453,47227176
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,10.182329533,4865110,7691456
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,9.143013016,4319561,6957081
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,9.143818621,4334904,6933332
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,46.011498265,23899623,33735769
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,49.158090567,24964798,36040250
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,46.689515818,24187327,34059146
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,9.515211051,4517026,7212363
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,8.784852913,4211584,6724036
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,42.542847157,21893792,31035562
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,41.646264932,21501848,30395162
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,42.393981425,21517262,30761942
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1,ok,0,39.466541487,20150296,28724409
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,36.214968021,26481305,37776379
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,33.178250348,24685085,34765725
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,32.33912345,23813017,33670539
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,28.980453333,21533488,30477368
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,21.930179431,16021273,23188949
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,34.873367856,25603557,36603611
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,44.7059943,33546946,46420233
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,30.569835709,22588290,31987667
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,34.018456789,25109074,35695673
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,37.996070998,28081683,39486337
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,32.450310215,24051595,33844110
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,43.451627507,32332265,44495015
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,30.704705071,22560152,31963124
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,45.099342314,33222593,46574633
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,41.019920714,29837355,42779164
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,43.960830691,32605244,45271548
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,35.931281696,26566614,37205453
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,36.285388692,26763906,37546396
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,34.512015178,25407233,36373297
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,36.20210216,26941437,38039263
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,35.78612095,26386320,37430589
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,38.617983598,28432936,40201439
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,35.877765688,26648506,37520834
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,29.162455659,21219230,30390092
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,4,ok,0,39.722810349,29326421,41280338
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,19.382598927,28157681,39007095
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,10.144008432,14332811,20686285
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,5.288822472,7366593,11166255
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,19.400669535,27856110,39330907
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,5.687558757,7783618,11839997
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,15.599396407,22203813,31591401
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,20.288914961,29242696,41281806
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,27.082308624,39080688,54096355
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,10.803329789,15300836,22017045
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,20.717110409,29848493,41782847
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,12.634706984,17914362,25769233
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,7.276976039,10335651,15006284
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,15.84799887,22655403,32141785
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,21.518993372,31224967,42674295
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,8.449761342,12089760,17397018
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,10.966829719,15498581,22796033
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,23.383386261,33804295,46705127
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,23.872681824,34463437,47645716
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,11.937508614,17028600,24534642
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,9.961369637,14180438,20452617
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,10.803556472,15264463,22174085
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,20.066620192,28659618,40598254
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,19.664557948,28440601,39335224
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,14.671760056,20774091,29811312
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,16,ok,0,14.841967231,21089315,29976648
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,7.011766903,22190304,31929002
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,1.860705512,5544933,8284170
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,7.315062254,23238845,32712486
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,6.937730268,22099384,31422525
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,5.051538832,15867499,23185288
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,4.57654597,14469665,20895932
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,6.953411797,22037737,31339493
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,9.847986684,31407082,43754290
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,8.1475675,25994102,36697503
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,1.175490729,3306422,5301348
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,10.301317903,32895072,46038022
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,1.977886852,5936674,9158150
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,3.297898934,9950758,15159764
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,7.793780745,24713551,35319556
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,2.853398548,8973615,12696267
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,9.517612568,30381200,42404954
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,9.826813404,31823854,43414131
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,2.796548876,8460706,12930719
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,2.36397312,7089121,10857636
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,8.045893495,25762783,36394255
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,3.909943967,12277926,17412436
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,2.34577722,7132781,10797922
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,11.395876388,36890203,50325631
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,6.891951921,21816583,31274363
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,64,ok,0,8.064645926,25427132,36280797
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.838861698,5267559,8150416
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.658768579,11801250,17026285
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.665934377,11770828,17057344
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.467528126,10039912,15007390
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.910386725,5913686,9115431
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,2.376838127,16884474,24931387
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.910872196,5902359,8816626
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.821008833,5114991,8064601
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.444891512,2264614,3845854
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.847108338,5422198,8305050
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.42493177,9690522,14806032
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.916148969,5871948,8988618
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.414578624,9754743,14347397
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.496652338,10391873,15461923
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.650442091,3832113,6343397
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.716164614,4403313,7071061
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,2.136372761,15359668,22148083
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.699427783,4074155,6689353
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.151956283,7715487,11487297
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,0.971007925,6086334,9526980
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.073230068,7055070,10712008
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.972543236,13814790,20491425
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.112732336,7320956,11467736
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,1.562875492,10823072,15822921
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,256,ok,0,2.991817271,22593070,30777116
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.551090405,7785396,12019874
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.413144023,5016460,7586913
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.550954075,8052821,12229737
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.54690071,7684526,11908847
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.513742358,7235456,11255331
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.424858328,4925092,7827409
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.811359542,13304168,19328735
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.450737462,5439928,8674202
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.392201228,4715484,7431400
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.611610989,8811685,13274492
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.615654009,9353615,14326419
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.623807568,9397451,13833424
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.71326418,11484918,16830929
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.474948442,6427593,9672092
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.622610636,9383044,14401490
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.549005355,7494826,11821294
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.481103017,6412312,9904417
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.627086477,9645664,14384391
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.648607401,9957738,13930030
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.485889639,6468824,10208297
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.502095129,6680462,10387456
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.588674512,8164959,12606231
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.671454086,10901248,16476153
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.83481566,13888486,20927034
+max_clique,treiber_stack,Treiber stack,gen200_p0.9_44,512,1024,ok,0,0.617322963,8948757,13820089
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.129326179,2067100,3617968
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.150121831,2955793,5048927
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.1580264,3117077,5279085
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.127093174,2246312,3891640
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.142350491,2762886,4642108
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.143437064,2687562,4593000
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.184630145,4181759,6976540
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.144281296,2737180,4657304
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.150392581,2843601,4856181
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.159999285,3261065,5485616
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.142863892,2603105,4465503
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.217120196,5168177,8475686
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.188236235,4094443,6830918
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.171112742,3544987,5971010
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.178159979,3939022,6576450
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.147654294,2816062,4808155
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.203627652,4479855,7335207
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.163177572,3366125,5702238
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.16181984,3260771,5518587
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.167711504,3536535,5943960
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.180953036,4105600,6706932
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.149411879,2835893,4853292
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.187232822,4148333,6831186
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.197509478,4497575,7357203
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1,ok,0,0.167173563,3329936,5593552
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.206100348,4712530,7743649
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.160860766,3499062,5755231
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.236850854,6091977,9756288
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.156369676,3083288,5191875
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.286015296,8049324,12503214
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.184395565,3972992,6625858
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.168292645,3681082,6083751
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.170469871,3711473,6194796
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.22309215,5706888,9234390
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.197282106,4698244,7696945
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.192730725,4529197,7492187
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.18619929,4282362,7039161
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.214456419,5184738,8457211
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.251966772,6552005,10613480
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.185267927,4224848,7024898
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.156182065,3244014,5486596
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.154755522,3084067,5187446
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.212331924,5177608,8421777
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.171046452,3727829,6269578
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.151228013,2931063,4982627
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.176440775,4046742,6709466
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.240145103,6264442,10107140
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.21080751,5242207,8573779
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.169143997,3452742,5781927
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,4,ok,0,0.188344265,4309138,7141475
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.17821563,4285312,6884639
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.220542764,5639100,9149185
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.202260859,4970643,8019570
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.235799352,6277104,9982449
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.172509456,3949807,6528210
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.252773644,6888543,10902428
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.214179549,5226841,8502676
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.205888718,5104247,8319932
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.20309061,5018246,8089572
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.161501538,3342280,5636167
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.190963301,4421259,7303896
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.192052534,4732159,7703590
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.158677651,3449050,5748421
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.144749806,3004462,5041247
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.130887622,2518357,4223866
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.366596615,11965053,17652529
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.155088873,3252321,5436321
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.206850291,4885544,8016889
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.213401686,5444672,8777769
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.21521813,5524490,8933069
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.176808436,4209061,6890171
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.159700694,3361070,5586499
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.170766622,3776358,6236538
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.17431659,3704495,6056676
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,16,ok,0,0.178000839,4180053,6863060
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.213876228,5498276,8906294
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.209755927,5376359,8774281
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.180936557,4275808,6965017
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.172456035,3837785,6409106
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.232625954,6492748,10377790
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.231925583,6088149,9832637
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.223650462,5856222,9464508
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.222433438,5773273,9368679
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.156627297,3482522,5805724
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.161161628,3565144,5843682
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.185459337,4569128,7365097
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.173629168,4002376,6538190
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.245872876,6586025,10599861
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.138522022,2630250,4397909
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.22702148,6135664,9830751
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.289586445,8458482,13307092
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.286120466,8278427,13064439
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.197564118,4966787,8146906
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.199480212,5132302,8129506
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.236919844,6655101,10557620
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.156455926,3339939,5595356
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.169490578,3764159,6247229
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.168958717,3843453,6412306
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.259830761,7341214,11804210
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,64,ok,0,0.284538402,8572544,13388994
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.201425907,5116134,8008327
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.187045822,4391859,7269960
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.209596177,5024968,8135089
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.244697934,6329809,10115354
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.242333218,6131450,9883885
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.197445378,4652351,7576117
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.236840694,6216981,9927709
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.152814827,2942201,4856523
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.219700542,5395032,8703584
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.15786972,3234595,5385661
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.190389559,4425044,7117202
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.196527555,4385670,7197817
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.19049926,4324374,7066721
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.208380914,5178529,8292179
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.197398737,4752267,7715865
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.226582439,5738109,9185512
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.190487119,4554009,7254673
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.201662238,4950967,7905077
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.191136872,4244291,6983345
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.192647905,4639885,7259857
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.215432791,5224347,8396543
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.179380893,4069758,6551225
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.231657231,6166586,9859779
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.156101216,3313614,5312979
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,256,ok,0,0.228706914,5918955,9443355
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.33247717,8625202,13371921
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.285147864,6814317,10487211
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.254779909,6645168,10388359
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.228325463,5112472,8169314
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.228259743,4857727,7846965
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.261148124,5881364,9319476
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.311641428,7919836,12354197
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.28741337,6701833,10514182
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.244178302,5266274,8284009
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.21076237,4439781,7142785
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.320820061,8796198,13771814
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.253616406,5134925,8257119
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.247887332,5247146,8414629
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.256105782,6330130,9869705
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.231380031,5151387,8230118
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.271558699,6677711,10266339
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.264890263,5956443,9404913
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.23879065,5329516,8412777
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.261128615,6216993,9844692
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.249600486,5286107,8410864
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.294857697,8110106,12565260
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.229302815,4986603,8041933
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.262184487,6339864,9993905
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.262404518,6348442,9734885
+max_clique,2d_stack,2D-stack,gen200_p0.9_44,512,1024,ok,0,0.291802951,7762122,12118269
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,1,ok,0,156.382185632,4055057,29367749
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,1,ok,0,151.938154637,4035204,29241000
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,1,ok,0,156.329778234,3975784,29646000
@@ -899,156 +899,156 @@ max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,1024,ok,0,1.279855664
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,1024,ok,0,1.273443858,5216145,8311179
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,1024,ok,0,1.238866377,5188864,8277453
 max_clique,locked_pq,Globally locked PQ,gen200_p0.9_44,512,1024,ok,0,1.254369148,5152924,8229488
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,39.867312362,3410662,24815496
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,40.411896839,3410221,24802089
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.083670163,3416723,24816775
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.220866729,3510771,24971393
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.251877472,3481590,24906173
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,40.757552834,3410409,24822499
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,39.406814549,3408543,24805169
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,39.333473953,3409963,24799247
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,39.94634775,3410297,24805726
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,36.912275261,3420580,24822350
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,40.598940376,3409822,24801893
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.002143089,3421693,24826046
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.828890187,3417621,24816137
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.05815519,3418423,24820786
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.023716273,3416385,24814899
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,39.335336361,3411809,24813964
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,36.749507536,3424056,24837455
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.514634354,3413945,24814212
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.382190646,3416452,24813446
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,40.57428397,3411707,24809792
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.17746216,3503432,24940935
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.360687087,3414682,24808933
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,37.593404889,3418770,24826836
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,39.738310544,3409160,24805753
-max_clique,pr,PR,gen200_p0.9_44,512,1,ok,0,39.158455964,3411545,24805976
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.797396403,7299785,28934040
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.481780572,7299798,28941487
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,33.380311059,7299799,28939260
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.319557281,7299901,28933162
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.14319854,7299820,28932023
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,35.029313562,7299713,28930675
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,35.473038432,7299691,28932561
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,35.222844359,7299872,28929037
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,35.010447549,7299551,28926333
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.932716943,7299783,28932116
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.75715422,7299825,28933509
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.404868011,7299095,28930776
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.02320653,7299963,28981726
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,35.13877792,7299850,28926594
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.682295432,7299823,28932000
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,35.30494938,7298886,28911378
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.742787066,7299807,28925205
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,33.956223497,7299679,28926522
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.16969125,7301179,28930191
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.330344889,7299855,28935053
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.911628497,7299833,28937365
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,33.396896419,7299855,28939030
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,36.281473112,7299795,28932016
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,35.944697258,7299900,28936674
-max_clique,pr,PR,gen200_p0.9_44,512,4,ok,0,34.296465159,7299789,28925831
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,10.037182381,8456929,17634624
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,10.34881088,8459980,17637179
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.685334427,8460659,17640001
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,11.229822384,8461594,17649933
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.973050286,8455895,17625894
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.278806518,8459291,17645325
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.785037583,8455436,17629504
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.818673646,8459638,17631399
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.379136519,8448910,17623202
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.310984035,8450282,17644764
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,10.620464359,8459207,17638961
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.139903009,8465996,17654506
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.637090444,8461411,17637793
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,10.891298724,8452691,17641005
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.759184352,8396611,17496742
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.874353537,8461924,17645497
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.535079504,8460941,17640954
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.36351112,8454269,17615226
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.793222375,8467042,17650157
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.760290407,8454967,17628978
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,10.088426112,8461664,17637661
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,10.345216779,8441155,17601151
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,10.256998745,8462138,17654449
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,10.304943156,8450556,17624947
-max_clique,pr,PR,gen200_p0.9_44,512,16,ok,0,9.512046241,8456117,17624296
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.638342806,2552530,4499558
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.679739105,2567861,4532457
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.602088005,2555091,4500594
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.664920515,2558849,4511223
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.642292619,2563151,4516974
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.642081329,2564389,4519135
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.582373328,2561414,4509015
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.667400503,2556353,4509195
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.641683557,2560095,4504551
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.514050978,2560013,4504934
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.626596437,2558481,4511644
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.612620039,2566794,4521716
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.622111741,2557982,4498247
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.636722311,2556366,4497682
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.622155852,2564839,4518763
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.652778465,2561770,4524541
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.639398429,2557321,4505795
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.598399172,2565087,4515160
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.643237973,2561699,4521078
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.630813871,2561971,4517708
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.629506426,2551213,4493007
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.628802434,2566569,4522064
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.610642393,2557413,4507639
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.631638024,2563784,4516572
-max_clique,pr,PR,gen200_p0.9_44,512,64,ok,0,0.658827195,2560948,4515028
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.302696428,3065042,5197601
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.305223106,3070860,5211416
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.278853597,3058828,5198700
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.274912245,3041172,5172591
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.287686407,3056477,5187848
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.238573052,3043653,5176082
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.275482546,3047775,5180019
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.278131385,3024717,5146732
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.266690057,3031400,5155969
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.258274119,3018304,5135539
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.306681641,3060027,5190862
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.28841599,3045600,5180415
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.25580009,3066668,5201991
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.280714534,3071674,5215611
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.28262709,3016232,5132326
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.322347233,3035566,5155265
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.285147129,3047003,5175249
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.290155345,3045049,5175253
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.283907825,3050372,5183638
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.241883474,3040416,5164758
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.294944652,3030817,5156827
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.273286248,3053048,5188504
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.281117785,3053979,5185608
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.281762937,3047075,5177282
-max_clique,pr,PR,gen200_p0.9_44,512,256,ok,0,0.259046311,3037668,5169647
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.251703226,4570610,7387600
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.260834857,4426418,7184727
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.256819634,4415582,7171870
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.257728016,4460269,7230587
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.226402541,4422172,7213803
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.238276151,4441883,7241182
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.247133731,4452761,7214845
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.229945723,4312367,7025071
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.269381186,4481931,7274993
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.244314182,4513879,7346676
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.257511756,4554139,7397871
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.262381243,4470829,7260840
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.242799426,4412839,7162500
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.240367068,4312052,7055110
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.230009284,4328831,7112541
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.235259011,4396301,7195595
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.233173614,4407780,7149348
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.239925017,4465260,7261422
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.23808864,4470286,7234126
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.239596786,4406811,7143952
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.227938527,4261049,7003862
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.252458069,4488637,7283025
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.236650276,4299286,6993278
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.224389195,3945882,6477439
-max_clique,pr,PR,gen200_p0.9_44,512,1024,ok,0,0.221916586,4083961,6644864
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,39.867312362,3410662,24815496
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,40.411896839,3410221,24802089
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.083670163,3416723,24816775
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.220866729,3510771,24971393
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.251877472,3481590,24906173
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,40.757552834,3410409,24822499
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,39.406814549,3408543,24805169
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,39.333473953,3409963,24799247
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,39.94634775,3410297,24805726
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,36.912275261,3420580,24822350
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,40.598940376,3409822,24801893
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.002143089,3421693,24826046
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.828890187,3417621,24816137
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.05815519,3418423,24820786
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.023716273,3416385,24814899
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,39.335336361,3411809,24813964
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,36.749507536,3424056,24837455
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.514634354,3413945,24814212
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.382190646,3416452,24813446
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,40.57428397,3411707,24809792
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.17746216,3503432,24940935
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.360687087,3414682,24808933
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,37.593404889,3418770,24826836
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,39.738310544,3409160,24805753
+max_clique,pr,Linden,gen200_p0.9_44,512,1,ok,0,39.158455964,3411545,24805976
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.797396403,7299785,28934040
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.481780572,7299798,28941487
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,33.380311059,7299799,28939260
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.319557281,7299901,28933162
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.14319854,7299820,28932023
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,35.029313562,7299713,28930675
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,35.473038432,7299691,28932561
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,35.222844359,7299872,28929037
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,35.010447549,7299551,28926333
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.932716943,7299783,28932116
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.75715422,7299825,28933509
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.404868011,7299095,28930776
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.02320653,7299963,28981726
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,35.13877792,7299850,28926594
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.682295432,7299823,28932000
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,35.30494938,7298886,28911378
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.742787066,7299807,28925205
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,33.956223497,7299679,28926522
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.16969125,7301179,28930191
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.330344889,7299855,28935053
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.911628497,7299833,28937365
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,33.396896419,7299855,28939030
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,36.281473112,7299795,28932016
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,35.944697258,7299900,28936674
+max_clique,pr,Linden,gen200_p0.9_44,512,4,ok,0,34.296465159,7299789,28925831
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,10.037182381,8456929,17634624
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,10.34881088,8459980,17637179
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.685334427,8460659,17640001
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,11.229822384,8461594,17649933
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.973050286,8455895,17625894
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.278806518,8459291,17645325
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.785037583,8455436,17629504
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.818673646,8459638,17631399
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.379136519,8448910,17623202
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.310984035,8450282,17644764
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,10.620464359,8459207,17638961
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.139903009,8465996,17654506
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.637090444,8461411,17637793
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,10.891298724,8452691,17641005
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.759184352,8396611,17496742
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.874353537,8461924,17645497
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.535079504,8460941,17640954
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.36351112,8454269,17615226
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.793222375,8467042,17650157
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.760290407,8454967,17628978
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,10.088426112,8461664,17637661
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,10.345216779,8441155,17601151
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,10.256998745,8462138,17654449
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,10.304943156,8450556,17624947
+max_clique,pr,Linden,gen200_p0.9_44,512,16,ok,0,9.512046241,8456117,17624296
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.638342806,2552530,4499558
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.679739105,2567861,4532457
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.602088005,2555091,4500594
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.664920515,2558849,4511223
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.642292619,2563151,4516974
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.642081329,2564389,4519135
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.582373328,2561414,4509015
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.667400503,2556353,4509195
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.641683557,2560095,4504551
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.514050978,2560013,4504934
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.626596437,2558481,4511644
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.612620039,2566794,4521716
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.622111741,2557982,4498247
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.636722311,2556366,4497682
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.622155852,2564839,4518763
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.652778465,2561770,4524541
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.639398429,2557321,4505795
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.598399172,2565087,4515160
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.643237973,2561699,4521078
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.630813871,2561971,4517708
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.629506426,2551213,4493007
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.628802434,2566569,4522064
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.610642393,2557413,4507639
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.631638024,2563784,4516572
+max_clique,pr,Linden,gen200_p0.9_44,512,64,ok,0,0.658827195,2560948,4515028
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.302696428,3065042,5197601
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.305223106,3070860,5211416
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.278853597,3058828,5198700
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.274912245,3041172,5172591
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.287686407,3056477,5187848
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.238573052,3043653,5176082
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.275482546,3047775,5180019
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.278131385,3024717,5146732
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.266690057,3031400,5155969
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.258274119,3018304,5135539
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.306681641,3060027,5190862
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.28841599,3045600,5180415
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.25580009,3066668,5201991
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.280714534,3071674,5215611
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.28262709,3016232,5132326
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.322347233,3035566,5155265
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.285147129,3047003,5175249
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.290155345,3045049,5175253
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.283907825,3050372,5183638
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.241883474,3040416,5164758
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.294944652,3030817,5156827
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.273286248,3053048,5188504
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.281117785,3053979,5185608
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.281762937,3047075,5177282
+max_clique,pr,Linden,gen200_p0.9_44,512,256,ok,0,0.259046311,3037668,5169647
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.251703226,4570610,7387600
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.260834857,4426418,7184727
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.256819634,4415582,7171870
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.257728016,4460269,7230587
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.226402541,4422172,7213803
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.238276151,4441883,7241182
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.247133731,4452761,7214845
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.229945723,4312367,7025071
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.269381186,4481931,7274993
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.244314182,4513879,7346676
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.257511756,4554139,7397871
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.262381243,4470829,7260840
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.242799426,4412839,7162500
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.240367068,4312052,7055110
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.230009284,4328831,7112541
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.235259011,4396301,7195595
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.233173614,4407780,7149348
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.239925017,4465260,7261422
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.23808864,4470286,7234126
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.239596786,4406811,7143952
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.227938527,4261049,7003862
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.252458069,4488637,7283025
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.236650276,4299286,6993278
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.224389195,3945882,6477439
+max_clique,pr,Linden,gen200_p0.9_44,512,1024,ok,0,0.221916586,4083961,6644864
 max_clique,mq_stick_swap,MultiQueue (stick swap),gen200_p0.9_44,512,1,ok,0,1.827926606,4386269,29231405
 max_clique,mq_stick_swap,MultiQueue (stick swap),gen200_p0.9_44,512,1,ok,0,0.962578816,3182085,25051428
 max_clique,mq_stick_swap,MultiQueue (stick swap),gen200_p0.9_44,512,1,ok,0,0.928600722,2992445,23986382
