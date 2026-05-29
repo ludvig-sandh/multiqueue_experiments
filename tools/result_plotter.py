@@ -24,7 +24,7 @@ LAYOUTS = ("heatmap", "graph")
 SPREADS = ("none", "minmax", "stddev", "minmax_band", "stddev_band")
 HEATMAP_COLOR_MODES = ("time", "row-slowdown", "row_slowdown")
 HEATMAP_WIDTH_MODES = ("auto", "regular", "compact")
-VALUES = ("time", "visited-nodes")
+VALUES = ("time", "visited-nodes", "work-amplification", "efficiency")
 
 TITLE_FONT_SIZE = 15
 AXIS_LABEL_FONT_SIZE = 13
@@ -84,6 +84,12 @@ def format_multiplier(value: float) -> str:
 def format_value(value: float, value_kind: str) -> str:
     if value_kind == "visited-nodes":
         return format_compact_count(value)
+    if value_kind == "work-amplification":
+        return f"{value:.2f}x"
+    if value_kind == "efficiency":
+        if abs(value) < 0.1:
+            return f"{value:.1%}"
+        return f"{value:.0%}"
     return f"{value:.3f}"
 
 
@@ -100,7 +106,7 @@ def format_compact_count(value: float) -> str:
 
 
 def value_column(value_kind: str) -> str:
-    if value_kind == "visited-nodes":
+    if value_kind in {"visited-nodes", "work-amplification"}:
         return "visited_nodes"
     return "time_s"
 
@@ -108,13 +114,25 @@ def value_column(value_kind: str) -> str:
 def value_label(value_kind: str) -> str:
     if value_kind == "visited-nodes":
         return "Visited Nodes"
+    if value_kind == "work-amplification":
+        return "Work Amplification"
+    if value_kind == "efficiency":
+        return "Parallel Efficiency"
     return "Time (s)"
 
 
 def row_best_ratio_label(value_kind: str) -> str:
     if value_kind == "visited-nodes":
         return "Increase vs row best"
+    if value_kind == "work-amplification":
+        return "Increase vs row best"
+    if value_kind == "efficiency":
+        return "Drop vs row best"
     return "Slowdown vs row best"
+
+
+def higher_is_better(value_kind: str) -> bool:
+    return value_kind == "efficiency"
 
 
 def mark_best_label(label: str) -> str:
@@ -206,6 +224,84 @@ def filter_empty_rows(row_keys, row_labels, grid):
     return filtered_keys, filtered_labels
 
 
+def normalize_to_row_baseline(grid, samples, x_values):
+    normalized_grid: dict[tuple[str, str], dict[object, float | None]] = defaultdict(dict)
+    normalized_samples: dict[tuple[str, str], dict[object, list[float | None]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
+
+    for key, row_values in grid.items():
+        baseline_value = next(
+            (
+                row_values[x_value]
+                for x_value in x_values
+                if row_values.get(x_value) is not None and row_values[x_value] > 0
+            ),
+            None,
+        )
+
+        for x_value in x_values:
+            value = row_values.get(x_value)
+            if baseline_value is None or value is None:
+                normalized_grid[key][x_value] = None
+            else:
+                normalized_grid[key][x_value] = value / baseline_value
+
+            normalized_samples[key][x_value] = [
+                sample / baseline_value
+                if baseline_value is not None and sample is not None
+                else None
+                for sample in samples[key][x_value]
+            ]
+
+    return normalized_grid, normalized_samples
+
+
+def normalize_to_efficiency(grid, samples, thread_samples, x_values):
+    efficiency_grid: dict[tuple[str, str], dict[object, float | None]] = defaultdict(dict)
+    efficiency_samples: dict[tuple[str, str], dict[object, list[float | None]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
+
+    for key, row_values in grid.items():
+        baseline_time = next(
+            (
+                row_values[x_value]
+                for x_value in x_values
+                if row_values.get(x_value) is not None and row_values[x_value] > 0
+            ),
+            None,
+        )
+
+        for x_value in x_values:
+            value = row_values.get(x_value)
+            threads = [
+                thread_count
+                for thread_count in thread_samples[key][x_value]
+                if thread_count is not None and thread_count > 0
+            ]
+            mean_threads = sum(threads) / len(threads) if threads else None
+
+            if baseline_time is None or value is None or mean_threads is None:
+                efficiency_grid[key][x_value] = None
+            else:
+                efficiency_grid[key][x_value] = (baseline_time / value) / mean_threads
+
+            efficiency_samples[key][x_value] = [
+                (baseline_time / sample) / mean_threads
+                if (
+                    baseline_time is not None
+                    and sample is not None
+                    and sample > 0
+                    and mean_threads is not None
+                )
+                else None
+                for sample in samples[key][x_value]
+            ]
+
+    return efficiency_grid, efficiency_samples
+
+
 def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str, value_kind: str):
     if not rows:
         raise ValueError("CSV file contains no benchmark rows")
@@ -255,6 +351,9 @@ def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str, value_kind: s
     processed_share_samples: dict[
         tuple[str, str], dict[object, list[tuple[float | None, float | None, float | None]]]
     ] = defaultdict(lambda: defaultdict(list))
+    thread_samples: dict[tuple[str, str], dict[object, list[float | None]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
     sample_statuses: dict[tuple[str, str], dict[object, list[str]]] = defaultdict(
         lambda: defaultdict(list)
     )
@@ -262,6 +361,9 @@ def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str, value_kind: s
         key = row_key(row)
         x_value = parse_axis_value(row[x_axis])
         samples[key][x_value].append(row[value_column(value_kind)])
+        thread_samples[key][x_value].append(
+            float(row["threads"]) if row.get("threads") else None
+        )
         processed_share_samples[key][x_value].append(
             (row["processed_nodes"], row["ignored_nodes"], row["visited_nodes"])
         )
@@ -269,6 +371,10 @@ def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str, value_kind: s
 
     grid, failure_grid = combine_samples(samples, sample_statuses)
     processed_share_grid = combine_processed_share(processed_share_samples, sample_statuses)
+    if value_kind == "work-amplification":
+        grid, samples = normalize_to_row_baseline(grid, samples, x_values)
+    elif value_kind == "efficiency":
+        grid, samples = normalize_to_efficiency(grid, samples, thread_samples, x_values)
     unique_row_keys, row_labels = filter_empty_rows(unique_row_keys, row_labels, grid)
 
     return (
@@ -311,6 +417,9 @@ def build_comparison_data(rows: list[dict], value_kind: str):
     processed_share_samples: dict[
         tuple[str, str], dict[object, list[tuple[float | None, float | None, float | None]]]
     ] = defaultdict(lambda: defaultdict(list))
+    thread_samples: dict[tuple[str, str], dict[object, list[float | None]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
     sample_statuses: dict[tuple[str, str], dict[object, list[str]]] = defaultdict(
         lambda: defaultdict(list)
     )
@@ -318,6 +427,9 @@ def build_comparison_data(rows: list[dict], value_kind: str):
         key = (row["instance"], row["instance"])
         x_value = row["name"]
         samples[key][x_value].append(row[value_column(value_kind)])
+        thread_samples[key][x_value].append(
+            float(row["threads"]) if row.get("threads") else None
+        )
         processed_share_samples[key][x_value].append(
             (row["processed_nodes"], row["ignored_nodes"], row["visited_nodes"])
         )
@@ -325,6 +437,10 @@ def build_comparison_data(rows: list[dict], value_kind: str):
 
     grid, failure_grid = combine_samples(samples, sample_statuses)
     processed_share_grid = combine_processed_share(processed_share_samples, sample_statuses)
+    if value_kind == "work-amplification":
+        grid, samples = normalize_to_row_baseline(grid, samples, x_values)
+    elif value_kind == "efficiency":
+        grid, samples = normalize_to_efficiency(grid, samples, thread_samples, x_values)
     row_keys, row_labels = filter_empty_rows(row_keys, row_labels, grid)
 
     return (
@@ -390,8 +506,9 @@ def plot_heatmap(
         if entry is not None
     ]
 
+    row_best_value = max if higher_is_better(value_kind) else min
     row_best_times = {
-        key: min(
+        key: row_best_value(
             value
             for value in (grid[key].get(x_value) for x_value in x_values)
             if value is not None
@@ -400,7 +517,9 @@ def plot_heatmap(
         if any(grid[key].get(x_value) is not None for x_value in x_values)
     }
     all_slowdowns = [
-        value / row_best_times[key]
+        row_best_times[key] / value
+        if higher_is_better(value_kind)
+        else value / row_best_times[key]
         for key in row_keys
         if key in row_best_times
         for value in (grid[key].get(x_value) for x_value in x_values)
@@ -422,7 +541,12 @@ def plot_heatmap(
     else:
         norm = None
         colorbar_label = value_label(value_kind)
-    cmap = plt.get_cmap("RdYlGn_r")  # reversed so green=fast, red=slow
+    if color_mode == "row-slowdown":
+        cmap = plt.get_cmap("RdYlGn_r")  # green=best, red=worse than row best
+    elif higher_is_better(value_kind):
+        cmap = plt.get_cmap("RdYlGn")
+    else:
+        cmap = plt.get_cmap("RdYlGn_r")  # green=low, red=high
 
     if compact_columns:
         fig_width = max(6.6, 0.75 * n_cols + 2.4)
@@ -461,7 +585,7 @@ def plot_heatmap(
                 color = "white"
             else:
                 if color_mode == "row-slowdown" and best_value is not None:
-                    slowdown = value / best_value
+                    slowdown = best_value / value if higher_is_better(value_kind) else value / best_value
                     color = cmap(norm(slowdown)) if norm is not None else "white"
                     if value_kind == "visited-nodes":
                         processed_share = processed_share_grid[key].get(x_value)
@@ -469,6 +593,10 @@ def plot_heatmap(
                             label = f"{format_value(value, value_kind)}\n({processed_share:.0%})"
                         else:
                             label = f"{format_value(value, value_kind)}\n(n/a)"
+                    elif value_kind == "work-amplification":
+                        label = format_value(value, value_kind)
+                    elif value_kind == "efficiency":
+                        label = format_value(value, value_kind)
                     else:
                         label = f"{format_value(value, value_kind)}\n({slowdown:.1f}x)"
                 else:
@@ -479,6 +607,10 @@ def plot_heatmap(
                             label = f"{format_value(value, value_kind)}\n({processed_share:.0%})"
                         else:
                             label = f"{format_value(value, value_kind)}\n(n/a)"
+                    elif value_kind == "work-amplification":
+                        label = format_value(value, value_kind)
+                    elif value_kind == "efficiency":
+                        label = format_value(value, value_kind)
                     elif baseline_value is not None:
                         speedup = baseline_value / value
                         label = f"{format_value(value, value_kind)}\n({speedup:.1f}x)"
