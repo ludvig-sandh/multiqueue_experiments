@@ -196,3 +196,9 @@ target_link_libraries(knapsack_seq_stack PRIVATE benchmark_base)
 
 add_executable(mdkp_seq_pq mdkp_seq_pq.cpp)
 target_link_libraries(mdkp_seq_pq PRIVATE benchmark_base)
+
+add_executable(mdkp_seq_stack mdkp_seq_stack.cpp)
+target_link_libraries(mdkp_seq_stack PRIVATE benchmark_base)
+
+add_executable(mdkp_work_stealing mdkp_work_stealing.cpp)
+target_link_libraries(mdkp_work_stealing PRIVATE benchmark_base)
