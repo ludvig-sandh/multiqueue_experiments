@@ -1,611 +1,707 @@
 problem,pq_type,name,instance,threads,batch,status,returncode,time_s,processed_nodes,ignored_nodes
-max_clique,seq_stack,Sequential Stack,DSJC1000_5,1,,ok,0,187.101512216,18010144,76403986
-max_clique,seq_stack,Sequential Stack,DSJC1000_5,1,,ok,0,188.374613167,18010144,76403986
-max_clique,seq_stack,Sequential Stack,DSJC1000_5,1,,ok,0,188.026559972,18010144,76403986
-max_clique,seq_stack,Sequential Stack,DSJC1000_5,1,,ok,0,187.8735934,18010144,76403986
-max_clique,seq_stack,Sequential Stack,DSJC1000_5,1,,ok,0,187.545571599,18010144,76403986
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,1,16,ok,0,182.251776027,18010144,76403949
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,1,16,ok,0,183.477052954,18010144,76403949
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,1,16,ok,0,182.82082791,18010144,76403949
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,1,16,ok,0,182.382484802,18010144,76403949
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,1,16,ok,0,184.256863833,18010144,76403949
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,2,16,ok,0,93.446810831,18010379,76404645
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,2,16,ok,0,93.938122788,18085018,76616593
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,2,16,ok,0,94.302593044,18146526,76837083
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,2,16,ok,0,93.576143808,18081683,76630793
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,2,16,ok,0,93.917703962,18010872,76406196
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,4,16,ok,0,47.612199279,18005604,76390031
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,4,16,ok,0,47.399466451,18004599,76387532
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,4,16,ok,0,47.347526157,18004174,76385832
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,4,16,ok,0,47.411209027,18003831,76384891
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,4,16,ok,0,47.656045283,18004076,76386032
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,8,16,ok,0,24.010777748,18020775,76438735
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,8,16,ok,0,23.852230869,17995443,76359732
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,8,16,ok,0,23.932296815,18027791,76460550
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,8,16,ok,0,23.878085246,18028620,76463339
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,8,16,ok,0,23.908020382,18027215,76460015
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,16,16,ok,0,13.847042771,18084221,76620815
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,16,16,ok,0,13.891019707,18037026,76486460
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,16,16,ok,0,13.896433589,18041132,76504089
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,16,16,ok,0,13.864836711,18074706,76606252
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,16,16,ok,0,13.847199581,18105463,76704031
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,32,16,ok,0,8.966244415,18000629,76378164
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,32,16,ok,0,9.214647881,18604725,78317245
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,32,16,ok,0,9.030670176,18177794,76935751
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,32,16,ok,0,9.075899066,18338934,77448137
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,32,16,ok,0,8.994337126,18034618,76482081
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,64,16,ok,0,7.947326476,19497629,81102998
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,64,16,ok,0,7.284781689,18099333,76705456
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,64,16,ok,0,7.796300914,19189299,80103818
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,64,16,ok,0,7.381446333,18008407,76401302
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,64,16,ok,0,7.493065853,18195715,76995607
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,128,16,ok,0,7.818280258,18699360,78645716
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,128,16,ok,0,7.605868614,18065912,76586353
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,128,16,ok,0,8.050224925,19036041,79647458
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,128,16,ok,0,7.596195232,18002713,76400370
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,128,16,ok,0,7.723094366,18362859,77561685
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,256,16,ok,0,8.954303823,18884089,79245844
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,256,16,ok,0,9.100385079,18326544,77459148
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,256,16,ok,0,8.753672475,18482831,77975475
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,256,16,ok,0,9.18602152,18341211,77502570
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,256,16,ok,0,9.116844896,18066818,76622066
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,12.149229604,18101719,76748977
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,12.245695188,18145174,76870147
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,12.380317239,18379165,77641106
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,12.696741245,18898853,79290742
-max_clique,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,13.314333713,20060046,82959341
-max_clique,pmc,PMC library,DSJC1000_5,1,,ok,0,194.65227615,,
-max_clique,pmc,PMC library,DSJC1000_5,1,,ok,0,194.790741677,,
-max_clique,pmc,PMC library,DSJC1000_5,1,,ok,0,195.10622675,,
-max_clique,pmc,PMC library,DSJC1000_5,1,,ok,0,194.924213384,,
-max_clique,pmc,PMC library,DSJC1000_5,1,,ok,0,194.938976953,,
-max_clique,pmc,PMC library,DSJC1000_5,2,,ok,0,97.956820519,,
-max_clique,pmc,PMC library,DSJC1000_5,2,,ok,0,97.984901752,,
-max_clique,pmc,PMC library,DSJC1000_5,2,,ok,0,97.973125037,,
-max_clique,pmc,PMC library,DSJC1000_5,2,,ok,0,97.984322521,,
-max_clique,pmc,PMC library,DSJC1000_5,2,,ok,0,97.875381918,,
-max_clique,pmc,PMC library,DSJC1000_5,4,,ok,0,49.512971165,,
-max_clique,pmc,PMC library,DSJC1000_5,4,,ok,0,49.450808413,,
-max_clique,pmc,PMC library,DSJC1000_5,4,,ok,0,49.468843161,,
-max_clique,pmc,PMC library,DSJC1000_5,4,,ok,0,49.551842283,,
-max_clique,pmc,PMC library,DSJC1000_5,4,,ok,0,49.464911241,,
-max_clique,pmc,PMC library,DSJC1000_5,8,,ok,0,25.026315783,,
-max_clique,pmc,PMC library,DSJC1000_5,8,,ok,0,25.011142528,,
-max_clique,pmc,PMC library,DSJC1000_5,8,,ok,0,25.032853248,,
-max_clique,pmc,PMC library,DSJC1000_5,8,,ok,0,25.028315689,,
-max_clique,pmc,PMC library,DSJC1000_5,8,,ok,0,25.025462232,,
-max_clique,pmc,PMC library,DSJC1000_5,16,,ok,0,12.849373502,,
-max_clique,pmc,PMC library,DSJC1000_5,16,,ok,0,12.875077991,,
-max_clique,pmc,PMC library,DSJC1000_5,16,,ok,0,12.853303721,,
-max_clique,pmc,PMC library,DSJC1000_5,16,,ok,0,12.893075252,,
-max_clique,pmc,PMC library,DSJC1000_5,16,,ok,0,12.871247961,,
-max_clique,pmc,PMC library,DSJC1000_5,32,,ok,0,6.759582938,,
-max_clique,pmc,PMC library,DSJC1000_5,32,,ok,0,6.753208235,,
-max_clique,pmc,PMC library,DSJC1000_5,32,,ok,0,6.756673713,,
-max_clique,pmc,PMC library,DSJC1000_5,32,,ok,0,6.754690398,,
-max_clique,pmc,PMC library,DSJC1000_5,32,,ok,0,6.754261598,,
-max_clique,pmc,PMC library,DSJC1000_5,64,,ok,0,3.79066918,,
-max_clique,pmc,PMC library,DSJC1000_5,64,,ok,0,3.783560993,,
-max_clique,pmc,PMC library,DSJC1000_5,64,,ok,0,3.78596182,,
-max_clique,pmc,PMC library,DSJC1000_5,64,,ok,0,3.78651175,,
-max_clique,pmc,PMC library,DSJC1000_5,64,,ok,0,3.787562453,,
-max_clique,pmc,PMC library,DSJC1000_5,128,,ok,0,2.330844833,,
-max_clique,pmc,PMC library,DSJC1000_5,128,,ok,0,2.326823484,,
-max_clique,pmc,PMC library,DSJC1000_5,128,,ok,0,2.336419526,,
-max_clique,pmc,PMC library,DSJC1000_5,128,,ok,0,2.333568799,,
-max_clique,pmc,PMC library,DSJC1000_5,128,,ok,0,2.323889387,,
-max_clique,pmc,PMC library,DSJC1000_5,256,,ok,0,1.704478544,,
-max_clique,pmc,PMC library,DSJC1000_5,256,,ok,0,1.697654088,,
-max_clique,pmc,PMC library,DSJC1000_5,256,,ok,0,1.701854967,,
-max_clique,pmc,PMC library,DSJC1000_5,256,,ok,0,1.698001418,,
-max_clique,pmc,PMC library,DSJC1000_5,256,,ok,0,1.697804768,,
-max_clique,pmc,PMC library,DSJC1000_5,512,,ok,0,1.973451176,,
-max_clique,pmc,PMC library,DSJC1000_5,512,,ok,0,1.96619314,,
-max_clique,pmc,PMC library,DSJC1000_5,512,,ok,0,1.973709937,,
-max_clique,pmc,PMC library,DSJC1000_5,512,,ok,0,1.962813291,,
-max_clique,pmc,PMC library,DSJC1000_5,512,,ok,0,1.966089919,,
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,1,16,ok,0,185.545713413,18010144,76403949
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,1,16,ok,0,183.388692537,18010144,76403949
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,1,16,ok,0,182.841614134,18010144,76403949
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,1,16,ok,0,184.535292565,18010144,76403949
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,1,16,ok,0,183.897844601,18010144,76403949
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,2,16,ok,0,92.966706244,18119795,76806418
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,2,16,ok,0,92.476876644,18119211,76804552
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,2,16,ok,0,93.513331498,18118737,76802549
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,2,16,ok,0,93.145375384,18118997,76803753
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,2,16,ok,0,92.469701838,18119302,76804739
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,4,16,ok,0,46.988122978,18341415,77607274
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,4,16,ok,0,46.734334317,18337975,77596440
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,4,16,ok,0,46.944499372,18342013,77609312
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,4,16,ok,0,46.72655178,18342504,77610745
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,4,16,ok,0,47.04471796,18341144,77606652
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,8,16,ok,0,23.880328723,18826733,79149648
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,8,16,ok,0,23.963815514,18828830,79162629
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,8,16,ok,0,23.837381539,18830636,79162079
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,8,16,ok,0,23.873802762,18826725,79154276
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,8,16,ok,0,23.960971964,18837671,79184467
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,16,16,ok,0,12.400810231,19861066,82297341
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,16,16,ok,0,12.258425297,19883639,82356285
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,16,16,ok,0,12.370516822,19827382,82196754
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,16,16,ok,0,12.367094004,19835602,82221023
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,16,16,ok,0,12.358549609,19869558,82317685
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,32,16,ok,0,6.599851443,21938733,88616936
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,32,16,ok,0,6.548448997,21925080,88579923
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,32,16,ok,0,6.534581816,21943312,88635023
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,32,16,ok,0,6.592126135,21986273,88765804
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,32,16,ok,0,6.571506509,21964713,88693993
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,64,16,ok,0,3.251598908,21552170,87446470
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,64,16,ok,0,3.280301953,21595918,87579166
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,64,16,ok,0,3.254465754,21548564,87435992
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,64,16,ok,0,3.251011946,21557262,87462674
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,64,16,ok,0,3.302886003,21693811,87879421
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,128,16,ok,0,1.706984681,20571970,84403631
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,128,16,ok,0,1.726772036,20664508,84694830
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,128,16,ok,0,1.762377267,21342119,86766843
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,128,16,ok,0,1.70954908,20542314,84313927
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,128,16,ok,0,1.708296351,20565332,84382328
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,256,16,ok,0,1.319067329,19300469,80458020
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,256,16,ok,0,1.313209846,19301047,80458949
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,256,16,ok,0,1.321047523,19299729,80456118
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,256,16,ok,0,1.318758778,19300311,80458300
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,256,16,ok,0,1.333706863,19865106,82189355
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.735743357,18423567,77765067
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.717580976,18417606,77748755
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.754932091,18441847,77811918
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.751097342,18393742,77664451
-max_clique,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.747861165,18713800,78677485
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,183.030089883,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.629029899,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.734131556,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.342487988,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.95623331,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,184.044733804,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.800505899,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,183.063792632,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,183.00761302,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.596183738,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.070175706,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.276547499,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,184.636798102,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,184.114449624,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,181.783704684,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.894520564,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,183.762453166,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,181.927313234,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.333680274,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,183.661814743,18010144,76403949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.014419827,18013145,76410416
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,93.530524995,18294100,77313796
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.752402035,18002536,76383452
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.962272213,18227930,77100458
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.424837317,18006109,76392383
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,94.393909814,18456091,77830381
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.389348225,18026465,76455150
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.942366071,18010529,76405889
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.946628905,18225163,77096427
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.382173633,18013702,76414480
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.458129953,18010788,76406988
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,93.363686774,18229911,77107666
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,93.052062188,18296199,77311936
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.937074462,18242105,77145931
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,93.541858982,18529703,78063431
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,91.829843119,18007638,76397412
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.379294094,18010697,76405917
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,91.890762359,18018893,76432269
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,91.885229056,18002184,76382205
-max_clique,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.403396098,18019536,76433953
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.480408394,18058231,76535110
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.635600211,18175147,76934438
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.342359895,18007217,76396201
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.242890856,18397410,77645143
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.463156585,18090378,76664764
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.026617257,18298548,77319912
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,48.05608941,19098924,79849946
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.756896218,17998000,76369284
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,48.039662223,19098828,79880527
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.062460138,18334473,77427947
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.90368066,18349149,77495375
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.663382834,18650880,78444062
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.788797985,19081822,79823810
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.653868638,18725646,78681498
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.740484325,18029870,76469538
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.292290428,18066600,76579988
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.675768861,18183386,76960836
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.734403602,18366071,77535179
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,50.176606862,20288559,83641820
-max_clique,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.74697807,18297777,77307632
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.014425107,17972063,76286342
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.579127433,18571377,78190262
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,24.293456463,19233253,80288674
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.332500734,18118035,76732114
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.184752174,18010829,76407262
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.677836612,18518871,78035473
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.844654363,18489357,77927159
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.427895483,18293487,77304407
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.605274181,18368013,77531787
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.29037425,18258009,77185352
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.37533073,18212619,77042499
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,24.59845745,19798808,82085695
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.081216005,17985236,76322840
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.277523592,18142166,76830119
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,24.579575429,19762346,81954493
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.32151745,18188660,76972581
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.469156178,18314315,77366413
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.198757137,18005044,76379379
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.383072896,18311747,77354480
-max_clique,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.225530136,18127814,76770490
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.808055702,20589461,84571232
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.809708611,18312695,77351634
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.886855023,18400445,77643617
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.338771588,19550775,81255310
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.520910373,19894470,82348756
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.750434574,20438261,84022774
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.825045836,18083555,76627603
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.805954793,18264467,77218603
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.88531516,18431789,77745741
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.474725,19793961,82069243
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.68302941,17974031,76289136
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.896379974,18389084,77591527
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.559111679,20008089,82659777
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.315387046,19392168,80738615
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.722064716,17937240,76165041
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.971993332,18649611,78412145
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.872797691,18297830,77313559
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.136683989,19052330,79701005
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.809381971,18249435,77139343
-max_clique,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.204925001,19240032,80303285
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.030715076,18611983,78304915
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.994766435,18513293,77999371
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.908993235,18055833,76545065
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.927574416,18302548,77285158
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.109790842,19064899,79675623
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.201018174,19477903,80997254
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.177744843,19290681,80429423
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.972608126,18409287,77665110
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.961375311,18259202,77189862
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.000555069,18524325,77987221
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.006542072,18619176,78324913
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.249060461,19780958,81976766
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.894753553,18090076,76651794
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.081209708,18873593,79100235
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.871424011,17909990,76081163
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.931357865,18193491,76949510
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.031620297,18699511,78583351
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.907429571,18031956,76460843
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.935256113,18184464,76918025
-max_clique,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.895294054,18068814,76582385
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.198384775,20362121,83793172
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.961375277,17965002,76245664
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.084994082,19215128,80188241
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.011135888,18467796,77842922
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.008618972,18444851,77747437
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.991932486,18343867,77459442
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.950945804,17916529,76105904
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.967324401,18011579,76405189
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.996349515,18385857,77573189
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.003620442,18298671,77318818
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.959483904,17953584,76226402
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.06597774,18823481,78954940
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.948897089,17926046,76135835
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.95339926,17937382,76173999
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.09747922,19372649,80714532
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.076006703,19155076,79981849
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.001903698,18415969,77698919
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.955022084,17939950,76187743
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.992389057,18180258,76953682
-max_clique,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.950649493,17920841,76123826
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.649505299,18838592,79032949
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.672915802,19262175,80334060
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.710687205,19911920,82377150
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.608552888,17992255,76352707
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.602787396,17929375,76152426
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.672302131,19126848,79892793
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.610674613,17934671,76163307
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.616734577,17951474,76223054
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.616762557,18188598,76985512
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.617519388,18189064,76981729
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.621648407,18196527,76999952
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.602522515,17903385,76073772
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.62732398,18122711,76754481
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.625003245,18037960,76502721
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.747279357,20379061,83837146
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.698654519,19603115,81426262
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.629234654,18203902,77015588
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.606996765,17912539,76101715
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.61811889,18074432,76604093
-max_clique,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.758414972,20548653,84400273
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.26310301,17982448,76317918
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.261894987,17933312,76173029
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.29041051,18617889,78328435
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.268659872,18012833,76418866
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.260125794,17915022,76118307
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.263481541,17943938,76208191
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.260775164,17931958,76169749
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.294320589,18753809,78779283
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.272627741,18263344,77217917
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.277651362,18449608,77805044
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.266020406,17952426,76235184
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.306862557,18973938,79470319
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.266742218,17967962,76283690
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.270963737,18058985,76569587
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.269293234,18096163,76687329
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.270150165,18053375,76549472
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.25893488,17991875,76358533
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.255047422,17934776,76179238
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.2541649,17985302,76338609
-max_clique,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.260773845,17935040,76177597
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.769557212,19796115,82068889
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.701801282,18069796,76615663
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.721913396,18738392,78695161
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.724073991,19168804,80068482
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.712061395,18432671,77761056
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.702763333,18333460,77443419
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.700087317,17971359,76308913
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.709164048,18457368,77841998
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.695669737,18045451,76540344
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.743724964,19609096,81490234
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.728951582,19106822,79866403
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.711088842,18016925,76453855
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.710599231,18219635,77080446
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.711901693,18136235,76830466
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.701710841,17974438,76314961
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.709211227,18235344,77142303
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.738795413,18444340,77799288
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.737467161,19640092,81610919
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.707996715,18376109,77584836
-max_clique,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.705072848,17970106,76303242
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,1,16,ok,0,180.391048259,18010144,76403949
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,1,16,ok,0,180.756505363,18010144,76403949
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,1,16,ok,0,178.983589691,18010144,76403949
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,1,16,ok,0,180.258699001,18010144,76403949
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,1,16,ok,0,181.385698964,18010144,76403949
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,2,16,ok,0,183.21846683,18009991,76403559
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,2,16,ok,0,179.765900584,18010004,76403609
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,2,16,ok,0,182.558292288,18010135,76403889
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,2,16,ok,0,181.796382794,18010135,76403913
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,2,16,ok,0,184.266110734,18010144,76403947
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,4,16,ok,0,178.914650171,18010074,76403756
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,4,16,ok,0,181.021327657,18008229,76397488
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,4,16,ok,0,180.595303055,18010136,76403844
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,4,16,ok,0,182.904965063,18009116,76400704
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,4,16,ok,0,181.279196163,18010177,76404002
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,8,16,ok,0,103.644212882,18073449,76612821
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,8,16,ok,0,103.929794498,18096591,76690580
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,8,16,ok,0,105.383099392,18285382,77284968
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,8,16,ok,0,102.827539201,18015511,76423119
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,8,16,ok,0,103.76543932,18079370,76628915
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,16,16,ok,0,89.745350813,18298306,77321521
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,16,16,ok,0,90.137896805,18392461,77623586
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,16,16,ok,0,88.802933647,18032284,76478550
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,16,16,ok,0,89.584086158,18286862,77285539
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,16,16,ok,0,89.616035713,18389587,77611722
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,32,16,ok,0,70.513473452,18291157,77297340
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,32,16,ok,0,74.405573788,19427187,80893273
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,32,16,ok,0,69.576657444,18099638,76691100
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,32,16,ok,0,70.477867234,18262181,77210144
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,32,16,ok,0,70.082548823,18165075,76899175
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,64,16,ok,0,53.747949223,18014922,76420912
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,64,16,ok,0,54.292672734,18242128,77140436
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,64,16,ok,0,58.931295626,19606132,81527405
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,64,16,ok,0,54.895463127,18372281,77576358
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,64,16,ok,0,54.071260313,18169990,76922570
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,128,16,ok,0,42.188246441,18310232,77359207
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,128,16,ok,0,43.370127458,18747882,78738349
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,128,16,ok,0,43.076119868,18711559,78636170
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,128,16,ok,0,42.411258681,18327137,77418556
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,128,16,ok,0,46.33904306,19875946,82346145
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,256,16,ok,0,33.812260779,19302778,80484017
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,256,16,ok,0,31.898761749,18141614,76827492
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,256,16,ok,0,33.929978611,19308194,80515536
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,256,16,ok,0,32.213154606,18329532,77410292
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,256,16,ok,0,32.080450608,18320311,77371252
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,512,16,ok,0,27.520504082,18718115,78646471
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,512,16,ok,0,26.932981905,18336721,77454570
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,512,16,ok,0,27.088532606,18332995,77421845
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,512,16,ok,0,27.24795771,18449364,77781945
-max_clique,treiber_stack,Treiber stack (elimination),DSJC1000_5,512,16,ok,0,26.829175322,18124033,76787715
-max_clique,2d_stack,2D stack,DSJC1000_5,1,16,ok,0,187.002479202,18127028,76774965
-max_clique,2d_stack,2D stack,DSJC1000_5,1,16,ok,0,187.827974593,18127028,76774965
-max_clique,2d_stack,2D stack,DSJC1000_5,1,16,ok,0,185.976392105,18127028,76774965
-max_clique,2d_stack,2D stack,DSJC1000_5,1,16,ok,0,186.990930777,18127028,76774965
-max_clique,2d_stack,2D stack,DSJC1000_5,1,16,ok,0,186.303012462,18127028,76774965
-max_clique,2d_stack,2D stack,DSJC1000_5,2,16,ok,0,95.282802123,18235639,77125218
-max_clique,2d_stack,2D stack,DSJC1000_5,2,16,ok,0,95.733546887,17884243,76003614
-max_clique,2d_stack,2D stack,DSJC1000_5,2,16,ok,0,97.744302848,18670512,78516376
-max_clique,2d_stack,2D stack,DSJC1000_5,2,16,ok,0,94.6059782,17993910,76355168
-max_clique,2d_stack,2D stack,DSJC1000_5,2,16,ok,0,97.016431739,18214220,77057883
-max_clique,2d_stack,2D stack,DSJC1000_5,4,16,ok,0,47.654192897,18090498,76659245
-max_clique,2d_stack,2D stack,DSJC1000_5,4,16,ok,0,50.065957941,19166234,80044779
-max_clique,2d_stack,2D stack,DSJC1000_5,4,16,ok,0,48.11513297,18098123,76681994
-max_clique,2d_stack,2D stack,DSJC1000_5,4,16,ok,0,48.461012377,18160535,76895138
-max_clique,2d_stack,2D stack,DSJC1000_5,4,16,ok,0,49.922529202,18023593,76438269
-max_clique,2d_stack,2D stack,DSJC1000_5,8,16,ok,0,25.032723881,19391442,80737747
-max_clique,2d_stack,2D stack,DSJC1000_5,8,16,ok,0,23.951835098,18215302,77056063
-max_clique,2d_stack,2D stack,DSJC1000_5,8,16,ok,0,24.760313328,19252743,80323643
-max_clique,2d_stack,2D stack,DSJC1000_5,8,16,ok,0,25.93820446,20839638,85311432
-max_clique,2d_stack,2D stack,DSJC1000_5,8,16,ok,0,25.373277948,19599791,81433962
-max_clique,2d_stack,2D stack,DSJC1000_5,16,16,ok,0,12.317749193,18308629,77355556
-max_clique,2d_stack,2D stack,DSJC1000_5,16,16,ok,0,12.761322013,18930561,79284190
-max_clique,2d_stack,2D stack,DSJC1000_5,16,16,ok,0,12.441667762,18053962,76532966
-max_clique,2d_stack,2D stack,DSJC1000_5,16,16,ok,0,12.244037147,17920647,76113397
-max_clique,2d_stack,2D stack,DSJC1000_5,16,16,ok,0,12.148317182,17900889,76054744
-max_clique,2d_stack,2D stack,DSJC1000_5,32,16,ok,0,6.342160029,18566666,78168384
-max_clique,2d_stack,2D stack,DSJC1000_5,32,16,ok,0,6.442201165,18760284,78752286
-max_clique,2d_stack,2D stack,DSJC1000_5,32,16,ok,0,6.184421828,17996453,76347640
-max_clique,2d_stack,2D stack,DSJC1000_5,32,16,ok,0,6.937843831,21007299,85886985
-max_clique,2d_stack,2D stack,DSJC1000_5,32,16,ok,0,6.268356329,18217470,77059617
-max_clique,2d_stack,2D stack,DSJC1000_5,64,16,ok,0,3.254339906,18911318,79238986
-max_clique,2d_stack,2D stack,DSJC1000_5,64,16,ok,0,3.15308412,18083740,76639074
-max_clique,2d_stack,2D stack,DSJC1000_5,64,16,ok,0,3.164435944,17988398,76334381
-max_clique,2d_stack,2D stack,DSJC1000_5,64,16,ok,0,3.138339798,17925443,76137620
-max_clique,2d_stack,2D stack,DSJC1000_5,64,16,ok,0,3.306122207,19341299,80569649
-max_clique,2d_stack,2D stack,DSJC1000_5,128,16,ok,0,1.740549546,18818354,78933071
-max_clique,2d_stack,2D stack,DSJC1000_5,128,16,ok,0,1.74724713,18532811,78062487
-max_clique,2d_stack,2D stack,DSJC1000_5,128,16,ok,0,1.707736246,18126363,76786129
-max_clique,2d_stack,2D stack,DSJC1000_5,128,16,ok,0,1.722865998,18577038,78196887
-max_clique,2d_stack,2D stack,DSJC1000_5,128,16,ok,0,1.692991674,18110944,76724406
-max_clique,2d_stack,2D stack,DSJC1000_5,256,16,ok,0,1.316003847,18041395,76511602
-max_clique,2d_stack,2D stack,DSJC1000_5,256,16,ok,0,1.327572592,18390225,77609559
-max_clique,2d_stack,2D stack,DSJC1000_5,256,16,ok,0,1.323297343,18160577,76898137
-max_clique,2d_stack,2D stack,DSJC1000_5,256,16,ok,0,1.323480833,18263411,77216467
-max_clique,2d_stack,2D stack,DSJC1000_5,256,16,ok,0,1.348649507,18654904,78443677
-max_clique,2d_stack,2D stack,DSJC1000_5,512,16,ok,0,0.770431479,20043124,82791856
-max_clique,2d_stack,2D stack,DSJC1000_5,512,16,ok,0,0.723157298,18218399,77080321
-max_clique,2d_stack,2D stack,DSJC1000_5,512,16,ok,0,0.724865571,18374406,77580519
-max_clique,2d_stack,2D stack,DSJC1000_5,512,16,ok,0,0.727444617,18153288,76862847
-max_clique,2d_stack,2D stack,DSJC1000_5,512,16,ok,0,0.726684045,18190444,76987896
-max_clique,seq_pq,Sequential PQ,DSJC1000_5,1,,ok,0,221.738658873,18032555,76002258
-max_clique,seq_pq,Sequential PQ,DSJC1000_5,1,,ok,0,221.522105027,18032555,76002258
-max_clique,seq_pq,Sequential PQ,DSJC1000_5,1,,ok,0,222.102098075,18032555,76002258
-max_clique,seq_pq,Sequential PQ,DSJC1000_5,1,,ok,0,222.251078062,18032555,76002258
-max_clique,seq_pq,Sequential PQ,DSJC1000_5,1,,ok,0,222.006681761,18032555,76002258
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,1,16,ok,0,205.212584131,18116299,77061973
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,1,16,ok,0,204.8382701,18116299,77061973
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,1,16,ok,0,203.947386577,18116299,77061973
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,1,16,ok,0,204.242541898,18116299,77061973
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,1,16,ok,0,203.574525522,18116299,77061973
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,2,16,ok,0,105.03389145,18115480,77059132
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,2,16,ok,0,105.676779212,18115582,77059509
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,2,16,ok,0,104.941902719,18115370,77058642
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,2,16,ok,0,105.221611157,18115479,77059069
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,2,16,ok,0,104.952495726,18115469,77059042
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,4,16,ok,0,54.22547135,18116448,77062630
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,4,16,ok,0,54.106756503,18116246,77061770
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,4,16,ok,0,54.175432894,18116008,77060876
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,4,16,ok,0,54.142779533,18115368,77058694
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,4,16,ok,0,53.98128683,18116456,77062569
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,8,16,ok,0,29.343665013,18117996,77067493
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,8,16,ok,0,29.331568886,18116189,77061665
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,8,16,ok,0,29.372579527,18117071,77064585
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,8,16,ok,0,29.305669846,18117048,77064743
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,8,16,ok,0,29.321454411,18116236,77061738
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,16,16,ok,0,43.833945992,18121450,77079787
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,16,16,ok,0,43.971888873,18121661,77080504
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,16,16,ok,0,44.051781273,18127837,77102011
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,16,16,ok,0,44.146517217,18125850,77095203
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,16,16,ok,0,43.878774152,18122564,77083522
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,32,16,ok,0,50.670536109,18114985,77059235
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,32,16,ok,0,49.918195642,18116786,77066069
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,32,16,ok,0,49.953875652,18118537,77073066
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,32,16,ok,0,50.958133058,18115249,77060749
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,32,16,ok,0,50.000105567,18114971,77059116
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,64,16,ok,0,54.607189478,18117455,77072815
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,64,16,ok,0,53.601791409,18116342,77066736
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,64,16,ok,0,54.521951406,18113682,77057527
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,64,16,ok,0,54.429647377,18115708,77064616
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,64,16,ok,0,53.985877636,18119023,77076885
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,128,16,ok,0,54.834047966,18130570,77117820
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,128,16,ok,0,54.791607181,18123011,77092188
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,128,16,ok,0,55.329783708,18132586,77124400
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,128,16,ok,0,54.501786945,18140119,77150692
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,128,16,ok,0,55.383621332,18129089,77111078
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,256,16,ok,0,52.815524871,18172271,77263673
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,256,16,ok,0,53.055632097,18169602,77254174
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,256,16,ok,0,52.928198817,18161087,77223155
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,256,16,ok,0,53.249475147,18160766,77222636
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,256,16,ok,0,53.334453539,18167952,77251011
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,92.238830148,18236867,77505161
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,94.436165892,18232148,77488851
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,92.089873103,18239963,77497743
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,92.332250922,18239460,77510819
-max_clique,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,93.774077741,18233132,77482923
-max_clique,pr,PR,DSJC1000_5,1,16,ok,0,207.931788663,18096522,76992330
-max_clique,pr,PR,DSJC1000_5,1,16,ok,0,209.396896522,18096522,76992330
-max_clique,pr,PR,DSJC1000_5,1,16,ok,0,209.125174707,18096522,76992330
-max_clique,pr,PR,DSJC1000_5,1,16,ok,0,209.250021072,18096522,76992330
-max_clique,pr,PR,DSJC1000_5,1,16,ok,0,208.142616712,18096522,76992330
-max_clique,pr,PR,DSJC1000_5,2,16,ok,0,106.141007921,18096551,76992468
-max_clique,pr,PR,DSJC1000_5,2,16,ok,0,106.218766767,18096555,76992438
-max_clique,pr,PR,DSJC1000_5,2,16,ok,0,107.941893064,18096521,76992322
-max_clique,pr,PR,DSJC1000_5,2,16,ok,0,106.445667879,18096555,76992449
-max_clique,pr,PR,DSJC1000_5,2,16,ok,0,106.061536463,18096539,76992445
-max_clique,pr,PR,DSJC1000_5,4,16,ok,0,53.705418957,18096593,76992612
-max_clique,pr,PR,DSJC1000_5,4,16,ok,0,53.743552591,18096602,76992662
-max_clique,pr,PR,DSJC1000_5,4,16,ok,0,53.718347225,18096610,76992660
-max_clique,pr,PR,DSJC1000_5,4,16,ok,0,53.664541636,18096586,76992616
-max_clique,pr,PR,DSJC1000_5,4,16,ok,0,53.753979863,18096602,76992630
-max_clique,pr,PR,DSJC1000_5,8,16,ok,0,27.702634126,18096641,76992843
-max_clique,pr,PR,DSJC1000_5,8,16,ok,0,27.395462962,18096636,76992837
-max_clique,pr,PR,DSJC1000_5,8,16,ok,0,27.263204737,18096693,76993005
-max_clique,pr,PR,DSJC1000_5,8,16,ok,0,27.333870424,18096655,76992910
-max_clique,pr,PR,DSJC1000_5,8,16,ok,0,27.323408421,18096656,76992942
-max_clique,pr,PR,DSJC1000_5,16,16,ok,0,14.706430851,18096864,76994011
-max_clique,pr,PR,DSJC1000_5,16,16,ok,0,14.662877503,18096847,76993692
-max_clique,pr,PR,DSJC1000_5,16,16,ok,0,14.704409545,18096867,76994135
-max_clique,pr,PR,DSJC1000_5,16,16,ok,0,14.642145257,18096873,76993990
-max_clique,pr,PR,DSJC1000_5,16,16,ok,0,14.64351861,18096859,76993867
-max_clique,pr,PR,DSJC1000_5,32,16,ok,0,7.881304692,18097221,76995815
-max_clique,pr,PR,DSJC1000_5,32,16,ok,0,7.890778483,18097112,76995009
-max_clique,pr,PR,DSJC1000_5,32,16,ok,0,7.872539763,18097183,76995215
-max_clique,pr,PR,DSJC1000_5,32,16,ok,0,7.84381004,18097193,76995280
-max_clique,pr,PR,DSJC1000_5,32,16,ok,0,7.853276171,18097413,76996471
-max_clique,pr,PR,DSJC1000_5,64,16,ok,0,5.2346688,18097810,76998485
-max_clique,pr,PR,DSJC1000_5,64,16,ok,0,5.186818415,18097783,76998359
-max_clique,pr,PR,DSJC1000_5,64,16,ok,0,5.083843558,18097756,76998311
-max_clique,pr,PR,DSJC1000_5,64,16,ok,0,5.140425072,18097691,76997957
-max_clique,pr,PR,DSJC1000_5,64,16,ok,0,5.317484184,18097940,76998842
-max_clique,pr,PR,DSJC1000_5,128,16,ok,0,8.121485821,18098892,77004365
-max_clique,pr,PR,DSJC1000_5,128,16,ok,0,7.415471783,18098906,77003756
-max_clique,pr,PR,DSJC1000_5,128,16,ok,0,7.930541449,18098774,77003500
-max_clique,pr,PR,DSJC1000_5,128,16,ok,0,7.738749625,18099071,77004758
-max_clique,pr,PR,DSJC1000_5,128,16,ok,0,7.575623186,18098844,77004087
-max_clique,pr,PR,DSJC1000_5,256,16,ok,0,9.018807941,18100013,77010528
-max_clique,pr,PR,DSJC1000_5,256,16,ok,0,8.603616624,18166951,77216555
-max_clique,pr,PR,DSJC1000_5,256,16,ok,0,8.730539175,18099007,77004901
-max_clique,pr,PR,DSJC1000_5,256,16,ok,0,8.867764687,18098698,77003526
-max_clique,pr,PR,DSJC1000_5,256,16,ok,0,8.925133803,18098179,77000675
-max_clique,pr,PR,DSJC1000_5,512,16,ok,0,17.087267943,18111926,77053956
-max_clique,pr,PR,DSJC1000_5,512,16,ok,0,16.127571526,18201382,77325858
-max_clique,pr,PR,DSJC1000_5,512,16,ok,0,16.249388015,18107462,77040132
-max_clique,pr,PR,DSJC1000_5,512,16,ok,0,15.565153015,18119251,77078761
-max_clique,pr,PR,DSJC1000_5,512,16,ok,0,15.818464474,18153645,77178175
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,1,16,ok,0,208.122541104,18113069,77050378
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,1,16,ok,0,206.59217427,18113069,77050378
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,1,16,ok,0,206.151775656,18113069,77050378
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,1,16,ok,0,206.984524744,18113069,77050378
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,1,16,ok,0,207.373931154,18113069,77050378
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,2,16,ok,0,103.764228661,18106059,77025919
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,2,16,ok,0,103.652790995,18105759,77025025
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,2,16,ok,0,103.850633417,18106824,77028541
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,2,16,ok,0,103.931207492,18107078,77029857
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,2,16,ok,0,104.202777172,18108535,77034655
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,4,16,ok,0,51.933820432,18097350,76995858
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,4,16,ok,0,51.91887453,18094589,76985353
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,4,16,ok,0,52.084189865,18095585,76989039
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,4,16,ok,0,51.993323673,18096755,76993009
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,4,16,ok,0,52.263530092,18096794,76993537
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,8,16,ok,0,25.954495872,18129089,77106431
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,8,16,ok,0,25.916595464,18137172,77135425
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,8,16,ok,0,26.013388298,18134113,77124671
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,8,16,ok,0,25.974766922,18134701,77126685
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,8,16,ok,0,26.046335281,18125385,77093393
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,16,16,ok,0,13.173765335,18105441,77024315
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,16,16,ok,0,13.282636647,18106268,77027333
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,16,16,ok,0,13.292364398,18105619,77024399
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,16,16,ok,0,13.296082338,18116773,77064186
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,16,16,ok,0,13.295427414,18109808,77040110
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,32,16,ok,0,6.614451599,18096979,76995122
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,32,16,ok,0,6.595096175,18091880,76976657
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,32,16,ok,0,6.614307818,18098645,77001095
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,32,16,ok,0,6.620915983,18108509,77037067
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,32,16,ok,0,6.620180282,18106177,77027889
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,64,16,ok,0,3.260939317,18131250,77119880
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,64,16,ok,0,3.276552722,18152793,77190997
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,64,16,ok,0,3.288276357,18120314,77080791
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,64,16,ok,0,3.28513594,18152364,77190139
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,64,16,ok,0,3.274854057,18121237,77082233
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,128,16,ok,0,1.850053607,18099057,77005095
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,128,16,ok,0,1.85142537,18096576,76998800
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,128,16,ok,0,1.879166701,18124378,77099096
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,128,16,ok,0,1.840859356,18141462,77154620
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,128,16,ok,0,1.870308692,18151991,77188741
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,256,16,ok,0,1.580201026,18123352,77092418
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,256,16,ok,0,1.594916948,18102934,77018124
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,256,16,ok,0,1.598489607,18115645,77065759
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,256,16,ok,0,1.603525328,18088896,76968441
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,256,16,ok,0,1.594840399,18112614,77056820
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.376389283,18090159,76963025
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.371197752,18115308,77064577
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.374788439,18072625,76896171
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.382690877,18135611,77138507
-max_clique,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.416929123,18226043,77455076
+Maximum Clique Problem,seq_stack,Sequential Stack,DSJC1000_5,1,,ok,0,187.101512216,18010144,76403986
+Maximum Clique Problem,seq_stack,Sequential Stack,DSJC1000_5,1,,ok,0,188.374613167,18010144,76403986
+Maximum Clique Problem,seq_stack,Sequential Stack,DSJC1000_5,1,,ok,0,188.026559972,18010144,76403986
+Maximum Clique Problem,seq_stack,Sequential Stack,DSJC1000_5,1,,ok,0,187.8735934,18010144,76403986
+Maximum Clique Problem,seq_stack,Sequential Stack,DSJC1000_5,1,,ok,0,187.545571599,18010144,76403986
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,1,16,ok,0,182.251776027,18010144,76403949
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,1,16,ok,0,183.477052954,18010144,76403949
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,1,16,ok,0,182.82082791,18010144,76403949
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,1,16,ok,0,182.382484802,18010144,76403949
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,1,16,ok,0,184.256863833,18010144,76403949
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,2,16,ok,0,93.446810831,18010379,76404645
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,2,16,ok,0,93.938122788,18085018,76616593
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,2,16,ok,0,94.302593044,18146526,76837083
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,2,16,ok,0,93.576143808,18081683,76630793
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,2,16,ok,0,93.917703962,18010872,76406196
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,4,16,ok,0,47.612199279,18005604,76390031
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,4,16,ok,0,47.399466451,18004599,76387532
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,4,16,ok,0,47.347526157,18004174,76385832
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,4,16,ok,0,47.411209027,18003831,76384891
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,4,16,ok,0,47.656045283,18004076,76386032
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,8,16,ok,0,24.010777748,18020775,76438735
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,8,16,ok,0,23.852230869,17995443,76359732
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,8,16,ok,0,23.932296815,18027791,76460550
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,8,16,ok,0,23.878085246,18028620,76463339
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,8,16,ok,0,23.908020382,18027215,76460015
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,16,16,ok,0,13.847042771,18084221,76620815
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,16,16,ok,0,13.891019707,18037026,76486460
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,16,16,ok,0,13.896433589,18041132,76504089
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,16,16,ok,0,13.864836711,18074706,76606252
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,16,16,ok,0,13.847199581,18105463,76704031
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,32,16,ok,0,8.966244415,18000629,76378164
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,32,16,ok,0,9.214647881,18604725,78317245
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,32,16,ok,0,9.030670176,18177794,76935751
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,32,16,ok,0,9.075899066,18338934,77448137
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,32,16,ok,0,8.994337126,18034618,76482081
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,64,16,ok,0,7.947326476,19497629,81102998
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,64,16,ok,0,7.284781689,18099333,76705456
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,64,16,ok,0,7.796300914,19189299,80103818
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,64,16,ok,0,7.381446333,18008407,76401302
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,64,16,ok,0,7.493065853,18195715,76995607
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,128,16,ok,0,7.818280258,18699360,78645716
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,128,16,ok,0,7.605868614,18065912,76586353
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,128,16,ok,0,8.050224925,19036041,79647458
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,128,16,ok,0,7.596195232,18002713,76400370
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,128,16,ok,0,7.723094366,18362859,77561685
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,256,16,ok,0,8.954303823,18884089,79245844
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,256,16,ok,0,9.100385079,18326544,77459148
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,256,16,ok,0,8.753672475,18482831,77975475
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,256,16,ok,0,9.18602152,18341211,77502570
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,256,16,ok,0,9.116844896,18066818,76622066
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,12.149229604,18101719,76748977
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,12.245695188,18145174,76870147
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,12.380317239,18379165,77641106
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,12.696741245,18898853,79290742
+Maximum Clique Problem,locked_stack,Globally locked Stack,DSJC1000_5,512,16,ok,0,13.314333713,20060046,82959341
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,1,,ok,0,194.65227615,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,1,,ok,0,194.790741677,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,1,,ok,0,195.10622675,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,1,,ok,0,194.924213384,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,1,,ok,0,194.938976953,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,2,,ok,0,97.956820519,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,2,,ok,0,97.984901752,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,2,,ok,0,97.973125037,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,2,,ok,0,97.984322521,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,2,,ok,0,97.875381918,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,4,,ok,0,49.512971165,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,4,,ok,0,49.450808413,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,4,,ok,0,49.468843161,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,4,,ok,0,49.551842283,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,4,,ok,0,49.464911241,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,8,,ok,0,25.026315783,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,8,,ok,0,25.011142528,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,8,,ok,0,25.032853248,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,8,,ok,0,25.028315689,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,8,,ok,0,25.025462232,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,16,,ok,0,12.849373502,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,16,,ok,0,12.875077991,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,16,,ok,0,12.853303721,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,16,,ok,0,12.893075252,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,16,,ok,0,12.871247961,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,32,,ok,0,6.759582938,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,32,,ok,0,6.753208235,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,32,,ok,0,6.756673713,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,32,,ok,0,6.754690398,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,32,,ok,0,6.754261598,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,64,,ok,0,3.79066918,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,64,,ok,0,3.783560993,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,64,,ok,0,3.78596182,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,64,,ok,0,3.78651175,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,64,,ok,0,3.787562453,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,128,,ok,0,2.330844833,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,128,,ok,0,2.326823484,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,128,,ok,0,2.336419526,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,128,,ok,0,2.333568799,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,128,,ok,0,2.323889387,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,256,,ok,0,1.704478544,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,256,,ok,0,1.697654088,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,256,,ok,0,1.701854967,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,256,,ok,0,1.698001418,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,256,,ok,0,1.697804768,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,512,,ok,0,1.973451176,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,512,,ok,0,1.96619314,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,512,,ok,0,1.973709937,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,512,,ok,0,1.962813291,,
+Maximum Clique Problem,pmc,PMC,DSJC1000_5,512,,ok,0,1.966089919,,
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,1,16,ok,0,185.545713413,18010144,76403949
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,1,16,ok,0,183.388692537,18010144,76403949
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,1,16,ok,0,182.841614134,18010144,76403949
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,1,16,ok,0,184.535292565,18010144,76403949
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,1,16,ok,0,183.897844601,18010144,76403949
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,2,16,ok,0,92.966706244,18119795,76806418
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,2,16,ok,0,92.476876644,18119211,76804552
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,2,16,ok,0,93.513331498,18118737,76802549
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,2,16,ok,0,93.145375384,18118997,76803753
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,2,16,ok,0,92.469701838,18119302,76804739
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,4,16,ok,0,46.988122978,18341415,77607274
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,4,16,ok,0,46.734334317,18337975,77596440
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,4,16,ok,0,46.944499372,18342013,77609312
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,4,16,ok,0,46.72655178,18342504,77610745
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,4,16,ok,0,47.04471796,18341144,77606652
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,8,16,ok,0,23.880328723,18826733,79149648
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,8,16,ok,0,23.963815514,18828830,79162629
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,8,16,ok,0,23.837381539,18830636,79162079
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,8,16,ok,0,23.873802762,18826725,79154276
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,8,16,ok,0,23.960971964,18837671,79184467
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,16,16,ok,0,12.400810231,19861066,82297341
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,16,16,ok,0,12.258425297,19883639,82356285
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,16,16,ok,0,12.370516822,19827382,82196754
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,16,16,ok,0,12.367094004,19835602,82221023
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,16,16,ok,0,12.358549609,19869558,82317685
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,32,16,ok,0,6.599851443,21938733,88616936
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,32,16,ok,0,6.548448997,21925080,88579923
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,32,16,ok,0,6.534581816,21943312,88635023
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,32,16,ok,0,6.592126135,21986273,88765804
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,32,16,ok,0,6.571506509,21964713,88693993
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,64,16,ok,0,3.251598908,21552170,87446470
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,64,16,ok,0,3.280301953,21595918,87579166
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,64,16,ok,0,3.254465754,21548564,87435992
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,64,16,ok,0,3.251011946,21557262,87462674
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,64,16,ok,0,3.302886003,21693811,87879421
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,128,16,ok,0,1.706984681,20571970,84403631
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,128,16,ok,0,1.726772036,20664508,84694830
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,128,16,ok,0,1.762377267,21342119,86766843
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,128,16,ok,0,1.70954908,20542314,84313927
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,128,16,ok,0,1.708296351,20565332,84382328
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,256,16,ok,0,1.319067329,19300469,80458020
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,256,16,ok,0,1.313209846,19301047,80458949
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,256,16,ok,0,1.321047523,19299729,80456118
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,256,16,ok,0,1.318758778,19300311,80458300
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,256,16,ok,0,1.333706863,19865106,82189355
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.735743357,18423567,77765067
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.717580976,18417606,77748755
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.754932091,18441847,77811918
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.751097342,18393742,77664451
+Maximum Clique Problem,work_stealing,Simple work stealing,DSJC1000_5,512,16,ok,0,0.747861165,18713800,78677485
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,183.030089883,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.629029899,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.734131556,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.342487988,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.95623331,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,184.044733804,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.800505899,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,183.063792632,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,183.00761302,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.596183738,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.070175706,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.276547499,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,184.636798102,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,184.114449624,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,181.783704684,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.894520564,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,183.762453166,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,181.927313234,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,182.333680274,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,1,16,ok,0,183.661814743,18010144,76403949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.014419827,18013145,76410416
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,93.530524995,18294100,77313796
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.752402035,18002536,76383452
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.962272213,18227930,77100458
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.424837317,18006109,76392383
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,94.393909814,18456091,77830381
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.389348225,18026465,76455150
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.942366071,18010529,76405889
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.946628905,18225163,77096427
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.382173633,18013702,76414480
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.458129953,18010788,76406988
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,93.363686774,18229911,77107666
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,93.052062188,18296199,77311936
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.937074462,18242105,77145931
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,93.541858982,18529703,78063431
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,91.829843119,18007638,76397412
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.379294094,18010697,76405917
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,91.890762359,18018893,76432269
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,91.885229056,18002184,76382205
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,2,16,ok,0,92.403396098,18019536,76433953
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.480408394,18058231,76535110
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.635600211,18175147,76934438
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.342359895,18007217,76396201
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.242890856,18397410,77645143
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.463156585,18090378,76664764
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.026617257,18298548,77319912
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,48.05608941,19098924,79849946
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.756896218,17998000,76369284
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,48.039662223,19098828,79880527
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.062460138,18334473,77427947
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.90368066,18349149,77495375
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.663382834,18650880,78444062
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.788797985,19081822,79823810
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,47.653868638,18725646,78681498
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.740484325,18029870,76469538
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.292290428,18066600,76579988
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.675768861,18183386,76960836
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.734403602,18366071,77535179
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,50.176606862,20288559,83641820
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,4,16,ok,0,46.74697807,18297777,77307632
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.014425107,17972063,76286342
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.579127433,18571377,78190262
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,24.293456463,19233253,80288674
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.332500734,18118035,76732114
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.184752174,18010829,76407262
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.677836612,18518871,78035473
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.844654363,18489357,77927159
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.427895483,18293487,77304407
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.605274181,18368013,77531787
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.29037425,18258009,77185352
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.37533073,18212619,77042499
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,24.59845745,19798808,82085695
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.081216005,17985236,76322840
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.277523592,18142166,76830119
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,24.579575429,19762346,81954493
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.32151745,18188660,76972581
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.469156178,18314315,77366413
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.198757137,18005044,76379379
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.383072896,18311747,77354480
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,8,16,ok,0,23.225530136,18127814,76770490
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.808055702,20589461,84571232
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.809708611,18312695,77351634
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.886855023,18400445,77643617
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.338771588,19550775,81255310
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.520910373,19894470,82348756
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.750434574,20438261,84022774
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.825045836,18083555,76627603
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.805954793,18264467,77218603
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.88531516,18431789,77745741
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.474725,19793961,82069243
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.68302941,17974031,76289136
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.896379974,18389084,77591527
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.559111679,20008089,82659777
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.315387046,19392168,80738615
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.722064716,17937240,76165041
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.971993332,18649611,78412145
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.872797691,18297830,77313559
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.136683989,19052330,79701005
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,11.809381971,18249435,77139343
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,16,16,ok,0,12.204925001,19240032,80303285
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.030715076,18611983,78304915
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.994766435,18513293,77999371
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.908993235,18055833,76545065
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.927574416,18302548,77285158
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.109790842,19064899,79675623
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.201018174,19477903,80997254
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.177744843,19290681,80429423
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.972608126,18409287,77665110
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.961375311,18259202,77189862
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.000555069,18524325,77987221
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.006542072,18619176,78324913
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.249060461,19780958,81976766
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.894753553,18090076,76651794
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.081209708,18873593,79100235
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.871424011,17909990,76081163
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.931357865,18193491,76949510
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,6.031620297,18699511,78583351
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.907429571,18031956,76460843
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.935256113,18184464,76918025
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,32,16,ok,0,5.895294054,18068814,76582385
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.198384775,20362121,83793172
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.961375277,17965002,76245664
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.084994082,19215128,80188241
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.011135888,18467796,77842922
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.008618972,18444851,77747437
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.991932486,18343867,77459442
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.950945804,17916529,76105904
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.967324401,18011579,76405189
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.996349515,18385857,77573189
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.003620442,18298671,77318818
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.959483904,17953584,76226402
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.06597774,18823481,78954940
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.948897089,17926046,76135835
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.95339926,17937382,76173999
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.09747922,19372649,80714532
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.076006703,19155076,79981849
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,3.001903698,18415969,77698919
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.955022084,17939950,76187743
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.992389057,18180258,76953682
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,64,16,ok,0,2.950649493,17920841,76123826
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.649505299,18838592,79032949
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.672915802,19262175,80334060
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.710687205,19911920,82377150
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.608552888,17992255,76352707
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.602787396,17929375,76152426
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.672302131,19126848,79892793
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.610674613,17934671,76163307
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.616734577,17951474,76223054
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.616762557,18188598,76985512
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.617519388,18189064,76981729
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.621648407,18196527,76999952
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.602522515,17903385,76073772
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.62732398,18122711,76754481
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.625003245,18037960,76502721
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.747279357,20379061,83837146
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.698654519,19603115,81426262
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.629234654,18203902,77015588
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.606996765,17912539,76101715
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.61811889,18074432,76604093
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,128,16,ok,0,1.758414972,20548653,84400273
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.26310301,17982448,76317918
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.261894987,17933312,76173029
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.29041051,18617889,78328435
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.268659872,18012833,76418866
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.260125794,17915022,76118307
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.263481541,17943938,76208191
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.260775164,17931958,76169749
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.294320589,18753809,78779283
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.272627741,18263344,77217917
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.277651362,18449608,77805044
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.266020406,17952426,76235184
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.306862557,18973938,79470319
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.266742218,17967962,76283690
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.270963737,18058985,76569587
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.269293234,18096163,76687329
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.270150165,18053375,76549472
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.25893488,17991875,76358533
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.255047422,17934776,76179238
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.2541649,17985302,76338609
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,256,16,ok,0,1.260773845,17935040,76177597
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.769557212,19796115,82068889
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.701801282,18069796,76615663
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.721913396,18738392,78695161
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.724073991,19168804,80068482
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.712061395,18432671,77761056
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.702763333,18333460,77443419
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.700087317,17971359,76308913
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.709164048,18457368,77841998
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.695669737,18045451,76540344
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.743724964,19609096,81490234
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.728951582,19106822,79866403
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.711088842,18016925,76453855
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.710599231,18219635,77080446
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.711901693,18136235,76830466
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.701710841,17974438,76314961
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.709211227,18235344,77142303
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.738795413,18444340,77799288
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.737467161,19640092,81610919
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.707996715,18376109,77584836
+Maximum Clique Problem,multilifo,MultiLIFO,DSJC1000_5,512,16,ok,0,0.705072848,17970106,76303242
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,1,16,ok,0,180.391048259,18010144,76403949
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,1,16,ok,0,180.756505363,18010144,76403949
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,1,16,ok,0,178.983589691,18010144,76403949
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,1,16,ok,0,180.258699001,18010144,76403949
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,1,16,ok,0,181.385698964,18010144,76403949
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,2,16,ok,0,183.21846683,18009991,76403559
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,2,16,ok,0,179.765900584,18010004,76403609
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,2,16,ok,0,182.558292288,18010135,76403889
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,2,16,ok,0,181.796382794,18010135,76403913
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,2,16,ok,0,184.266110734,18010144,76403947
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,4,16,ok,0,178.914650171,18010074,76403756
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,4,16,ok,0,181.021327657,18008229,76397488
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,4,16,ok,0,180.595303055,18010136,76403844
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,4,16,ok,0,182.904965063,18009116,76400704
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,4,16,ok,0,181.279196163,18010177,76404002
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,8,16,ok,0,103.644212882,18073449,76612821
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,8,16,ok,0,103.929794498,18096591,76690580
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,8,16,ok,0,105.383099392,18285382,77284968
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,8,16,ok,0,102.827539201,18015511,76423119
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,8,16,ok,0,103.76543932,18079370,76628915
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,16,16,ok,0,89.745350813,18298306,77321521
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,16,16,ok,0,90.137896805,18392461,77623586
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,16,16,ok,0,88.802933647,18032284,76478550
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,16,16,ok,0,89.584086158,18286862,77285539
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,16,16,ok,0,89.616035713,18389587,77611722
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,32,16,ok,0,70.513473452,18291157,77297340
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,32,16,ok,0,74.405573788,19427187,80893273
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,32,16,ok,0,69.576657444,18099638,76691100
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,32,16,ok,0,70.477867234,18262181,77210144
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,32,16,ok,0,70.082548823,18165075,76899175
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,64,16,ok,0,53.747949223,18014922,76420912
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,64,16,ok,0,54.292672734,18242128,77140436
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,64,16,ok,0,58.931295626,19606132,81527405
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,64,16,ok,0,54.895463127,18372281,77576358
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,64,16,ok,0,54.071260313,18169990,76922570
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,128,16,ok,0,42.188246441,18310232,77359207
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,128,16,ok,0,43.370127458,18747882,78738349
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,128,16,ok,0,43.076119868,18711559,78636170
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,128,16,ok,0,42.411258681,18327137,77418556
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,128,16,ok,0,46.33904306,19875946,82346145
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,256,16,ok,0,33.812260779,19302778,80484017
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,256,16,ok,0,31.898761749,18141614,76827492
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,256,16,ok,0,33.929978611,19308194,80515536
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,256,16,ok,0,32.213154606,18329532,77410292
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,256,16,ok,0,32.080450608,18320311,77371252
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,512,16,ok,0,27.520504082,18718115,78646471
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,512,16,ok,0,26.932981905,18336721,77454570
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,512,16,ok,0,27.088532606,18332995,77421845
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,512,16,ok,0,27.24795771,18449364,77781945
+Maximum Clique Problem,treiber_stack,Treiber stack,DSJC1000_5,512,16,ok,0,26.829175322,18124033,76787715
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,1,16,ok,0,187.002479202,18127028,76774965
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,1,16,ok,0,187.827974593,18127028,76774965
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,1,16,ok,0,185.976392105,18127028,76774965
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,1,16,ok,0,186.990930777,18127028,76774965
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,1,16,ok,0,186.303012462,18127028,76774965
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,2,16,ok,0,95.282802123,18235639,77125218
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,2,16,ok,0,95.733546887,17884243,76003614
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,2,16,ok,0,97.744302848,18670512,78516376
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,2,16,ok,0,94.6059782,17993910,76355168
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,2,16,ok,0,97.016431739,18214220,77057883
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,4,16,ok,0,47.654192897,18090498,76659245
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,4,16,ok,0,50.065957941,19166234,80044779
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,4,16,ok,0,48.11513297,18098123,76681994
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,4,16,ok,0,48.461012377,18160535,76895138
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,4,16,ok,0,49.922529202,18023593,76438269
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,8,16,ok,0,25.032723881,19391442,80737747
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,8,16,ok,0,23.951835098,18215302,77056063
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,8,16,ok,0,24.760313328,19252743,80323643
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,8,16,ok,0,25.93820446,20839638,85311432
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,8,16,ok,0,25.373277948,19599791,81433962
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,16,16,ok,0,12.317749193,18308629,77355556
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,16,16,ok,0,12.761322013,18930561,79284190
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,16,16,ok,0,12.441667762,18053962,76532966
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,16,16,ok,0,12.244037147,17920647,76113397
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,16,16,ok,0,12.148317182,17900889,76054744
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,32,16,ok,0,6.342160029,18566666,78168384
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,32,16,ok,0,6.442201165,18760284,78752286
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,32,16,ok,0,6.184421828,17996453,76347640
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,32,16,ok,0,6.937843831,21007299,85886985
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,32,16,ok,0,6.268356329,18217470,77059617
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,64,16,ok,0,3.254339906,18911318,79238986
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,64,16,ok,0,3.15308412,18083740,76639074
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,64,16,ok,0,3.164435944,17988398,76334381
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,64,16,ok,0,3.138339798,17925443,76137620
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,64,16,ok,0,3.306122207,19341299,80569649
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,128,16,ok,0,1.740549546,18818354,78933071
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,128,16,ok,0,1.74724713,18532811,78062487
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,128,16,ok,0,1.707736246,18126363,76786129
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,128,16,ok,0,1.722865998,18577038,78196887
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,128,16,ok,0,1.692991674,18110944,76724406
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,256,16,ok,0,1.316003847,18041395,76511602
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,256,16,ok,0,1.327572592,18390225,77609559
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,256,16,ok,0,1.323297343,18160577,76898137
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,256,16,ok,0,1.323480833,18263411,77216467
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,256,16,ok,0,1.348649507,18654904,78443677
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,512,16,ok,0,0.770431479,20043124,82791856
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,512,16,ok,0,0.723157298,18218399,77080321
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,512,16,ok,0,0.724865571,18374406,77580519
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,512,16,ok,0,0.727444617,18153288,76862847
+Maximum Clique Problem,2d_stack,2D-stack,DSJC1000_5,512,16,ok,0,0.726684045,18190444,76987896
+Maximum Clique Problem,seq_pq,Sequential PQ,DSJC1000_5,1,,ok,0,221.738658873,18032555,76002258
+Maximum Clique Problem,seq_pq,Sequential PQ,DSJC1000_5,1,,ok,0,221.522105027,18032555,76002258
+Maximum Clique Problem,seq_pq,Sequential PQ,DSJC1000_5,1,,ok,0,222.102098075,18032555,76002258
+Maximum Clique Problem,seq_pq,Sequential PQ,DSJC1000_5,1,,ok,0,222.251078062,18032555,76002258
+Maximum Clique Problem,seq_pq,Sequential PQ,DSJC1000_5,1,,ok,0,222.006681761,18032555,76002258
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,1,16,ok,0,205.212584131,18116299,77061973
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,1,16,ok,0,204.8382701,18116299,77061973
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,1,16,ok,0,203.947386577,18116299,77061973
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,1,16,ok,0,204.242541898,18116299,77061973
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,1,16,ok,0,203.574525522,18116299,77061973
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,2,16,ok,0,105.03389145,18115480,77059132
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,2,16,ok,0,105.676779212,18115582,77059509
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,2,16,ok,0,104.941902719,18115370,77058642
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,2,16,ok,0,105.221611157,18115479,77059069
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,2,16,ok,0,104.952495726,18115469,77059042
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,4,16,ok,0,54.22547135,18116448,77062630
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,4,16,ok,0,54.106756503,18116246,77061770
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,4,16,ok,0,54.175432894,18116008,77060876
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,4,16,ok,0,54.142779533,18115368,77058694
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,4,16,ok,0,53.98128683,18116456,77062569
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,8,16,ok,0,29.343665013,18117996,77067493
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,8,16,ok,0,29.331568886,18116189,77061665
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,8,16,ok,0,29.372579527,18117071,77064585
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,8,16,ok,0,29.305669846,18117048,77064743
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,8,16,ok,0,29.321454411,18116236,77061738
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,16,16,ok,0,43.833945992,18121450,77079787
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,16,16,ok,0,43.971888873,18121661,77080504
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,16,16,ok,0,44.051781273,18127837,77102011
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,16,16,ok,0,44.146517217,18125850,77095203
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,16,16,ok,0,43.878774152,18122564,77083522
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,32,16,ok,0,50.670536109,18114985,77059235
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,32,16,ok,0,49.918195642,18116786,77066069
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,32,16,ok,0,49.953875652,18118537,77073066
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,32,16,ok,0,50.958133058,18115249,77060749
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,32,16,ok,0,50.000105567,18114971,77059116
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,64,16,ok,0,54.607189478,18117455,77072815
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,64,16,ok,0,53.601791409,18116342,77066736
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,64,16,ok,0,54.521951406,18113682,77057527
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,64,16,ok,0,54.429647377,18115708,77064616
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,64,16,ok,0,53.985877636,18119023,77076885
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,128,16,ok,0,54.834047966,18130570,77117820
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,128,16,ok,0,54.791607181,18123011,77092188
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,128,16,ok,0,55.329783708,18132586,77124400
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,128,16,ok,0,54.501786945,18140119,77150692
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,128,16,ok,0,55.383621332,18129089,77111078
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,256,16,ok,0,52.815524871,18172271,77263673
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,256,16,ok,0,53.055632097,18169602,77254174
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,256,16,ok,0,52.928198817,18161087,77223155
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,256,16,ok,0,53.249475147,18160766,77222636
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,256,16,ok,0,53.334453539,18167952,77251011
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,92.238830148,18236867,77505161
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,94.436165892,18232148,77488851
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,92.089873103,18239963,77497743
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,92.332250922,18239460,77510819
+Maximum Clique Problem,locked_pq,Globally locked PQ,DSJC1000_5,512,16,ok,0,93.774077741,18233132,77482923
+Maximum Clique Problem,pr,Linden,DSJC1000_5,1,16,ok,0,207.931788663,18096522,76992330
+Maximum Clique Problem,pr,Linden,DSJC1000_5,1,16,ok,0,209.396896522,18096522,76992330
+Maximum Clique Problem,pr,Linden,DSJC1000_5,1,16,ok,0,209.125174707,18096522,76992330
+Maximum Clique Problem,pr,Linden,DSJC1000_5,1,16,ok,0,209.250021072,18096522,76992330
+Maximum Clique Problem,pr,Linden,DSJC1000_5,1,16,ok,0,208.142616712,18096522,76992330
+Maximum Clique Problem,pr,Linden,DSJC1000_5,2,16,ok,0,106.141007921,18096551,76992468
+Maximum Clique Problem,pr,Linden,DSJC1000_5,2,16,ok,0,106.218766767,18096555,76992438
+Maximum Clique Problem,pr,Linden,DSJC1000_5,2,16,ok,0,107.941893064,18096521,76992322
+Maximum Clique Problem,pr,Linden,DSJC1000_5,2,16,ok,0,106.445667879,18096555,76992449
+Maximum Clique Problem,pr,Linden,DSJC1000_5,2,16,ok,0,106.061536463,18096539,76992445
+Maximum Clique Problem,pr,Linden,DSJC1000_5,4,16,ok,0,53.705418957,18096593,76992612
+Maximum Clique Problem,pr,Linden,DSJC1000_5,4,16,ok,0,53.743552591,18096602,76992662
+Maximum Clique Problem,pr,Linden,DSJC1000_5,4,16,ok,0,53.718347225,18096610,76992660
+Maximum Clique Problem,pr,Linden,DSJC1000_5,4,16,ok,0,53.664541636,18096586,76992616
+Maximum Clique Problem,pr,Linden,DSJC1000_5,4,16,ok,0,53.753979863,18096602,76992630
+Maximum Clique Problem,pr,Linden,DSJC1000_5,8,16,ok,0,27.702634126,18096641,76992843
+Maximum Clique Problem,pr,Linden,DSJC1000_5,8,16,ok,0,27.395462962,18096636,76992837
+Maximum Clique Problem,pr,Linden,DSJC1000_5,8,16,ok,0,27.263204737,18096693,76993005
+Maximum Clique Problem,pr,Linden,DSJC1000_5,8,16,ok,0,27.333870424,18096655,76992910
+Maximum Clique Problem,pr,Linden,DSJC1000_5,8,16,ok,0,27.323408421,18096656,76992942
+Maximum Clique Problem,pr,Linden,DSJC1000_5,16,16,ok,0,14.706430851,18096864,76994011
+Maximum Clique Problem,pr,Linden,DSJC1000_5,16,16,ok,0,14.662877503,18096847,76993692
+Maximum Clique Problem,pr,Linden,DSJC1000_5,16,16,ok,0,14.704409545,18096867,76994135
+Maximum Clique Problem,pr,Linden,DSJC1000_5,16,16,ok,0,14.642145257,18096873,76993990
+Maximum Clique Problem,pr,Linden,DSJC1000_5,16,16,ok,0,14.64351861,18096859,76993867
+Maximum Clique Problem,pr,Linden,DSJC1000_5,32,16,ok,0,7.881304692,18097221,76995815
+Maximum Clique Problem,pr,Linden,DSJC1000_5,32,16,ok,0,7.890778483,18097112,76995009
+Maximum Clique Problem,pr,Linden,DSJC1000_5,32,16,ok,0,7.872539763,18097183,76995215
+Maximum Clique Problem,pr,Linden,DSJC1000_5,32,16,ok,0,7.84381004,18097193,76995280
+Maximum Clique Problem,pr,Linden,DSJC1000_5,32,16,ok,0,7.853276171,18097413,76996471
+Maximum Clique Problem,pr,Linden,DSJC1000_5,64,16,ok,0,5.2346688,18097810,76998485
+Maximum Clique Problem,pr,Linden,DSJC1000_5,64,16,ok,0,5.186818415,18097783,76998359
+Maximum Clique Problem,pr,Linden,DSJC1000_5,64,16,ok,0,5.083843558,18097756,76998311
+Maximum Clique Problem,pr,Linden,DSJC1000_5,64,16,ok,0,5.140425072,18097691,76997957
+Maximum Clique Problem,pr,Linden,DSJC1000_5,64,16,ok,0,5.317484184,18097940,76998842
+Maximum Clique Problem,pr,Linden,DSJC1000_5,128,16,ok,0,8.121485821,18098892,77004365
+Maximum Clique Problem,pr,Linden,DSJC1000_5,128,16,ok,0,7.415471783,18098906,77003756
+Maximum Clique Problem,pr,Linden,DSJC1000_5,128,16,ok,0,7.930541449,18098774,77003500
+Maximum Clique Problem,pr,Linden,DSJC1000_5,128,16,ok,0,7.738749625,18099071,77004758
+Maximum Clique Problem,pr,Linden,DSJC1000_5,128,16,ok,0,7.575623186,18098844,77004087
+Maximum Clique Problem,pr,Linden,DSJC1000_5,256,16,ok,0,9.018807941,18100013,77010528
+Maximum Clique Problem,pr,Linden,DSJC1000_5,256,16,ok,0,8.603616624,18166951,77216555
+Maximum Clique Problem,pr,Linden,DSJC1000_5,256,16,ok,0,8.730539175,18099007,77004901
+Maximum Clique Problem,pr,Linden,DSJC1000_5,256,16,ok,0,8.867764687,18098698,77003526
+Maximum Clique Problem,pr,Linden,DSJC1000_5,256,16,ok,0,8.925133803,18098179,77000675
+Maximum Clique Problem,pr,Linden,DSJC1000_5,512,16,ok,0,17.087267943,18111926,77053956
+Maximum Clique Problem,pr,Linden,DSJC1000_5,512,16,ok,0,16.127571526,18201382,77325858
+Maximum Clique Problem,pr,Linden,DSJC1000_5,512,16,ok,0,16.249388015,18107462,77040132
+Maximum Clique Problem,pr,Linden,DSJC1000_5,512,16,ok,0,15.565153015,18119251,77078761
+Maximum Clique Problem,pr,Linden,DSJC1000_5,512,16,ok,0,15.818464474,18153645,77178175
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,1,16,ok,0,208.122541104,18113069,77050378
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,1,16,ok,0,206.59217427,18113069,77050378
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,1,16,ok,0,206.151775656,18113069,77050378
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,1,16,ok,0,206.984524744,18113069,77050378
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,1,16,ok,0,207.373931154,18113069,77050378
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,2,16,ok,0,103.764228661,18106059,77025919
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,2,16,ok,0,103.652790995,18105759,77025025
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,2,16,ok,0,103.850633417,18106824,77028541
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,2,16,ok,0,103.931207492,18107078,77029857
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,2,16,ok,0,104.202777172,18108535,77034655
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,4,16,ok,0,51.933820432,18097350,76995858
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,4,16,ok,0,51.91887453,18094589,76985353
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,4,16,ok,0,52.084189865,18095585,76989039
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,4,16,ok,0,51.993323673,18096755,76993009
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,4,16,ok,0,52.263530092,18096794,76993537
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,8,16,ok,0,25.954495872,18129089,77106431
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,8,16,ok,0,25.916595464,18137172,77135425
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,8,16,ok,0,26.013388298,18134113,77124671
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,8,16,ok,0,25.974766922,18134701,77126685
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,8,16,ok,0,26.046335281,18125385,77093393
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,16,16,ok,0,13.173765335,18105441,77024315
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,16,16,ok,0,13.282636647,18106268,77027333
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,16,16,ok,0,13.292364398,18105619,77024399
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,16,16,ok,0,13.296082338,18116773,77064186
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,16,16,ok,0,13.295427414,18109808,77040110
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,32,16,ok,0,6.614451599,18096979,76995122
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,32,16,ok,0,6.595096175,18091880,76976657
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,32,16,ok,0,6.614307818,18098645,77001095
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,32,16,ok,0,6.620915983,18108509,77037067
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,32,16,ok,0,6.620180282,18106177,77027889
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,64,16,ok,0,3.260939317,18131250,77119880
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,64,16,ok,0,3.276552722,18152793,77190997
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,64,16,ok,0,3.288276357,18120314,77080791
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,64,16,ok,0,3.28513594,18152364,77190139
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,64,16,ok,0,3.274854057,18121237,77082233
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,128,16,ok,0,1.850053607,18099057,77005095
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,128,16,ok,0,1.85142537,18096576,76998800
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,128,16,ok,0,1.879166701,18124378,77099096
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,128,16,ok,0,1.840859356,18141462,77154620
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,128,16,ok,0,1.870308692,18151991,77188741
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,256,16,ok,0,1.580201026,18123352,77092418
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,256,16,ok,0,1.594916948,18102934,77018124
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,256,16,ok,0,1.598489607,18115645,77065759
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,256,16,ok,0,1.603525328,18088896,76968441
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,256,16,ok,0,1.594840399,18112614,77056820
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.376389283,18090159,76963025
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.371197752,18115308,77064577
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.374788439,18072625,76896171
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.382690877,18135611,77138507
+Maximum Clique Problem,mq_stick_swap,MultiQueue (stick swap),DSJC1000_5,512,16,ok,0,1.416929123,18226043,77455076
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,1,,ok,0,174.8485,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,1,,ok,0,174.8451,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,1,,ok,0,175.4355,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,1,,ok,0,174.9366,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,1,,ok,0,174.7946,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,2,,ok,0,87.3708,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,2,,ok,0,87.6382,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,2,,ok,0,87.6473,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,2,,ok,0,87.5706,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,2,,ok,0,87.681,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,4,,ok,0,43.8701,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,4,,ok,0,43.8833,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,4,,ok,0,43.8986,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,4,,ok,0,43.8855,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,4,,ok,0,43.9613,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,8,,ok,0,22.0845,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,8,,ok,0,22.1012,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,8,,ok,0,22.1217,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,8,,ok,0,22.1104,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,8,,ok,0,22.1061,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,16,,ok,0,11.1248,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,16,,ok,0,11.1205,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,16,,ok,0,11.1174,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,16,,ok,0,11.1084,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,16,,ok,0,11.1162,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,32,,ok,0,5.6798,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,32,,ok,0,5.6714,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,32,,ok,0,5.6729,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,32,,ok,0,5.6594,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,32,,ok,0,5.6723,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,64,,ok,0,3.0332,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,64,,ok,0,3.0327,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,64,,ok,0,3.0284,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,64,,ok,0,3.0321,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,64,,ok,0,3.0343,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,128,,ok,0,1.9582,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,128,,ok,0,1.9579,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,128,,ok,0,1.9615,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,128,,ok,0,1.9561,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,128,,ok,0,1.9585,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,256,,ok,0,1.3611,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,256,,ok,0,1.3069,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,256,,ok,0,1.3347,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,256,,ok,0,1.3282,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,256,,ok,0,1.3441,,
+Maximum Clique Problem,pbs,PBS,DSJC1000_5,512,,timeout,,1800,,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,1,,ok,0,72.570425456,76981458,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,1,,ok,0,72.599719856,76981458,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,1,,ok,0,72.585585806,76981458,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,1,,ok,0,72.594916997,76981458,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,1,,ok,0,72.556019422,76981458,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,2,,ok,0,36.364072183,77198053,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,2,,ok,0,36.391363309,77198829,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,2,,ok,0,36.360283927,77199501,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,2,,ok,0,36.351603872,77199799,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,2,,ok,0,36.36155152,77198574,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,4,,ok,0,18.309570337,77676597,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,4,,ok,0,18.297845704,77677945,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,4,,ok,0,18.253112079,77678310,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,4,,ok,0,18.381202186,77679181,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,4,,ok,0,18.277598548,77677195,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,8,,ok,0,9.221683105,78475427,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,8,,ok,0,9.211951969,78471857,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,8,,ok,0,9.204252112,78464603,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,8,,ok,0,9.217286823,78457872,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,8,,ok,0,9.20163234,78464264,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,16,,ok,0,4.587305074,77854960,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,16,,ok,0,4.589420099,77863220,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,16,,ok,0,4.587748094,77867589,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,16,,ok,0,4.584937938,77865207,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,16,,ok,0,4.591599074,77846791,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,32,,ok,0,2.322410982,78591016,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,32,,ok,0,2.314377563,78623051,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,32,,ok,0,2.316484388,78623002,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,32,,ok,0,2.325401119,78609665,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,32,,ok,0,2.316289457,78593857,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,64,,ok,0,1.150335964,76900935,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,64,,ok,0,1.148542091,76937264,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,64,,ok,0,1.14858743,76921903,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,64,,ok,0,1.148203,76927797,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,64,,ok,0,1.149159792,76938036,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,128,,ok,0,0.587315917,76936404,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,128,,ok,0,0.585514253,76969837,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,128,,ok,0,0.586011994,76961692,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,128,,ok,0,0.586842386,76957134,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,128,,ok,0,0.586790236,76969285,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,256,,ok,0,0.448157387,77076729,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,256,,ok,0,0.446365101,76981093,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,256,,ok,0,0.446708041,76965654,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,256,,ok,0,0.446563952,76981559,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,256,,ok,0,0.447038613,76973174,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,512,,ok,0,0.460884737,76995475,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,512,,ok,0,0.455120194,76989391,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,512,,ok,0,0.463938415,76992412,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,512,,ok,0,0.468862758,76988591,
+Maximum Clique Problem,ciaranm,McCreesh,DSJC1000_5,512,,ok,0,0.471430683,76970695,

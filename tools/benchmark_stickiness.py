@@ -4,30 +4,29 @@ from benchmarking import BenchmarkGroup, Params, parse_instance_arg, run_benchma
 # Set num_repetitions in params_x, params_y, or params_fallback.
 # Omitted values resolve to 1 after benchmark parameters are combined.
 GROUP = BenchmarkGroup(
-    name="batch",
+    name="stickiness",
     timeout=60*30,
     params_fallback=Params(
         problem="Maximum Clique Problem",
-        num_repetitions=25,
+        num_repetitions=5,
         threads=512
     ),
     params_x=[
-        Params(pq_type="locked_stack", name="Globally locked Stack"),
-        Params(pq_type="work_stealing", name="Simple work stealing"),
         Params(pq_type="multilifo", name="MultiLIFO"),
-        Params(pq_type="treiber_stack", name="Treiber stack (elimination)"),
-        Params(pq_type="2d_stack", name="2D stack"),
-        Params(pq_type="locked_pq", name="Globally locked PQ"),
-        Params(pq_type="pr", name="PR"),
+        Params(pq_type="mq_pq", name="MultiQueue (pq)"),
+        Params(pq_type="mq_random", name="MultiQueue (random)"),
+        Params(pq_type="mq_random_strict", name="MultiQueue (random strict)"),
+        Params(pq_type="mq_stick_mark", name="MultiQueue (stick mark)"),
+        Params(pq_type="mq_stick_random", name="MultiQueue (stick random)"),
         Params(pq_type="mq_stick_swap", name="MultiQueue (stick swap)"),
     ],
     params_y=[
-        Params(batch=1),
-        Params(batch=4),
-        Params(batch=16),
-        Params(batch=64),
-        Params(batch=256),
-        Params(batch=1024),
+        Params(stickiness=1),
+        Params(stickiness=4),
+        Params(stickiness=16),
+        Params(stickiness=64),
+        Params(stickiness=256),
+        Params(stickiness=1024),
     ],
 )
 

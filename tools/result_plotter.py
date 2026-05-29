@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import math
 import statistics
 from collections import defaultdict
 from pathlib import Path
@@ -21,6 +22,18 @@ MODE_AXES = {
 
 LAYOUTS = ("heatmap", "graph")
 SPREADS = ("none", "minmax", "stddev", "minmax_band", "stddev_band")
+HEATMAP_COLOR_MODES = ("time", "row-slowdown", "row_slowdown")
+HEATMAP_WIDTH_MODES = ("auto", "regular", "compact")
+
+TITLE_FONT_SIZE = 15
+AXIS_LABEL_FONT_SIZE = 13
+TICK_LABEL_FONT_SIZE = 11
+CELL_LABEL_FONT_SIZE = 11
+LEGEND_FONT_SIZE = 11
+COLORBAR_LABEL_FONT_SIZE = 12
+COLORBAR_TICK_FONT_SIZE = 11
+BEST_TILE_EDGE_COLOR = "#f2b705"
+BEST_TILE_LINE_WIDTH = 2.6
 
 
 def read_results(csv_path: Path) -> list[dict]:
@@ -48,6 +61,18 @@ def parse_axis_value(value: str):
 
 def format_axis_label(axis: str) -> str:
     return axis.replace("_", " ").title()
+
+
+def format_multiplier(value: float) -> str:
+    if value < 10:
+        return f"{value:.1f}x"
+    return f"{value:g}x"
+
+
+def mark_best_label(label: str) -> str:
+    lines = label.splitlines()
+    lines[0] += r" $\star$"
+    return "\n".join(lines)
 
 
 def unique_in_order(values):
@@ -211,6 +236,9 @@ def plot_heatmap(
     failure_grid,
     x_axis: str,
     y_axis: str,
+    color_mode: str,
+    mark_row_best: bool = False,
+    compact_columns: bool = False,
 ) -> None:
     import matplotlib.colors as mcolors
     from matplotlib.patches import Patch
@@ -226,19 +254,45 @@ def plot_heatmap(
         if entry is not None
     ]
 
+    row_best_times = {
+        key: min(
+            value
+            for value in (grid[key].get(x_value) for x_value in x_values)
+            if value is not None
+        )
+        for key in row_keys
+        if any(grid[key].get(x_value) is not None for x_value in x_values)
+    }
+    all_slowdowns = [
+        value / row_best_times[key]
+        for key in row_keys
+        if key in row_best_times
+        for value in (grid[key].get(x_value) for x_value in x_values)
+        if value is not None
+    ]
+    max_slowdown = max(all_slowdowns) if all_slowdowns else None
+
     has_timing_data = bool(all_times)
-    if has_timing_data:
+    if color_mode == "time" and has_timing_data:
         vmin = min(all_times)
         vmax = max(all_times)
         if vmin <= 0:
             raise ValueError("Logarithmic heatmap colors require all timing values to be positive.")
         norm = mcolors.LogNorm(vmin=vmin, vmax=vmax)
+        colorbar_label = "Time (s)"
+    elif color_mode == "row-slowdown" and max_slowdown is not None:
+        norm = mcolors.LogNorm(vmin=1.0, vmax=max(max_slowdown, 1.000001))
+        colorbar_label = "Slowdown vs row best"
     else:
         norm = None
+        colorbar_label = "Time (s)"
     cmap = plt.get_cmap("RdYlGn_r")  # reversed so green=fast, red=slow
 
-    fig_width = max(8, 1.4 * n_cols + 3)
-    fig_height = max(4, 0.7 * n_rows + 2)
+    if compact_columns:
+        fig_width = max(6.6, 0.75 * n_cols + 2.4)
+    else:
+        fig_width = max(7.8, 1.2 * n_cols + 2.8)
+    fig_height = max(3.2, 0.42 * n_rows + 1.8)
     fig, ax = plt.subplots(figsize=(fig_width, fig_height))
     seen_failures: set[str] = set()
 
@@ -251,9 +305,16 @@ def plot_heatmap(
             status = failure_grid[key].get(x_value)
             baseline_x_value = x_values[0]
             baseline_value = grid[key].get(baseline_x_value)
+            best_value = row_best_times.get(key)
 
             label = None
             hatch = None
+            is_row_best = (
+                mark_row_best
+                and value is not None
+                and best_value is not None
+                and math.isclose(value, best_value)
+            )
 
             if not has_result:
                 color = "white"
@@ -264,20 +325,27 @@ def plot_heatmap(
                 color, hatch, label, _legend_label = failure_style("timeout")
                 seen_failures.add("timeout")
             else:
-                color = cmap(norm(value)) if norm is not None else "white"
-                if baseline_value is not None:
-                    speedup = baseline_value / value
-                    label = f"{value:.3f}\n({speedup:.1f}x)"
+                if color_mode == "row-slowdown" and best_value is not None:
+                    slowdown = value / best_value
+                    color = cmap(norm(slowdown)) if norm is not None else "white"
+                    label = f"{value:.3f}\n({slowdown:.1f}x)"
                 else:
-                    label = f"{value:.3f}"
+                    color = cmap(norm(value)) if norm is not None else "white"
+                    if baseline_value is not None:
+                        speedup = baseline_value / value
+                        label = f"{value:.3f}\n({speedup:.1f}x)"
+                    else:
+                        label = f"{value:.3f}"
+                if is_row_best:
+                    label = mark_best_label(label)
 
             rect = plt.Rectangle(
                 (col_idx, row_idx),
                 1,
                 1,
                 facecolor=color,
-                edgecolor="black",
-                linewidth=1.0,
+                edgecolor=BEST_TILE_EDGE_COLOR if is_row_best else "black",
+                linewidth=BEST_TILE_LINE_WIDTH if is_row_best else 1.0,
                 hatch=hatch,
             )
             ax.add_patch(rect)
@@ -289,7 +357,9 @@ def plot_heatmap(
                     label,
                     ha="center",
                     va="center",
-                    fontsize=9,
+                    fontsize=CELL_LABEL_FONT_SIZE,
+                    fontweight="bold" if is_row_best else "normal",
+                    linespacing=0.9,
                 )
 
     ax.set_xlim(0, n_cols)
@@ -306,18 +376,32 @@ def plot_heatmap(
     ax.set_yticks([i + 0.5 for i in range(n_rows)])
     ax.set_yticklabels(row_labels)
 
-    ax.set_xlabel(format_axis_label(x_axis))
-    ax.set_ylabel(format_axis_label(y_axis))
-    ax.set_title(f"{problem} — {instance}")
+    ax.set_xlabel(format_axis_label(x_axis), fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
+    ax.set_ylabel(format_axis_label(y_axis), fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
+    ax.set_title(f"{problem} - {instance}", fontsize=TITLE_FONT_SIZE, pad=8)
 
-    ax.tick_params(length=0)
+    ax.tick_params(length=0, labelsize=TICK_LABEL_FONT_SIZE, pad=2)
     for spine in ax.spines.values():
         spine.set_visible(False)
 
     if has_timing_data:
+        from matplotlib.ticker import FuncFormatter
+
         sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
         sm.set_array([])
-        plt.colorbar(sm, ax=ax, label="Time (s)")
+        colorbar = plt.colorbar(sm, ax=ax, label=colorbar_label, pad=0.015, fraction=0.04)
+        colorbar.ax.tick_params(labelsize=COLORBAR_TICK_FONT_SIZE)
+        colorbar.set_label(colorbar_label, fontsize=COLORBAR_LABEL_FONT_SIZE)
+        if color_mode == "row-slowdown":
+            ticks = [1.0]
+            tick = 10.0
+            while max_slowdown is not None and tick < max_slowdown:
+                ticks.append(tick)
+                tick *= 10.0
+            colorbar.set_ticks(ticks)
+            colorbar.ax.yaxis.set_major_formatter(
+                FuncFormatter(lambda value, _pos: format_multiplier(value))
+            )
 
     if seen_failures:
         handles = []
@@ -333,12 +417,14 @@ def plot_heatmap(
                     label=legend_label,
                 )
             )
-        legend_x = 1.22 if has_timing_data else 1.02
         ax.legend(
             handles=handles,
-            loc="upper left",
-            bbox_to_anchor=(legend_x, 1.0),
+            loc="upper center",
+            bbox_to_anchor=(0.5, -0.18),
             borderaxespad=0.0,
+            frameon=False,
+            ncol=len(handles),
+            fontsize=LEGEND_FONT_SIZE,
         )
 
     plt.tight_layout()
@@ -356,8 +442,8 @@ def plot_graph(
     x_axis: str,
     spread: str,
 ) -> None:
-    fig_width = max(8, 1.2 * len(x_values) + 3)
-    fig, ax = plt.subplots(figsize=(fig_width, 5))
+    fig_width = max(6.8, 0.75 * len(x_values) + 2.8)
+    fig, ax = plt.subplots(figsize=(fig_width, 4.6))
     x_positions = {x_value: idx for idx, x_value in enumerate(x_values)}
     band_spread = spread.endswith("_band")
     spread_kind = spread.removesuffix("_band")
@@ -402,7 +488,7 @@ def plot_graph(
                 line_x_values,
                 line_times,
                 marker="o",
-                linewidth=2,
+                linewidth=2.5,
                 color=color,
                 label=row_labels[row_idx],
             )[0]
@@ -435,7 +521,7 @@ def plot_graph(
                 line_times,
                 yerr=yerr,
                 marker="o",
-                linewidth=2,
+                linewidth=2.5,
                 color=color,
                 capsize=4 if spread != "none" else 0,
                 label=row_labels[row_idx],
@@ -443,12 +529,18 @@ def plot_graph(
 
     ax.set_xticks(range(len(x_values)))
     ax.set_xticklabels(x_values)
-    ax.set_xlabel(format_axis_label(x_axis))
-    ax.set_ylabel("Execution Time (s)")
+    ax.set_xlabel(format_axis_label(x_axis), fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
+    ax.set_ylabel("Execution Time (s)", fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
     ax.set_yscale("log")
-    ax.set_title(f"{problem} — {instance}")
+    ax.set_title(f"{problem} — {instance}", fontsize=TITLE_FONT_SIZE, pad=8)
+    ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
     ax.grid(True, linestyle="--", alpha=0.35)
-    ax.legend(loc="upper left", bbox_to_anchor=(1.02, 1.0), borderaxespad=0.0)
+    ax.legend(
+        loc="upper left",
+        bbox_to_anchor=(1.02, 1.0),
+        borderaxespad=0.0,
+        fontsize=LEGEND_FONT_SIZE,
+    )
 
     plt.tight_layout()
     plt.show()
@@ -460,7 +552,14 @@ def main() -> None:
     parser.add_argument("--mode", choices=MODE_AXES)
     parser.add_argument("--layout", choices=LAYOUTS, default="heatmap")
     parser.add_argument("--spread", choices=SPREADS, default="none")
+    parser.add_argument("--heatmap-colors", choices=HEATMAP_COLOR_MODES, default="time")
+    parser.add_argument("--heatmap-width", choices=HEATMAP_WIDTH_MODES, default="auto")
     args = parser.parse_args()
+    heatmap_colors = args.heatmap_colors.replace("_", "-")
+    compact_heatmap = (
+        args.heatmap_width == "compact"
+        or (args.heatmap_width == "auto" and args.mode == "comparison")
+    )
 
     x_axis, y_axis = MODE_AXES[args.mode] if args.mode else (X_AXIS, Y_AXIS)
 
@@ -513,6 +612,9 @@ def main() -> None:
             failure_grid,
             x_axis,
             y_axis,
+            heatmap_colors,
+            mark_row_best=args.mode == "comparison",
+            compact_columns=compact_heatmap,
         )
 
 
