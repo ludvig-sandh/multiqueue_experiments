@@ -55,6 +55,27 @@ target_compile_features(pmc PUBLIC cxx_std_17)
 target_link_libraries(pmc PUBLIC OpenMP::OpenMP_CXX)
 ###
 
+### Ciaran McCreesh maximum clique solver
+add_library(ciaranm_max_clique STATIC
+  ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/graph.cc
+  ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/bit_graph.cc
+  ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/max_clique_params.cc
+  ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/colourise.cc
+  ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/degree_sort.cc
+  ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/queue.cc
+  ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique/clique/tbmcsa1_max_clique.cc
+)
+
+target_include_directories(ciaranm_max_clique SYSTEM PUBLIC
+  ${CMAKE_SOURCE_DIR}/third_party/multithreadedmaximumclique
+)
+
+set_target_properties(ciaranm_max_clique PROPERTIES INTERPROCEDURAL_OPTIMIZATION FALSE)
+target_compile_features(ciaranm_max_clique PUBLIC cxx_std_17)
+target_compile_options(ciaranm_max_clique PRIVATE -w)
+target_link_libraries(ciaranm_max_clique PUBLIC Threads::Threads)
+###
+
 add_library(monotonic_base INTERFACE)
 target_sources(monotonic_base INTERFACE monotonic.cpp)
 target_link_libraries(monotonic_base INTERFACE benchmark_base)
@@ -162,6 +183,10 @@ target_link_libraries(max_clique_work_stealing PRIVATE benchmark_base)
 add_executable(max_clique_pmc max_clique_pmc.cpp)
 set_target_properties(max_clique_pmc PROPERTIES INTERPROCEDURAL_OPTIMIZATION FALSE)
 target_link_libraries(max_clique_pmc PRIVATE pmc benchmark_base)
+
+add_executable(max_clique_ciaranm max_clique_ciaranm.cpp)
+set_target_properties(max_clique_ciaranm PROPERTIES INTERPROCEDURAL_OPTIMIZATION FALSE)
+target_link_libraries(max_clique_ciaranm PRIVATE ciaranm_max_clique benchmark_base)
 
 add_executable(knapsack_seq_stack knapsack_seq_stack.cpp)
 target_link_libraries(knapsack_seq_stack PRIVATE benchmark_base)
