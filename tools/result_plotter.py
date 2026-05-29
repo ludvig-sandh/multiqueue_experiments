@@ -24,6 +24,7 @@ LAYOUTS = ("heatmap", "graph")
 SPREADS = ("none", "minmax", "stddev", "minmax_band", "stddev_band")
 HEATMAP_COLOR_MODES = ("time", "row-slowdown", "row_slowdown")
 HEATMAP_WIDTH_MODES = ("auto", "regular", "compact")
+VALUES = ("time", "visited-nodes")
 
 TITLE_FONT_SIZE = 15
 AXIS_LABEL_FONT_SIZE = 13
@@ -42,6 +43,17 @@ def read_results(csv_path: Path) -> list[dict]:
         reader = csv.DictReader(f)
         for row in reader:
             row["time_s"] = float(row["time_s"]) if row["time_s"] else None
+            row["processed_nodes"] = (
+                float(row["processed_nodes"]) if row.get("processed_nodes") else None
+            )
+            row["ignored_nodes"] = (
+                float(row["ignored_nodes"]) if row.get("ignored_nodes") else None
+            )
+            row["visited_nodes"] = (
+                row["processed_nodes"] + (row["ignored_nodes"] or 0)
+                if row["processed_nodes"] is not None
+                else None
+            )
             row["status"] = row.get("status") or ("ok" if row["time_s"] is not None else "timeout")
             rows.append(row)
     return rows
@@ -67,6 +79,42 @@ def format_multiplier(value: float) -> str:
     if value < 10:
         return f"{value:.1f}x"
     return f"{value:g}x"
+
+
+def format_value(value: float, value_kind: str) -> str:
+    if value_kind == "visited-nodes":
+        return format_compact_count(value)
+    return f"{value:.3f}"
+
+
+def format_compact_count(value: float) -> str:
+    for suffix, factor in (("G", 1_000_000_000), ("M", 1_000_000), ("K", 1_000)):
+        if abs(value) >= factor:
+            scaled = round(value / factor, 1)
+            if suffix == "K" and abs(scaled) >= 10:
+                return f"{scaled:.0f}{suffix}"
+            if scaled.is_integer():
+                return f"{scaled:.0f}{suffix}"
+            return f"{scaled:.1f}{suffix}"
+    return f"{value:.0f}"
+
+
+def value_column(value_kind: str) -> str:
+    if value_kind == "visited-nodes":
+        return "visited_nodes"
+    return "time_s"
+
+
+def value_label(value_kind: str) -> str:
+    if value_kind == "visited-nodes":
+        return "Visited Nodes"
+    return "Time (s)"
+
+
+def row_best_ratio_label(value_kind: str) -> str:
+    if value_kind == "visited-nodes":
+        return "Increase vs row best"
+    return "Slowdown vs row best"
 
 
 def mark_best_label(label: str) -> str:
@@ -108,7 +156,57 @@ def combine_samples(
     return grid, failure_grid
 
 
-def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str):
+def combine_processed_share(
+    processed_share_samples: dict[
+        tuple[str, str], dict[object, list[tuple[float | None, float | None, float | None]]]
+    ],
+    sample_statuses: dict[tuple[str, str], dict[object, list[str]]],
+):
+    grid: dict[tuple[str, str], dict[object, float | None]] = defaultdict(dict)
+    for key, row_samples in processed_share_samples.items():
+        for x_value, samples in row_samples.items():
+            if failure_status(sample_statuses[key][x_value]) is not None:
+                grid[key][x_value] = None
+                continue
+
+            valid_samples = [
+                (processed_nodes, ignored_nodes, visited_nodes)
+                for processed_nodes, ignored_nodes, visited_nodes in samples
+                if (
+                    processed_nodes is not None
+                    and ignored_nodes is not None
+                    and visited_nodes is not None
+                    and visited_nodes > 0
+                )
+            ]
+            if not valid_samples:
+                grid[key][x_value] = None
+                continue
+
+            processed_sum = sum(
+                processed_nodes
+                for processed_nodes, _ignored_nodes, _visited_nodes in valid_samples
+            )
+            visited_sum = sum(
+                visited_nodes
+                for _processed_nodes, _ignored_nodes, visited_nodes in valid_samples
+            )
+            grid[key][x_value] = processed_sum / visited_sum if visited_sum > 0 else None
+
+    return grid
+
+
+def filter_empty_rows(row_keys, row_labels, grid):
+    filtered_keys = []
+    filtered_labels = []
+    for key, label in zip(row_keys, row_labels):
+        if any(value is not None for value in grid[key].values()):
+            filtered_keys.append(key)
+            filtered_labels.append(label)
+    return filtered_keys, filtered_labels
+
+
+def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str, value_kind: str):
     if not rows:
         raise ValueError("CSV file contains no benchmark rows")
 
@@ -154,21 +252,39 @@ def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str):
     samples: dict[tuple[str, str], dict[object, list[float | None]]] = defaultdict(
         lambda: defaultdict(list)
     )
+    processed_share_samples: dict[
+        tuple[str, str], dict[object, list[tuple[float | None, float | None, float | None]]]
+    ] = defaultdict(lambda: defaultdict(list))
     sample_statuses: dict[tuple[str, str], dict[object, list[str]]] = defaultdict(
         lambda: defaultdict(list)
     )
     for row in rows:
         key = row_key(row)
         x_value = parse_axis_value(row[x_axis])
-        samples[key][x_value].append(row["time_s"])
+        samples[key][x_value].append(row[value_column(value_kind)])
+        processed_share_samples[key][x_value].append(
+            (row["processed_nodes"], row["ignored_nodes"], row["visited_nodes"])
+        )
         sample_statuses[key][x_value].append(row["status"])
 
     grid, failure_grid = combine_samples(samples, sample_statuses)
+    processed_share_grid = combine_processed_share(processed_share_samples, sample_statuses)
+    unique_row_keys, row_labels = filter_empty_rows(unique_row_keys, row_labels, grid)
 
-    return problem, instance, unique_row_keys, row_labels, x_values, grid, failure_grid, samples
+    return (
+        problem,
+        instance,
+        unique_row_keys,
+        row_labels,
+        x_values,
+        grid,
+        failure_grid,
+        samples,
+        processed_share_grid,
+    )
 
 
-def build_comparison_data(rows: list[dict]):
+def build_comparison_data(rows: list[dict], value_kind: str):
     if not rows:
         raise ValueError("CSV file contains no benchmark rows")
 
@@ -192,18 +308,36 @@ def build_comparison_data(rows: list[dict]):
     samples: dict[tuple[str, str], dict[object, list[float | None]]] = defaultdict(
         lambda: defaultdict(list)
     )
+    processed_share_samples: dict[
+        tuple[str, str], dict[object, list[tuple[float | None, float | None, float | None]]]
+    ] = defaultdict(lambda: defaultdict(list))
     sample_statuses: dict[tuple[str, str], dict[object, list[str]]] = defaultdict(
         lambda: defaultdict(list)
     )
     for row in rows:
         key = (row["instance"], row["instance"])
         x_value = row["name"]
-        samples[key][x_value].append(row["time_s"])
+        samples[key][x_value].append(row[value_column(value_kind)])
+        processed_share_samples[key][x_value].append(
+            (row["processed_nodes"], row["ignored_nodes"], row["visited_nodes"])
+        )
         sample_statuses[key][x_value].append(row["status"])
 
     grid, failure_grid = combine_samples(samples, sample_statuses)
+    processed_share_grid = combine_processed_share(processed_share_samples, sample_statuses)
+    row_keys, row_labels = filter_empty_rows(row_keys, row_labels, grid)
 
-    return problem, "DIMACS comparison", row_keys, row_labels, x_values, grid, failure_grid, samples
+    return (
+        problem,
+        "DIMACS comparison",
+        row_keys,
+        row_labels,
+        x_values,
+        grid,
+        failure_grid,
+        samples,
+        processed_share_grid,
+    )
 
 
 def failure_style(status: str) -> tuple[str, str, str, str]:
@@ -234,9 +368,11 @@ def plot_heatmap(
     x_values,
     grid,
     failure_grid,
+    processed_share_grid,
     x_axis: str,
     y_axis: str,
     color_mode: str,
+    value_kind: str,
     mark_row_best: bool = False,
     compact_columns: bool = False,
 ) -> None:
@@ -246,8 +382,8 @@ def plot_heatmap(
     n_rows = len(row_keys)
     n_cols = len(x_values)
 
-    # Collect all times for normalization
-    all_times = [
+    # Collect all values for normalization.
+    all_values = [
         entry
         for row in grid.values()
         for entry in row.values()
@@ -272,20 +408,20 @@ def plot_heatmap(
     ]
     max_slowdown = max(all_slowdowns) if all_slowdowns else None
 
-    has_timing_data = bool(all_times)
-    if color_mode == "time" and has_timing_data:
-        vmin = min(all_times)
-        vmax = max(all_times)
+    has_value_data = bool(all_values)
+    if color_mode == "time" and has_value_data:
+        vmin = min(all_values)
+        vmax = max(all_values)
         if vmin <= 0:
-            raise ValueError("Logarithmic heatmap colors require all timing values to be positive.")
+            raise ValueError("Logarithmic heatmap colors require all plotted values to be positive.")
         norm = mcolors.LogNorm(vmin=vmin, vmax=vmax)
-        colorbar_label = "Time (s)"
+        colorbar_label = value_label(value_kind)
     elif color_mode == "row-slowdown" and max_slowdown is not None:
         norm = mcolors.LogNorm(vmin=1.0, vmax=max(max_slowdown, 1.000001))
-        colorbar_label = "Slowdown vs row best"
+        colorbar_label = row_best_ratio_label(value_kind)
     else:
         norm = None
-        colorbar_label = "Time (s)"
+        colorbar_label = value_label(value_kind)
     cmap = plt.get_cmap("RdYlGn_r")  # reversed so green=fast, red=slow
 
     if compact_columns:
@@ -322,20 +458,32 @@ def plot_heatmap(
                 color, hatch, label, _legend_label = failure_style(status)
                 seen_failures.add(status)
             elif value is None:
-                color, hatch, label, _legend_label = failure_style("timeout")
-                seen_failures.add("timeout")
+                color = "white"
             else:
                 if color_mode == "row-slowdown" and best_value is not None:
                     slowdown = value / best_value
                     color = cmap(norm(slowdown)) if norm is not None else "white"
-                    label = f"{value:.3f}\n({slowdown:.1f}x)"
+                    if value_kind == "visited-nodes":
+                        processed_share = processed_share_grid[key].get(x_value)
+                        if processed_share is not None:
+                            label = f"{format_value(value, value_kind)}\n({processed_share:.0%})"
+                        else:
+                            label = f"{format_value(value, value_kind)}\n(n/a)"
+                    else:
+                        label = f"{format_value(value, value_kind)}\n({slowdown:.1f}x)"
                 else:
                     color = cmap(norm(value)) if norm is not None else "white"
-                    if baseline_value is not None:
+                    if value_kind == "visited-nodes":
+                        processed_share = processed_share_grid[key].get(x_value)
+                        if processed_share is not None:
+                            label = f"{format_value(value, value_kind)}\n({processed_share:.0%})"
+                        else:
+                            label = f"{format_value(value, value_kind)}\n(n/a)"
+                    elif baseline_value is not None:
                         speedup = baseline_value / value
-                        label = f"{value:.3f}\n({speedup:.1f}x)"
+                        label = f"{format_value(value, value_kind)}\n({speedup:.1f}x)"
                     else:
-                        label = f"{value:.3f}"
+                        label = format_value(value, value_kind)
                 if is_row_best:
                     label = mark_best_label(label)
 
@@ -384,7 +532,7 @@ def plot_heatmap(
     for spine in ax.spines.values():
         spine.set_visible(False)
 
-    if has_timing_data:
+    if has_value_data:
         from matplotlib.ticker import FuncFormatter
 
         sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
@@ -441,6 +589,7 @@ def plot_graph(
     samples,
     x_axis: str,
     spread: str,
+    value_kind: str,
 ) -> None:
     fig_width = max(6.8, 0.75 * len(x_values) + 2.8)
     fig, ax = plt.subplots(figsize=(fig_width, 4.6))
@@ -456,22 +605,22 @@ def plot_graph(
         yerr_upper = []
 
         for x_value in x_values:
-            mean_time = grid[key].get(x_value)
-            if mean_time is None:
+            mean_value = grid[key].get(x_value)
+            if mean_value is None:
                 continue
 
-            points.append((x_positions[x_value], mean_time))
-            raw_times = [
-                time_s
-                for time_s in samples[key][x_value]
-                if time_s is not None
+            points.append((x_positions[x_value], mean_value))
+            raw_values = [
+                value
+                for value in samples[key][x_value]
+                if value is not None
             ]
 
-            if spread_kind == "minmax" and raw_times:
-                yerr_lower.append(mean_time - min(raw_times))
-                yerr_upper.append(max(raw_times) - mean_time)
-            elif spread_kind == "stddev" and len(raw_times) > 1:
-                stddev = statistics.stdev(raw_times)
+            if spread_kind == "minmax" and raw_values:
+                yerr_lower.append(mean_value - min(raw_values))
+                yerr_upper.append(max(raw_values) - mean_value)
+            elif spread_kind == "stddev" and len(raw_values) > 1:
+                stddev = statistics.stdev(raw_values)
                 yerr_lower.append(stddev)
                 yerr_upper.append(stddev)
             else:
@@ -481,23 +630,23 @@ def plot_graph(
         if not points:
             continue
 
-        line_x_values = [x_value for x_value, _time_s in points]
-        line_times = [time_s for _x_value, time_s in points]
+        line_x_values = [x_value for x_value, _value in points]
+        line_values = [value for _x_value, value in points]
         if band_spread:
             line = ax.plot(
                 line_x_values,
-                line_times,
+                line_values,
                 marker="o",
                 linewidth=2.5,
                 color=color,
                 label=row_labels[row_idx],
             )[0]
             lower = [
-                max(time_s - err, time_s * 1e-12)
-                for time_s, err in zip(line_times, yerr_lower)
+                max(value - err, value * 1e-12)
+                for value, err in zip(line_values, yerr_lower)
             ]
             upper = [
-                time_s + err for time_s, err in zip(line_times, yerr_upper)
+                value + err for value, err in zip(line_values, yerr_upper)
             ]
             ax.fill_between(
                 line_x_values,
@@ -510,15 +659,15 @@ def plot_graph(
         else:
             if spread != "none":
                 log_yerr_lower = [
-                    min(err, time_s * (1 - 1e-12))
-                    for time_s, err in zip(line_times, yerr_lower)
+                    min(err, value * (1 - 1e-12))
+                    for value, err in zip(line_values, yerr_lower)
                 ]
                 yerr = [log_yerr_lower, yerr_upper]
             else:
                 yerr = None
             ax.errorbar(
                 line_x_values,
-                line_times,
+                line_values,
                 yerr=yerr,
                 marker="o",
                 linewidth=2.5,
@@ -530,7 +679,7 @@ def plot_graph(
     ax.set_xticks(range(len(x_values)))
     ax.set_xticklabels(x_values)
     ax.set_xlabel(format_axis_label(x_axis), fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
-    ax.set_ylabel("Execution Time (s)", fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
+    ax.set_ylabel(value_label(value_kind), fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
     ax.set_yscale("log")
     ax.set_title(f"{problem} — {instance}", fontsize=TITLE_FONT_SIZE, pad=8)
     ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
@@ -554,6 +703,7 @@ def main() -> None:
     parser.add_argument("--spread", choices=SPREADS, default="none")
     parser.add_argument("--heatmap-colors", choices=HEATMAP_COLOR_MODES, default="time")
     parser.add_argument("--heatmap-width", choices=HEATMAP_WIDTH_MODES, default="auto")
+    parser.add_argument("--value", choices=VALUES, default="time")
     args = parser.parse_args()
     heatmap_colors = args.heatmap_colors.replace("_", "-")
     compact_heatmap = (
@@ -577,7 +727,8 @@ def main() -> None:
             grid,
             failure_grid,
             samples,
-        ) = build_comparison_data(rows)
+            processed_share_grid,
+        ) = build_comparison_data(rows, args.value)
     else:
         (
             problem,
@@ -588,7 +739,8 @@ def main() -> None:
             grid,
             failure_grid,
             samples,
-        ) = build_heatmap_data(rows, x_axis, y_axis)
+            processed_share_grid,
+        ) = build_heatmap_data(rows, x_axis, y_axis, args.value)
     if args.layout == "graph":
         plot_graph(
             problem,
@@ -600,6 +752,7 @@ def main() -> None:
             samples,
             x_axis,
             args.spread,
+            args.value,
         )
     else:
         plot_heatmap(
@@ -610,9 +763,11 @@ def main() -> None:
             x_values,
             grid,
             failure_grid,
+            processed_share_grid,
             x_axis,
             y_axis,
             heatmap_colors,
+            args.value,
             mark_row_best=args.mode == "comparison",
             compact_columns=compact_heatmap,
         )
