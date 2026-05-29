@@ -7,7 +7,7 @@ GROUP = BenchmarkGroup(
     name="batch",
     timeout=60*30,
     params_fallback=Params(
-        problem="Maximum Clique Problem",
+        problem="max_clique",
         num_repetitions=25,
         threads=512
     ),
