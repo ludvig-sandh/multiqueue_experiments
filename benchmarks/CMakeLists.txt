@@ -171,6 +171,9 @@ target_compile_definitions(old_knapsack_float_seq PRIVATE FLOAT_INSTANCE)
 add_executable(knapsack_seq_pq knapsack_seq_pq.cpp)
 target_link_libraries(knapsack_seq_pq PRIVATE benchmark_base)
 
+add_executable(knapsack_work_stealing knapsack_work_stealing.cpp)
+target_link_libraries(knapsack_work_stealing PRIVATE benchmark_base)
+
 add_executable(max_clique_seq_pq max_clique_seq_pq.cpp)
 target_link_libraries(max_clique_seq_pq PRIVATE benchmark_base)
 
