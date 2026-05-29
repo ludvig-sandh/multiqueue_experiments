@@ -36,21 +36,20 @@ public:
         
         if (node.index + 2 >= inst_.size()) return;
 
+        // Include item
+        if (node.free_capacity >= inst_.weight(node.index)) {
+            auto const child_value = node.value + inst_.value(node.index);
+            auto const child_free_capacity = node.free_capacity - inst_.weight(node.index);
+            auto [lb, ub] = inst_.compute_bounds_linear(child_free_capacity, node.index + 1);
+            node_type child{child_value + ub, child_value + lb, node.index + 1, child_free_capacity, child_value};
+            out.push_back(std::move(child));
+        }
+
         auto [lb, ub] = inst_.compute_bounds_linear(node.free_capacity, node.index + 1);
 
         // Exclude item
         {
             node_type child{node.value + ub, node.value + lb, node.index + 1, node.free_capacity, node.value};
-            out.push_back(std::move(child));
-        }
-
-        // Include item
-        if (node.free_capacity >= inst_.weight(node.index)) {
-            node_type child = node;
-            child.value = node.value + inst_.value(node.index);
-            child.free_capacity = node.free_capacity - inst_.weight(node.index);
-            child.index = node.index + 1;
-            
             out.push_back(std::move(child));
         }
     }
