@@ -250,15 +250,7 @@ public:
     }
 
     void branch_impl(node_type const& n, data_type incumbent, std::vector<node_type>& out) const {
-        if (n.index + 2 >= inst_.size()) return;
-
-        auto [lb, ub] = inst_.compute_bounds(n.free_capacities, n.index + 1);
-
-        // Exclude item
-        {
-            node_type child{n.value + ub, n.value + lb, n.index + 1, n.free_capacities, n.value};
-            if (child.upper_bound > incumbent) out.push_back(std::move(child));
-        }
+        if (n.index >= inst_.size()) return;
 
         // Include item
         bool can_fit_item = true;
@@ -276,9 +268,18 @@ public:
                 child.free_capacities[c] -= inst_.weight(n.index, c);
             }
             child.index = n.index + 1;
-            child.upper_bound = n.upper_bound;
-            child.lower_bound = n.lower_bound;
+            auto [lb, ub] = inst_.compute_bounds(child.free_capacities, child.index);
+            child.upper_bound = child.value + ub;
+            child.lower_bound = child.value + lb;
 
+            if (child.upper_bound > incumbent) out.push_back(std::move(child));
+        }
+
+        auto [lb, ub] = inst_.compute_bounds(n.free_capacities, n.index + 1);
+
+        // Exclude item
+        {
+            node_type child{n.value + ub, n.value + lb, n.index + 1, n.free_capacities, n.value};
             if (child.upper_bound > incumbent) out.push_back(std::move(child));
         }
     }
