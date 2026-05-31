@@ -1,0 +1,321 @@
+problem,pq_type,name,instance,threads,batch,stickiness,status,returncode,time_s,processed_nodes,ignored_nodes
+mdkp,seq_stack,Sequential Stack,mdkp9,1,,,ok,0,40.465082479,8731371,0
+mdkp,seq_stack,Sequential Stack,mdkp9,1,,,ok,0,37.293802364,8731371,0
+mdkp,seq_stack,Sequential Stack,mdkp9,1,,,ok,0,37.425563702,8731371,0
+mdkp,seq_stack,Sequential Stack,mdkp9,1,,,ok,0,37.367835064,8731371,0
+mdkp,seq_stack,Sequential Stack,mdkp9,1,,,ok,0,37.305766744,8731371,0
+mdkp,locked_stack,Globally locked Stack,mdkp9,1,16,,ok,0,37.49513123,8731371,0
+mdkp,locked_stack,Globally locked Stack,mdkp9,1,16,,ok,0,37.496539498,8731371,0
+mdkp,locked_stack,Globally locked Stack,mdkp9,1,16,,ok,0,37.604509826,8731371,0
+mdkp,locked_stack,Globally locked Stack,mdkp9,1,16,,ok,0,37.462480821,8731371,0
+mdkp,locked_stack,Globally locked Stack,mdkp9,1,16,,ok,0,37.523331682,8731371,0
+mdkp,locked_stack,Globally locked Stack,mdkp9,2,16,,ok,0,19.368233394,8850523,4
+mdkp,locked_stack,Globally locked Stack,mdkp9,2,16,,ok,0,17.261510749,7883095,2
+mdkp,locked_stack,Globally locked Stack,mdkp9,2,16,,ok,0,17.013889112,7762416,3
+mdkp,locked_stack,Globally locked Stack,mdkp9,2,16,,ok,0,17.413530752,7941895,2
+mdkp,locked_stack,Globally locked Stack,mdkp9,2,16,,ok,0,17.093350003,7750672,3
+mdkp,locked_stack,Globally locked Stack,mdkp9,4,16,,ok,0,8.702899181,7792644,2
+mdkp,locked_stack,Globally locked Stack,mdkp9,4,16,,ok,0,9.020122321,8109100,3
+mdkp,locked_stack,Globally locked Stack,mdkp9,4,16,,ok,0,9.111797929,8194892,6
+mdkp,locked_stack,Globally locked Stack,mdkp9,4,16,,ok,0,8.956639135,8057153,4
+mdkp,locked_stack,Globally locked Stack,mdkp9,4,16,,ok,0,8.490360985,7614860,5
+mdkp,locked_stack,Globally locked Stack,mdkp9,8,16,,ok,0,4.740590127,8416967,11
+mdkp,locked_stack,Globally locked Stack,mdkp9,8,16,,ok,0,4.449437804,7885380,10
+mdkp,locked_stack,Globally locked Stack,mdkp9,8,16,,ok,0,4.910108509,8690162,8
+mdkp,locked_stack,Globally locked Stack,mdkp9,8,16,,ok,0,4.935377443,8674105,7
+mdkp,locked_stack,Globally locked Stack,mdkp9,8,16,,ok,0,4.809641272,8552221,13
+mdkp,locked_stack,Globally locked Stack,mdkp9,16,16,,ok,0,2.428270236,8093442,23
+mdkp,locked_stack,Globally locked Stack,mdkp9,16,16,,ok,0,2.622121051,8770982,20
+mdkp,locked_stack,Globally locked Stack,mdkp9,16,16,,ok,0,2.568146603,8588274,28
+mdkp,locked_stack,Globally locked Stack,mdkp9,16,16,,ok,0,2.704112551,9043483,27
+mdkp,locked_stack,Globally locked Stack,mdkp9,16,16,,ok,0,2.546209737,8506715,14
+mdkp,locked_stack,Globally locked Stack,mdkp9,32,16,,ok,0,1.453304998,9073598,63
+mdkp,locked_stack,Globally locked Stack,mdkp9,32,16,,ok,0,1.360414372,8504325,51
+mdkp,locked_stack,Globally locked Stack,mdkp9,32,16,,ok,0,1.292394998,8059696,39
+mdkp,locked_stack,Globally locked Stack,mdkp9,32,16,,ok,0,1.396592764,8700275,38
+mdkp,locked_stack,Globally locked Stack,mdkp9,32,16,,ok,0,1.335483658,8301507,35
+mdkp,locked_stack,Globally locked Stack,mdkp9,64,16,,ok,0,0.982039106,8222328,121
+mdkp,locked_stack,Globally locked Stack,mdkp9,64,16,,ok,0,0.975417459,8216818,127
+mdkp,locked_stack,Globally locked Stack,mdkp9,64,16,,ok,0,0.919864207,7784541,77
+mdkp,locked_stack,Globally locked Stack,mdkp9,64,16,,ok,0,1.04643017,8730870,75
+mdkp,locked_stack,Globally locked Stack,mdkp9,64,16,,ok,0,0.921602502,7728434,142
+mdkp,locked_stack,Globally locked Stack,mdkp9,128,16,,ok,0,0.993333745,7581634,157
+mdkp,locked_stack,Globally locked Stack,mdkp9,128,16,,ok,0,1.142275364,8669897,171
+mdkp,locked_stack,Globally locked Stack,mdkp9,128,16,,ok,0,1.083404925,8307568,171
+mdkp,locked_stack,Globally locked Stack,mdkp9,128,16,,ok,0,1.141566193,8753531,94
+mdkp,locked_stack,Globally locked Stack,mdkp9,128,16,,ok,0,1.166314726,8956093,159
+mdkp,locked_stack,Globally locked Stack,mdkp9,256,16,,ok,0,1.051162512,7844726,271
+mdkp,locked_stack,Globally locked Stack,mdkp9,256,16,,ok,0,1.04230947,7771433,256
+mdkp,locked_stack,Globally locked Stack,mdkp9,256,16,,ok,0,1.143434277,8522598,204
+mdkp,locked_stack,Globally locked Stack,mdkp9,256,16,,ok,0,1.164079571,8598342,267
+mdkp,locked_stack,Globally locked Stack,mdkp9,256,16,,ok,0,1.070121941,7913656,303
+mdkp,locked_stack,Globally locked Stack,mdkp9,512,16,,ok,0,1.707156586,8212669,601
+mdkp,locked_stack,Globally locked Stack,mdkp9,512,16,,ok,0,1.627716863,7837940,631
+mdkp,locked_stack,Globally locked Stack,mdkp9,512,16,,ok,0,1.638694342,7839516,494
+mdkp,locked_stack,Globally locked Stack,mdkp9,512,16,,ok,0,1.626645801,7746551,481
+mdkp,locked_stack,Globally locked Stack,mdkp9,512,16,,ok,0,1.566727558,7486198,844
+mdkp,work_stealing,Simple work stealing,mdkp9,1,16,,ok,0,37.383219471,8731371,0
+mdkp,work_stealing,Simple work stealing,mdkp9,1,16,,ok,0,37.367403601,8731371,0
+mdkp,work_stealing,Simple work stealing,mdkp9,1,16,,ok,0,37.624470967,8731371,0
+mdkp,work_stealing,Simple work stealing,mdkp9,1,16,,ok,0,37.368905824,8731371,0
+mdkp,work_stealing,Simple work stealing,mdkp9,1,16,,ok,0,37.337972522,8731371,0
+mdkp,work_stealing,Simple work stealing,mdkp9,2,16,,ok,0,17.32995969,8082224,0
+mdkp,work_stealing,Simple work stealing,mdkp9,2,16,,ok,0,17.305588727,8080719,0
+mdkp,work_stealing,Simple work stealing,mdkp9,2,16,,ok,0,17.306914261,8081196,0
+mdkp,work_stealing,Simple work stealing,mdkp9,2,16,,ok,0,17.309296387,8081132,2
+mdkp,work_stealing,Simple work stealing,mdkp9,2,16,,ok,0,17.314093309,8079831,1
+mdkp,work_stealing,Simple work stealing,mdkp9,4,16,,ok,0,9.362818206,8742884,2
+mdkp,work_stealing,Simple work stealing,mdkp9,4,16,,ok,0,9.362504736,8741369,0
+mdkp,work_stealing,Simple work stealing,mdkp9,4,16,,ok,0,9.361163782,8744285,3
+mdkp,work_stealing,Simple work stealing,mdkp9,4,16,,ok,0,9.370933097,8740110,1
+mdkp,work_stealing,Simple work stealing,mdkp9,4,16,,ok,0,9.376437691,8747832,4
+mdkp,work_stealing,Simple work stealing,mdkp9,8,16,,ok,0,5.329832743,9865619,7
+mdkp,work_stealing,Simple work stealing,mdkp9,8,16,,ok,0,5.073720246,9405512,8
+mdkp,work_stealing,Simple work stealing,mdkp9,8,16,,ok,0,5.177360482,9672088,11
+mdkp,work_stealing,Simple work stealing,mdkp9,8,16,,ok,0,5.268953227,9846929,5
+mdkp,work_stealing,Simple work stealing,mdkp9,8,16,,ok,0,4.809456797,8976555,6
+mdkp,work_stealing,Simple work stealing,mdkp9,16,16,,ok,0,2.517179533,9357370,6
+mdkp,work_stealing,Simple work stealing,mdkp9,16,16,,ok,0,2.487167655,9256115,18
+mdkp,work_stealing,Simple work stealing,mdkp9,16,16,,ok,0,2.625852661,9781602,17
+mdkp,work_stealing,Simple work stealing,mdkp9,16,16,,ok,0,2.526345266,9406746,11
+mdkp,work_stealing,Simple work stealing,mdkp9,16,16,,ok,0,2.542607228,9468731,12
+mdkp,work_stealing,Simple work stealing,mdkp9,32,16,,ok,0,1.264341286,9256797,26
+mdkp,work_stealing,Simple work stealing,mdkp9,32,16,,ok,0,1.202819268,8796637,35
+mdkp,work_stealing,Simple work stealing,mdkp9,32,16,,ok,0,1.140979539,8375189,19
+mdkp,work_stealing,Simple work stealing,mdkp9,32,16,,ok,0,1.100579645,8042780,27
+mdkp,work_stealing,Simple work stealing,mdkp9,32,16,,ok,0,1.148415118,8426567,30
+mdkp,work_stealing,Simple work stealing,mdkp9,64,16,,ok,0,0.591308668,8436405,51
+mdkp,work_stealing,Simple work stealing,mdkp9,64,16,,ok,0,0.641582617,9206854,53
+mdkp,work_stealing,Simple work stealing,mdkp9,64,16,,ok,0,0.569752003,8095719,43
+mdkp,work_stealing,Simple work stealing,mdkp9,64,16,,ok,0,0.55291171,7784762,41
+mdkp,work_stealing,Simple work stealing,mdkp9,64,16,,ok,0,0.638009008,9083639,31
+mdkp,work_stealing,Simple work stealing,mdkp9,128,16,,ok,0,0.332620054,8414633,84
+mdkp,work_stealing,Simple work stealing,mdkp9,128,16,,ok,0,0.341241086,8670872,110
+mdkp,work_stealing,Simple work stealing,mdkp9,128,16,,ok,0,0.33477944,8479571,86
+mdkp,work_stealing,Simple work stealing,mdkp9,128,16,,ok,0,0.335165241,8454017,57
+mdkp,work_stealing,Simple work stealing,mdkp9,128,16,,ok,0,0.312247352,7848130,64
+mdkp,work_stealing,Simple work stealing,mdkp9,256,16,,ok,0,0.298971828,8373793,177
+mdkp,work_stealing,Simple work stealing,mdkp9,256,16,,ok,0,0.293035803,8294922,154
+mdkp,work_stealing,Simple work stealing,mdkp9,256,16,,ok,0,0.296325011,8302513,158
+mdkp,work_stealing,Simple work stealing,mdkp9,256,16,,ok,0,0.339387721,9752902,133
+mdkp,work_stealing,Simple work stealing,mdkp9,256,16,,ok,0,0.295517979,8364505,158
+mdkp,work_stealing,Simple work stealing,mdkp9,512,16,,ok,0,0.228390106,9364899,264
+mdkp,work_stealing,Simple work stealing,mdkp9,512,16,,ok,0,0.205162607,8397579,302
+mdkp,work_stealing,Simple work stealing,mdkp9,512,16,,ok,0,0.190629669,8187216,288
+mdkp,work_stealing,Simple work stealing,mdkp9,512,16,,ok,0,0.201094057,8728852,280
+mdkp,work_stealing,Simple work stealing,mdkp9,512,16,,ok,0,0.217096968,9153728,287
+mdkp,multilifo,MultiLIFO,mdkp9,1,16,,ok,0,37.636356211,8731371,0
+mdkp,multilifo,MultiLIFO,mdkp9,2,16,,ok,0,17.679607052,8066114,7
+mdkp,multilifo,MultiLIFO,mdkp9,4,16,,ok,0,9.351988339,8389417,13
+mdkp,multilifo,MultiLIFO,mdkp9,8,16,,ok,0,4.9636903,8503858,33
+mdkp,multilifo,MultiLIFO,mdkp9,16,16,,ok,0,2.455531027,8498921,71
+mdkp,multilifo,MultiLIFO,mdkp9,32,16,,ok,0,1.316778204,8970115,131
+mdkp,multilifo,MultiLIFO,mdkp9,64,16,,ok,0,0.6634767,8828997,169
+mdkp,multilifo,MultiLIFO,mdkp9,128,16,,ok,0,0.362111368,8573103,251
+mdkp,multilifo,MultiLIFO,mdkp9,256,16,,ok,0,0.3429285,9381455,324
+mdkp,multilifo,MultiLIFO,mdkp9,512,16,,ok,0,0.258820421,9143797,349
+mdkp,treiber_stack,Treiber stack,mdkp9,1,16,,ok,0,37.628069943,8731371,0
+mdkp,treiber_stack,Treiber stack,mdkp9,1,16,,ok,0,37.605464975,8731371,0
+mdkp,treiber_stack,Treiber stack,mdkp9,1,16,,ok,0,37.564012287,8731371,0
+mdkp,treiber_stack,Treiber stack,mdkp9,1,16,,ok,0,37.655369134,8731371,0
+mdkp,treiber_stack,Treiber stack,mdkp9,1,16,,ok,0,37.576495469,8731371,0
+mdkp,treiber_stack,Treiber stack,mdkp9,2,16,,ok,0,37.670955958,8731369,1
+mdkp,treiber_stack,Treiber stack,mdkp9,2,16,,ok,0,37.194602353,8722844,1
+mdkp,treiber_stack,Treiber stack,mdkp9,2,16,,ok,0,37.514260444,8731157,1
+mdkp,treiber_stack,Treiber stack,mdkp9,2,16,,ok,0,37.472840849,8731371,0
+mdkp,treiber_stack,Treiber stack,mdkp9,2,16,,ok,0,37.495996887,8731349,0
+mdkp,treiber_stack,Treiber stack,mdkp9,4,16,,ok,0,37.204150266,8731338,0
+mdkp,treiber_stack,Treiber stack,mdkp9,4,16,,ok,0,34.99261279,8436888,1
+mdkp,treiber_stack,Treiber stack,mdkp9,4,16,,ok,0,36.499892479,8730411,0
+mdkp,treiber_stack,Treiber stack,mdkp9,4,16,,ok,0,36.931852014,8731365,1
+mdkp,treiber_stack,Treiber stack,mdkp9,4,16,,ok,0,35.414112617,8731324,1
+mdkp,treiber_stack,Treiber stack,mdkp9,8,16,,ok,0,24.438240404,8024052,3
+mdkp,treiber_stack,Treiber stack,mdkp9,8,16,,ok,0,28.358215331,8406181,4
+mdkp,treiber_stack,Treiber stack,mdkp9,8,16,,ok,0,28.942714486,8801847,5
+mdkp,treiber_stack,Treiber stack,mdkp9,8,16,,ok,0,27.638147255,8731351,5
+mdkp,treiber_stack,Treiber stack,mdkp9,8,16,,ok,0,23.865129729,8669385,6
+mdkp,treiber_stack,Treiber stack,mdkp9,16,16,,ok,0,8.943655397,8253277,16
+mdkp,treiber_stack,Treiber stack,mdkp9,16,16,,ok,0,9.544946824,8429841,15
+mdkp,treiber_stack,Treiber stack,mdkp9,16,16,,ok,0,9.576439662,8634402,14
+mdkp,treiber_stack,Treiber stack,mdkp9,16,16,,ok,0,10.125477567,8612838,12
+mdkp,treiber_stack,Treiber stack,mdkp9,16,16,,ok,0,11.330241779,9016367,22
+mdkp,treiber_stack,Treiber stack,mdkp9,32,16,,ok,0,6.890246416,8687288,18
+mdkp,treiber_stack,Treiber stack,mdkp9,32,16,,ok,0,6.516943598,8109333,23
+mdkp,treiber_stack,Treiber stack,mdkp9,32,16,,ok,0,7.023416894,8803737,19
+mdkp,treiber_stack,Treiber stack,mdkp9,32,16,,ok,0,7.086906469,8956151,13
+mdkp,treiber_stack,Treiber stack,mdkp9,32,16,,ok,0,6.829701447,8720897,14
+mdkp,treiber_stack,Treiber stack,mdkp9,64,16,,ok,0,5.305844672,9212503,24
+mdkp,treiber_stack,Treiber stack,mdkp9,64,16,,ok,0,4.550366994,7769475,44
+mdkp,treiber_stack,Treiber stack,mdkp9,64,16,,ok,0,4.687725382,8024380,31
+mdkp,treiber_stack,Treiber stack,mdkp9,64,16,,ok,0,5.140762595,8988120,32
+mdkp,treiber_stack,Treiber stack,mdkp9,64,16,,ok,0,5.086611512,8963747,18
+mdkp,treiber_stack,Treiber stack,mdkp9,128,16,,ok,0,3.477331687,7903009,41
+mdkp,treiber_stack,Treiber stack,mdkp9,128,16,,ok,0,3.432934747,7759442,38
+mdkp,treiber_stack,Treiber stack,mdkp9,128,16,,ok,0,3.537610165,8005861,67
+mdkp,treiber_stack,Treiber stack,mdkp9,128,16,,ok,0,3.74689941,8648996,46
+mdkp,treiber_stack,Treiber stack,mdkp9,128,16,,ok,0,3.582346665,8072592,50
+mdkp,treiber_stack,Treiber stack,mdkp9,256,16,,ok,0,2.772577885,8327077,27
+mdkp,treiber_stack,Treiber stack,mdkp9,256,16,,ok,0,2.4940221,7515887,68
+mdkp,treiber_stack,Treiber stack,mdkp9,256,16,,ok,0,2.669606662,8129802,59
+mdkp,treiber_stack,Treiber stack,mdkp9,256,16,,ok,0,2.664421429,8038888,52
+mdkp,treiber_stack,Treiber stack,mdkp9,256,16,,ok,0,2.516698736,7601754,79
+mdkp,treiber_stack,Treiber stack,mdkp9,512,16,,ok,0,2.418323085,8127706,31
+mdkp,treiber_stack,Treiber stack,mdkp9,512,16,,ok,0,2.37221655,7981780,56
+mdkp,treiber_stack,Treiber stack,mdkp9,512,16,,ok,0,2.301014686,7740723,67
+mdkp,treiber_stack,Treiber stack,mdkp9,512,16,,ok,0,2.328518483,7844417,40
+mdkp,treiber_stack,Treiber stack,mdkp9,512,16,,ok,0,2.335705301,7929388,34
+mdkp,2d_stack,2D-stack,mdkp9,1,16,,ok,0,37.505024354,8731371,0
+mdkp,2d_stack,2D-stack,mdkp9,1,16,,ok,0,37.530425337,8731371,0
+mdkp,2d_stack,2D-stack,mdkp9,1,16,,ok,0,37.473463857,8731371,0
+mdkp,2d_stack,2D-stack,mdkp9,1,16,,ok,0,37.690667776,8731371,0
+mdkp,2d_stack,2D-stack,mdkp9,1,16,,ok,0,37.681097485,8731371,0
+mdkp,2d_stack,2D-stack,mdkp9,2,16,,ok,0,17.412277041,8082635,1
+mdkp,2d_stack,2D-stack,mdkp9,2,16,,ok,0,16.893157835,7743776,1
+mdkp,2d_stack,2D-stack,mdkp9,2,16,,ok,0,19.7258413,9079704,0
+mdkp,2d_stack,2D-stack,mdkp9,2,16,,ok,0,19.640795309,9079741,0
+mdkp,2d_stack,2D-stack,mdkp9,2,16,,ok,0,18.697922894,8570782,4
+mdkp,2d_stack,2D-stack,mdkp9,4,16,,ok,0,9.607876484,8739605,5
+mdkp,2d_stack,2D-stack,mdkp9,4,16,,ok,0,9.563529693,8701283,7
+mdkp,2d_stack,2D-stack,mdkp9,4,16,,ok,0,9.379044266,8547044,4
+mdkp,2d_stack,2D-stack,mdkp9,4,16,,ok,0,9.525921671,8687417,5
+mdkp,2d_stack,2D-stack,mdkp9,4,16,,ok,0,9.404219029,8550105,2
+mdkp,2d_stack,2D-stack,mdkp9,8,16,,ok,0,4.460314326,8043154,9
+mdkp,2d_stack,2D-stack,mdkp9,8,16,,ok,0,4.884707907,8849949,14
+mdkp,2d_stack,2D-stack,mdkp9,8,16,,ok,0,4.996890685,9046709,13
+mdkp,2d_stack,2D-stack,mdkp9,8,16,,ok,0,4.799939637,8692816,6
+mdkp,2d_stack,2D-stack,mdkp9,8,16,,ok,0,4.746823115,8547782,16
+mdkp,2d_stack,2D-stack,mdkp9,16,16,,ok,0,2.459850011,8659214,18
+mdkp,2d_stack,2D-stack,mdkp9,16,16,,ok,0,2.316793467,8130821,22
+mdkp,2d_stack,2D-stack,mdkp9,16,16,,ok,0,2.207364007,7749907,26
+mdkp,2d_stack,2D-stack,mdkp9,16,16,,ok,0,2.447227101,8594169,22
+mdkp,2d_stack,2D-stack,mdkp9,16,16,,ok,0,2.671563366,9403620,15
+mdkp,2d_stack,2D-stack,mdkp9,32,16,,ok,0,1.28388526,8869682,38
+mdkp,2d_stack,2D-stack,mdkp9,32,16,,ok,0,1.141103556,7831740,29
+mdkp,2d_stack,2D-stack,mdkp9,32,16,,ok,0,1.287361068,8830035,35
+mdkp,2d_stack,2D-stack,mdkp9,32,16,,ok,0,1.30843536,9035016,40
+mdkp,2d_stack,2D-stack,mdkp9,32,16,,ok,0,1.153226666,7927985,48
+mdkp,2d_stack,2D-stack,mdkp9,64,16,,ok,0,0.656327285,8772497,64
+mdkp,2d_stack,2D-stack,mdkp9,64,16,,ok,0,0.718074008,9704009,75
+mdkp,2d_stack,2D-stack,mdkp9,64,16,,ok,0,0.659867214,8847109,54
+mdkp,2d_stack,2D-stack,mdkp9,64,16,,ok,0,0.701356077,9470128,76
+mdkp,2d_stack,2D-stack,mdkp9,64,16,,ok,0,0.735373171,9935760,101
+mdkp,2d_stack,2D-stack,mdkp9,128,16,,ok,0,0.398930718,9710101,99
+mdkp,2d_stack,2D-stack,mdkp9,128,16,,ok,0,0.366674138,8895619,134
+mdkp,2d_stack,2D-stack,mdkp9,128,16,,ok,0,0.379023469,9216301,122
+mdkp,2d_stack,2D-stack,mdkp9,128,16,,ok,0,0.359679071,8721547,148
+mdkp,2d_stack,2D-stack,mdkp9,128,16,,ok,0,0.404838433,9879080,99
+mdkp,2d_stack,2D-stack,mdkp9,256,16,,ok,0,0.288082934,7957905,203
+mdkp,2d_stack,2D-stack,mdkp9,256,16,,ok,0,0.310580359,8741038,223
+mdkp,2d_stack,2D-stack,mdkp9,256,16,,ok,0,0.340734234,9669579,176
+mdkp,2d_stack,2D-stack,mdkp9,256,16,,ok,0,0.319998962,9050856,208
+mdkp,2d_stack,2D-stack,mdkp9,256,16,,ok,0,0.356143992,10162467,172
+mdkp,2d_stack,2D-stack,mdkp9,512,16,,ok,0,0.218634522,9614823,323
+mdkp,2d_stack,2D-stack,mdkp9,512,16,,ok,0,0.187958246,8342072,374
+mdkp,2d_stack,2D-stack,mdkp9,512,16,,ok,0,0.194291842,8497949,292
+mdkp,2d_stack,2D-stack,mdkp9,512,16,,ok,0,0.205421679,9062834,324
+mdkp,2d_stack,2D-stack,mdkp9,512,16,,ok,0,0.201204718,9022983,323
+mdkp,seq_pq,Sequential PQ,mdkp9,1,,,ok,0,39.638150121,7449749,1
+mdkp,seq_pq,Sequential PQ,mdkp9,1,,,ok,0,39.519779331,7449749,1
+mdkp,seq_pq,Sequential PQ,mdkp9,1,,,ok,0,39.530741499,7449749,1
+mdkp,seq_pq,Sequential PQ,mdkp9,1,,,ok,0,39.545061883,7449749,1
+mdkp,seq_pq,Sequential PQ,mdkp9,1,,,ok,0,39.655684389,7449749,1
+mdkp,locked_pq,Globally locked PQ,mdkp9,1,16,,ok,0,38.203842592,7458499,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,1,16,,ok,0,38.417251183,7458499,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,1,16,,ok,0,38.321578958,7458499,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,1,16,,ok,0,38.228301556,7458499,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,1,16,,ok,0,38.227805836,7458499,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,2,16,,ok,0,19.200985683,7458503,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,2,16,,ok,0,19.186257678,7458503,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,2,16,,ok,0,19.210792498,7458503,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,2,16,,ok,0,19.206385637,7458503,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,2,16,,ok,0,19.198884878,7458503,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,4,16,,ok,0,9.625785145,7458510,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,4,16,,ok,0,9.625516113,7458510,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,4,16,,ok,0,9.621688344,7458510,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,4,16,,ok,0,9.629789654,7458510,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,4,16,,ok,0,9.624118739,7458510,2736
+mdkp,locked_pq,Globally locked PQ,mdkp9,8,16,,ok,0,4.854408883,7458524,2746
+mdkp,locked_pq,Globally locked PQ,mdkp9,8,16,,ok,0,4.848048168,7458524,2746
+mdkp,locked_pq,Globally locked PQ,mdkp9,8,16,,ok,0,4.853332321,7458524,2745
+mdkp,locked_pq,Globally locked PQ,mdkp9,8,16,,ok,0,4.851123776,7458524,2745
+mdkp,locked_pq,Globally locked PQ,mdkp9,8,16,,ok,0,4.852035627,7458524,2745
+mdkp,locked_pq,Globally locked PQ,mdkp9,16,16,,ok,0,3.063148487,7458557,2755
+mdkp,locked_pq,Globally locked PQ,mdkp9,16,16,,ok,0,3.046070095,7458556,2754
+mdkp,locked_pq,Globally locked PQ,mdkp9,16,16,,ok,0,3.049679344,7458557,2755
+mdkp,locked_pq,Globally locked PQ,mdkp9,16,16,,ok,0,3.05251831,7458558,2753
+mdkp,locked_pq,Globally locked PQ,mdkp9,16,16,,ok,0,3.044764952,7458542,2752
+mdkp,locked_pq,Globally locked PQ,mdkp9,32,16,,ok,0,4.176096524,7458566,2762
+mdkp,locked_pq,Globally locked PQ,mdkp9,32,16,,ok,0,4.165067926,7458582,2763
+mdkp,locked_pq,Globally locked PQ,mdkp9,32,16,,ok,0,4.183067371,7458540,2752
+mdkp,locked_pq,Globally locked PQ,mdkp9,32,16,,ok,0,4.168509294,7458554,2752
+mdkp,locked_pq,Globally locked PQ,mdkp9,32,16,,ok,0,4.186710661,7458550,2759
+mdkp,locked_pq,Globally locked PQ,mdkp9,64,16,,ok,0,4.981653058,7458678,2789
+mdkp,locked_pq,Globally locked PQ,mdkp9,64,16,,ok,0,5.091732811,7458613,2772
+mdkp,locked_pq,Globally locked PQ,mdkp9,64,16,,ok,0,4.996872696,7458570,2756
+mdkp,locked_pq,Globally locked PQ,mdkp9,64,16,,ok,0,4.995542313,7458605,2765
+mdkp,locked_pq,Globally locked PQ,mdkp9,64,16,,ok,0,4.999622323,7458634,2770
+mdkp,locked_pq,Globally locked PQ,mdkp9,128,16,,ok,0,5.176775413,7458795,2806
+mdkp,locked_pq,Globally locked PQ,mdkp9,128,16,,ok,0,5.210908707,7458747,2801
+mdkp,locked_pq,Globally locked PQ,mdkp9,128,16,,ok,0,5.212822971,7458670,2799
+mdkp,locked_pq,Globally locked PQ,mdkp9,128,16,,ok,0,5.222281614,7458795,2813
+mdkp,locked_pq,Globally locked PQ,mdkp9,128,16,,ok,0,5.146384406,7458660,2789
+mdkp,locked_pq,Globally locked PQ,mdkp9,256,16,,ok,0,5.306916384,7459019,2892
+mdkp,locked_pq,Globally locked PQ,mdkp9,256,16,,ok,0,5.341964571,7458991,2876
+mdkp,locked_pq,Globally locked PQ,mdkp9,256,16,,ok,0,5.452949896,7459527,2921
+mdkp,locked_pq,Globally locked PQ,mdkp9,256,16,,ok,0,5.289538371,7458840,2804
+mdkp,locked_pq,Globally locked PQ,mdkp9,256,16,,ok,0,5.394140251,7458987,2871
+mdkp,locked_pq,Globally locked PQ,mdkp9,512,16,,ok,0,9.045434694,7459316,2985
+mdkp,locked_pq,Globally locked PQ,mdkp9,512,16,,ok,0,8.852812067,7459745,3040
+mdkp,locked_pq,Globally locked PQ,mdkp9,512,16,,ok,0,9.086860777,7460131,3173
+mdkp,locked_pq,Globally locked PQ,mdkp9,512,16,,ok,0,9.03951044,7459660,3044
+mdkp,locked_pq,Globally locked PQ,mdkp9,512,16,,ok,0,8.83778502,7459533,3030
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,1,16,,ok,0,37.956136472,7458499,2736
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,1,16,,ok,0,37.886201669,7458499,2736
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,1,16,,ok,0,37.969713401,7458499,2736
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,1,16,,ok,0,37.949333471,7458499,2736
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,1,16,,ok,0,37.914618194,7458499,2736
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,2,16,,ok,0,18.984875956,7458499,2735
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,2,16,,ok,0,19.021524726,7458499,2736
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,2,16,,ok,0,19.021426737,7458515,2738
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,2,16,,ok,0,18.99842972,7458503,2736
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,2,16,,ok,0,18.989795798,7458504,2736
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,4,16,,ok,0,9.500720588,7458509,2740
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,4,16,,ok,0,9.510973314,7458504,2737
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,4,16,,ok,0,9.512289908,7458524,2741
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,4,16,,ok,0,9.521268079,7458516,2741
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,4,16,,ok,0,9.501814619,7458519,2741
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,8,16,,ok,0,4.755710286,7458527,2751
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,8,16,,ok,0,4.755660866,7458550,2752
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,8,16,,ok,0,4.757778931,7458493,2738
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,8,16,,ok,0,4.756076837,7458591,2758
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,8,16,,ok,0,4.760938728,7458568,2761
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,16,16,,ok,0,2.414207974,7458666,2780
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,16,16,,ok,0,2.418212824,7458634,2766
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,16,16,,ok,0,2.413951883,7458605,2759
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,16,16,,ok,0,2.414539805,7458609,2760
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,16,16,,ok,0,2.412201679,7458746,2783
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,32,16,,ok,0,1.216762271,7458953,2852
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,32,16,,ok,0,1.216908511,7458954,2847
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,32,16,,ok,0,1.217107242,7458815,2808
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,32,16,,ok,0,1.217636293,7458686,2804
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,32,16,,ok,0,1.218920946,7459136,2923
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,64,16,,ok,0,0.617344762,7459311,2950
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,64,16,,ok,0,0.616258581,7459409,2975
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,64,16,,ok,0,0.615988839,7459291,2977
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,64,16,,ok,0,0.61615067,7459421,2951
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,64,16,,ok,0,0.616835211,7459335,2938
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,128,16,,ok,0,0.344687145,7461559,3451
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,128,16,,ok,0,0.341730368,7461159,3434
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,128,16,,ok,0,0.339485113,7458606,2659
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,128,16,,ok,0,0.340525185,7460002,3050
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,128,16,,ok,0,0.340559085,7460898,3356
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,256,16,,ok,0,0.285789859,7461687,3023
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,256,16,,ok,0,0.278939023,7462269,3453
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,256,16,,ok,0,0.279047972,7463066,3758
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,256,16,,ok,0,0.280143975,7465617,4487
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,256,16,,ok,0,0.282208511,7464999,4180
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,512,16,,ok,0,0.207229214,7467508,4192
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,512,16,,ok,0,0.195774286,7466529,4182
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,512,16,,ok,0,0.206047071,7466064,3780
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,512,16,,ok,0,0.1970548,7469923,5071
+mdkp,mq_stick_swap,MultiQueue (stick swap),mdkp9,512,16,,ok,0,0.198381393,7465236,3708

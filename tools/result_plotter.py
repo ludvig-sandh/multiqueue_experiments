@@ -17,6 +17,7 @@ Y_AXIS = "name"
 MODE_AXES = {
     "threads": ("threads", "name"),
     "batch": ("batch", "name"),
+    "stickiness": ("stickiness", "name"),
     "comparison": ("name", "instance"),
 }
 

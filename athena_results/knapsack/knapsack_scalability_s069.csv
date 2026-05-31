@@ -1,0 +1,83 @@
+problem,pq_type,name,instance,threads,batch,stickiness,status,returncode,time_s,processed_nodes,ignored_nodes
+knapsack,seq_stack,Sequential Stack,s069,1,,,ok,0,13.618755052,721182964,15550271
+knapsack,locked_stack,Globally locked Stack,s069,1,16,,ok,0,15.023220755,721182964,15550265
+knapsack,locked_stack,Globally locked Stack,s069,2,16,,ok,0,6.794403122,504101355,13481719
+knapsack,locked_stack,Globally locked Stack,s069,4,16,,timeout,,1800,,
+knapsack,locked_stack,Globally locked Stack,s069,8,16,,ok,0,23.605465608,741241455,15960898
+knapsack,locked_stack,Globally locked Stack,s069,16,16,,timeout,,1800,,
+knapsack,locked_stack,Globally locked Stack,s069,32,16,,timeout,,1800,,
+knapsack,locked_stack,Globally locked Stack,s069,64,16,,ok,0,27.105991749,497765687,13845569
+knapsack,locked_stack,Globally locked Stack,s069,128,16,,timeout,,1800,,
+knapsack,locked_stack,Globally locked Stack,s069,256,16,,timeout,,1800,,
+knapsack,locked_stack,Globally locked Stack,s069,512,16,,timeout,,1800,,
+knapsack,work_stealing,Simple work stealing,s069,1,16,,ok,0,15.26530611,721182964,15550265
+knapsack,work_stealing,Simple work stealing,s069,2,16,,ok,0,4.161822125,392954336,12261710
+knapsack,work_stealing,Simple work stealing,s069,4,16,,ok,0,1.918923396,361365985,11773664
+knapsack,work_stealing,Simple work stealing,s069,8,16,,ok,0,0.939261299,351566526,11619873
+knapsack,work_stealing,Simple work stealing,s069,16,16,,ok,0,0.645347526,478090977,14583109
+knapsack,work_stealing,Simple work stealing,s069,32,16,,ok,0,0.321367933,450370173,13089681
+knapsack,work_stealing,Simple work stealing,s069,64,16,,ok,0,0.168468005,412507893,12472504
+knapsack,work_stealing,Simple work stealing,s069,128,16,,ok,0,0.120586228,493927794,14339188
+knapsack,work_stealing,Simple work stealing,s069,256,16,,ok,0,0.082968188,348074860,11068465
+knapsack,work_stealing,Simple work stealing,s069,512,16,,ok,0,0.094882823,397403679,12089541
+knapsack,multilifo,MultiLIFO,s069,1,16,,ok,0,14.124604773,721182964,15550265
+knapsack,multilifo,MultiLIFO,s069,2,16,,ok,0,5.164256325,452104063,12415948
+knapsack,multilifo,MultiLIFO,s069,4,16,,timeout,,1800,,
+knapsack,multilifo,MultiLIFO,s069,8,16,,ok,0,1.035830238,309929354,10089113
+knapsack,multilifo,MultiLIFO,s069,16,16,,timeout,,1800,,
+knapsack,multilifo,MultiLIFO,s069,32,16,,ok,0,0.6304794,344133050,10648690
+knapsack,multilifo,MultiLIFO,s069,64,16,,ok,0,0.384348105,368964110,11426857
+knapsack,multilifo,MultiLIFO,s069,128,16,,ok,0,0.274534404,390314119,11858694
+knapsack,multilifo,MultiLIFO,s069,256,16,,ok,0,0.160704495,340614566,10829801
+knapsack,multilifo,MultiLIFO,s069,512,16,,ok,0,0.440150231,400300180,11637564
+knapsack,treiber_stack,Treiber stack,s069,1,16,,ok,0,18.286161627,721182964,15550265
+knapsack,treiber_stack,Treiber stack,s069,2,16,,ok,0,18.34326077,721182389,15550268
+knapsack,treiber_stack,Treiber stack,s069,4,16,,ok,0,18.648631046,721181665,15550731
+knapsack,treiber_stack,Treiber stack,s069,8,16,,ok,0,19.179672058,721171940,15550497
+knapsack,treiber_stack,Treiber stack,s069,16,16,,ok,0,19.035345031,463495897,13157075
+knapsack,treiber_stack,Treiber stack,s069,32,16,,ok,0,27.073729036,710874082,15527889
+knapsack,treiber_stack,Treiber stack,s069,64,16,,ok,0,25.256248588,720069804,15552792
+knapsack,treiber_stack,Treiber stack,s069,128,16,,timeout,,1800,,
+knapsack,treiber_stack,Treiber stack,s069,256,16,,ok,0,23.876236693,627205330,13760504
+knapsack,treiber_stack,Treiber stack,s069,512,16,,ok,0,36.204476388,723066652,15690474
+knapsack,2d_stack,2D-stack,s069,1,16,,ok,0,19.078841994,721182964,15550265
+knapsack,2d_stack,2D-stack,s069,2,16,,ok,0,5.327207707,408655440,12254597
+knapsack,2d_stack,2D-stack,s069,4,16,,ok,0,4.095414327,605525988,14946123
+knapsack,2d_stack,2D-stack,s069,8,16,,ok,0,2.343327823,711761716,16087340
+knapsack,2d_stack,2D-stack,s069,16,16,,ok,0,616.037738506,290751540544,10262530258
+knapsack,2d_stack,2D-stack,s069,32,16,,ok,0,0.583207028,446217445,13174850
+knapsack,2d_stack,2D-stack,s069,64,16,,ok,0,0.34894255,363306480,11416049
+knapsack,2d_stack,2D-stack,s069,128,16,,ok,0,0.174027529,326477006,10729548
+knapsack,2d_stack,2D-stack,s069,256,16,,ok,0,0.17441784,449279216,12559386
+knapsack,2d_stack,2D-stack,s069,512,16,,ok,0,0.151730596,327970973,10631432
+knapsack,seq_pq,Sequential PQ,s069,1,,,ok,0,31.076232423,302701839,7464384
+knapsack,locked_pq,Globally locked PQ,s069,1,16,,ok,0,10.578525028,352368921,9853683
+knapsack,locked_pq,Globally locked PQ,s069,2,16,,ok,0,18.853437452,313004522,9889498
+knapsack,locked_pq,Globally locked PQ,s069,4,16,,ok,0,26.873221308,342107324,9864383
+knapsack,locked_pq,Globally locked PQ,s069,8,16,,ok,0,35.886077616,313715463,9891640
+knapsack,locked_pq,Globally locked PQ,s069,16,16,,ok,0,65.091937638,306039209,9901235
+knapsack,locked_pq,Globally locked PQ,s069,32,16,,ok,0,91.49779362,333571620,9886016
+knapsack,locked_pq,Globally locked PQ,s069,64,16,,ok,0,108.25376054,345422867,9874719
+knapsack,locked_pq,Globally locked PQ,s069,128,16,,ok,0,92.578123939,303045052,9941527
+knapsack,locked_pq,Globally locked PQ,s069,256,16,,ok,0,112.311287368,311867321,9996553
+knapsack,locked_pq,Globally locked PQ,s069,512,16,,ok,0,106.281454811,319400977,10122585
+knapsack,pr,Linden,s069,1,16,,ok,0,15.825843968,319823300,9905273
+knapsack,pr,Linden,s069,2,16,,ok,0,10.97625789,319824282,9905608
+knapsack,pr,Linden,s069,4,16,,ok,0,7.022378277,319827213,9906235
+knapsack,pr,Linden,s069,8,16,,ok,0,5.177511996,319832242,9906114
+knapsack,pr,Linden,s069,16,16,,ok,0,10.43358373,319835980,9906037
+knapsack,pr,Linden,s069,32,16,,ok,0,16.607386937,319832819,9905257
+knapsack,pr,Linden,s069,64,16,,failed,-6,,,
+knapsack,pr,Linden,s069,128,16,,ok,0,46.29519864,319802848,9905240
+knapsack,pr,Linden,s069,256,16,,ok,0,46.644587004,319796784,9905251
+knapsack,pr,Linden,s069,512,16,,ok,0,93.664236123,319783157,9905224
+knapsack,mq_stick_swap,MultiQueue (stick swap),s069,1,16,,ok,0,7.602074098,304821891,9902904
+knapsack,mq_stick_swap,MultiQueue (stick swap),s069,2,16,,ok,0,4.280313894,310770197,9896258
+knapsack,mq_stick_swap,MultiQueue (stick swap),s069,4,16,,ok,0,2.253783614,309198877,9899089
+knapsack,mq_stick_swap,MultiQueue (stick swap),s069,8,16,,ok,0,1.267617785,324431250,9882590
+knapsack,mq_stick_swap,MultiQueue (stick swap),s069,16,16,,ok,0,0.891183254,310213473,9903694
+knapsack,mq_stick_swap,MultiQueue (stick swap),s069,32,16,,ok,0,0.509025069,310809958,9911265
+knapsack,mq_stick_swap,MultiQueue (stick swap),s069,64,16,,ok,0,0.380677151,324137483,9904255
+knapsack,mq_stick_swap,MultiQueue (stick swap),s069,128,16,,ok,0,0.205442208,309387664,9928632
+knapsack,mq_stick_swap,MultiQueue (stick swap),s069,256,16,,ok,0,0.174294711,319355661,9901239
+knapsack,mq_stick_swap,MultiQueue (stick swap),s069,512,16,,ok,0,0.202344031,321681498,9894356

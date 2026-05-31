@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+python3 tools/result_plotter.py athena_results/stickiness/stickiness_brock400_4.csv --mode stickiness
+
 python3 tools/result_plotter.py athena_results/batch/batch_brock400_4_athena.csv --mode batch --heatmap-colors row-slowdown
 python3 tools/result_plotter.py athena_results/batch/batch_brock400_4_athena.csv --mode batch --layout graph
 python3 tools/result_plotter.py athena_results/batch/batch_DSJC1000_5_athena.csv --mode batch --heatmap-colors row-slowdown

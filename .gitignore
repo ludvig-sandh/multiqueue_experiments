@@ -8,3 +8,4 @@ benchmark_results.csv
 info.txt
 .codex
 /*.csv
+/build_multi/
