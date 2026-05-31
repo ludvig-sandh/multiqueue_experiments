@@ -490,6 +490,7 @@ def plot_heatmap(
     y_axis: str,
     color_mode: str,
     value_kind: str,
+    title: str | None,
     mark_row_best: bool = False,
     compact_columns: bool = False,
 ) -> None:
@@ -659,7 +660,7 @@ def plot_heatmap(
 
     ax.set_xlabel(format_axis_label(x_axis), fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
     ax.set_ylabel(format_axis_label(y_axis), fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
-    ax.set_title(f"{problem} - {instance}", fontsize=TITLE_FONT_SIZE, pad=8)
+    ax.set_title(title or f"{problem} - {instance}", fontsize=TITLE_FONT_SIZE, pad=8)
 
     ax.tick_params(length=0, labelsize=TICK_LABEL_FONT_SIZE, pad=2)
     for spine in ax.spines.values():
@@ -723,6 +724,7 @@ def plot_graph(
     x_axis: str,
     spread: str,
     value_kind: str,
+    title: str | None,
 ) -> None:
     fig_width = max(6.8, 0.75 * len(x_values) + 2.8)
     fig, ax = plt.subplots(figsize=(fig_width, 4.6))
@@ -814,7 +816,7 @@ def plot_graph(
     ax.set_xlabel(format_axis_label(x_axis), fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
     ax.set_ylabel(value_label(value_kind), fontsize=AXIS_LABEL_FONT_SIZE, labelpad=5)
     ax.set_yscale("log")
-    ax.set_title(f"{problem} — {instance}", fontsize=TITLE_FONT_SIZE, pad=8)
+    ax.set_title(title or f"{problem} — {instance}", fontsize=TITLE_FONT_SIZE, pad=8)
     ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
     ax.grid(True, linestyle="--", alpha=0.35)
     ax.legend(
@@ -837,6 +839,7 @@ def main() -> None:
     parser.add_argument("--heatmap-colors", choices=HEATMAP_COLOR_MODES, default="time")
     parser.add_argument("--heatmap-width", choices=HEATMAP_WIDTH_MODES, default="auto")
     parser.add_argument("--value", choices=VALUES, default="time")
+    parser.add_argument("--title", help="Custom plot title")
     args = parser.parse_args()
     heatmap_colors = args.heatmap_colors.replace("_", "-")
     compact_heatmap = (
@@ -886,6 +889,7 @@ def main() -> None:
             x_axis,
             args.spread,
             args.value,
+            args.title,
         )
     else:
         plot_heatmap(
@@ -901,6 +905,7 @@ def main() -> None:
             y_axis,
             heatmap_colors,
             args.value,
+            args.title,
             mark_row_best=args.mode == "comparison",
             compact_columns=compact_heatmap,
         )
