@@ -9,7 +9,7 @@ GROUP = BenchmarkGroup(
     params_fallback=Params(
         problem="knapsack",
         batch=None,
-        num_repetitions=1,
+        num_repetitions=5,
     ),
     params_x=[
         Params(pq_type="seq_stack", name="Sequential Stack", threads=1),
