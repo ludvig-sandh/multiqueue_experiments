@@ -118,7 +118,7 @@ def value_label(value_kind: str) -> str:
     if value_kind == "work-amplification":
         return "Work Amplification"
     if value_kind == "efficiency":
-        return "Parallel Efficiency"
+        return "Strong Scalability"
     return "Time (s)"
 
 
