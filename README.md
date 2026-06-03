@@ -1,4 +1,4 @@
-This repository contains experiments to compare the [multiqueue](https://github.com/marvinwilliams/multiqueue) to other state-of-the-art (relaxed) concurrent priority queues.
+This repository contains implementation and experiments to study scalable parallel Branch-and-Bound using relaxed concurrent data structures such as the [multiqueue](https://github.com/marvinwilliams/multiqueue). A generic modular framework is built to instantiate, configure, and benchmark solvers against existing state-of-the-art Branch-and-Bound solvers.
 
 ## Importing datasets
 The DIMACS maximum clique dataset must be imported via the following command
@@ -109,17 +109,7 @@ Create benchmark CSV files with a benchmark group entry script by passing the pa
 python3 tools/benchmark_scalability.py data/DIMACS_all_ascii/brock200_1.clq
 ```
 
-Use `tools/result_plotter.py` to plot benchmark CSV files.
-
-Arguments:
-
-```text
-csv_path                  CSV file to plot
---mode threads|batch      X-axis values (default: threads)
---layout heatmap|graph    Plot type (default: heatmap)
---spread none|minmax|stddev|minmax_band|stddev_band
-                          Spread display for graph layout (default: minmax)
-```
+Use `tools/result_plotter.py` to plot benchmark CSV files. (use --help)
 
 Examples:
 
