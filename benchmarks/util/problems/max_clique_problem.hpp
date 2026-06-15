@@ -10,6 +10,8 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <array>
+#include <numeric>
 
 // -------- trailing zero count --------
 inline unsigned ctz64(std::uint64_t x) {
@@ -124,6 +126,7 @@ struct Bitset {
 struct MaxCliqueInstance {
     std::size_t n{};
     std::vector<Bitset> adj; // adj[v] = neighbors of v
+    std::vector<std::size_t> degree_order; // vertices sorted by degree (ascending)
 
     MaxCliqueInstance() = default;
 
@@ -183,6 +186,7 @@ struct MaxCliqueInstance {
                     adj[v].set(u);
                 }
             }
+            compute_degree_order();
             return;
         }
 
@@ -205,9 +209,19 @@ struct MaxCliqueInstance {
                 adj[v].set(u);
                 ++read_edges;
             }
-            // If fewer than m edges found, still accept (some files may contain blanks/comments).
+            compute_degree_order();
             return;
         }
+    }
+
+    void compute_degree_order() {
+        degree_order.resize(n);
+        std::iota(degree_order.begin(), degree_order.end(), 0);
+        std::sort(degree_order.begin(), degree_order.end(), [this](std::size_t a, std::size_t b) {
+            auto deg_a = adj[a].count();
+            auto deg_b = adj[b].count();
+            return deg_a < deg_b || (deg_a == deg_b && a < b);
+        });
     }
 
     std::size_t size() const noexcept { return n; }
@@ -251,43 +265,37 @@ inline unsigned greedy_coloring_upper_bound(MaxCliqueInstance const& G, Bitset c
     return colors;
 }
 
-// Tomita/MCQ-style coloring: return a candidate order and an upper-bound per position.
-inline void color_sort_with_bounds(MaxCliqueInstance const& G,
-                                   Bitset const& P,
-                                   std::vector<unsigned>& order,
-                                   std::vector<unsigned>& color_bound) {
+// San Segundo's bitset coloring: produces vertex ordering and color bounds.
+// The color at position i is an upper bound on the clique size from that position onward.
+inline void san_segundo_coloring(MaxCliqueInstance const& G,
+                                  Bitset const& P,
+                                  std::vector<std::size_t>& order,
+                                  std::vector<unsigned>& color_bound) {
     order.clear();
     color_bound.clear();
 
-    Bitset remaining = P;
+    Bitset p_left = P; // vertices not yet colored
     unsigned color = 0;
 
-    while (remaining.any()) {
+    while (p_left.any()) {
         ++color;
+        Bitset q = p_left; // vertices that can still be given this color
 
-        Bitset avail = remaining;
-        Bitset colored(P.nbits);
+        while (q.any()) {
+            std::size_t v = q.find_any();
+            if (v >= q.nbits) break;
 
-        while (avail.any()) {
-            std::size_t v = avail.find_any();
-            if (v >= avail.nbits) break;
+            p_left.reset(v);
+            q.reset(v);
 
-            colored.set(v);
-            avail.reset(v);
-
+            // Remove neighbors of v from q (they can't have the same color)
             auto const& Nv = G.neighbors(v);
-            for (std::size_t i = 0; i < avail.w.size(); ++i) {
-                avail.w[i] &= ~Nv.w[i];
+            for (std::size_t i = 0; i < q.w.size(); ++i) {
+                q.w[i] &= ~Nv.w[i];
             }
-        }
 
-        colored.for_each_set_bit([&](std::size_t v) {
-            order.push_back(static_cast<unsigned>(v));
+            order.push_back(v);
             color_bound.push_back(color);
-        });
-
-        for (std::size_t i = 0; i < remaining.w.size(); ++i) {
-            remaining.w[i] &= ~colored.w[i];
         }
     }
 }
@@ -340,22 +348,26 @@ public:
 
     void branch_impl(node_type const& n, data_type incumbent, std::vector<node_type>& out) const {
         order_.clear();
-        bound_.clear();
-        color_sort_with_bounds(G_, n.candidates, order_, bound_);
-        if (bound_.empty()) return;
+        color_bound_.clear();
+        san_segundo_coloring(G_, n.candidates, order_, color_bound_);
 
-        if (n.clique_size + bound_.back() <= incumbent) return;
+        if (order_.empty()) return;
 
-        // MCQ/Tomita-style expansion over an ordered P: after each branch, remove v from P.
+        // Prune if even taking the last vertex wouldn't help
+        if (n.clique_size + color_bound_.back() <= incumbent) return;
+
+        // Expand in reverse order (highest color bounds first for better pruning)
         Bitset remaining = n.candidates;
 
-        // Expand in reverse coloring order; color bounds give branch-and-bound cutoff.
         for (std::size_t idx = order_.size(); idx-- > 0;) {
-            if (n.clique_size + bound_[idx] <= incumbent) break;
+            // Early termination if this branch can't beat incumbent
+            if (n.clique_size + color_bound_[idx] <= incumbent) break;
 
-            unsigned v = order_[idx];
+            std::size_t v = order_[idx];
             Bitset childP = Bitset::intersection(remaining, G_.neighbors(v));
             data_type child_clique = n.clique_size + 1;
+
+            // Compute tight bounds for the child node
             data_type child_ub = child_clique + greedy_coloring_upper_bound(G_, childP);
             data_type child_lb = child_clique + greedy_completion_lower_bound(G_, childP);
 
@@ -373,6 +385,6 @@ private:
     }
 
     instance_type const& G_;
-    inline static thread_local std::vector<unsigned> order_{};
-    inline static thread_local std::vector<unsigned> bound_{};
+    inline static thread_local std::vector<std::size_t> order_{};
+    inline static thread_local std::vector<unsigned> color_bound_{};
 };
