@@ -27,6 +27,25 @@ HEATMAP_COLOR_MODES = ("time", "row-slowdown", "row_slowdown")
 HEATMAP_WIDTH_MODES = ("auto", "regular", "compact")
 VALUES = ("time", "visited-nodes", "work-amplification", "efficiency")
 
+PQ_TYPE_ORDER = [
+    "seq_stack",       # Sequential Stack
+    "locked_stack",    # Globally locked Stack
+    "treiber_stack",   # Treiber stack
+    "multilifo",       # MultiLIFO
+    "2d_stack",        # 2D-stack
+    "work_stealing",   # Simple work stealing
+    "seq_pq",          # Sequential PQ
+    "locked_pq",       # Globally locked PQ
+    "pr",              # Linden
+    "mq_stick_swap",   # MultiQueue (stick swap)
+    "pmc",             # PMC
+    "pbs",             # PBS
+    "ciaranm",         # McCreesh
+]
+PQ_TYPE_ORDER_INDEX = {
+    pq_type: index for index, pq_type in enumerate(PQ_TYPE_ORDER)
+}
+
 TITLE_FONT_SIZE = 15
 AXIS_LABEL_FONT_SIZE = 13
 TICK_LABEL_FONT_SIZE = 11
@@ -116,7 +135,7 @@ def value_label(value_kind: str) -> str:
     if value_kind == "visited-nodes":
         return "Visited Nodes"
     if value_kind == "work-amplification":
-        return "Work Amplification"
+        return "Work Efficiency"
     if value_kind == "efficiency":
         return "Strong Scalability"
     return "Time (s)"
@@ -144,6 +163,28 @@ def mark_best_label(label: str) -> str:
 
 def unique_in_order(values):
     return list(dict.fromkeys(values))
+
+
+def ordered_axis_values(rows: list[dict], axis: str):
+    values = {parse_axis_value(row[axis]) for row in rows}
+    if axis not in {"name", "pq_type"}:
+        return sorted(values)
+
+    pq_types_by_value: dict[object, set[str]] = defaultdict(set)
+    for row in rows:
+        pq_types_by_value[parse_axis_value(row[axis])].add(row["pq_type"])
+
+    default_index = len(PQ_TYPE_ORDER)
+    return sorted(
+        values,
+        key=lambda value: (
+            min(
+                PQ_TYPE_ORDER_INDEX.get(pq_type, default_index)
+                for pq_type in pq_types_by_value[value]
+            ),
+            str(value),
+        ),
+    )
 
 
 def failure_status(statuses: list[str]) -> str | None:
@@ -326,7 +367,7 @@ def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str, value_kind: s
     problem = next(iter(problems))
     instance = next(iter(instances))
 
-    x_values = sorted({parse_axis_value(row[x_axis]) for row in rows})
+    x_values = ordered_axis_values(rows, x_axis)
 
     def row_key(row: dict) -> tuple[str, str]:
         return (
@@ -339,6 +380,13 @@ def build_heatmap_data(rows: list[dict], x_axis: str, y_axis: str, value_kind: s
         key = row_key(row)
         if key not in unique_row_keys:
             unique_row_keys.append(key)
+    if y_axis in {"name", "pq_type"}:
+        unique_row_keys.sort(
+            key=lambda key: (
+                PQ_TYPE_ORDER_INDEX.get(key[1], len(PQ_TYPE_ORDER)),
+                key[0],
+            )
+        )
 
     def format_row_label(key: tuple[str, str]) -> str:
         y_value, _pq_type = key
@@ -408,7 +456,7 @@ def build_comparison_data(rows: list[dict], value_kind: str):
         raise ValueError("Comparison mode expects the CSV to contain exactly one problem.")
 
     problem = next(iter(problems))
-    x_values = unique_in_order(row["name"] for row in rows)
+    x_values = ordered_axis_values(rows, "name")
     row_labels = unique_in_order(row["instance"] for row in rows)
     row_keys = [(instance, instance) for instance in row_labels]
 

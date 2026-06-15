@@ -5,11 +5,13 @@ from pathlib import Path
 
 
 PQ_TYPE_ORDER = [
+    "seq_stack",       # Sequential Stack
     "locked_stack",    # Globally locked Stack
     "treiber_stack",   # Treiber stack
     "multilifo",       # MultiLIFO
     "2d_stack",        # 2D-stack
     "work_stealing",   # Simple work stealing
+    "seq_pq",          # Sequential PQ
     "locked_pq",       # Globally locked PQ
     "pr",              # Linden
     "mq_stick_swap",   # MultiQueue (stick swap)
